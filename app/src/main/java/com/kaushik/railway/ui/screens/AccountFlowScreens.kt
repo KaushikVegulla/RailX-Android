@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -79,11 +80,11 @@ private fun BasicDetailsStep(
             }
             if (vm.regIdMessage.isNotBlank()) {
                 val ok = vm.regIdMessage == "User ID is available"
-                Text(vm.regIdMessage, color = if (ok) Success else Color.Red, fontSize = 13.sp)
+                Text(vm.regIdMessage, color = if (ok) Success else MaterialTheme.colorScheme.error, fontSize = 13.sp)
             }
             Spacer(Modifier.height(8.dp))
             LabeledField("Full name (as per Govt. ID)", vm.regFullName) { vm.regFullName = it }
-            error?.let { Text(it, color = Color.Red, fontSize = 13.sp, modifier = Modifier.padding(top = 8.dp)) }
+            error?.let { Text(it, color = MaterialTheme.colorScheme.error, fontSize = 13.sp, modifier = Modifier.padding(top = 8.dp)) }
             Spacer(Modifier.height(16.dp))
             OrangeButton("CONTINUE") {
                 val idError = IrctcRules.validateUserId(vm.regUserId)
@@ -122,7 +123,7 @@ private fun SecurityStep(
             LabeledField("Confirm password", confirm, isPassword = true) { confirm = it.take(15) }
             Spacer(Modifier.height(8.dp))
             IrctcRules.passwordRules.forEach { rule ->
-                Text("• $rule", color = Color.Gray, fontSize = 12.sp)
+                Text("• $rule", color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 12.sp)
             }
             Spacer(Modifier.height(10.dp))
             LabeledField("Mobile number (+91)", vm.regMobile, keyboardType = KeyboardType.Number) {
@@ -132,7 +133,7 @@ private fun SecurityStep(
             LabeledField("Email", vm.regEmail, keyboardType = KeyboardType.Email) { vm.regEmail = it }
             Spacer(Modifier.height(8.dp))
             ChoiceField("Preferred language", vm.regLanguage, IrctcRules.languages) { vm.regLanguage = it }
-            error?.let { Text(it, color = Color.Red, fontSize = 13.sp, modifier = Modifier.padding(top = 8.dp)) }
+            error?.let { Text(it, color = MaterialTheme.colorScheme.error, fontSize = 13.sp, modifier = Modifier.padding(top = 8.dp)) }
             Spacer(Modifier.height(16.dp))
             OrangeButton(if (busy) "PLEASE WAIT" else "CONTINUE", enabled = !busy) {
                 val problem = IrctcRules.validatePassword(vm.regPassword)
@@ -186,7 +187,7 @@ private fun CaptchaStep(
                 Text("Refresh captcha", color = Orange)
             }
             LabeledField("Enter captcha", typed) { typed = it.take(5) }
-            error?.let { Text(it, color = Color.Red, fontSize = 13.sp, modifier = Modifier.padding(top = 8.dp)) }
+            error?.let { Text(it, color = MaterialTheme.colorScheme.error, fontSize = 13.sp, modifier = Modifier.padding(top = 8.dp)) }
             Spacer(Modifier.height(16.dp))
             OrangeButton("SUBMIT") {
                 if (IrctcRules.captchaMatches(vm.regCaptcha, typed)) {
@@ -214,7 +215,7 @@ private fun ConfirmContactsStep(
     StepHeading(step, total, "Confirm email and mobile", "Cognito emails a code on the next step")
     RailCard {
         ColumnBlock {
-            Text("User ID", color = Color.Gray, fontSize = 12.sp)
+            Text("User ID", color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 12.sp)
             Text(vm.regUserId, color = Navy, fontWeight = FontWeight.Bold, fontSize = 18.sp)
             Spacer(Modifier.height(8.dp))
             Text("Email  ${IrctcRules.maskEmail(vm.regEmail)}", color = Navy, fontSize = 14.sp)
@@ -285,7 +286,7 @@ private fun OtpStep(
                     modifier = Modifier.padding(top = 8.dp)
                 )
             }
-            error?.let { Text(it, color = Color.Red, fontSize = 13.sp, modifier = Modifier.padding(top = 8.dp)) }
+            error?.let { Text(it, color = MaterialTheme.colorScheme.error, fontSize = 13.sp, modifier = Modifier.padding(top = 8.dp)) }
             Spacer(Modifier.height(16.dp))
             OrangeButton(if (busy || vm.cognitoBusy) "PLEASE WAIT" else "VERIFY", enabled = !busy && !vm.cognitoBusy) {
                 busy = true
@@ -323,7 +324,7 @@ private fun AccountCreatedStep(vm: AppViewModel, onDone: () -> Unit) {
             Spacer(Modifier.height(8.dp))
             Text(
                 "Continue to sign in. You can fill gender, date of birth, and address after that.",
-                color = Color.Gray,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
                 fontSize = 14.sp
             )
             Spacer(Modifier.height(16.dp))

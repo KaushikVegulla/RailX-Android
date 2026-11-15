@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -18,6 +19,7 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
@@ -38,6 +40,7 @@ import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.kaushik.railway.ui.theme.GlassFill
+import com.kaushik.railway.data.isAvailableStatus
 import com.kaushik.railway.ui.theme.GlassHighlight
 import com.kaushik.railway.ui.theme.GlassStroke
 import com.kaushik.railway.ui.theme.Mute
@@ -64,45 +67,28 @@ fun TricolorStrip() {
 @Composable
 fun glassModifier(modifier: Modifier = Modifier): Modifier =
     modifier
-        .shadow(18.dp, GlassShape, ambientColor = Color(0x330A3D91), spotColor = Color(0x220A3D91))
         .clip(GlassShape)
-        .background(
-            Brush.verticalGradient(listOf(GlassHighlight, GlassFill, Color.White.copy(alpha = 0.38f)))
-        )
-        .border(1.dp, GlassStroke, GlassShape)
+        .background(MaterialTheme.colorScheme.surface)
+        .border(1.dp, MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.6f), GlassShape)
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun RailTopBar(title: String, onBack: (() -> Unit)? = null) {
-    Column(
-        Modifier
-            .fillMaxWidth()
-            .background(
-                Brush.verticalGradient(listOf(Navy.copy(alpha = 0.92f), Navy.copy(alpha = 0.78f)))
-            )
-    ) {
-        TopAppBar(
-            title = {
-                Column {
-                    Text(title, fontWeight = FontWeight.SemiBold, fontSize = 17.sp)
-                    Text("Centre for Railway Information Systems", color = Color.White.copy(alpha = 0.75f), fontSize = 10.sp)
+    TopAppBar(
+        title = { Text(title, style = MaterialTheme.typography.titleLarge) },
+        navigationIcon = {
+            if (onBack != null) {
+                IconButton(onClick = onBack) {
+                    Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
                 }
-            },
-            navigationIcon = {
-                if (onBack != null) {
-                    IconButton(onClick = onBack) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
-                    }
-                }
-            },
-            colors = TopAppBarDefaults.topAppBarColors(
-                containerColor = Color.Transparent,
-                titleContentColor = Color.White,
-                navigationIconContentColor = Color.White
-            )
+            }
+        },
+        colors = TopAppBarDefaults.topAppBarColors(
+            containerColor = MaterialTheme.colorScheme.background,
+            titleContentColor = MaterialTheme.colorScheme.onBackground,
+            navigationIconContentColor = MaterialTheme.colorScheme.onBackground
         )
-        TricolorStrip()
-    }
+    )
 }
 
 @Composable
@@ -110,14 +96,14 @@ fun OrangeButton(text: String, modifier: Modifier = Modifier, enabled: Boolean =
     Button(
         onClick = onClick,
         enabled = enabled,
-        modifier = modifier
-            .fillMaxWidth()
-            .height(52.dp)
-            .shadow(12.dp, RoundedCornerShape(18.dp), ambientColor = Orange.copy(alpha = 0.35f)),
+        modifier = modifier.fillMaxWidth().heightIn(min = 54.dp),
         shape = RoundedCornerShape(18.dp),
-        colors = ButtonDefaults.buttonColors(containerColor = Orange, contentColor = Color.White)
+        colors = ButtonDefaults.buttonColors(
+            containerColor = MaterialTheme.colorScheme.secondaryContainer,
+            contentColor = MaterialTheme.colorScheme.onSecondaryContainer
+        )
     ) {
-        Text(text, fontWeight = FontWeight.Bold, fontSize = 15.sp, letterSpacing = 0.4.sp)
+        Text(text, style = MaterialTheme.typography.labelLarge)
     }
 }
 
@@ -129,19 +115,19 @@ fun RailCard(modifier: Modifier = Modifier, content: @Composable () -> Unit) {
 @Composable
 fun StatusChip(status: String) {
     val color = when {
-        status.contains("AVAILABLE", true) || status.contains("CNF", true) -> Success
+        isAvailableStatus(status) || status.trim().equals("CONFIRMED", true) -> Success
         status.contains("RAC", true) -> Rac
-        status.contains("CANCEL", true) -> Waitlist
-        else -> Waitlist
+        status.contains("CANCEL", true) || status.contains("WL", true) || status.contains("WAIT", true) || status.contains("AVAILABLE", true) || status.contains("AVBL", true) -> Waitlist
+        else -> Mute
     }
     Text(
         text = status,
-        color = if (color == Rac) NavyDark else Color.White,
-        fontSize = 11.sp,
-        fontWeight = FontWeight.Bold,
+        color = color,
+        style = MaterialTheme.typography.labelMedium,
+        fontWeight = FontWeight.SemiBold,
         modifier = Modifier
-            .background(color.copy(alpha = 0.92f), RoundedCornerShape(50))
-            .padding(horizontal = 10.dp, vertical = 5.dp)
+            .background(color.copy(alpha = 0.12f), RoundedCornerShape(50))
+            .padding(horizontal = 12.dp, vertical = 6.dp)
     )
 }
 
@@ -166,10 +152,10 @@ fun LabeledField(
         ),
         shape = RoundedCornerShape(16.dp),
         colors = OutlinedTextFieldDefaults.colors(
-            focusedContainerColor = Color.White.copy(alpha = 0.45f),
-            unfocusedContainerColor = Color.White.copy(alpha = 0.28f),
-            focusedBorderColor = Navy.copy(alpha = 0.45f),
-            unfocusedBorderColor = Color.White.copy(alpha = 0.7f)
+            focusedContainerColor = MaterialTheme.colorScheme.surfaceVariant,
+            unfocusedContainerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.6f),
+            focusedBorderColor = Navy,
+            unfocusedBorderColor = MaterialTheme.colorScheme.outlineVariant
         )
     )
 }
@@ -198,7 +184,7 @@ fun LoadingSkeleton(lines: Int = 3, modifier: Modifier = Modifier) {
                     .height(56.dp)
                     .padding(bottom = 8.dp)
                     .clip(RoundedCornerShape(12.dp))
-                    .background(Color(0xFFE0E0E0).copy(alpha = 0.6f))
+                    .background(MaterialTheme.colorScheme.surfaceVariant)
             )
         }
     }

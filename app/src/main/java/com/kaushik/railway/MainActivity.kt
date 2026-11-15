@@ -9,19 +9,24 @@ import androidx.compose.foundation.layout.navigationBarsPadding
 import com.kaushik.railway.data.PaymentBridge
 import com.razorpay.PaymentData
 import com.razorpay.PaymentResultWithDataListener
-import androidx.compose.foundation.clickable
+import androidx.compose.foundation.background
+import androidx.compose.foundation.selection.selectable
+import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.animation.animateColorAsState
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ConfirmationNumber
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.filled.Train
-import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -29,6 +34,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
@@ -69,13 +76,7 @@ import com.kaushik.railway.ui.theme.RailwayTheme
 class MainActivity : FragmentActivity(), PaymentResultWithDataListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge(
-            statusBarStyle = SystemBarStyle.dark(android.graphics.Color.TRANSPARENT),
-            navigationBarStyle = SystemBarStyle.light(
-                android.graphics.Color.WHITE,
-                android.graphics.Color.WHITE
-            )
-        )
+        enableEdgeToEdge()
         setContent {
             RailwayTheme { RailwayApp() }
         }
@@ -252,25 +253,27 @@ fun RailwayApp(vm: AppViewModel = viewModel()) {
         }
         if (showBar) {
             Surface(
-                color = Color.White.copy(alpha = 0.55f),
-                shadowElevation = 16.dp,
-                modifier = Modifier.navigationBarsPadding()
+                color = MaterialTheme.colorScheme.surface.copy(alpha = 0.98f),
+                shape = RoundedCornerShape(30.dp),
+                border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.6f)),
+                shadowElevation = 2.dp,
+                modifier = Modifier.navigationBarsPadding().padding(horizontal = 16.dp, vertical = 10.dp)
             ) {
-                Column {
-                    HorizontalDivider(color = Color(0xFFE0E0E0))
-                    Row(Modifier.fillMaxWidth().padding(vertical = 8.dp), horizontalArrangement = Arrangement.SpaceEvenly) {
-                        NavItem("Home", route == Routes.Home, Icons.Default.Home) {
-                            nav.navigate(Routes.Home) { popUpTo(nav.graph.findStartDestination().id) { saveState = true }; launchSingleTop = true; restoreState = true }
-                        }
-                        NavItem("Bookings", route == Routes.Bookings, Icons.Default.Train) {
-                            nav.navigate(Routes.Bookings) { popUpTo(nav.graph.findStartDestination().id) { saveState = true }; launchSingleTop = true; restoreState = true }
-                        }
-                        NavItem("PNR", route == Routes.Pnr, Icons.Default.ConfirmationNumber) {
-                            nav.navigate(Routes.Pnr) { popUpTo(nav.graph.findStartDestination().id) { saveState = true }; launchSingleTop = true; restoreState = true }
-                        }
-                        NavItem("More", route == Routes.More, Icons.Default.MoreHoriz) {
-                            nav.navigate(Routes.More) { popUpTo(nav.graph.findStartDestination().id) { saveState = true }; launchSingleTop = true; restoreState = true }
-                        }
+                Row(
+                    Modifier.fillMaxWidth().padding(6.dp),
+                    horizontalArrangement = Arrangement.spacedBy(4.dp)
+                ) {
+                    NavItem("Home", route == Routes.Home, Icons.Default.Home, Modifier.weight(1f)) {
+                        nav.navigate(Routes.Home) { popUpTo(Routes.Home) { saveState = true }; launchSingleTop = true; restoreState = true }
+                    }
+                    NavItem("Trips", route == Routes.Bookings, Icons.Default.Train, Modifier.weight(1f)) {
+                        nav.navigate(Routes.Bookings) { popUpTo(Routes.Home) { saveState = true }; launchSingleTop = true; restoreState = true }
+                    }
+                    NavItem("PNR", route == Routes.Pnr, Icons.Default.ConfirmationNumber, Modifier.weight(1f)) {
+                        nav.navigate(Routes.Pnr) { popUpTo(Routes.Home) { saveState = true }; launchSingleTop = true; restoreState = true }
+                    }
+                    NavItem("More", route == Routes.More, Icons.Default.MoreHoriz, Modifier.weight(1f)) {
+                        nav.navigate(Routes.More) { popUpTo(Routes.Home) { saveState = true }; launchSingleTop = true; restoreState = true }
                     }
                 }
             }
@@ -280,13 +283,18 @@ fun RailwayApp(vm: AppViewModel = viewModel()) {
 }
 
 @Composable
-private fun NavItem(label: String, selected: Boolean, icon: ImageVector, onClick: () -> Unit) {
-    val tint = if (selected) Navy else Color(0xFF8A97A6)
+private fun NavItem(label: String, selected: Boolean, icon: ImageVector, modifier: Modifier = Modifier, onClick: () -> Unit) {
+    val colors = MaterialTheme.colorScheme
+    val tint by animateColorAsState(if (selected) colors.onPrimaryContainer else colors.onSurfaceVariant, label = "Navigation tint")
+    val background by animateColorAsState(if (selected) colors.primaryContainer else Color.Transparent, label = "Navigation selection")
     Column(
-        modifier = Modifier.clickable(onClick = onClick).padding(horizontal = 12.dp, vertical = 4.dp),
-        horizontalAlignment = Alignment.CenterHorizontally
+        modifier = modifier.clip(RoundedCornerShape(24.dp)).background(background)
+            .selectable(selected = selected, role = Role.Tab, onClick = onClick)
+            .heightIn(min = 56.dp).padding(horizontal = 4.dp, vertical = 8.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.spacedBy(4.dp)
     ) {
-        Icon(icon, label, tint = tint)
-        Text(label, color = tint, fontSize = 11.sp)
+        Icon(icon, contentDescription = null, tint = tint)
+        Text(label, color = tint, style = MaterialTheme.typography.labelSmall)
     }
 }

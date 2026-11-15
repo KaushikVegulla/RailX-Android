@@ -1,122 +1,59 @@
-# Railway Reservation System (RailX) v1.6
+# RailX
 
-## v1.6.0 — Cognito sign-in, MPIN, and biometric unlock
+RailX is a native Android railway journey demo built with Kotlin and Jetpack Compose. It supports train enquiries, Cognito accounts, a local booking flow, and Razorpay test checkout. It is an academic project and is not affiliated with IRCTC, CRIS, or Indian Railways. Demo bookings are not valid railway tickets.
 
-Accounts are created in the Amazon Cognito user pool **RailX-Users** (`ap-south-1`). The app keeps the existing Compose screens.
+## What changed in 1.7
 
-- Sign-up sends the user ID, name, email, and `+91` mobile number to Cognito. The email code confirms the account. SMS stays off until a TRAI DLT header exists.
-- If Cognito cannot be reached, registration falls back to the on-device demo codes.
-- After sign-in the app asks for the profile (gender, date of birth, address), then a 4-digit MPIN. Biometric unlock is optional and falls back to that MPIN.
-- Tatkal still asks for an Aadhaar or VID check on this device. Only the last 4 digits are stored.
-- Remote Razorpay calls send `Authorization: Bearer <Cognito ID token>`. The Python backend checks that token and no longer accepts `/register` or `/login`.
-- The visible name is **RailX**. It is still an academic demo inspired by RailOne (CRIS), not an official railway app.
+- Refreshed Home, navigation, train results, and booking screens with consistent light/dark colors, readable cards, calendar selection, and accessible controls.
+- Train sorting by departure, duration, and known fares; filters for departure window, class, and known availability. Controls that need missing provider data stay unavailable.
+- Station suggestions wait briefly for typing to pause and cancel obsolete requests. Origin and destination suggestions stay separate.
+- Availability loads progressively with a maximum of three concurrent class enquiries. A bounded 30-second cache avoids immediately repeating the same journey/class enquiry; station suggestions are cached for 24 hours.
+- Booking history renders rows as needed. Passenger decoding happens off the UI thread.
+- Booking history, last journey, and reused passengers belong to the signed-in account. Checkout captures the account that started payment and checks it again before saving.
+- Startup waits for session readiness without an extra fixed delay. Unsupported service shortcuts and the nonfunctional return-journey toggle have been removed.
 
-The pool id and app client id are public mobile-client values. There is no client secret. Passwords and the MPIN stay hashed on the device.
+## Build and run
 
-## v1.5.0 — IRCTC-style account and Tatkal link
+Use Android Studio with a full JDK 17 or newer, Android SDK platform 35, and the checked-in Gradle wrapper. Minimum Android version is 7.0 (API 24).
 
-Academic walkthrough of the account flow: user ID, password rules, captcha (or OTP when the visually impaired option is on), masked email and mobile, demo OTPs, profile (gender, date of birth, address), 4-digit MPIN, then a local Aadhaar / VID check before Tatkal search.
-
-- Accounts stay on the device. Passwords and the MPIN are stored as hashes.
-- The Aadhaar or VID value is not saved and is not sent to UIDAI. Only the last 4 digits remain.
-- PAN does not turn on Tatkal. General quota search does not ask for this link.
-- Not an official IRCTC, CRIS, or UIDAI service.
-
-## v1.4.0 — Improvements (product plan)
-
-## v1.4.0 — Improvements (product plan)
-
-- **One-tap rebook** last journey on Home
-- **Saved passengers** load from last booking
-- **Offline-first search** — MockData fallback when API empty/fails
-- **System dark mode** support
-- **Share e-ticket** via Android share sheet
-- **Trust banners** — clear demo / not IRCTC ticket messaging
-- Keys stay masked in `local.properties` (no backend required)
-
-
-Android app inspired by **RailOne (CRIS)** / IRCTC Rail Connect.
-
-Academic demo — **not affiliated with IRCTC, CRIS, or Indian Railways**.
-
-**Repo:** https://github.com/KaushikVegulla/Railway-Reservation-System-
-
----
-
-## v1.4 highlights
-
-### Masked API keys (no backend required)
-All secrets live in **`local.properties`** (gitignored) and are injected via **BuildConfig**:
-
-| Property | Purpose |
-|----------|---------|
-| `railradar.api.key` | Live train / PNR / availability |
-| `razorpay.key.id` | Razorpay test key id |
-| `razorpay.key.secret` | Razorpay test secret (demo only) |
-| `use.local.keys=true` | Payments run on-device with masked keys |
-
-**Nothing secret is committed to git.**
-
-### Features
-- Live RailRadar search, vacancy chart, PNR, running status  
-- **Interactive seat map** (demo coach layout)  
-- Multi-passenger + berth chips  
-- Optional **return journey** date  
-- Razorpay test checkout (local masked keys)  
-- Room booking history + cancel with confirm  
-- DataStore login session  
-- Auth works offline (local demo users) when no server is running  
-- Offline station suggestions from MockData  
-- Loading skeletons component  
-- Unit tests for core models  
-
-### Optional backend
-The existing `backend/` folder is **optional**. With `use.local.keys=true` the app does **not** need it for payments. Auth falls back to an in-memory local demo if the server is unreachable.
-
----
-
-## Quick setup
-
-```bash
-git clone https://github.com/KaushikVegulla/Railway-Reservation-System-.git
+```sh
 cp local.properties.example local.properties
 ```
 
-Edit `local.properties`:
+Set `sdk.dir` to your SDK path. Set `railradar.api.key` for live enquiries. Without a working provider, train search can display clearly marked sample data.
+
+Accounts use the configured Amazon Cognito user pool in `ap-south-1`. Its pool/client IDs are public configuration. Registration has a local demo fallback when Cognito is unreachable. MPIN, biometric unlock, and the local demo Aadhaar/VID check remain available; the latter is not UIDAI verification.
+
+For backend-mediated Razorpay test payments, configure:
 
 ```properties
-sdk.dir=/path/to/Android/sdk
-railradar.api.key=rg_your_key
-razorpay.key.id=rzp_test_xxx
-razorpay.key.secret=your_test_secret
-use.local.keys=true
+use.local.keys=false
+backend.base.url=http://10.0.2.2:8088
 ```
 
-Open in Android Studio → Sync → Run.
+Then follow [backend setup](backend/README.md). The emulator address above is for local development; deployed backends should use HTTPS. Remote payment calls require a Cognito token.
 
-- Min SDK 24 · Target 35 · **version 1.6.0**
-- Test card: `4111 1111 1111 1111`, any future expiry, any CVV
+The existing `use.local.keys=true` mode is for academic experimentation with test keys only. `local.properties` is gitignored, but secrets injected into `BuildConfig` can be extracted from the APK. Never package production payment secrets. This release does not replace the demo payment backend with a production booking service.
 
----
-
-## Layout
-
-```
-app/.../railway/
-  AppViewModel.kt
-  data/
-    AuthApi.kt          # backend + local demo fallback
-    PaymentApi.kt       # masked keys via BuildConfig
-    RailKitClient.kt
-    SessionStore.kt
-    db/  repository/
-  ui/components/SeatMap.kt
-  ui/screens/...
-backend/                # optional only
+```sh
+./gradlew :app:assembleDebug :app:testDebugUnitTest :app:lintDebug
+./gradlew :app:connectedDebugAndroidTest  # running emulator/device required
 ```
 
----
+## Existing data on upgrade
 
-## Disclaimer
+The Room v1 → v2 migration preserves booking rows and adds an account-owner column without destructive migration. Older rows have no reliable owner, so they remain on disk but are hidden from account history. Older unscoped saved-passenger/last-journey preferences are also retained but not shown. New records are scoped to the active account; signing out clears contact information from the session.
 
-Learning project only. Do not use for real reservations. Client-side Razorpay secret is for **test keys** in an academic demo — never ship production secrets in an app.
+## Project layout
+
+- `app/src/main/java/com/kaushik/railway/ui/`: Compose screens, shared controls, theme.
+- `AppViewModel.kt`: session and journey state.
+- `data/repository/`: cancellable enquiry orchestration, caching, account-scoped booking storage.
+- `data/db/`: Room entities, owner-filtered queries, schema migration.
+- `app/src/test/`: model, account, search filter, and repository unit tests.
+- `app/src/androidTest/`: database migration and account-isolation tests.
+- `backend/`: optional Python Cognito/Razorpay test backend.
+
+## Scope
+
+One-tap rebook, reuse of passengers from the last booking, seat preferences, PNR/live-status enquiries, and text ticket sharing are supported. Multi-route favorites, a full passenger manager, PDF export, reminders, and live background notifications are future work. Local cancellation changes the demo record; it does not cancel an actual railway ticket or issue a refund.

@@ -16,6 +16,7 @@ import androidx.compose.material3.Checkbox
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.Text
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -71,7 +72,7 @@ internal fun ChoiceField(label: String, value: String, options: List<String>, on
                 .fillMaxWidth()
                 .padding(top = 4.dp)
                 .clip(RoundedCornerShape(16.dp))
-                .background(Color.White.copy(alpha = 0.55f))
+                .background(MaterialTheme.colorScheme.surface)
                 .clickable { open = true }
                 .padding(horizontal = 14.dp, vertical = 12.dp)
         ) {

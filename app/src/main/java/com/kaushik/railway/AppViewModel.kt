@@ -6,6 +6,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.kaushik.railway.data.AccountIdentity
 import com.kaushik.railway.data.AccountStore
 import com.kaushik.railway.data.AvailabilityResult
 import com.kaushik.railway.data.Booking
@@ -30,6 +31,8 @@ import com.kaushik.railway.data.repository.BookingRepository
 import com.kaushik.railway.data.repository.TrainRepository
 import com.kaushik.railway.nav.AccountGate
 import com.kaushik.railway.util.UiState
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.async
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.first
@@ -47,6 +50,10 @@ class AppViewModel : ViewModel() {
     private val bookingRepo = BookingRepository(AppDatabase.getInstance(RailApp.instance))
     private val trainRepo = TrainRepository()
     private val authRepo = AuthRepository(sessionStore)
+
+    private var bookingHistoryJob: Job? = null
+    var bookingOwnerId by mutableStateOf("")
+        private set
 
     // Auth / session
     var loggedIn by mutableStateOf(false)
@@ -134,6 +141,22 @@ class AppViewModel : ViewModel() {
     var runningNote by mutableStateOf("")
 
     val stationSuggestions = mutableStateListOf<Station>()
+    var stationSuggestionField by mutableStateOf("from")
+        private set
+    var vacancyLoading by mutableStateOf(false)
+        private set
+    var vacancyError by mutableStateOf<String?>(null)
+        private set
+    private var stationSearchJob: Job? = null
+    private var trainSearchJob: Job? = null
+    private var availabilityJob: Job? = null
+    private var vacancyJob: Job? = null
+    private var stationSearchVersion = 0
+    private var trainSearchVersion = 0
+    private var availabilityVersion = 0
+    private var vacancyVersion = 0
+    private var lastStationQuery = ""
+
 
     // Seat / berth preferences (enhanced)
     val berthOptions = listOf("No Preference", "Lower", "Middle", "Upper", "Side Lower", "Side Upper")
@@ -143,13 +166,15 @@ class AppViewModel : ViewModel() {
     init {
         viewModelScope.launch {
             authRepo.sessionFlow.collectLatest { session ->
+                val owner = AccountIdentity.ownerId(session.loggedIn, session.userId, session.email)
+                if (owner != bookingOwnerId) switchBookingOwner(owner)
                 loggedIn = session.loggedIn
                 userName = session.name
                 userEmail = session.email
                 userMobile = session.mobile
                 userId = session.userId
-                if (session.mobile.isNotBlank()) mobile = session.mobile
-                if (session.email.isNotBlank()) email = session.email
+                mobile = session.mobile
+                email = session.email
                 if (!session.loggedIn) clearAccountFlags() else refreshAccount()
                 sessionSeen = true
                 if (profilesReady) gateReady = true
@@ -162,19 +187,43 @@ class AppViewModel : ViewModel() {
                 if (sessionSeen) gateReady = true
             }
         }
-        viewModelScope.launch {
-            sessionStore.lastJourneyFlow.collectLatest { j -> lastJourney = j }
-        }
-        viewModelScope.launch {
-            sessionStore.savedPassengersFlow.collectLatest { list ->
-                savedPassengers.clear()
-                savedPassengers.addAll(list)
+    }
+
+    private fun switchBookingOwner(owner: String) {
+        bookingHistoryJob?.cancel()
+        bookingOwnerId = owner
+        bookings.clear()
+        lastBooking = null
+        lastJourney = null
+        savedPassengers.clear()
+        passengers.clear()
+        passengers.add(Passenger())
+        clearSeats()
+        mobile = ""
+        email = ""
+        PaymentApi.bearerToken = null
+        if (owner.isBlank()) return
+        bookingHistoryJob = viewModelScope.launch {
+            launch {
+                bookingRepo.observeBookings(owner).collectLatest { list ->
+                    if (bookingOwnerId == owner) {
+                        bookings.clear()
+                        bookings.addAll(list)
+                    }
+                }
             }
-        }
-        viewModelScope.launch {
-            bookingRepo.observeBookings().collectLatest { list ->
-                bookings.clear()
-                bookings.addAll(list)
+            launch {
+                sessionStore.observeLastJourney(owner).collectLatest { journey ->
+                    if (bookingOwnerId == owner) lastJourney = journey
+                }
+            }
+            launch {
+                sessionStore.observeSavedPassengers(owner).collectLatest { list ->
+                    if (bookingOwnerId == owner) {
+                        savedPassengers.clear()
+                        savedPassengers.addAll(list)
+                    }
+                }
             }
         }
     }
@@ -834,7 +883,7 @@ class AppViewModel : ViewModel() {
         userEmail = profile.email
         userMobile = profile.mobile
         email = profile.email
-        if (profile.mobile.isNotBlank()) mobile = profile.mobile
+        mobile = profile.mobile
         profileComplete = profile.profileComplete
         mpinSet = profile.mpinSet
         mpinDeferred = profile.mpinDeferred
@@ -865,74 +914,105 @@ class AppViewModel : ViewModel() {
     fun quotaCode() = selectedQuota.take(2)
 
     fun searchTrainsLive() {
+        trainSearchJob?.cancel()
+        val request = ++trainSearchVersion
+        val from = fromCode
+        val to = toCode
+        val date = journeyDate
         searchLoading = true
         searchError = null
         isOfflineHint = false
         trains.clear()
-        viewModelScope.launch {
-            val result = trainRepo.searchTrains(fromCode, toCode, toApiDate(journeyDate))
-            searchLoading = false
-            result.onSuccess { list ->
-                if (list.isNotEmpty()) {
+        trainSearchJob = viewModelScope.launch {
+            try {
+                val result = trainRepo.searchTrains(from, to, toApiDate(date))
+                if (request != trainSearchVersion || from != fromCode || to != toCode || date != journeyDate) return@launch
+                result.onSuccess { list ->
                     trains.addAll(list)
-                } else {
-                    trains.addAll(MockData.trains(fromCode, toCode))
+                }.onFailure {
+                    trains.addAll(MockData.trains(from, to))
                     isOfflineHint = true
+                    searchError = "Live search is unavailable. Showing demo trains."
                 }
-            }.onFailure {
-                trains.addAll(MockData.trains(fromCode, toCode))
-                isOfflineHint = true
+            } finally {
+                if (request == trainSearchVersion) searchLoading = false
             }
         }
     }
 
     fun loadAvailability(train: Train) {
+        availabilityJob?.cancel()
+        vacancyJob?.cancel()
+        ++vacancyVersion
+        val request = ++availabilityVersion
+        val date = journeyDate
+        val quota = quotaCode()
+        val classFilter = selectedClass
         selectedTrain = train
         availLoading = true
         availError = null
         isOfflineHint = false
         classRows.clear()
         vacancy = null
-        viewModelScope.launch {
-            val classes = if (selectedClass == "All Classes") {
-                listOf("1A", "2A", "3A", "3E", "SL", "CC", "EC", "2S")
-            } else listOf(selectedClass)
-            val result = trainRepo.loadClassAvailability(
-                train, toApiDate(journeyDate), classes, quotaCode()
-            )
-            availLoading = false
-            result.onSuccess { list ->
-                if (list.isNotEmpty()) {
-                    classRows.addAll(list)
-                } else {
-                    classRows.addAll(
-                        train.classes.ifEmpty {
-                            MockData.trains(fromCode, toCode).firstOrNull()?.classes.orEmpty()
+        vacancyLoading = false
+        vacancyError = null
+        val classes = if (classFilter == "All Classes") {
+            train.classes.map { it.code }.ifEmpty { listOf("1A", "2A", "3A", "3E", "SL", "CC", "EC", "2S") }
+        } else listOf(classFilter)
+        fun isCurrent() = request == availabilityVersion && selectedTrain == train &&
+            date == journeyDate && quota == quotaCode() && classFilter == selectedClass
+        availabilityJob = viewModelScope.launch {
+            val failed = mutableListOf<String>()
+            try {
+                val result = trainRepo.loadClassAvailability(train, toApiDate(date), classes, quota) { cls, row ->
+                    if (isCurrent()) {
+                        row.onSuccess { value ->
+                            val position = classRows.indexOfFirst { classes.indexOf(it.code) > classes.indexOf(cls) }
+                            if (position < 0) classRows.add(value) else classRows.add(position, value)
+                        }.onFailure {
+                            failed.add(cls)
+                            availError = "Could not load ${failed.joinToString()}. Other classes remain available."
                         }
-                    )
-                    isOfflineHint = true
-                }
-            }.onFailure {
-                classRows.addAll(
-                    train.classes.ifEmpty {
-                        MockData.trains(fromCode, toCode).firstOrNull()?.classes.orEmpty()
                     }
-                )
-                isOfflineHint = true
+                }
+                if (!isCurrent()) return@launch
+                if (result.isFailure && classRows.isEmpty()) {
+                    classRows.addAll(train.classes.ifEmpty {
+                        MockData.trains(train.fromCode, train.toCode).firstOrNull()?.classes.orEmpty()
+                    }.filter { it.code in classes })
+                    isOfflineHint = true
+                    availError = "Live availability is unavailable. Showing demo availability."
+                }
+            } finally {
+                if (request == availabilityVersion) availLoading = false
             }
         }
     }
 
     fun loadVacancyChart(cls: TrainClassAvail) {
+        vacancyJob?.cancel()
+        val request = ++vacancyVersion
         selectedTravelClass = cls
         val train = selectedTrain ?: return
-        viewModelScope.launch {
-            val result = trainRepo.getVacancy(
-                train.number, train.fromCode, train.toCode,
-                toApiDate(journeyDate), cls.code, quotaCode()
-            )
-            result.onSuccess { vacancy = it }
-                .onFailure { availError = it.message }
+        val date = journeyDate
+        val quota = quotaCode()
+        vacancy = null
+        vacancyError = null
+        vacancyLoading = true
+        vacancyJob = viewModelScope.launch {
+            try {
+                val result = trainRepo.getVacancy(
+                    train.number, train.fromCode, train.toCode, toApiDate(date), cls.code, quota
+                )
+                if (request != vacancyVersion || selectedTrain != train || selectedTravelClass != cls ||
+                    date != journeyDate || quota != quotaCode()) return@launch
+                result.onSuccess { result ->
+                    vacancy = result
+                    selectedTravelClass = cls.copy(fare = result.fare, status = result.status)
+                }.onFailure { vacancyError = it.message ?: "Could not load availability. Try again." }
+            } finally {
+                if (request == vacancyVersion) vacancyLoading = false
+            }
         }
     }
 
@@ -962,22 +1042,33 @@ class AppViewModel : ViewModel() {
         }
     }
 
-    fun searchStations(query: String) {
-        viewModelScope.launch {
-            val found = trainRepo.searchStations(query)
-            stationSuggestions.clear()
-            if (found.isNotEmpty()) {
-                stationSuggestions.addAll(found)
-            } else if (query.length >= 2) {
-                // Offline fallback from MockData
-                val q = query.lowercase()
-                stationSuggestions.addAll(
-                    MockData.stations.filter {
-                        it.code.lowercase().contains(q) || it.name.lowercase().contains(q)
-                    }.take(20)
-                )
-            }
+    fun searchStations(query: String, field: String = "from") {
+        val normalized = query.trim()
+        if (normalized == lastStationQuery && field == stationSuggestionField) return
+        stationSearchJob?.cancel()
+        val request = ++stationSearchVersion
+        lastStationQuery = normalized
+        stationSuggestionField = field
+        stationSuggestions.clear()
+        if (normalized.length < 2) return
+        stationSearchJob = viewModelScope.launch {
+            delay(300)
+            val found = trainRepo.searchStations(normalized)
+            if (request != stationSearchVersion || field != stationSuggestionField) return@launch
+            stationSuggestions.addAll(found.ifEmpty {
+                val q = normalized.lowercase()
+                MockData.stations.filter {
+                    it.code.lowercase().contains(q) || it.name.lowercase().contains(q)
+                }.take(20)
+            })
         }
+    }
+
+    fun clearStationSuggestions() {
+        stationSearchJob?.cancel()
+        ++stationSearchVersion
+        lastStationQuery = ""
+        stationSuggestions.clear()
     }
 
     fun payableAmount(): Int {
@@ -986,13 +1077,20 @@ class AppViewModel : ViewModel() {
         return (cls.fare * passengers.size + ins).coerceAtLeast(1)
     }
 
-    fun confirmBooking(paymentId: String = "", orderId: String = ""): Booking {
-        val train = selectedTrain!!
-        val cls = selectedTravelClass!!
-        val pnr = (1..10).map { Random.nextInt(0, 10) }.joinToString("")
-        val amount = payableAmount()
+    suspend fun confirmBooking(
+        paymentId: String = "",
+        orderId: String = "",
+        expectedOwnerId: String
+    ): Booking {
+        val session = sessionStore.sessionFlow.first()
+        val activeOwner = AccountIdentity.ownerId(session.loggedIn, session.userId, session.email)
+        check(expectedOwnerId.isNotBlank() && expectedOwnerId == activeOwner && activeOwner == bookingOwnerId) {
+            "Your account changed during checkout. Sign in to the original account to continue."
+        }
+        val train = checkNotNull(selectedTrain) { "Choose your train again." }
+        val cls = checkNotNull(selectedTravelClass) { "Choose your travel class again." }
         val booking = Booking(
-            pnr = pnr,
+            pnr = (1..10).map { Random.nextInt(0, 10) }.joinToString(""),
             train = train,
             travelClass = cls,
             date = journeyDate,
@@ -1000,33 +1098,36 @@ class AppViewModel : ViewModel() {
             passengers = passengers.toList(),
             contact = mobile.ifBlank { userMobile },
             status = "PAID",
-            amount = amount,
+            amount = payableAmount(),
             fromName = stationName(fromCode),
             toName = stationName(toCode),
             paymentId = paymentId,
             orderId = orderId
         )
-        lastBooking = booking
-        viewModelScope.launch {
-            bookingRepo.save(booking)
-            sessionStore.saveLastJourney(
-                LastJourney(
-                    fromCode = fromCode,
-                    toCode = toCode,
-                    classCode = cls.code,
-                    quota = selectedQuota,
-                    trainNumber = train.number,
-                    trainName = train.name
-                )
-            )
-            sessionStore.savePassengers(passengers.toList())
-        }
+        val journey = LastJourney(
+            fromCode = fromCode,
+            toCode = toCode,
+            classCode = cls.code,
+            quota = selectedQuota,
+            trainNumber = train.number,
+            trainName = train.name
+        )
+        // Persist under the captured account before reporting a successful booking.
+        bookingRepo.save(expectedOwnerId, booking)
+        sessionStore.saveLastJourney(expectedOwnerId, journey)
+        sessionStore.savePassengers(expectedOwnerId, booking.passengers)
+        if (bookingOwnerId == expectedOwnerId) lastBooking = booking
         return booking
     }
 
     fun cancel(pnr: String) {
-        viewModelScope.launch { bookingRepo.cancel(pnr) }
-        if (lastBooking?.pnr == pnr) lastBooking = lastBooking?.copy(status = "CANCELLED")
+        val owner = bookingOwnerId.takeIf { it.isNotBlank() } ?: return
+        viewModelScope.launch {
+            bookingRepo.cancel(owner, pnr)
+            if (bookingOwnerId == owner && lastBooking?.pnr == pnr) {
+                lastBooking = lastBooking?.copy(status = "CANCELLED")
+            }
+        }
     }
 
     fun toggleSeat(id: String, label: String) {

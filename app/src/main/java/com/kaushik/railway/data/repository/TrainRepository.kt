@@ -7,53 +7,88 @@ import com.kaushik.railway.data.RunningStop
 import com.kaushik.railway.data.Station
 import com.kaushik.railway.data.Train
 import com.kaushik.railway.data.TrainClassAvail
+import com.kaushik.railway.data.TrainDataSource
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll
+import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.sync.Semaphore
+import kotlinx.coroutines.sync.withPermit
 import kotlinx.coroutines.withContext
+import java.util.Locale
 
-class TrainRepository {
+class TrainRepository(
+    private val source: TrainDataSource = RailKitClient,
+    nowMillis: () -> Long = { System.nanoTime() / 1_000_000 }
+) {
+    private data class AvailabilityKey(
+        val train: String, val from: String, val to: String,
+        val date: String, val coach: String, val quota: String
+    )
+    private val availability = ExpiringCache<AvailabilityKey, AvailabilityResult>(30_000, 128, nowMillis)
+    private val stations = ExpiringCache<String, List<Station>>(86_400_000, 64, nowMillis)
+    private val availabilitySlots = Semaphore(3)
 
     suspend fun searchTrains(from: String, to: String, date: String): Result<List<Train>> =
-        withContext(Dispatchers.IO) {
-            runCatching { RailKitClient.searchTrains(from, to, date) }
-        }
+        capture { source.searchTrains(from, to, date) }
 
+    /** Each class can succeed independently; callbacks execute in the caller's context. */
     suspend fun loadClassAvailability(
         train: Train,
         date: String,
         classes: List<String>,
-        quota: String
-    ): Result<List<TrainClassAvail>> = withContext(Dispatchers.IO) {
-        runCatching {
-            classes.map { cls ->
-                async {
-                    val av = RailKitClient.getAvailability(
-                        train.number, train.fromCode, train.toCode, date, cls, quota
-                    )
-                    TrainClassAvail(cls, className(cls), av.fare, av.status, 0)
-                }
-            }.awaitAll()
-        }
+        quota: String,
+        onClass: (String, Result<TrainClassAvail>) -> Unit = { _, _ -> }
+    ): Result<List<TrainClassAvail>> = coroutineScope {
+        val results = classes.distinct().map { cls ->
+            async {
+                val result = getVacancy(train.number, train.fromCode, train.toCode, date, cls, quota)
+                    .map { av -> TrainClassAvail(cls, className(cls), av.fare, av.status, 0) }
+                onClass(cls, result)
+                result
+            }
+        }.awaitAll()
+        val rows = results.mapNotNull { it.getOrNull() }
+        if (rows.isNotEmpty() || results.isEmpty()) Result.success(rows)
+        else Result.failure(results.first().exceptionOrNull() ?: IllegalStateException("Availability unavailable"))
     }
 
     suspend fun getVacancy(
         trainNo: String, from: String, to: String, date: String, coach: String, quota: String
-    ): Result<AvailabilityResult> = withContext(Dispatchers.IO) {
-        runCatching { RailKitClient.getAvailability(trainNo, from, to, date, coach, quota) }
+    ): Result<AvailabilityResult> {
+        val key = AvailabilityKey(trainNo, from.uppercase(Locale.ROOT), to.uppercase(Locale.ROOT),
+            date, coach.uppercase(Locale.ROOT), quota.uppercase(Locale.ROOT))
+        availability[key]?.let { return Result.success(it) }
+        return capture {
+            availabilitySlots.withPermit {
+                availability[key] ?: source.getAvailability(trainNo, from, to, date, coach, quota)
+                    .also { availability.put(key, it) }
+            }
+        }
     }
 
-    suspend fun checkPnr(pnr: String): Result<PnrResult> = withContext(Dispatchers.IO) {
-        runCatching { RailKitClient.checkPnr(pnr) }
-    }
+    suspend fun checkPnr(pnr: String): Result<PnrResult> = capture { source.checkPnr(pnr) }
 
     suspend fun trackTrain(trainNo: String, date: String): Result<List<RunningStop>> =
-        withContext(Dispatchers.IO) {
-            runCatching { RailKitClient.trackTrain(trainNo, date) }
-        }
+        capture { source.trackTrain(trainNo, date) }
 
-    suspend fun searchStations(query: String): List<Station> = withContext(Dispatchers.IO) {
-        runCatching { RailKitClient.searchStations(query) }.getOrDefault(emptyList())
+    suspend fun searchStations(query: String): List<Station> {
+        val normalized = query.trim().lowercase(Locale.ROOT)
+        if (normalized.length < 2) return emptyList()
+        stations[normalized]?.let { return it }
+        return capture { source.searchStations(normalized) }
+            .getOrDefault(emptyList()).also { if (it.isNotEmpty()) stations.put(normalized, it) }
+    }
+
+    private suspend fun <T> capture(block: suspend () -> T): Result<T> = withContext(Dispatchers.IO) {
+        try {
+            Result.success(block())
+        } catch (e: CancellationException) {
+            throw e
+        } catch (e: Exception) {
+            Result.failure(e)
+        }
     }
 
     private fun className(code: String) = when (code) {

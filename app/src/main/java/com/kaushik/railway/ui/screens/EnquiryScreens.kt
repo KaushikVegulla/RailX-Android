@@ -13,6 +13,7 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -44,9 +45,9 @@ fun PnrScreen(vm: AppViewModel, onBack: () -> Unit) {
                 pnr = value.filter { ch -> ch.isDigit() }.take(10)
             })
             Spacer(Modifier.height(12.dp))
-            OrangeButton("GET LIVE STATUS") { vm.lookupPnr(pnr) }
-            if (vm.pnrLoading) Text("Fetching from RailRadar…", color = Color.Gray, modifier = Modifier.padding(top = 8.dp))
-            vm.pnrError?.let { Text(it, color = Color.Red, fontSize = 13.sp, modifier = Modifier.padding(top = 8.dp)) }
+            OrangeButton("GET LIVE STATUS", enabled = pnr.length == 10 && !vm.pnrLoading) { vm.lookupPnr(pnr) }
+            if (vm.pnrLoading) Text("Fetching from RailRadar…", color = MaterialTheme.colorScheme.onSurfaceVariant, modifier = Modifier.padding(top = 8.dp))
+            vm.pnrError?.let { Text(it, color = MaterialTheme.colorScheme.error, fontSize = 13.sp, modifier = Modifier.padding(top = 8.dp)) }
             vm.pnrResult?.let { b ->
                 Spacer(Modifier.height(16.dp))
                 RailCard {
@@ -60,7 +61,7 @@ fun PnrScreen(vm: AppViewModel, onBack: () -> Unit) {
                         KeyValue("Chart", b.chart)
                         if (b.fare > 0) KeyValue("Fare", "₹${b.fare}")
                         Spacer(Modifier.height(8.dp))
-                        b.passengers.forEach { Text(it, fontSize = 13.sp, color = Color.DarkGray) }
+                        b.passengers.forEach { Text(it, fontSize = 13.sp, color = MaterialTheme.colorScheme.onSurfaceVariant) }
                     }
                 }
             }
@@ -77,9 +78,9 @@ fun RunningStatusScreen(vm: AppViewModel, onBack: () -> Unit) {
         ) {
             LabeledField("Train number", trainNo, onValue = { trainNo = it.filter { c -> c.isDigit() }.take(5) })
             Spacer(Modifier.height(12.dp))
-            OrangeButton("TRACK NOW") { vm.loadRunning(trainNo) }
-            if (vm.runningLoading) Text("Fetching live status…", color = Color.Gray, modifier = Modifier.padding(top = 8.dp))
-            vm.runningError?.let { Text(it, color = Color.Red, fontSize = 13.sp, modifier = Modifier.padding(top = 8.dp)) }
+            OrangeButton("TRACK NOW", enabled = trainNo.length == 5 && !vm.runningLoading) { vm.loadRunning(trainNo) }
+            if (vm.runningLoading) Text("Fetching live status…", color = MaterialTheme.colorScheme.onSurfaceVariant, modifier = Modifier.padding(top = 8.dp))
+            vm.runningError?.let { Text(it, color = MaterialTheme.colorScheme.error, fontSize = 13.sp, modifier = Modifier.padding(top = 8.dp)) }
             if (vm.runningNote.isNotBlank()) {
                 Spacer(Modifier.height(8.dp))
                 Text(vm.runningNote, fontWeight = FontWeight.Bold, color = Navy)
@@ -89,7 +90,7 @@ fun RunningStatusScreen(vm: AppViewModel, onBack: () -> Unit) {
                     Row(Modifier.fillMaxWidth()) {
                         Column(Modifier.weight(1f)) {
                             Text("${stop.station} (${stop.code})", fontWeight = FontWeight.SemiBold, color = Navy)
-                            Text("Arr ${stop.schArr}   Dep ${stop.schDep}", fontSize = 12.sp, color = Color.Gray)
+                            Text("Arr ${stop.schArr}   Dep ${stop.schDep}", fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
                             if (stop.delayMin != 0) {
                                 Text("Delay: ${stop.delayMin} min", fontSize = 12.sp, color = Orange)
                             }
@@ -161,7 +162,7 @@ fun ProfileScreen(
                         saved = true
                     }
                     if (saved) {
-                        Text("Profile updated", color = Color(0xFF2E7D32), fontSize = 13.sp, modifier = Modifier.padding(top = 8.dp))
+                        Text("Profile updated", color = com.kaushik.railway.ui.theme.Success, fontSize = 13.sp, modifier = Modifier.padding(top = 8.dp))
                     }
                 }
             }
@@ -175,7 +176,7 @@ fun ProfileScreen(
             OrangeButton("LOGOUT", onClick = onLogout)
             Text(
                 "RailX academic demo. Bookings are stored locally on this device.",
-                color = Color.Gray,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
                 fontSize = 12.sp,
                 modifier = Modifier.padding(top = 16.dp)
             )
@@ -194,7 +195,7 @@ fun MoreScreen(
 ) {
     Column(Modifier.fillMaxSize().background(Color.Transparent).padding(16.dp)) {
         Text("More", fontSize = 24.sp, fontWeight = FontWeight.Bold, color = Navy)
-        Text("RailX  •  academic demo", color = Color.Gray, fontSize = 13.sp)
+        Text("RailX  •  academic demo", color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 13.sp)
         Spacer(Modifier.height(12.dp))
         listOf(
             "PNR enquiry" to onPnr,
@@ -212,7 +213,7 @@ fun MoreScreen(
         }
         Text(
             "Inspired by RailOne (CRIS). Academic demo only — not an official Indian Railways app.",
-            color = Color.Gray,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
             fontSize = 12.sp,
             modifier = Modifier.padding(top = 16.dp)
         )
