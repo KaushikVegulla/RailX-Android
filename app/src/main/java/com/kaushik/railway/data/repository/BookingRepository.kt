@@ -7,7 +7,11 @@ import com.kaushik.railway.data.TrainClassAvail
 import com.kaushik.railway.data.db.AppDatabase
 import com.kaushik.railway.data.db.BookingEntity
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.flowOf
+import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.withContext
 import org.json.JSONArray
 import org.json.JSONObject
 
@@ -15,18 +19,25 @@ class BookingRepository(private val db: AppDatabase) {
 
     private val dao = db.bookingDao()
 
-    fun observeBookings(): Flow<List<Booking>> =
-        dao.getAllBookings().map { list -> list.map { it.toDomain() } }
+    fun observeBookings(ownerId: String): Flow<List<Booking>> =
+        if (ownerId.isBlank()) flowOf(emptyList()) else
+            dao.getAllBookings(ownerId)
+                .map { list -> list.map { it.toDomain() } }
+                .flowOn(Dispatchers.Default)
 
-    suspend fun save(booking: Booking) {
-        dao.insert(booking.toEntity())
+    suspend fun save(ownerId: String, booking: Booking) = withContext(Dispatchers.Default) {
+        require(ownerId.isNotBlank()) { "Sign in before saving a booking" }
+        dao.insert(booking.toEntity(ownerId))
     }
 
-    suspend fun cancel(pnr: String) {
-        dao.updateStatus(pnr, "CANCELLED")
+    suspend fun cancel(ownerId: String, pnr: String) {
+        require(ownerId.isNotBlank()) { "Sign in before cancelling a booking" }
+        dao.updateStatus(ownerId, pnr, "CANCELLED")
     }
 
-    suspend fun getByPnr(pnr: String): Booking? = dao.getByPnr(pnr)?.toDomain()
+    suspend fun getByPnr(ownerId: String, pnr: String): Booking? = withContext(Dispatchers.Default) {
+        if (ownerId.isBlank()) null else dao.getByPnr(ownerId, pnr)?.toDomain()
+    }
 
     private fun BookingEntity.toDomain(): Booking {
         val pax = mutableListOf<Passenger>()
@@ -82,7 +93,7 @@ class BookingRepository(private val db: AppDatabase) {
         )
     }
 
-    private fun Booking.toEntity(): BookingEntity {
+    private fun Booking.toEntity(ownerId: String): BookingEntity {
         val arr = JSONArray()
         passengers.forEach { p ->
             arr.put(
@@ -95,6 +106,7 @@ class BookingRepository(private val db: AppDatabase) {
             )
         }
         return BookingEntity(
+            ownerId = ownerId,
             pnr = pnr,
             trainNumber = train.number,
             trainName = train.name,

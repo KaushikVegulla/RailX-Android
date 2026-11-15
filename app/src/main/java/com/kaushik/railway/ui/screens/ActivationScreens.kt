@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -68,7 +69,7 @@ fun ProfileActivationScreen(vm: AppViewModel, onDone: () -> Unit, onLater: () ->
                         ChoiceField("Marital status", marital, IrctcRules.maritalStatuses) { marital = it }
                         Spacer(Modifier.height(8.dp))
                         LabeledField("Nationality", nationality) { nationality = it }
-                        error?.let { Text(it, color = Color.Red, fontSize = 13.sp, modifier = Modifier.padding(top = 8.dp)) }
+                        error?.let { Text(it, color = MaterialTheme.colorScheme.error, fontSize = 13.sp, modifier = Modifier.padding(top = 8.dp)) }
                         Spacer(Modifier.height(16.dp))
                         OrangeButton("CONTINUE") {
                             error = when {
@@ -107,7 +108,7 @@ fun ProfileActivationScreen(vm: AppViewModel, onDone: () -> Unit, onLater: () ->
                             text = "I accept the RailX demo terms and confirm these details match my Govt. ID.",
                             onChange = { terms = it }
                         )
-                        error?.let { Text(it, color = Color.Red, fontSize = 13.sp, modifier = Modifier.padding(top = 8.dp)) }
+                        error?.let { Text(it, color = MaterialTheme.colorScheme.error, fontSize = 13.sp, modifier = Modifier.padding(top = 8.dp)) }
                         Spacer(Modifier.height(16.dp))
                         OrangeButton(if (busy) "PLEASE WAIT" else "SUBMIT", enabled = !busy) {
                             val draft = ProfileDraft(
@@ -186,7 +187,7 @@ fun MpinScreen(vm: AppViewModel, onDone: () -> Unit) {
                         Text(
                             if (canBio) "Fingerprint or face. MPIN stays the fallback."
                             else "This device has no fingerprint or face unlock.",
-                            color = Color.Gray,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
                             fontSize = 12.sp
                         )
                     }
@@ -196,7 +197,7 @@ fun MpinScreen(vm: AppViewModel, onDone: () -> Unit) {
                         enabled = canBio
                     )
                 }
-                error?.let { Text(it, color = Color.Red, fontSize = 13.sp, modifier = Modifier.padding(top = 8.dp)) }
+                error?.let { Text(it, color = MaterialTheme.colorScheme.error, fontSize = 13.sp, modifier = Modifier.padding(top = 8.dp)) }
                 Spacer(Modifier.height(16.dp))
                 OrangeButton(if (busy) "PLEASE WAIT" else "SUBMIT", enabled = !busy) {
                     busy = true
@@ -272,7 +273,7 @@ fun UnlockScreen(vm: AppViewModel, onUnlocked: () -> Unit) {
                     LabeledField("MPIN", pin, isPassword = true, keyboardType = KeyboardType.NumberPassword) {
                         pin = it.filter { ch -> ch.isDigit() }.take(4)
                     }
-                    error?.let { Text(it, color = Color.Red, fontSize = 13.sp, modifier = Modifier.padding(top = 8.dp)) }
+                    error?.let { Text(it, color = MaterialTheme.colorScheme.error, fontSize = 13.sp, modifier = Modifier.padding(top = 8.dp)) }
                     Spacer(Modifier.height(16.dp))
                     OrangeButton("UNLOCK") {
                         if (vm.verifyMpin(pin)) {
@@ -313,7 +314,7 @@ fun AadhaarEnableScreen(vm: AppViewModel, onDone: () -> Unit, onBack: () -> Unit
                         Spacer(Modifier.height(8.dp))
                         Text(
                             "The full number stays in this form until you submit. Only the last 4 digits are saved, and UIDAI is not contacted.",
-                            color = Color.Gray,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
                             fontSize = 14.sp
                         )
                         Spacer(Modifier.height(16.dp))
@@ -327,7 +328,7 @@ fun AadhaarEnableScreen(vm: AppViewModel, onDone: () -> Unit, onBack: () -> Unit
                 RailCard {
                     ColumnBlock {
                         ChoiceField("Authentication type", kind, IrctcRules.authTypes) { kind = it }
-                        error?.let { Text(it, color = Color.Red, fontSize = 13.sp, modifier = Modifier.padding(top = 8.dp)) }
+                        error?.let { Text(it, color = MaterialTheme.colorScheme.error, fontSize = 13.sp, modifier = Modifier.padding(top = 8.dp)) }
                         Spacer(Modifier.height(16.dp))
                         OrangeButton("CONTINUE") {
                             error = when (kind) {
@@ -353,7 +354,7 @@ fun AadhaarEnableScreen(vm: AppViewModel, onDone: () -> Unit, onBack: () -> Unit
                             text = "I confirm this number is mine and I agree to link it in this academic demo so Tatkal search can continue.",
                             onChange = { consent = it }
                         )
-                        error?.let { Text(it, color = Color.Red, fontSize = 13.sp, modifier = Modifier.padding(top = 8.dp)) }
+                        error?.let { Text(it, color = MaterialTheme.colorScheme.error, fontSize = 13.sp, modifier = Modifier.padding(top = 8.dp)) }
                         Spacer(Modifier.height(16.dp))
                         OrangeButton(if (busy) "PLEASE WAIT" else "SUBMIT", enabled = !busy) {
                             val check = IrctcRules.checkIdentity(kind, number, consent)
@@ -396,7 +397,7 @@ fun AadhaarEnableScreen(vm: AppViewModel, onDone: () -> Unit, onBack: () -> Unit
                         Spacer(Modifier.height(8.dp))
                         Text(
                             "UIDAI was not contacted. Train search in this app stays a local demo.",
-                            color = Color.Gray,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
                             fontSize = 14.sp
                         )
                         Spacer(Modifier.height(16.dp))

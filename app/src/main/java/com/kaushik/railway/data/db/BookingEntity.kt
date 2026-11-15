@@ -1,9 +1,11 @@
 package com.kaushik.railway.data.db
 
 import androidx.room.Entity
+import androidx.room.ColumnInfo
+import androidx.room.Index
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "bookings")
+@Entity(tableName = "bookings", indices = [Index(value = ["ownerId", "createdAt"])])
 data class BookingEntity(
     @PrimaryKey val pnr: String,
     val trainNumber: String,
@@ -23,5 +25,7 @@ data class BookingEntity(
     val amount: Int,
     val paymentId: String = "",
     val orderId: String = "",
-    val createdAt: Long = System.currentTimeMillis()
+    val createdAt: Long = System.currentTimeMillis(),
+    // Empty identifies pre-migration records whose owner cannot be safely inferred.
+    @ColumnInfo(defaultValue = "''") val ownerId: String = ""
 )

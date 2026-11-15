@@ -4,26 +4,23 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import androidx.room.Update
 import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface BookingDao {
-    @Query("SELECT * FROM bookings ORDER BY createdAt DESC")
-    fun getAllBookings(): Flow<List<BookingEntity>>
+    @Query("SELECT * FROM bookings WHERE ownerId = :ownerId AND ownerId != '' ORDER BY createdAt DESC")
+    fun getAllBookings(ownerId: String): Flow<List<BookingEntity>>
 
-    @Query("SELECT * FROM bookings WHERE pnr = :pnr LIMIT 1")
-    suspend fun getByPnr(pnr: String): BookingEntity?
+    @Query("SELECT * FROM bookings WHERE ownerId = :ownerId AND ownerId != '' AND pnr = :pnr LIMIT 1")
+    suspend fun getByPnr(ownerId: String, pnr: String): BookingEntity?
 
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    // A duplicate PNR must never replace another account's record.
+    @Insert(onConflict = OnConflictStrategy.ABORT)
     suspend fun insert(booking: BookingEntity)
 
-    @Update
-    suspend fun update(booking: BookingEntity)
+    @Query("UPDATE bookings SET status = :status WHERE ownerId = :ownerId AND ownerId != '' AND pnr = :pnr")
+    suspend fun updateStatus(ownerId: String, pnr: String, status: String)
 
-    @Query("UPDATE bookings SET status = :status WHERE pnr = :pnr")
-    suspend fun updateStatus(pnr: String, status: String)
-
-    @Query("DELETE FROM bookings WHERE pnr = :pnr")
-    suspend fun delete(pnr: String)
+    @Query("DELETE FROM bookings WHERE ownerId = :ownerId AND ownerId != '' AND pnr = :pnr")
+    suspend fun delete(ownerId: String, pnr: String)
 }

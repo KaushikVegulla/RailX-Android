@@ -1,6 +1,12 @@
 package com.kaushik.railway.data
 
 import com.kaushik.railway.BuildConfig
+import kotlinx.coroutines.suspendCancellableCoroutine
+import okhttp3.Call
+import okhttp3.Callback
+import java.io.IOException
+import kotlin.coroutines.resume
+import kotlin.coroutines.resumeWithException
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.Request
@@ -18,7 +24,7 @@ import java.util.concurrent.TimeUnit
  * API key is injected via BuildConfig (from local.properties).
  * Never hardcode production keys in source.
  */
-object RailKitClient {
+object RailKitClient : TrainDataSource {
     private const val BASE = "https://api.railradar.in/v1"
 
     private val http = OkHttpClient.Builder()
@@ -27,7 +33,7 @@ object RailKitClient {
         .addInterceptor(AuthInterceptor())
         .build()
 
-    fun searchTrains(from: String, to: String, date: String): List<Train> {
+    override suspend fun searchTrains(from: String, to: String, date: String): List<Train> {
         val iso = isoDate(date)
         val src = from.uppercase()
         val dst = to.uppercase()
@@ -63,7 +69,7 @@ object RailKitClient {
         }
     }
 
-    fun getAvailability(
+    override suspend fun getAvailability(
         trainNo: String,
         from: String,
         to: String,
@@ -109,7 +115,7 @@ object RailKitClient {
         )
     }
 
-    fun fareLookup(trainNo: String, from: String, to: String, date: String, coach: String, quota: String): Int {
+    suspend fun fareLookup(trainNo: String, from: String, to: String, date: String, coach: String, quota: String): Int {
         val iso = isoDate(date)
         val no = padTrain(trainNo)
         val q =
@@ -123,7 +129,7 @@ object RailKitClient {
         return data.optJSONObject("breakdown")?.optInt("totalFare", 0) ?: 0
     }
 
-    fun checkPnr(pnr: String): PnrResult {
+    override suspend fun checkPnr(pnr: String): PnrResult {
         val digits = pnr.filter { it.isDigit() }
         if (digits.length != 10) throw IllegalStateException("PNR must be 10 digits")
         val root = getJson("/pnr/$digits")
@@ -169,7 +175,7 @@ object RailKitClient {
         )
     }
 
-    fun trackTrain(trainNo: String, date: String): List<RunningStop> {
+    override suspend fun trackTrain(trainNo: String, date: String): List<RunningStop> {
         val no = padTrain(trainNo)
         val root = getJson("/trains/$no/live?haltsOnly=true")
         if (!root.optBoolean("success", false)) {
@@ -199,7 +205,7 @@ object RailKitClient {
         }
     }
 
-    fun searchStations(query: String): List<Station> {
+    override suspend fun searchStations(query: String): List<Station> {
         if (query.length < 2) return emptyList()
         val root = getJson("/lookup/search/stations?q=${enc(query)}&limit=20")
         if (!root.optBoolean("success", false)) return emptyList()
@@ -216,22 +222,39 @@ object RailKitClient {
         }
     }
 
-    private fun getJson(pathAndQuery: String): JSONObject {
+    private suspend fun getJson(pathAndQuery: String): JSONObject {
         val req = Request.Builder().url(BASE + pathAndQuery).get().build()
-        http.newCall(req).execute().use { resp ->
-            val body = resp.body?.string().orEmpty()
-            val parsed = try {
-                JSONObject(body)
-            } catch (_: Exception) {
-                JSONObject().put("success", false).put("error", "Invalid response (${resp.code}): ${body.take(120)}")
-            }
-            if (!parsed.has("success") && resp.isSuccessful) parsed.put("success", true)
-            if (!resp.isSuccessful && parsed.optBoolean("success", true)) {
-                parsed.put("success", false)
-                if (!parsed.has("error")) parsed.put("error", "HTTP ${resp.code}")
-            }
-            return parsed
+        // Consume and close the body on OkHttp's worker thread, including cancellation races.
+        val (body, code) = suspendCancellableCoroutine<Pair<String, Int>> { continuation ->
+            val call = http.newCall(req)
+            continuation.invokeOnCancellation { call.cancel() }
+            call.enqueue(object : Callback {
+                override fun onFailure(call: Call, e: IOException) {
+                    if (continuation.isActive) continuation.resumeWithException(e)
+                }
+
+                override fun onResponse(call: Call, response: Response) {
+                    try {
+                        val value = response.use { it.body?.string().orEmpty() to it.code }
+                        if (continuation.isActive) continuation.resume(value)
+                    } catch (e: Exception) {
+                        if (continuation.isActive) continuation.resumeWithException(e)
+                    }
+                }
+            })
         }
+        val parsed = try {
+            JSONObject(body)
+        } catch (_: Exception) {
+            JSONObject().put("success", false).put("error", "Invalid response ($code)")
+        }
+        val successful = code in 200..299
+        if (!parsed.has("success") && successful) parsed.put("success", true)
+        if (!successful) {
+            parsed.put("success", false)
+            if (!parsed.has("error")) parsed.put("error", "HTTP $code")
+        }
+        return parsed
     }
 
     private fun errorMessage(root: JSONObject, fallback: String): String {
@@ -312,7 +335,7 @@ object RailKitClient {
         override fun intercept(chain: Interceptor.Chain): Response {
             val key = BuildConfig.RAILRADAR_API_KEY
             if (key.isBlank() || key == "YOUR_RAILRADAR_API_KEY") {
-                throw IllegalStateException(
+                throw IOException(
                     "RailRadar API key not configured. Add railradar.api.key=rg_xxxxx to local.properties"
                 )
             }

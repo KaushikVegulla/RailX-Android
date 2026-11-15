@@ -8,6 +8,12 @@ import android.content.ContextWrapper
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.navigationBarsPadding
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.horizontalScroll
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -19,6 +25,11 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
+import androidx.compose.material3.TextButton
+import androidx.compose.material3.FilterChip
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
@@ -31,6 +42,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -59,10 +71,15 @@ import com.kaushik.railway.ui.theme.Orange
 
 @Composable
 fun PassengerScreen(vm: AppViewModel, onBack: () -> Unit, onContinue: () -> Unit) {
-    Scaffold(topBar = { RailTopBar("Passenger details", onBack) }) { pad ->
+    val passengersValid = vm.passengers.all { it.name.isNotBlank() && (it.age.toIntOrNull() ?: 0) in 1..120 }
+    Scaffold(
+        topBar = { RailTopBar("Passenger details", onBack) },
+        bottomBar = { BookingFooter(vm.payableAmount(), "Review journey", passengersValid, onContinue) }
+    ) { pad ->
         Column(
             Modifier.fillMaxSize().padding(pad).background(Color.Transparent).verticalScroll(rememberScrollState()).padding(16.dp)
         ) {
+            BookingSteps(0)
             if (vm.savedPassengers.isNotEmpty()) {
                 RailCard(Modifier.padding(bottom = 12.dp)) {
                     Column {
@@ -70,7 +87,7 @@ fun PassengerScreen(vm: AppViewModel, onBack: () -> Unit, onContinue: () -> Unit
                         Text(
                             "${vm.savedPassengers.size} passenger(s) from your last booking",
                             fontSize = 12.sp,
-                            color = Color.Gray
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
                         )
                         Spacer(Modifier.height(8.dp))
                         OrangeButton("LOAD SAVED PASSENGERS") { vm.loadSavedPassengers() }
@@ -80,7 +97,7 @@ fun PassengerScreen(vm: AppViewModel, onBack: () -> Unit, onContinue: () -> Unit
             Text(
                 "Demo booking — not an official IRCTC ticket. For learning / portfolio use only.",
                 fontSize = 11.sp,
-                color = Color.Gray,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
                 modifier = Modifier.padding(bottom = 8.dp)
             )
             vm.passengers.forEachIndexed { i, p ->
@@ -99,12 +116,12 @@ fun PassengerScreen(vm: AppViewModel, onBack: () -> Unit, onContinue: () -> Unit
                         LabeledField("Berth preference", p.berth, onValue = { value -> vm.passengers[i] = p.copy(berth = value) })
                         Text(
                             "Tap options below or type. Preferred: Lower / Middle / Upper / Side Lower / Side Upper",
-                            color = Color.Gray,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
                             fontSize = 11.sp,
                             modifier = Modifier.padding(top = 4.dp)
                         )
                         Row(
-                            Modifier.fillMaxWidth().padding(top = 6.dp),
+                            Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()).padding(top = 6.dp),
                             horizontalArrangement = Arrangement.spacedBy(6.dp)
                         ) {
                             listOf("Lower", "Middle", "Upper", "Side Lower").forEach { opt ->
@@ -136,7 +153,7 @@ fun PassengerScreen(vm: AppViewModel, onBack: () -> Unit, onContinue: () -> Unit
             Spacer(Modifier.height(8.dp))
             LabeledField("Email", vm.email, onValue = { vm.email = it })
             Spacer(Modifier.height(16.dp))
-            OrangeButton("CONTINUE") { onContinue() }
+            if (!passengersValid) Text("Enter a name and an age from 1 to 120 for each passenger.", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
         }
     }
 }
@@ -147,10 +164,14 @@ fun ReviewScreen(vm: AppViewModel, onBack: () -> Unit, onPay: () -> Unit) {
     val cls = vm.selectedTravelClass ?: return
     val ins = if (vm.insurance) vm.passengers.size * 15 else 0
     val total = cls.fare * vm.passengers.size + ins
-    Scaffold(topBar = { RailTopBar("Review booking", onBack) }) { pad ->
+    Scaffold(
+        topBar = { RailTopBar("Review booking", onBack) },
+        bottomBar = { BookingFooter(total, "Continue to payment", total > 0, onPay) }
+    ) { pad ->
         Column(
             Modifier.fillMaxSize().padding(pad).background(Color.Transparent).verticalScroll(rememberScrollState()).padding(16.dp)
         ) {
+            BookingSteps(1)
             RailCard {
                 Column {
                     SectionTitle("${train.number} ${train.name}")
@@ -183,7 +204,7 @@ fun ReviewScreen(vm: AppViewModel, onBack: () -> Unit, onPay: () -> Unit) {
                 }
             }
             Spacer(Modifier.height(16.dp))
-            OrangeButton("PROCEED TO PAY ₹$total") { onPay() }
+            Text("Review your journey and passenger details before payment.", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
         }
     }
 }
@@ -206,7 +227,8 @@ fun PaymentScreen(vm: AppViewModel, onBack: () -> Unit, onSuccess: () -> Unit) {
 
     Scaffold(topBar = { RailTopBar("Payment", onBack) }) { pad ->
         Column(Modifier.fillMaxSize().padding(pad).background(Color.Transparent).padding(16.dp)) {
-            Text("Amount payable", color = Color.Gray)
+            BookingSteps(2)
+            Text("Amount payable", color = MaterialTheme.colorScheme.onSurfaceVariant)
             Text("₹$total", fontSize = 32.sp, fontWeight = FontWeight.Bold, color = Navy)
             Spacer(Modifier.height(16.dp))
             Text("Pay using Razorpay (test)", fontWeight = FontWeight.SemiBold, color = Navy)
@@ -230,8 +252,8 @@ fun PaymentScreen(vm: AppViewModel, onBack: () -> Unit, onSuccess: () -> Unit) {
                     Text(label, fontWeight = if (selected) FontWeight.Bold else FontWeight.Medium, color = Navy)
                 }
             }
-            error?.let { Text(it, color = Color.Red, fontSize = 13.sp, modifier = Modifier.padding(vertical = 8.dp)) }
-            if (busy) Text("Opening Razorpay checkout…", color = Color.Gray, fontSize = 13.sp)
+            error?.let { Text(it, color = MaterialTheme.colorScheme.error, fontSize = 13.sp, modifier = Modifier.padding(vertical = 8.dp)) }
+            if (busy) Text("Opening Razorpay checkout…", color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 13.sp)
             Spacer(Modifier.height(12.dp))
             OrangeButton(if (busy) "PLEASE WAIT" else "PAY ₹$total", enabled = !busy) {
                 val host = activity
@@ -239,16 +261,22 @@ fun PaymentScreen(vm: AppViewModel, onBack: () -> Unit, onSuccess: () -> Unit) {
                     error = "Unable to open Razorpay checkout from this screen."
                     return@OrangeButton
                 }
+                val paymentOwner = vm.bookingOwnerId
+                if (paymentOwner.isBlank()) {
+                    error = "Sign in before starting payment."
+                    return@OrangeButton
+                }
                 busy = true
                 error = null
                 PaymentBridge.onSuccess = { payId, orderId, sig ->
                     scope.launch {
                         try {
+                            check(vm.bookingOwnerId == paymentOwner) { "Your account changed. Sign in to the account that started payment." }
                             withContext(Dispatchers.IO) {
                                 vm.refreshPaymentSession()
                                 PaymentApi.verifyPayment(payId, orderId, sig)
                             }
-                            vm.confirmBooking(payId, orderId)
+                            vm.confirmBooking(payId, orderId, expectedOwnerId = paymentOwner)
                             busy = false
                             onSuccess()
                         } catch (e: Exception) {
@@ -296,6 +324,7 @@ fun PaymentScreen(vm: AppViewModel, onBack: () -> Unit, onSuccess: () -> Unit) {
                             )
                         }
                         withContext(Dispatchers.Main) {
+                            check(vm.bookingOwnerId == paymentOwner) { "Your account changed. Start payment again." }
                             val checkout = Checkout()
                             checkout.setKeyID(order.keyId)
                             checkout.open(host, options)
@@ -308,7 +337,7 @@ fun PaymentScreen(vm: AppViewModel, onBack: () -> Unit, onSuccess: () -> Unit) {
             }
             Text(
                 "Razorpay test mode. Card 4111 1111 1111 1111, any future expiry, any CVV. UPI: success@razorpay",
-                color = Color.Gray,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
                 fontSize = 12.sp,
                 modifier = Modifier.padding(top = 8.dp)
             )
@@ -349,14 +378,14 @@ fun TicketScreen(vm: AppViewModel, onHome: () -> Unit) {
             Modifier.fillMaxSize().padding(pad).background(Color.Transparent).verticalScroll(rememberScrollState()).padding(16.dp)
         ) {
             if (b == null) {
-                Text("No ticket yet. Complete a booking first.", color = Color.Gray)
+                Text("No ticket yet. Complete a booking first.", color = MaterialTheme.colorScheme.onSurfaceVariant)
                 Spacer(Modifier.height(16.dp))
                 OrangeButton("BACK TO HOME") { onHome() }
             } else {
                 Text(
                     "Demo e-ticket — not valid for travel on Indian Railways.",
                     fontSize = 11.sp,
-                    color = Color.Gray,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
                     modifier = Modifier.padding(bottom = 8.dp)
                 )
                 RailCard {
@@ -410,57 +439,92 @@ fun TicketScreen(vm: AppViewModel, onHome: () -> Unit) {
 
 @Composable
 fun BookingsScreen(vm: AppViewModel, onBack: () -> Unit) {
-    var confirmPnr by remember { mutableStateOf<String?>(null) }
-    Scaffold(topBar = { RailTopBar("My bookings", onBack) }) { pad ->
-        Column(
-            Modifier.fillMaxSize().padding(pad).background(Color.Transparent)
-                .verticalScroll(rememberScrollState()).padding(16.dp)
+    var confirmPnr by rememberSaveable(vm.bookingOwnerId) { mutableStateOf<String?>(null) }
+    var showCancelled by rememberSaveable(vm.bookingOwnerId) { mutableStateOf(false) }
+    val bookings = vm.bookings.filter { (it.status == "CANCELLED") == showCancelled }
+    Scaffold(topBar = { RailTopBar("My journeys", onBack) }) { pad ->
+        LazyColumn(
+            Modifier.fillMaxSize().padding(pad),
+            contentPadding = PaddingValues(20.dp),
+            verticalArrangement = Arrangement.spacedBy(14.dp)
         ) {
-            if (vm.bookings.isEmpty()) {
-                Text("No bookings yet. Search trains to book a ticket.", color = Color.Gray)
-            } else {
-                Text("${vm.bookings.size} booking(s)", color = Color.Gray, fontSize = 13.sp)
-                Spacer(Modifier.height(8.dp))
-                vm.bookings.forEach { b ->
-                    RailCard(Modifier.padding(bottom = 10.dp)) {
-                        Column {
-                            Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-                                Text("PNR ${b.pnr}", fontWeight = FontWeight.Bold, color = Orange)
-                                Text(
-                                    b.status,
-                                    fontWeight = FontWeight.Bold,
-                                    color = if (b.status == "CANCELLED") Color.Gray else Navy
-                                )
-                            }
-                            Text("${b.train.number} ${b.train.name}", color = Navy)
-                            Text("${b.fromName} → ${b.toName}", fontSize = 13.sp, color = Color.Gray)
-                            Text("${b.date}  •  ${b.travelClass.code}  •  ₹${b.amount}", fontSize = 13.sp)
-                            if (b.paymentId.isNotBlank()) {
-                                Text("Payment: ${b.paymentId.take(12)}…", fontSize = 11.sp, color = Color.Gray)
-                            }
-                            if (b.status != "CANCELLED") {
-                                Spacer(Modifier.height(8.dp))
-                                if (confirmPnr == b.pnr) {
-                                    Text("Cancel this ticket? (demo — no real refund)", fontSize = 12.sp, color = Color.Gray)
-                                    Spacer(Modifier.height(6.dp))
-                                    Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                                        OutlinedButton(onClick = { vm.cancel(b.pnr); confirmPnr = null }) {
-                                            Text("Yes, cancel", color = Color.Red)
-                                        }
-                                        OutlinedButton(onClick = { confirmPnr = null }) {
-                                            Text("Keep ticket")
-                                        }
-                                    }
-                                } else {
-                                    OutlinedButton(onClick = { confirmPnr = b.pnr }) {
-                                        Text("Cancel ticket")
-                                    }
-                                }
-                            }
+            item {
+                Text("Your travel collection", style = MaterialTheme.typography.headlineSmall, fontWeight = FontWeight.Bold)
+                Text("Bookings saved for this account", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                Row(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.padding(top = 10.dp)) {
+                    FilterChip(selected = !showCancelled, onClick = { showCancelled = false }, label = { Text("Booked") })
+                    FilterChip(selected = showCancelled, onClick = { showCancelled = true }, label = { Text("Cancelled") })
+                }
+            }
+            if (bookings.isEmpty()) {
+                item {
+                    RailCard {
+                        Column(Modifier.padding(vertical = 12.dp)) {
+                            Text(if (showCancelled) "No cancelled journeys" else "Your next journey starts here", style = MaterialTheme.typography.titleMedium)
+                            Text(if (showCancelled) "Cancelled demo bookings will appear here." else "Search for a train to create your first demo booking.", modifier = Modifier.padding(top = 8.dp), style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
                         }
                     }
                 }
             }
+            items(bookings, key = { it.pnr }) { b ->
+                RailCard {
+                    Column {
+                        Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
+                            Text(b.train.number, color = MaterialTheme.colorScheme.primary, style = MaterialTheme.typography.labelMedium)
+                            Text(if (b.status == "CANCELLED") "Cancelled" else b.status, style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                        }
+                        Text(b.train.name, style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.SemiBold)
+                        Text("${b.fromName} → ${b.toName}", modifier = Modifier.padding(top = 12.dp), style = MaterialTheme.typography.bodyMedium)
+                        Text("${b.date} · ${b.travelClass.code}", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                        Row(Modifier.fillMaxWidth().padding(top = 14.dp), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) {
+                            Text("PNR ${b.pnr}", style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                            Text("₹${b.amount}", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
+                        }
+                        if (b.status != "CANCELLED") {
+                            TextButton(onClick = { confirmPnr = b.pnr }) { Text("Cancel booking") }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    val cancellation = vm.bookings.firstOrNull { it.pnr == confirmPnr && it.status != "CANCELLED" }
+    if (cancellation != null) {
+        AlertDialog(
+            onDismissRequest = { confirmPnr = null },
+            title = { Text("Cancel this journey?") },
+            text = { Text("${cancellation.train.name} · ${cancellation.date}\nThis cancels the local demo booking. No real refund is issued.") },
+            confirmButton = { TextButton(onClick = { vm.cancel(cancellation.pnr); confirmPnr = null }) { Text("Cancel booking", color = MaterialTheme.colorScheme.error) } },
+            dismissButton = { TextButton(onClick = { confirmPnr = null }) { Text("Keep journey") } }
+        )
+    }
+}
+
+@Composable
+private fun BookingSteps(current: Int) {
+    Row(Modifier.fillMaxWidth().padding(bottom = 20.dp), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+        listOf("Passengers", "Review", "Payment").forEachIndexed { index, label ->
+            Surface(
+                modifier = Modifier.weight(1f),
+                shape = RoundedCornerShape(12.dp),
+                color = if (index == current) MaterialTheme.colorScheme.primaryContainer else MaterialTheme.colorScheme.surfaceVariant
+            ) {
+                Text("${index + 1} · $label", modifier = Modifier.padding(horizontal = 8.dp, vertical = 10.dp), style = MaterialTheme.typography.labelSmall,
+                    color = if (index == current) MaterialTheme.colorScheme.onPrimaryContainer else MaterialTheme.colorScheme.onSurfaceVariant)
+            }
+        }
+    }
+}
+
+@Composable
+private fun BookingFooter(amount: Int, label: String, enabled: Boolean, onContinue: () -> Unit) {
+    Surface(color = MaterialTheme.colorScheme.surface, tonalElevation = 2.dp) {
+        Row(Modifier.fillMaxWidth().navigationBarsPadding().padding(horizontal = 20.dp, vertical = 12.dp), verticalAlignment = Alignment.CenterVertically) {
+            Column(Modifier.padding(end = 20.dp)) {
+                Text("Total", style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                Text("₹$amount", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
+            }
+            OrangeButton(label, modifier = Modifier.weight(1f), enabled = enabled, onClick = onContinue)
         }
     }
 }

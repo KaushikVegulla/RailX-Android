@@ -2,7 +2,7 @@ package com.kaushik.railway.ui.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
-import androidx.compose.foundation.clickable
+import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -14,10 +14,15 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.stateDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
@@ -48,46 +53,59 @@ fun SeatMapGrid(
     Column(modifier.fillMaxWidth()) {
         Text("Select berth (demo map)", fontWeight = FontWeight.SemiBold, color = Navy, fontSize = 14.sp)
         Spacer(Modifier.height(8.dp))
+        val colors = MaterialTheme.colorScheme
         Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceEvenly) {
-            LegendDot(Color(0xFF4CAF50), "Free")
-            LegendDot(Orange, "Selected")
-            LegendDot(Color(0xFFBDBDBD), "Booked")
-            LegendDot(Color(0xFFE91E63), "Ladies")
+            LegendDot(colors.primaryContainer, "Free")
+            LegendDot(colors.secondary, "Selected ✓")
+            LegendDot(colors.surfaceVariant, "Booked ×")
         }
         Spacer(Modifier.height(12.dp))
-        // Group into bays of 6 (LB,MB,UB x2 side)
         seats.chunked(8).forEachIndexed { bay, baySeats ->
-            Text("Bay ${bay + 1}", fontSize = 11.sp, color = Color.Gray, modifier = Modifier.padding(bottom = 4.dp))
-            Row(
-                Modifier.fillMaxWidth().padding(bottom = 10.dp),
-                horizontalArrangement = Arrangement.spacedBy(6.dp)
-            ) {
-                baySeats.forEach { seat ->
-                    val isSelected = seat.id in selectedIds
-                    val bg = when {
-                        isSelected -> Orange
-                        seat.status == SeatStatus.Booked -> Color(0xFFBDBDBD)
-                        seat.status == SeatStatus.Ladies -> Color(0xFFF8BBD0)
-                        else -> Color(0xFFE8F5E9)
-                    }
-                    val enabled = seat.status != SeatStatus.Booked
-                    Box(
-                        Modifier
-                            .weight(1f)
-                            .height(48.dp)
-                            .clip(RoundedCornerShape(8.dp))
-                            .background(bg)
-                            .border(1.dp, if (isSelected) Navy else Color(0xFFCCCCCC), RoundedCornerShape(8.dp))
-                            .then(if (enabled) Modifier.clickable { onToggle(seat) } else Modifier),
-                        contentAlignment = Alignment.Center
-                    ) {
-                        Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                            Text(seat.id, fontSize = 11.sp, fontWeight = FontWeight.Bold, color = Navy)
-                            Text(seat.berth, fontSize = 9.sp, color = Color.DarkGray)
+            Text("Bay ${bay + 1}", fontSize = 12.sp, color = colors.onSurfaceVariant,
+                modifier = Modifier.padding(bottom = 6.dp))
+            baySeats.chunked(4).forEach { row ->
+                Row(Modifier.fillMaxWidth().padding(bottom = 8.dp), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                    row.forEach { seat ->
+                        val selected = seat.id in selectedIds
+                        val booked = seat.status == SeatStatus.Booked
+                        val status = when {
+                            selected -> "Selected"
+                            booked -> "Booked"
+                            seat.status == SeatStatus.Ladies -> "Ladies preference"
+                            else -> "Available"
+                        }
+                        val background = when {
+                            selected -> colors.secondary
+                            booked -> colors.surfaceVariant
+                            else -> colors.primaryContainer
+                        }
+                        val foreground = when {
+                            selected -> colors.onSecondary
+                            booked -> colors.onSurfaceVariant
+                            else -> colors.onPrimaryContainer
+                        }
+                        Box(
+                            Modifier.weight(1f).height(64.dp)
+                                .clip(RoundedCornerShape(12.dp)).background(background)
+                                .border(1.dp, if (selected) colors.secondary else colors.outlineVariant, RoundedCornerShape(12.dp))
+                                .selectable(selected = selected, enabled = !booked, role = Role.Checkbox) { onToggle(seat) }
+                                .semantics(mergeDescendants = true) {
+                                    contentDescription = "Berth ${seat.id}, ${seat.berth}"
+                                    stateDescription = status
+                                },
+                            contentAlignment = Alignment.Center
+                        ) {
+                            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                                Text(seat.id, fontSize = 11.sp, fontWeight = FontWeight.Bold, color = foreground)
+                                Text(seat.berth + when { selected -> " ✓"; booked -> " ×"; else -> "" }, fontSize = 11.sp, color = foreground)
+                                if (seat.status == SeatStatus.Ladies) Text("Ladies", fontSize = 10.sp, color = foreground)
+                            }
                         }
                     }
+                    repeat(4 - row.size) { Spacer(Modifier.weight(1f)) }
                 }
             }
+            Spacer(Modifier.height(4.dp))
         }
     }
 }
@@ -97,7 +115,7 @@ private fun LegendDot(color: Color, label: String) {
     Row(verticalAlignment = Alignment.CenterVertically) {
         Box(Modifier.size(10.dp).clip(RoundedCornerShape(2.dp)).background(color))
         Spacer(Modifier.width(4.dp))
-        Text(label, fontSize = 10.sp, color = Color.Gray)
+        Text(label, fontSize = 10.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
     }
 }
 

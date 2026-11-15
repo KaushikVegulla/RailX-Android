@@ -18,6 +18,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Train
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.ui.text.input.KeyboardType
@@ -50,7 +51,6 @@ import com.kaushik.railway.ui.theme.LiquidGlassBackdrop
 import com.kaushik.railway.ui.theme.Navy
 import com.kaushik.railway.ui.theme.Orange
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import java.util.concurrent.atomic.AtomicBoolean
@@ -68,30 +68,25 @@ fun SplashScreen(ready: Boolean, onDone: () -> Unit) {
     val gate = remember { AtomicBoolean(false) }
     LaunchedEffect(ready) {
         if (!ready || gate.get()) return@LaunchedEffect
-        delay(900)
-        if (gate.compareAndSet(false, true)) onDone()
-    }
-    LaunchedEffect(Unit) {
-        delay(2500)
         if (gate.compareAndSet(false, true)) onDone()
     }
     Box(
         Modifier
             .fillMaxSize()
-            .background(Brush.verticalGradient(listOf(Color(0xFF062A66), Navy))),
+            .background(MaterialTheme.colorScheme.primaryContainer),
         contentAlignment = Alignment.Center
     ) {
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             Box(
-                Modifier.size(88.dp).clip(CircleShape).background(Orange),
+                Modifier.size(88.dp).clip(CircleShape).background(MaterialTheme.colorScheme.secondaryContainer),
                 contentAlignment = Alignment.Center
             ) {
-                Icon(Icons.Default.Train, null, tint = Color.White, modifier = Modifier.size(48.dp))
+                Icon(Icons.Default.Train, null, tint = MaterialTheme.colorScheme.onSecondaryContainer, modifier = Modifier.size(48.dp))
             }
             Spacer(Modifier.height(16.dp))
-            Text("RailX", color = Color.White, fontSize = 28.sp, fontWeight = FontWeight.Black)
-            Text("Centre for Railway Information Systems", color = Color(0xFFFFCC80), fontSize = 12.sp)
-            Text("Indian Railways  •  e-Ticketing", color = Color.White.copy(alpha = 0.8f), fontSize = 12.sp)
+            Text("RailX", color = MaterialTheme.colorScheme.onPrimaryContainer, fontSize = 28.sp, fontWeight = FontWeight.Black)
+            Text("Your journey, simplified.", color = MaterialTheme.colorScheme.onPrimaryContainer, fontSize = 14.sp)
+            Text("Railway enquiry & demo booking", color = MaterialTheme.colorScheme.onPrimaryContainer.copy(alpha = 0.8f), fontSize = 12.sp)
         }
     }
 }
@@ -127,7 +122,7 @@ fun LoginScreen(vm: AppViewModel, onLogin: () -> Unit, onRegister: () -> Unit, o
             text = "Visually impaired user: receive OTP instead of captcha",
             onChange = { impaired = it }
         )
-        error?.let { Text(it, color = Color.Red, fontSize = 13.sp, modifier = Modifier.padding(top = 8.dp)) }
+        error?.let { Text(it, color = MaterialTheme.colorScheme.error, fontSize = 13.sp, modifier = Modifier.padding(top = 8.dp)) }
         Spacer(Modifier.height(12.dp))
         OrangeButton(if (busy) "PLEASE WAIT" else "SIGN IN", enabled = !busy) {
             if (user.isBlank() || pass.isBlank()) {
@@ -164,7 +159,7 @@ fun LoginScreen(vm: AppViewModel, onLogin: () -> Unit, onRegister: () -> Unit, o
         }
         Text(
             "Academic demo inspired by the IRCTC account flow. Not an official railway login.",
-            color = Color.Gray,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
             fontSize = 12.sp,
             textAlign = TextAlign.Center,
             modifier = Modifier.padding(top = 12.dp)
@@ -213,14 +208,14 @@ fun RegisterScreen(vm: AppViewModel, onNeedVerify: (String) -> Unit, onBack: () 
         RailCard {
         Column {
         Text("Create account", color = Navy, fontSize = 26.sp, fontWeight = FontWeight.Bold)
-        Text("We’ll send a 6-digit verification code", color = Color.Gray, fontSize = 14.sp)
+        Text("We’ll send a 6-digit verification code", color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 14.sp)
         Spacer(Modifier.height(16.dp))
         LabeledField("Full name", name, onValue = { name = it })
         Spacer(Modifier.height(10.dp))
         LabeledField("Email", email, onValue = { email = it })
         Spacer(Modifier.height(10.dp))
         LabeledField("Password (6+ characters)", pass, isPassword = true, onValue = { pass = it })
-        error?.let { Text(it, color = Color.Red, fontSize = 13.sp, modifier = Modifier.padding(top = 10.dp)) }
+        error?.let { Text(it, color = MaterialTheme.colorScheme.error, fontSize = 13.sp, modifier = Modifier.padding(top = 10.dp)) }
         Spacer(Modifier.height(20.dp))
         OrangeButton(if (busy) "SENDING CODE…" else "REGISTER", enabled = !busy) {
             busy = true
@@ -271,7 +266,7 @@ fun VerifyEmailScreen(vm: AppViewModel, email: String, onVerified: () -> Unit, o
         Modifier.fillMaxSize().background(Color.Transparent).systemBarsPadding().padding(24.dp).verticalScroll(rememberScrollState())
     ) {
         Text("Verify email", color = Navy, fontSize = 26.sp, fontWeight = FontWeight.Bold)
-        Text(info, color = Color.Gray, fontSize = 14.sp)
+        Text(info, color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 14.sp)
         vm.otpDisplayCode?.let { shown ->
             Spacer(Modifier.height(12.dp))
             Text("Your code", color = Navy, fontSize = 13.sp, fontWeight = FontWeight.SemiBold)
@@ -285,7 +280,7 @@ fun VerifyEmailScreen(vm: AppViewModel, email: String, onVerified: () -> Unit, o
         }
         Spacer(Modifier.height(16.dp))
         LabeledField("6-digit code", code, onValue = { code = it.filter { ch -> ch.isDigit() }.take(6) })
-        error?.let { Text(it, color = Color.Red, fontSize = 13.sp, modifier = Modifier.padding(top = 10.dp)) }
+        error?.let { Text(it, color = MaterialTheme.colorScheme.error, fontSize = 13.sp, modifier = Modifier.padding(top = 10.dp)) }
         Spacer(Modifier.height(20.dp))
         OrangeButton(if (busy) "VERIFYING…" else "VERIFY & CONTINUE", enabled = !busy) {
             busy = true
@@ -314,7 +309,7 @@ fun VerifyEmailScreen(vm: AppViewModel, email: String, onVerified: () -> Unit, o
         Text(
             if (vm.otpEmailed) "Check inbox and spam. Codes expire in 10 minutes."
             else "Resend’s test sender cannot email this address. Codes expire in 10 minutes.",
-            color = Color.Gray,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
             fontSize = 12.sp,
             textAlign = TextAlign.Center,
             modifier = Modifier.padding(top = 8.dp)

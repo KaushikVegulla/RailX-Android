@@ -25,3 +25,10 @@ local.properties
 *.jks
 backend/.env
 backend/users.json
+
+# Python runtime caches
+__pycache__/
+*.py[cod]
+
+# Kotlin compiler sessions
+.kotlin/
