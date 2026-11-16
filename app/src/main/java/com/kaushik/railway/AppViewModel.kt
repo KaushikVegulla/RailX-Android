@@ -7,6 +7,7 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.kaushik.railway.data.AccountIdentity
+import com.kaushik.railway.data.AccountProvider
 import com.kaushik.railway.data.AccountStore
 import com.kaushik.railway.data.AvailabilityResult
 import com.kaushik.railway.data.Booking
@@ -463,7 +464,7 @@ class AppViewModel : ViewModel() {
                     useCognitoOtp = false
                     cognitoPassword = ""
                     if (regEmailOtp.isBlank() || regMobileOtp.isBlank()) issueOtps()
-                    cognitoDelivery = "Cognito is unreachable. Demo codes are on this screen."
+                    cognitoDelivery = "Cloud registration is unavailable. This creates a demo account stored only on this device. Use the codes shown here."
                     onDone(null)
                 }
                 is CognitoCall.Err -> onDone(call.message)
@@ -530,7 +531,9 @@ class AppViewModel : ViewModel() {
                     email = regEmail,
                     mobile = regMobile,
                     password = password,
-                    language = regLanguage
+                    language = regLanguage,
+                    authProvider = if (useCognitoOtp) AccountProvider.COGNITO else AccountProvider.LOCAL_DEMO,
+                    cloudUsername = if (useCognitoOtp) cognitoUsername.ifBlank { regUserId.trim() } else ""
                 )
                 loginPrefill = profile.userId
                 regPassword = ""
@@ -587,7 +590,8 @@ class AppViewModel : ViewModel() {
                     email = regEmail,
                     mobile = regMobile,
                     password = regPassword,
-                    language = regLanguage
+                    language = regLanguage,
+                    authProvider = AccountProvider.LOCAL_DEMO
                 )
                 loginPrefill = profile.userId
                 regPassword = ""
@@ -610,8 +614,30 @@ class AppViewModel : ViewModel() {
         authLoading = true
         authError = null
         viewModelScope.launch {
+            val savedProfile = accountStore.findProfile(idOrEmail)
+            if (savedProfile?.authProvider == AccountProvider.LOCAL_DEMO) {
+                try {
+                    val profile = accountStore.authenticate(idOrEmail, password)
+                        ?: error("No demo account on this device. Register again.")
+                    // Demo credentials never authenticate a cloud session or payment request.
+                    CognitoAuth.signOut()
+                    PaymentApi.bearerToken = null
+                    sessionStore.saveSession(profile.fullName, profile.email, profile.mobile, profile.userId)
+                    applyProfile(profile)
+                    loggedIn = true
+                    appUnlocked = true
+                    authLoading = false
+                    onSuccess()
+                } catch (e: Exception) {
+                    authLoading = false
+                    authError = e.message ?: "Demo sign-in failed"
+                    onError(authError!!)
+                }
+                return@launch
+            }
+            val cloudUsername = savedProfile?.cloudUsername?.takeIf { it.isNotBlank() } ?: idOrEmail.trim()
             val cognitoDeferred = async {
-                withTimeoutOrNull(12_000) { CognitoAuth.signIn(idOrEmail.trim(), password) }
+                withTimeoutOrNull(12_000) { CognitoAuth.signIn(cloudUsername, password) }
             }
             var localProfile: RailProfile? = null
             var localError: String? = null
@@ -642,13 +668,25 @@ class AppViewModel : ViewModel() {
                 }
                 is CognitoCall.Err -> if (cognito.code == "INVALID") {
                     authLoading = false
-                    authError = cognito.message
-                    onError(cognito.message)
+                    val message = if (localProfile != null && savedProfile?.authProvider == AccountProvider.LEGACY) {
+                        "Cloud sign-in was rejected. This older local account has no account-type record. " +
+                            "If you registered with on-screen demo codes, create a new demo account with different details."
+                    } else cognito.message
+                    authError = message
+                    onError(message)
                     return@launch
                 }
                 else -> Unit
             }
             val cognito = cognitoDeferred.await()
+            if (savedProfile?.authProvider == AccountProvider.COGNITO) {
+                val message = (cognito as? CognitoCall.Err)?.message
+                    ?: "Cloud sign-in is unavailable. Check your connection and try again."
+                authLoading = false
+                authError = message
+                onError(message)
+                return@launch
+            }
             if (localProfile != null) {
                 sessionStore.saveSession(localProfile.fullName, localProfile.email, localProfile.mobile, localProfile.userId)
                 applyProfile(localProfile)
@@ -819,7 +857,9 @@ class AppViewModel : ViewModel() {
                     fullName = name.ifBlank { it.fullName },
                     email = mail.ifBlank { it.email },
                     mobile = phoneDigits.ifBlank { it.mobile },
-                    passwordHash = IrctcRules.secretHash(it.userId, password)
+                    passwordHash = IrctcRules.secretHash(it.userId, password),
+                    authProvider = AccountProvider.COGNITO,
+                    cloudUsername = username
                 )
             }
         } else {
@@ -835,7 +875,9 @@ class AppViewModel : ViewModel() {
                 mobile = phoneDigits,
                 password = password,
                 language = "English",
-                profileComplete = false
+                profileComplete = false,
+                authProvider = AccountProvider.COGNITO,
+                cloudUsername = username
             )
         }
         sessionStore.saveSession(profile.fullName, profile.email, profile.mobile, profile.userId)

@@ -12,6 +12,8 @@ import org.json.JSONObject
 
 private val Context.accountDataStore by preferencesDataStore(name = "railone_accounts")
 
+enum class AccountProvider { LEGACY, LOCAL_DEMO, COGNITO }
+
 data class RailProfile(
     val userId: String,
     val fullName: String,
@@ -35,7 +37,9 @@ data class RailProfile(
     val mpinDeferred: Boolean = false,
     val aadhaarLinked: Boolean = false,
     val aadhaarLast4: String = "",
-    val aadhaarKind: String = ""
+    val aadhaarKind: String = "",
+    val authProvider: AccountProvider = AccountProvider.LEGACY,
+    val cloudUsername: String = ""
 ) {
     val mpinSet: Boolean get() = mpinHash.isNotBlank()
 }
@@ -74,11 +78,15 @@ class AccountStore(private val context: Context) {
     /**
      * @return the profile, null when no account matches, or throws when the password is wrong.
      */
-    suspend fun authenticate(idOrEmail: String, password: String): RailProfile? {
+    suspend fun findProfile(idOrEmail: String): RailProfile? {
         val key = idOrEmail.trim()
-        val found = profiles.first().find {
+        return profiles.first().find {
             it.userId.equals(key, ignoreCase = true) || it.email.equals(key, ignoreCase = true)
-        } ?: return null
+        }
+    }
+
+    suspend fun authenticate(idOrEmail: String, password: String): RailProfile? {
+        val found = findProfile(idOrEmail) ?: return null
         val hash = IrctcRules.secretHash(found.userId, password)
         if (hash != found.passwordHash) throw IllegalStateException("Invalid user ID or password")
         return found
@@ -91,7 +99,9 @@ class AccountStore(private val context: Context) {
         mobile: String,
         password: String,
         language: String,
-        profileComplete: Boolean = false
+        profileComplete: Boolean = false,
+        authProvider: AccountProvider = AccountProvider.LEGACY,
+        cloudUsername: String = ""
     ): RailProfile {
         val id = userId.trim()
         if (isUserIdTaken(id)) throw IllegalStateException("User ID is already taken")
@@ -105,7 +115,9 @@ class AccountStore(private val context: Context) {
             mobile = digits,
             passwordHash = IrctcRules.secretHash(id, password),
             language = language,
-            profileComplete = profileComplete
+            profileComplete = profileComplete,
+            authProvider = authProvider,
+            cloudUsername = cloudUsername
         )
         upsert(profile)
         return profile
@@ -174,6 +186,8 @@ private fun RailProfile.toJson(): JSONObject = JSONObject()
     .put("aadhaarLinked", aadhaarLinked)
     .put("aadhaarLast4", aadhaarLast4)
     .put("aadhaarKind", aadhaarKind)
+    .put("authProvider", authProvider.name)
+    .put("cloudUsername", cloudUsername)
 
 private fun JSONObject.toProfile(): RailProfile = RailProfile(
     userId = optString("userId"),
@@ -198,5 +212,8 @@ private fun JSONObject.toProfile(): RailProfile = RailProfile(
     mpinDeferred = optBoolean("mpinDeferred"),
     aadhaarLinked = optBoolean("aadhaarLinked"),
     aadhaarLast4 = optString("aadhaarLast4"),
-    aadhaarKind = optString("aadhaarKind")
+    aadhaarKind = optString("aadhaarKind"),
+    authProvider = AccountProvider.entries.firstOrNull { it.name == optString("authProvider") }
+        ?: AccountProvider.LEGACY,
+    cloudUsername = optString("cloudUsername")
 )
