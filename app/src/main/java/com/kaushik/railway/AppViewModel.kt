@@ -340,6 +340,9 @@ class AppViewModel : ViewModel() {
                 val updated = accountStore.update(userId) { it.copy(fullName = name, mobile = mobile.filter { ch -> ch.isDigit() }) }
                 applyProfile(updated)
             }
+            // Keep the Supabase profile row in step when signed in there
+            // (no-op without a session; failures are ignored by design).
+            supabaseSync.pushProfile(name.trim(), mobile.filter { ch -> ch.isDigit() })
         }
     }
 
