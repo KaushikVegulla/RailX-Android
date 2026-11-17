@@ -40,6 +40,12 @@ The existing `use.local.keys=true` mode is for academic experimentation with tes
 ./gradlew :app:connectedDebugAndroidTest  # running emulator/device required
 ```
 
+## Supabase backend
+
+Supabase is the RailX backend in progress: Auth for accounts, Postgres for synced bookings, passengers and favourite routes, and Edge Functions for the Razorpay steps that need a server secret. The app config defaults to the RailX project and can be overridden with `supabase.url` / `supabase.publishable.key` in `local.properties`. The publishable key is client configuration and is safe in the app because every table has Row Level Security policies scoped to the signed-in user. Never ship the secret / service_role key.
+
+The live schema was applied on 17 Nov 2026. Setup, auth settings and function deployment are documented in [supabase/README.md](supabase/README.md). The Cognito + local demo flow still drives the current sign-in screens; switching them to Supabase Auth is a follow-up change.
+
 ## Existing data on upgrade
 
 The Room v1 → v2 migration preserves booking rows and adds an account-owner column without destructive migration. Older rows have no reliable owner, so they remain on disk but are hidden from account history. Older unscoped saved-passenger/last-journey preferences are also retained but not shown. New records are scoped to the active account; signing out clears contact information from the session.
@@ -52,6 +58,8 @@ The Room v1 → v2 migration preserves booking rows and adds an account-owner co
 - `data/db/`: Room entities, owner-filtered queries, schema migration.
 - `app/src/test/`: model, account, search filter, and repository unit tests.
 - `app/src/androidTest/`: database migration and account-isolation tests.
+- `app/src/main/java/com/kaushik/railway/data/Supabase*.kt`: Supabase Auth (GoTrue) and PostgREST clients over OkHttp, row models, token store, and the auth/sync repositories.
+- `supabase/`: Postgres schema with Row Level Security, Edge Functions for Razorpay order creation and payment verification, and setup notes.
 - `backend/`: optional Python Cognito/Razorpay test backend.
 
 ## Scope
