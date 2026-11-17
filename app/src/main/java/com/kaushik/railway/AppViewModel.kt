@@ -648,6 +648,20 @@ class AppViewModel : ViewModel() {
         }
     }
 
+    fun sendSupabasePasswordReset(email: String, onDone: (String) -> Unit) {
+        viewModelScope.launch {
+            val target = email.trim()
+            if (!target.contains("@")) {
+                onDone("Enter the account email to get a reset link.")
+                return@launch
+            }
+            // Same message whatever Supabase answers, so this dialog cannot
+            // be used to probe which emails have accounts.
+            supabaseAuth.sendPasswordReset(target)
+            onDone("If a Supabase account exists for $target, a password reset link is on its way.")
+        }
+    }
+
     fun lookupUserId(emailOrMobile: String, onResult: (String?) -> Unit) {
         viewModelScope.launch {
             onResult(accountStore.findUserId(emailOrMobile))

@@ -4,8 +4,6 @@
 // Razorpay secret, which lives only in Edge Function secrets
 // (RAZORPAY_KEY_SECRET), never in the Android app.
 
-import { createClient } from "jsr:@supabase/supabase-js@2";
-
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers":
@@ -46,6 +44,24 @@ function signaturesMatch(expected: string, actual: string): boolean {
   return diff === 0;
 }
 
+async function requireUser(req: Request): Promise<{ id: string } | null> {
+  const auth = req.headers.get("Authorization") ?? "";
+  if (!auth.startsWith("Bearer ")) return null;
+  const base = Deno.env.get("SUPABASE_URL") ?? "";
+  const apikey = Deno.env.get("SUPABASE_ANON_KEY") ??
+    Deno.env.get("SUPABASE_PUBLISHABLE_KEY") ?? "";
+  try {
+    const resp = await fetch(`${base}/auth/v1/user`, {
+      headers: { Authorization: auth, apikey },
+    });
+    if (!resp.ok) return null;
+    const user = await resp.json();
+    return user?.id ? { id: String(user.id) } : null;
+  } catch {
+    return null;
+  }
+}
+
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") {
     return new Response("ok", { headers: corsHeaders });
@@ -54,17 +70,9 @@ Deno.serve(async (req) => {
     return json({ error: "Method not allowed" }, 405);
   }
 
-  const supabase = createClient(
-    Deno.env.get("SUPABASE_URL") ?? "",
-    Deno.env.get("SUPABASE_ANON_KEY") ?? Deno.env.get("SUPABASE_PUBLISHABLE_KEY") ?? "",
-    {
-      global: {
-        headers: { Authorization: req.headers.get("Authorization") ?? "" },
-      },
-    },
-  );
-  const { data: userData, error: userError } = await supabase.auth.getUser();
-  if (userError || !userData.user) {
+  // Require a signed-in Supabase user.
+  const user = await requireUser(req);
+  if (!user) {
     return json({ error: "Not authenticated" }, 401);
   }
 
