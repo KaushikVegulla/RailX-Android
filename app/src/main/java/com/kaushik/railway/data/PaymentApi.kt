@@ -23,6 +23,8 @@ data class RazorOrder(
  * it in server-side secrets; the app only sends the signed-in user's
  * Supabase JWT and opens Razorpay Checkout with the key_id / order_id the
  * function returns.
+ *
+ * (Rebuilt after a stalled CI runner; no behaviour change.)
  */
 object PaymentApi {
     @Volatile
