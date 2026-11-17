@@ -27,5 +27,6 @@ object SupabaseConfig {
     fun normalizeUrl(raw: String): String = raw.trim().trimEnd('/')
 
     fun authUrl(path: String): String = "$url/auth/v1/$path"
+    fun functionsUrl(name: String): String = "$url/functions/v1/$name"
     fun restUrl(table: String): String = "$url/rest/v1/$table"
 }

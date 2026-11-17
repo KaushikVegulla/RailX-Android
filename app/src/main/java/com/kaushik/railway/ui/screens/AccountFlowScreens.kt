@@ -279,6 +279,15 @@ private fun OtpStep(
                     modifier = Modifier.padding(top = 8.dp)
                 )
             } else if (!vm.cloudBusy) {
+                if (vm.supabaseDelivery.isNotBlank()) {
+                    Text(
+                        vm.supabaseDelivery,
+                        color = Orange,
+                        fontSize = 13.sp,
+                        fontWeight = FontWeight.SemiBold,
+                        modifier = Modifier.padding(bottom = 8.dp)
+                    )
+                }
                 LabeledField("Email OTP", emailCode, keyboardType = KeyboardType.Number) {
                     emailCode = it.filter { ch -> ch.isDigit() }.take(6)
                 }
@@ -304,15 +313,17 @@ private fun OtpStep(
                     if (message == null) onNext() else error = message
                 }
             }
-            TextButton(
-                onClick = {
-                    emailCode = ""
-                    mobileCode = ""
-                    error = null
-                    vm.resendRegistrationCode { message -> if (message != null) error = message }
-                },
-                modifier = Modifier.fillMaxWidth()
-            ) { Text(if (vm.useSupabaseConfirm) "Resend confirmation link" else "Resend demo codes", color = Orange) }
+            if (!vm.cloudBusy) {
+                TextButton(
+                    onClick = {
+                        emailCode = ""
+                        mobileCode = ""
+                        error = null
+                        vm.resendRegistrationCode { message -> if (message != null) error = message }
+                    },
+                    modifier = Modifier.fillMaxWidth()
+                ) { Text(if (vm.useSupabaseConfirm) "Resend confirmation link" else "Resend demo codes", color = Orange) }
+            }
             TextButton(onClick = onBack, modifier = Modifier.fillMaxWidth()) { Text("Back", color = Navy) }
         }
     }
