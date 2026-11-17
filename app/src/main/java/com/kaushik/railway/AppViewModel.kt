@@ -599,6 +599,13 @@ class AppViewModel : ViewModel() {
                     else -> Unit
                 }
             }
+            var localProfile: RailProfile? = null
+            var localError: String? = null
+            try {
+                localProfile = accountStore.authenticate(idOrEmail, password)
+            } catch (e: Exception) {
+                localError = e.message ?: "Login failed"
+            }
             if (localProfile != null) {
                 sessionStore.saveSession(localProfile.fullName, localProfile.email, localProfile.mobile, localProfile.userId)
                 applyProfile(localProfile)
