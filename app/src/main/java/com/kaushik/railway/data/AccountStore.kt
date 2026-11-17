@@ -12,7 +12,7 @@ import org.json.JSONObject
 
 private val Context.accountDataStore by preferencesDataStore(name = "railone_accounts")
 
-enum class AccountProvider { LEGACY, LOCAL_DEMO, COGNITO }
+enum class AccountProvider { LEGACY, LOCAL_DEMO, COGNITO, SUPABASE }
 
 data class RailProfile(
     val userId: String,

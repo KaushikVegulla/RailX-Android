@@ -1,6 +1,16 @@
 # RailX
 
+[![Android CI](https://github.com/KaushikVegulla/Railway-Reservation-System-/actions/workflows/android.yml/badge.svg)](https://github.com/KaushikVegulla/Railway-Reservation-System-/actions/workflows/android.yml)
+
 RailX is a native Android railway journey demo built with Kotlin and Jetpack Compose. It supports train enquiries, Cognito accounts, a local booking flow, and Razorpay test checkout. It is an academic project and is not affiliated with IRCTC, CRIS, or Indian Railways. Demo bookings are not valid railway tickets.
+
+## What changed in 1.8
+
+- **Supabase backend**: authentication and data are moving from Cognito + device-only storage to a Supabase project (Postgres with Row Level Security). See `supabase/README.md` for the schema and setup.
+- **Supabase sign-in**: accounts tied to Supabase — and new email sign-ins — authenticate against Supabase and mirror into a local profile, so MPIN unlock and account-scoped bookings keep working. A failed or unreachable Supabase attempt falls through to the existing Cognito / local flow.
+- **Booking sync**: confirmed bookings, their passengers, and cancellations are mirrored to Supabase (best-effort) whenever a Supabase session exists.
+- **Sign-out** now also ends the Supabase session.
+- Added an MIT `LICENSE`.
 
 ## What changed in 1.7
 
@@ -44,7 +54,7 @@ The existing `use.local.keys=true` mode is for academic experimentation with tes
 
 Supabase is the RailX backend in progress: Auth for accounts, Postgres for synced bookings, passengers and favourite routes, and Edge Functions for the Razorpay steps that need a server secret. The app config defaults to the RailX project and can be overridden with `supabase.url` / `supabase.publishable.key` in `local.properties`. The publishable key is client configuration and is safe in the app because every table has Row Level Security policies scoped to the signed-in user. Never ship the secret / service_role key.
 
-The live schema was applied on 17 Nov 2026. Setup, auth settings and function deployment are documented in [supabase/README.md](supabase/README.md). The Cognito + local demo flow still drives the current sign-in screens; switching them to Supabase Auth is a follow-up change.
+The live schema was applied on 17 Nov 2026. Setup, auth settings and function deployment are documented in [supabase/README.md](supabase/README.md). Since 1.8 the sign-in screens try Supabase Auth first for Supabase accounts and new email sign-ins, bookings sync to Supabase when a session exists, and the Cognito + local demo flows remain as fallbacks.
 
 ## Existing data on upgrade
 

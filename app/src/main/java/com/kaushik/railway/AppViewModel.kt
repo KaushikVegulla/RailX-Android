@@ -24,11 +24,15 @@ import com.kaushik.railway.data.RailProfile
 import com.kaushik.railway.data.RunningStop
 import com.kaushik.railway.data.SessionStore
 import com.kaushik.railway.data.Station
+import com.kaushik.railway.data.SupabaseCall
+import com.kaushik.railway.data.SupabaseSession
 import com.kaushik.railway.data.Train
 import com.kaushik.railway.data.TrainClassAvail
 import com.kaushik.railway.data.db.AppDatabase
 import com.kaushik.railway.data.repository.AuthRepository
 import com.kaushik.railway.data.repository.BookingRepository
+import com.kaushik.railway.data.repository.SupabaseAuthRepository
+import com.kaushik.railway.data.repository.SupabaseSyncRepository
 import com.kaushik.railway.data.repository.TrainRepository
 import com.kaushik.railway.nav.AccountGate
 import com.kaushik.railway.util.UiState
@@ -51,6 +55,8 @@ class AppViewModel : ViewModel() {
     private val bookingRepo = BookingRepository(AppDatabase.getInstance(RailApp.instance))
     private val trainRepo = TrainRepository()
     private val authRepo = AuthRepository(sessionStore)
+    private val supabaseAuth = SupabaseAuthRepository(RailApp.instance)
+    private val supabaseSync = SupabaseSyncRepository(supabaseAuth)
 
     private var bookingHistoryJob: Job? = null
     var bookingOwnerId by mutableStateOf("")
@@ -347,6 +353,7 @@ class AppViewModel : ViewModel() {
 
     fun logout(onDone: () -> Unit = {}) {
         viewModelScope.launch {
+            runCatching { supabaseAuth.signOut() }
             CognitoAuth.signOut()
             PaymentApi.bearerToken = null
             pendingPassword = ""
@@ -635,6 +642,42 @@ class AppViewModel : ViewModel() {
                 }
                 return@launch
             }
+            // Supabase accounts sign in against the Supabase backend first.
+            // Accounts explicitly tied to another provider skip this; a failed
+            // or unreachable Supabase attempt falls through to the existing
+            // Cognito / local flow so nobody is locked out by the migration.
+            val supabaseAccount = savedProfile?.authProvider == AccountProvider.SUPABASE
+            val trySupabase = supabaseAccount ||
+                (savedProfile == null && idOrEmail.contains("@"))
+            if (trySupabase) {
+                when (val sb = withTimeoutOrNull(12_000) {
+                    supabaseAuth.signIn(idOrEmail.trim(), password)
+                }) {
+                    is SupabaseCall.SignedIn -> {
+                        adoptSupabaseUser(sb.session, password)
+                        appUnlocked = true
+                        authLoading = false
+                        onSuccess()
+                        return@launch
+                    }
+                    is SupabaseCall.Err -> {
+                        if (sb.message.contains("not confirmed", ignoreCase = true)) {
+                            val message = "Confirm your email first: open the confirmation link Supabase sent you, then sign in."
+                            authLoading = false
+                            authError = message
+                            onError(message)
+                            return@launch
+                        }
+                        if (supabaseAccount) {
+                            authLoading = false
+                            authError = sb.message
+                            onError(sb.message)
+                            return@launch
+                        }
+                    }
+                    else -> Unit
+                }
+            }
             val cloudUsername = savedProfile?.cloudUsername?.takeIf { it.isNotBlank() } ?: idOrEmail.trim()
             val cognitoDeferred = async {
                 withTimeoutOrNull(12_000) { CognitoAuth.signIn(cloudUsername, password) }
@@ -878,6 +921,47 @@ class AppViewModel : ViewModel() {
                 profileComplete = false,
                 authProvider = AccountProvider.COGNITO,
                 cloudUsername = username
+            )
+        }
+        sessionStore.saveSession(profile.fullName, profile.email, profile.mobile, profile.userId)
+        applyProfile(profile)
+        loggedIn = true
+    }
+
+    /**
+     * Mirrors a signed-in Supabase user into a local profile, the same way
+     * [adoptCognitoUser] does for Cognito: bookings stay owned by the local
+     * user ID, while the Supabase UUID lives in cloudUsername and the
+     * Supabase tokens stay in SupabaseTokenStore for backend sync.
+     */
+    private suspend fun adoptSupabaseUser(session: SupabaseSession, password: String) {
+        val mail = session.email.trim()
+        val name = session.displayName
+        val list = accountStore.profiles.first()
+        val match = list.find { it.cloudUsername == session.userId }
+            ?: list.find { mail.isNotBlank() && it.email.equals(mail, ignoreCase = true) }
+        val profile = if (match != null) {
+            accountStore.update(match.userId) {
+                it.copy(
+                    fullName = name.ifBlank { it.fullName },
+                    email = mail.ifBlank { it.email },
+                    passwordHash = IrctcRules.secretHash(it.userId, password),
+                    authProvider = AccountProvider.SUPABASE,
+                    cloudUsername = session.userId
+                )
+            }
+        } else {
+            val id = accountStore.unusedUserId(IrctcRules.userIdFromEmail(mail.ifBlank { "railxuser" }))
+            accountStore.create(
+                userId = id,
+                fullName = name.ifBlank { id },
+                email = mail.ifBlank { "$id@users.railx.local" },
+                mobile = "",
+                password = password,
+                language = "English",
+                profileComplete = false,
+                authProvider = AccountProvider.SUPABASE,
+                cloudUsername = session.userId
             )
         }
         sessionStore.saveSession(profile.fullName, profile.email, profile.mobile, profile.userId)
@@ -1159,6 +1243,12 @@ class AppViewModel : ViewModel() {
         sessionStore.saveLastJourney(expectedOwnerId, journey)
         sessionStore.savePassengers(expectedOwnerId, booking.passengers)
         if (bookingOwnerId == expectedOwnerId) lastBooking = booking
+        // Best-effort mirror to the Supabase backend when a Supabase session
+        // exists; a no-op otherwise, and it never blocks the booking result.
+        viewModelScope.launch {
+            supabaseSync.pushBooking(booking)
+            booking.passengers.forEach { supabaseSync.pushPassenger(it) }
+        }
         return booking
     }
 
@@ -1166,6 +1256,7 @@ class AppViewModel : ViewModel() {
         val owner = bookingOwnerId.takeIf { it.isNotBlank() } ?: return
         viewModelScope.launch {
             bookingRepo.cancel(owner, pnr)
+            supabaseSync.pushBookingStatus(pnr, "CANCELLED")
             if (bookingOwnerId == owner && lastBooking?.pnr == pnr) {
                 lastBooking = lastBooking?.copy(status = "CANCELLED")
             }
