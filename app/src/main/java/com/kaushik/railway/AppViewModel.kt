@@ -22,6 +22,7 @@ import com.kaushik.railway.data.RailProfile
 import com.kaushik.railway.data.RunningStop
 import com.kaushik.railway.data.SessionStore
 import com.kaushik.railway.data.Station
+import com.kaushik.railway.data.RemoteFavouriteRoute
 import com.kaushik.railway.data.SupabaseCall
 import com.kaushik.railway.data.SupabaseSession
 import com.kaushik.railway.data.Train
@@ -105,6 +106,53 @@ class AppViewModel : ViewModel() {
     // Search
     var fromCode by mutableStateOf("NDLS")
     var toCode by mutableStateOf("MMCT")
+
+    // Favourite routes live in Supabase (favourite_routes) and only exist
+    // for Supabase sessions; demo/local accounts simply never see them.
+    var favouriteRoutes by mutableStateOf<List<RemoteFavouriteRoute>>(emptyList())
+        private set
+    var supabaseLinked by mutableStateOf(false)
+        private set
+
+    val currentRouteIsFavourite: Boolean
+        get() = favouriteRoutes.any {
+            it.fromCode.equals(fromCode, ignoreCase = true) &&
+                it.toCode.equals(toCode, ignoreCase = true)
+        }
+
+    fun loadFavouriteRoutes() {
+        viewModelScope.launch {
+            if (supabaseAuth.currentSession() != null) {
+                supabaseLinked = true
+                favouriteRoutes = supabaseSync.pullFavouriteRoutes()
+            }
+        }
+    }
+
+    fun toggleFavouriteRoute() {
+        val existing = favouriteRoutes.firstOrNull {
+            it.fromCode.equals(fromCode, ignoreCase = true) &&
+                it.toCode.equals(toCode, ignoreCase = true)
+        }
+        viewModelScope.launch {
+            if (existing != null) {
+                if (supabaseSync.deleteFavouriteRoute(existing.id)) {
+                    favouriteRoutes = favouriteRoutes.filterNot { it.id == existing.id }
+                }
+            } else {
+                val added = supabaseSync.addFavouriteRoute(fromCode, toCode)
+                if (added != null) favouriteRoutes = favouriteRoutes + added
+            }
+        }
+    }
+
+    fun removeFavouriteRoute(route: RemoteFavouriteRoute) {
+        viewModelScope.launch {
+            if (supabaseSync.deleteFavouriteRoute(route.id)) {
+                favouriteRoutes = favouriteRoutes.filterNot { it.id == route.id }
+            }
+        }
+    }
     var journeyDate by mutableStateOf(defaultDate())
     var selectedClass by mutableStateOf("All Classes")
     var selectedQuota by mutableStateOf("GN - General")
@@ -177,7 +225,14 @@ class AppViewModel : ViewModel() {
                 userId = session.userId
                 mobile = session.mobile
                 email = session.email
-                if (!session.loggedIn) clearAccountFlags() else refreshAccount()
+                if (!session.loggedIn) {
+                    clearAccountFlags()
+                    supabaseLinked = false
+                    favouriteRoutes = emptyList()
+                } else {
+                    refreshAccount()
+                    loadFavouriteRoutes()
+                }
                 sessionSeen = true
                 if (profilesReady) gateReady = true
             }
@@ -807,6 +862,8 @@ class AppViewModel : ViewModel() {
         sessionStore.saveSession(profile.fullName, profile.email, profile.mobile, profile.userId)
         applyProfile(profile)
         loggedIn = true
+        supabaseLinked = true
+        favouriteRoutes = supabaseSync.pullFavouriteRoutes()
     }
 
     private suspend fun bridgeLegacyAccount(name: String, email: String, password: String) {

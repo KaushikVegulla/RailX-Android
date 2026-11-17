@@ -22,6 +22,8 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.CalendarMonth
 import androidx.compose.material.icons.filled.ConfirmationNumber
 import androidx.compose.material.icons.filled.History
+import androidx.compose.material.icons.filled.Star
+import androidx.compose.material.icons.filled.StarBorder
 import androidx.compose.material.icons.filled.SwapVert
 import androidx.compose.material.icons.filled.Timeline
 import androidx.compose.material.icons.filled.Train
@@ -141,6 +143,21 @@ fun HomeScreen(
                             SimpleSelect("Quota", vm.selectedQuota, MockData.quotas) { vm.selectedQuota = it }
                         }
                     }
+                    if (vm.supabaseLinked) {
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            IconButton(onClick = { vm.toggleFavouriteRoute() }) {
+                                Icon(
+                                    if (vm.currentRouteIsFavourite) Icons.Default.Star else Icons.Default.StarBorder,
+                                    "Save route as favourite",
+                                    tint = if (vm.currentRouteIsFavourite) colors.primary else colors.onSurfaceVariant
+                                )
+                            }
+                            Text(
+                                if (vm.currentRouteIsFavourite) "Saved as a favourite route" else "Save this route as a favourite",
+                                style = MaterialTheme.typography.bodySmall, color = colors.onSurfaceVariant
+                            )
+                        }
+                    }
                     if (!vm.profileComplete) {
                         Text("Complete your profile to continue.", style = MaterialTheme.typography.bodySmall, color = colors.onSurfaceVariant)
                     } else if (vm.needsTatkalAadhaar()) {
@@ -161,6 +178,33 @@ fun HomeScreen(
                                 vm.needsTatkalAadhaar() -> onNeedAadhaar()
                                 else -> { focusManager.clearFocus(); vm.clearStationSuggestions(); vm.searchTrainsLive(); onSearch() }
                             }
+                        }
+                    }
+                }
+            }
+        }
+        if (vm.favouriteRoutes.isNotEmpty()) {
+            item {
+                Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                    Text("Favourite routes", style = MaterialTheme.typography.titleMedium, color = colors.onBackground)
+                    vm.favouriteRoutes.forEach { route ->
+                        Row(
+                            Modifier.fillMaxWidth().clip(RoundedCornerShape(12.dp))
+                                .background(colors.surfaceVariant.copy(alpha = 0.6f))
+                                .clickable(role = Role.Button) {
+                                    vm.fromCode = route.fromCode
+                                    vm.toCode = route.toCode
+                                    stationReset++
+                                    fromEdited = false
+                                    toEdited = false
+                                }
+                                .padding(horizontal = 12.dp, vertical = 4.dp),
+                            verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.spacedBy(8.dp)
+                        ) {
+                            Icon(Icons.Default.Star, null, tint = colors.primary, modifier = Modifier.size(18.dp))
+                            Text("${route.fromCode} \u2192 ${route.toCode}", style = MaterialTheme.typography.bodyMedium, color = colors.onSurface, modifier = Modifier.weight(1f))
+                            TextButton(onClick = { vm.removeFavouriteRoute(route) }) { Text("Remove", color = colors.primary) }
                         }
                     }
                 }
