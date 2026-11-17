@@ -99,6 +99,63 @@ class AppViewModel : ViewModel() {
     var appUnlocked by mutableStateOf(false)
     var cloudBusy by mutableStateOf(false)
     var useSupabaseConfirm by mutableStateOf(false)
+
+    // Deep links from Supabase emails (railx://auth-callback#...).
+    var pendingResetToken by mutableStateOf("")
+        private set
+    var showPasswordReset by mutableStateOf(false)
+    var authLinkNotice by mutableStateOf<String?>(null)
+
+    fun handleAuthLink(uri: String?) {
+        if (uri.isNullOrBlank() || !uri.startsWith("railx://auth-callback")) return
+        val params = uri.substringAfter('#', "")
+            .split('&')
+            .mapNotNull { part ->
+                val idx = part.indexOf('=')
+                if (idx <= 0) null else part.substring(0, idx) to part.substring(idx + 1)
+            }
+            .toMap()
+        when (params["type"]) {
+            "recovery" -> {
+                val token = params["access_token"].orEmpty()
+                if (token.isNotBlank()) {
+                    pendingResetToken = token
+                    showPasswordReset = true
+                }
+            }
+            "signup" -> authLinkNotice =
+                "Email confirmed. Sign in with your email and password to finish."
+            else -> Unit
+        }
+    }
+
+    fun dismissAuthLinkNotice() {
+        authLinkNotice = null
+    }
+
+    fun dismissPasswordReset() {
+        showPasswordReset = false
+        pendingResetToken = ""
+    }
+
+    fun completePasswordReset(newPassword: String, onDone: (String?) -> Unit) {
+        val token = pendingResetToken
+        if (token.isBlank()) {
+            onDone("This reset link has expired. Request a new one from the sign-in screen.")
+            return
+        }
+        viewModelScope.launch {
+            when (val call = supabaseAuth.updatePassword(token, newPassword)) {
+                is SupabaseCall.Err -> onDone(call.message)
+                else -> {
+                    pendingResetToken = ""
+                    showPasswordReset = false
+                    authLinkNotice = "Password updated. Sign in with your new password."
+                    onDone(null)
+                }
+            }
+        }
+    }
     var supabaseDelivery by mutableStateOf("")
     private var sessionSeen = false
     private var pendingSupabaseEmail = ""
@@ -626,11 +683,19 @@ class AppViewModel : ViewModel() {
             // A failed or unreachable Supabase attempt falls through to the
             // local / legacy flow so nobody is locked out by the migration.
             val supabaseAccount = savedProfile?.authProvider == AccountProvider.SUPABASE
-            val trySupabase = supabaseAccount ||
-                (savedProfile == null && idOrEmail.contains("@"))
+            // Supabase signs in by email. When the user types their RailX
+            // user ID, resolve it to the email stored on the local profile:
+            // sending the raw ID ("Admin") as the email is what produced
+            // "Invalid login credentials" for a correct password.
+            val supabaseEmail = when {
+                idOrEmail.contains("@") -> idOrEmail.trim()
+                else -> savedProfile?.email?.takeIf { it.contains("@") }.orEmpty()
+            }
+            val trySupabase = supabaseEmail.isNotBlank() && (supabaseAccount || savedProfile == null)
+            var supabaseError: String? = null
             if (trySupabase) {
                 when (val sb = withTimeoutOrNull(12_000) {
-                    supabaseAuth.signIn(idOrEmail.trim(), password)
+                    supabaseAuth.signIn(supabaseEmail, password)
                 }) {
                     is SupabaseCall.SignedIn -> {
                         adoptSupabaseUser(sb.session, password)
@@ -647,12 +712,11 @@ class AppViewModel : ViewModel() {
                             onError(message)
                             return@launch
                         }
-                        if (supabaseAccount) {
-                            authLoading = false
-                            authError = sb.message
-                            onError(sb.message)
-                            return@launch
-                        }
+                        // Remember the cloud error and fall through to the
+                        // local copy: an account registered on this device
+                        // can still sign in locally if its cloud password
+                        // differs (e.g. it was reset elsewhere).
+                        supabaseError = sb.message
                     }
                     else -> Unit
                 }
@@ -699,7 +763,8 @@ class AppViewModel : ViewModel() {
                 onNeedVerify(pendingVerifyEmail)
                 return@launch
             }
-            val message = localError ?: result.error ?: "No account for that user ID. Register first."
+            val message = (if (supabaseAccount) supabaseError else null)
+                ?: localError ?: result.error ?: "No account for that user ID. Register first."
             authLoading = false
             authError = message
             onError(message)

@@ -89,6 +89,12 @@ class SupabaseAuthRepository(context: Context) {
         SupabaseCall.Err("Could not reach Supabase (${e.message ?: "network error"})")
     }
 
+    suspend fun updatePassword(accessToken: String, newPassword: String): SupabaseCall = try {
+        SupabaseAuth.updatePassword(accessToken, newPassword)
+    } catch (e: Exception) {
+        SupabaseCall.Err("Could not reach Supabase (${e.message ?: "network error"})")
+    }
+
     suspend fun sendPasswordReset(email: String): SupabaseCall = try {
         SupabaseAuth.sendPasswordReset(email)
     } catch (e: Exception) {
