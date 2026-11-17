@@ -1,9 +1,11 @@
 package com.kaushik.railway
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.SystemBarStyle
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.viewModels
 import androidx.fragment.app.FragmentActivity
 import androidx.compose.foundation.layout.navigationBarsPadding
 import com.kaushik.railway.data.PaymentBridge
@@ -20,17 +22,25 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ConfirmationNumber
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.filled.Train
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Icon
+import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -39,6 +49,7 @@ import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.sp
 import com.kaushik.railway.ui.theme.LiquidGlassBackdrop
 import com.kaushik.railway.ui.theme.Navy
@@ -74,12 +85,21 @@ import com.kaushik.railway.ui.screens.VacancyChartScreen
 import com.kaushik.railway.ui.theme.RailwayTheme
 
 class MainActivity : FragmentActivity(), PaymentResultWithDataListener {
+    private val vm: AppViewModel by viewModels()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+        vm.handleAuthLink(intent?.data?.toString())
         setContent {
-            RailwayTheme { RailwayApp() }
+            RailwayTheme { RailwayApp(vm) }
         }
+    }
+
+    override fun onNewIntent(intent: Intent) {
+        super.onNewIntent(intent)
+        setIntent(intent)
+        vm.handleAuthLink(intent.data?.toString())
     }
 
     override fun onPaymentSuccess(razorpayPaymentId: String?, paymentData: PaymentData?) {
@@ -105,6 +125,19 @@ fun RailwayApp(vm: AppViewModel = viewModel()) {
     val showBar = route in tabs
 
     LiquidGlassBackdrop {
+    if (vm.showPasswordReset) {
+        PasswordResetDialog(vm)
+    }
+    vm.authLinkNotice?.let { notice ->
+        AlertDialog(
+            onDismissRequest = { vm.dismissAuthLinkNotice() },
+            title = { Text("RailX") },
+            text = { Text(notice) },
+            confirmButton = {
+                TextButton(onClick = { vm.dismissAuthLinkNotice() }) { Text("OK", color = Orange) }
+            }
+        )
+    }
     Column(Modifier.fillMaxSize()) {
         NavHost(
             navController = nav,
@@ -297,4 +330,70 @@ private fun NavItem(label: String, selected: Boolean, icon: ImageVector, modifie
         Icon(icon, contentDescription = null, tint = tint)
         Text(label, color = tint, style = MaterialTheme.typography.labelSmall)
     }
+}
+
+
+@Composable
+private fun PasswordResetDialog(vm: AppViewModel) {
+    var newPw by remember { mutableStateOf("") }
+    var confirmPw by remember { mutableStateOf("") }
+    var error by remember { mutableStateOf<String?>(null) }
+    var busy by remember { mutableStateOf(false) }
+    AlertDialog(
+        onDismissRequest = { if (!busy) vm.dismissPasswordReset() },
+        title = { Text("Set a new password") },
+        text = {
+            Column {
+                Text(
+                    "You opened a password reset link. Choose a new password for your Supabase account.",
+                    fontSize = 13.sp
+                )
+                Spacer(Modifier.height(12.dp))
+                OutlinedTextField(
+                    value = newPw,
+                    onValueChange = { newPw = it },
+                    label = { Text("New password") },
+                    singleLine = true,
+                    visualTransformation = PasswordVisualTransformation(),
+                    modifier = Modifier.fillMaxWidth()
+                )
+                Spacer(Modifier.height(8.dp))
+                OutlinedTextField(
+                    value = confirmPw,
+                    onValueChange = { confirmPw = it },
+                    label = { Text("Confirm new password") },
+                    singleLine = true,
+                    visualTransformation = PasswordVisualTransformation(),
+                    modifier = Modifier.fillMaxWidth()
+                )
+                error?.let {
+                    Text(it, color = MaterialTheme.colorScheme.error, fontSize = 13.sp, modifier = Modifier.padding(top = 8.dp))
+                }
+            }
+        },
+        confirmButton = {
+            TextButton(
+                enabled = !busy,
+                onClick = {
+                    error = when {
+                        newPw.length < 8 -> "Use at least 8 characters."
+                        newPw != confirmPw -> "Passwords do not match."
+                        else -> null
+                    }
+                    if (error == null) {
+                        busy = true
+                        vm.completePasswordReset(newPw) { message ->
+                            busy = false
+                            if (message != null) error = message
+                        }
+                    }
+                }
+            ) { Text(if (busy) "PLEASE WAIT" else "UPDATE PASSWORD", color = Orange) }
+        },
+        dismissButton = {
+            TextButton(enabled = !busy, onClick = { vm.dismissPasswordReset() }) {
+                Text("Cancel", color = Navy)
+            }
+        }
+    )
 }

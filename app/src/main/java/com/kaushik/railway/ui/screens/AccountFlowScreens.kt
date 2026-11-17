@@ -74,8 +74,9 @@ private fun BasicDetailsStep(
                 vm.regUserId = it.filter { ch -> ch.isLetterOrDigit() || ch == '_' }.take(35)
                 vm.regIdMessage = ""
                 vm.regIdChecked = ""
+                error = null
             }
-            TextButton(onClick = { vm.checkUserId() }, modifier = Modifier.fillMaxWidth()) {
+            TextButton(onClick = { error = null; vm.checkUserId() }, modifier = Modifier.fillMaxWidth()) {
                 Text("Check availability", color = Orange)
             }
             if (vm.regIdMessage.isNotBlank()) {
@@ -252,8 +253,16 @@ private fun OtpStep(
     StepHeading(
         step,
         total,
-        if (vm.useSupabaseConfirm) "Confirm your email" else "Enter email and mobile OTPs",
-        if (vm.useSupabaseConfirm) "Supabase emailed you a confirmation link" else "Demo codes, used only when the cloud is unreachable"
+        when {
+            vm.useSupabaseConfirm -> "Confirm your email"
+            vm.cloudBusy -> "Creating your account"
+            else -> "Enter email and mobile OTPs"
+        },
+        when {
+            vm.useSupabaseConfirm -> "Supabase emailed you a confirmation link"
+            vm.cloudBusy -> "Contacting Supabase - one moment"
+            else -> "Demo codes, used only when the cloud is unreachable"
+        }
     )
     RailCard {
         ColumnBlock {
@@ -269,7 +278,7 @@ private fun OtpStep(
                     fontWeight = FontWeight.SemiBold,
                     modifier = Modifier.padding(top = 8.dp)
                 )
-            } else {
+            } else if (!vm.cloudBusy) {
                 LabeledField("Email OTP", emailCode, keyboardType = KeyboardType.Number) {
                     emailCode = it.filter { ch -> ch.isDigit() }.take(6)
                 }
@@ -333,7 +342,11 @@ private fun AccountCreatedStep(vm: AppViewModel, onDone: () -> Unit) {
             }
         }
     }
-    DemoNote("This account lives on this device. It is not an IRCTC user ID.")
+    if (vm.useSupabaseConfirm) {
+        DemoNote("This account is backed by Supabase. Sign in with your email and password.")
+    } else {
+        DemoNote("This account lives on this device. It is not an IRCTC user ID.")
+    }
 }
 
 @Composable
