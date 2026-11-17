@@ -1,6 +1,7 @@
 package com.kaushik.railway.ui.screens
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -10,7 +11,9 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.FilterChip
 import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.Slider
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.MaterialTheme
@@ -29,8 +32,10 @@ import com.kaushik.railway.ui.components.KeyValue
 import com.kaushik.railway.ui.components.LabeledField
 import com.kaushik.railway.ui.components.OrangeButton
 import com.kaushik.railway.ui.components.RailCard
+import com.kaushik.railway.ui.components.SectionTitle
 import com.kaushik.railway.ui.components.RailTopBar
 import com.kaushik.railway.ui.components.StatusChip
+import com.kaushik.railway.ui.theme.Mute
 import com.kaushik.railway.ui.theme.Navy
 import com.kaushik.railway.ui.theme.Orange
 
@@ -186,6 +191,7 @@ fun ProfileScreen(
 
 @Composable
 fun MoreScreen(
+    vm: AppViewModel,
     onPnr: () -> Unit,
     onRunning: () -> Unit,
     onProfile: () -> Unit,
@@ -193,7 +199,9 @@ fun MoreScreen(
     onAadhaar: () -> Unit = {},
     onMpin: () -> Unit = {}
 ) {
-    Column(Modifier.fillMaxSize().background(Color.Transparent).padding(16.dp)) {
+    Column(
+        Modifier.fillMaxSize().background(Color.Transparent).verticalScroll(rememberScrollState()).padding(16.dp)
+    ) {
         Text("More", fontSize = 24.sp, fontWeight = FontWeight.Bold, color = Navy)
         Text("RailX  •  academic demo", color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 13.sp)
         Spacer(Modifier.height(12.dp))
@@ -208,6 +216,34 @@ fun MoreScreen(
             RailCard(Modifier.padding(bottom = 8.dp)) {
                 androidx.compose.material3.TextButton(onClick = action, modifier = Modifier.fillMaxWidth()) {
                     Text(label, color = Navy, fontWeight = FontWeight.Medium)
+                }
+            }
+        }
+        Spacer(Modifier.height(16.dp))
+        SectionTitle("Appearance")
+        RailCard(Modifier.padding(bottom = 8.dp)) {
+            Column {
+                Text("Theme", color = Navy, fontWeight = FontWeight.Medium)
+                Spacer(Modifier.height(8.dp))
+                Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                    listOf("system" to "System", "light" to "Light", "dark" to "Dark").forEach { (mode, label) ->
+                        FilterChip(
+                            selected = vm.themeMode == mode,
+                            onClick = { vm.setThemeMode(mode) },
+                            label = { Text(label) }
+                        )
+                    }
+                }
+                Spacer(Modifier.height(16.dp))
+                Text("Liquid Glass intensity", color = Navy, fontWeight = FontWeight.Medium)
+                Slider(
+                    value = vm.glassIntensity,
+                    onValueChange = { vm.setGlassIntensity(it) },
+                    valueRange = 0f..1f
+                )
+                Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
+                    Text("Fully tinted", color = Mute, fontSize = 12.sp)
+                    Text("Ultra-clear", color = Mute, fontSize = 12.sp)
                 }
             }
         }

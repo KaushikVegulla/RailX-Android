@@ -1,8 +1,17 @@
 package com.kaushik.railway.ui.components
 
+import androidx.compose.animation.core.Spring
+import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.animation.core.spring
 import androidx.compose.foundation.background
+import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.interaction.collectIsPressedAsState
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -14,25 +23,26 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.ArrowBackIosNew
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBar
-import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.scale
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
@@ -53,7 +63,7 @@ import com.kaushik.railway.ui.theme.TricolorGreen
 import com.kaushik.railway.ui.theme.TricolorSaffron
 import com.kaushik.railway.ui.theme.Waitlist
 
-private val GlassShape = RoundedCornerShape(24.dp)
+private val GlassShape = RoundedCornerShape(28.dp)
 
 @Composable
 fun TricolorStrip() {
@@ -65,51 +75,133 @@ fun TricolorStrip() {
 }
 
 @Composable
-fun glassModifier(modifier: Modifier = Modifier): Modifier =
-    modifier
+fun glassModifier(modifier: Modifier = Modifier): Modifier {
+    val fill = GlassFill
+    val stroke = GlassStroke
+    val highlight = GlassHighlight
+    return modifier
+        .shadow(
+            elevation = 18.dp,
+            shape = GlassShape,
+            clip = false,
+            ambientColor = Color.Black.copy(alpha = 0.10f),
+            spotColor = Color.Black.copy(alpha = 0.16f)
+        )
         .clip(GlassShape)
-        .background(MaterialTheme.colorScheme.surface)
-        .border(1.dp, MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.6f), GlassShape)
+        .background(
+            Brush.verticalGradient(
+                0f to highlight,
+                0.35f to fill,
+                1f to fill
+            )
+        )
+        .border(
+            1.dp,
+            Brush.verticalGradient(
+                listOf(stroke, stroke.copy(alpha = stroke.alpha * 0.45f))
+            ),
+            GlassShape
+        )
+}
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun RailTopBar(title: String, onBack: (() -> Unit)? = null) {
-    TopAppBar(
-        title = { Text(title, style = MaterialTheme.typography.titleLarge) },
-        navigationIcon = {
+    Column(
+        Modifier
+            .fillMaxWidth()
+            .background(
+                Brush.verticalGradient(
+                    listOf(GlassHighlight, GlassFill)
+                )
+            )
+    ) {
+        Row(
+            Modifier
+                .fillMaxWidth()
+                .statusBarsPadding()
+                .padding(horizontal = 10.dp, vertical = 10.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
             if (onBack != null) {
-                IconButton(onClick = onBack) {
-                    Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
+                IconButton(
+                    onClick = onBack,
+                    modifier = Modifier
+                        .size(38.dp)
+                        .clip(CircleShape)
+                        .background(GlassFill)
+                        .border(1.dp, GlassStroke, CircleShape)
+                ) {
+                    Icon(
+                        Icons.Filled.ArrowBackIosNew,
+                        contentDescription = "Back",
+                        tint = MaterialTheme.colorScheme.onSurface,
+                        modifier = Modifier.size(17.dp)
+                    )
                 }
+                Spacer(Modifier.width(10.dp))
             }
-        },
-        colors = TopAppBarDefaults.topAppBarColors(
-            containerColor = MaterialTheme.colorScheme.background,
-            titleContentColor = MaterialTheme.colorScheme.onBackground,
-            navigationIconContentColor = MaterialTheme.colorScheme.onBackground
+            Text(
+                title,
+                style = MaterialTheme.typography.titleLarge,
+                color = MaterialTheme.colorScheme.onBackground
+            )
+        }
+        Box(
+            Modifier
+                .fillMaxWidth()
+                .height(1.dp)
+                .background(MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.45f))
         )
-    )
+    }
 }
 
 @Composable
 fun OrangeButton(text: String, modifier: Modifier = Modifier, enabled: Boolean = true, onClick: () -> Unit) {
+    val interaction = remember { MutableInteractionSource() }
+    val pressed by interaction.collectIsPressedAsState()
+    val scale by animateFloatAsState(
+        targetValue = if (pressed) 0.965f else 1f,
+        animationSpec = spring(dampingRatio = 0.55f, stiffness = Spring.StiffnessMedium),
+        label = "buttonPress"
+    )
+    val primary = MaterialTheme.colorScheme.primary
+    val brush = if (enabled) {
+        Brush.horizontalGradient(listOf(primary, primary.copy(alpha = 0.82f)))
+    } else {
+        Brush.horizontalGradient(
+            listOf(
+                MaterialTheme.colorScheme.onSurface.copy(alpha = 0.16f),
+                MaterialTheme.colorScheme.onSurface.copy(alpha = 0.16f)
+            )
+        )
+    }
     Button(
         onClick = onClick,
         enabled = enabled,
-        modifier = modifier.fillMaxWidth().heightIn(min = 54.dp),
-        shape = RoundedCornerShape(18.dp),
+        interactionSource = interaction,
+        modifier = modifier.fillMaxWidth().heightIn(min = 56.dp).scale(scale),
+        shape = RoundedCornerShape(50),
         colors = ButtonDefaults.buttonColors(
-            containerColor = MaterialTheme.colorScheme.secondaryContainer,
-            contentColor = MaterialTheme.colorScheme.onSecondaryContainer
-        )
+            containerColor = Color.Transparent,
+            contentColor = Color.White,
+            disabledContainerColor = Color.Transparent,
+            disabledContentColor = MaterialTheme.colorScheme.onSurfaceVariant
+        ),
+        elevation = ButtonDefaults.buttonElevation(defaultElevation = 8.dp, pressedElevation = 3.dp),
+        contentPadding = PaddingValues(0.dp)
     ) {
-        Text(text, style = MaterialTheme.typography.labelLarge)
+        Box(
+            Modifier.fillMaxSize().background(brush),
+            contentAlignment = Alignment.Center
+        ) {
+            Text(text, style = MaterialTheme.typography.labelLarge)
+        }
     }
 }
 
 @Composable
 fun RailCard(modifier: Modifier = Modifier, content: @Composable () -> Unit) {
-    Box(glassModifier(modifier.fillMaxWidth()).padding(16.dp)) { content() }
+    Box(glassModifier(modifier.fillMaxWidth()).padding(18.dp)) { content() }
 }
 
 @Composable
@@ -150,12 +242,12 @@ fun LabeledField(
         keyboardOptions = KeyboardOptions(
             keyboardType = if (isPassword) KeyboardType.Password else keyboardType
         ),
-        shape = RoundedCornerShape(16.dp),
+        shape = RoundedCornerShape(20.dp),
         colors = OutlinedTextFieldDefaults.colors(
-            focusedContainerColor = MaterialTheme.colorScheme.surfaceVariant,
-            unfocusedContainerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.6f),
+            focusedContainerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.85f),
+            unfocusedContainerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f),
             focusedBorderColor = Navy,
-            unfocusedBorderColor = MaterialTheme.colorScheme.outlineVariant
+            unfocusedBorderColor = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.55f)
         )
     )
 }

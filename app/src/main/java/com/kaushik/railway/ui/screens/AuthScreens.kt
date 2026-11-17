@@ -1,6 +1,8 @@
 package com.kaushik.railway.ui.screens
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -13,6 +15,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.systemBarsPadding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Train
@@ -78,10 +81,28 @@ fun SplashScreen(ready: Boolean, onDone: () -> Unit) {
     ) {
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             Box(
-                Modifier.size(88.dp).clip(CircleShape).background(MaterialTheme.colorScheme.secondaryContainer),
+                Modifier
+                    .size(92.dp)
+                    .clip(RoundedCornerShape(26.dp))
+                    .background(
+                        Brush.linearGradient(
+                            listOf(Color(0xFF0A2E63), Color(0xFF0A5BD7), Color(0xFF0E86E8))
+                        )
+                    )
+                    .border(1.dp, Color.White.copy(alpha = 0.35f), RoundedCornerShape(26.dp)),
                 contentAlignment = Alignment.Center
             ) {
-                Icon(Icons.Default.Train, null, tint = MaterialTheme.colorScheme.onSecondaryContainer, modifier = Modifier.size(48.dp))
+                Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                    Icon(Icons.Default.Train, null, tint = Color.White, modifier = Modifier.size(46.dp))
+                    Box(
+                        Modifier
+                            .padding(top = 5.dp)
+                            .width(34.dp)
+                            .height(3.5.dp)
+                            .clip(RoundedCornerShape(50))
+                            .background(Color(0xFFFF8A3D))
+                    )
+                }
             }
             Spacer(Modifier.height(16.dp))
             Text("RailX", color = MaterialTheme.colorScheme.onPrimaryContainer, fontSize = 28.sp, fontWeight = FontWeight.Black)
