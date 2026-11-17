@@ -98,6 +98,29 @@ class AppViewModel : ViewModel() {
     var gateReady by mutableStateOf(false)
     var appUnlocked by mutableStateOf(false)
     var cloudBusy by mutableStateOf(false)
+    // Appearance (persisted): liquid glass intensity + theme mode.
+    private val uiPrefs = RailApp.instance.getSharedPreferences("railx_ui", android.content.Context.MODE_PRIVATE)
+    var glassIntensity by mutableStateOf(uiPrefs.getFloat("glass_intensity", 0.55f))
+        private set
+    var themeMode by mutableStateOf(uiPrefs.getString("theme_mode", "system") ?: "system")
+        private set
+    val darkThemeEnabled: Boolean?
+        get() = when (themeMode) {
+            "light" -> false
+            "dark" -> true
+            else -> null
+        }
+
+    fun updateGlassIntensity(value: Float) {
+        glassIntensity = value.coerceIn(0f, 1f)
+        uiPrefs.edit().putFloat("glass_intensity", glassIntensity).apply()
+    }
+
+    fun updateThemeMode(mode: String) {
+        themeMode = mode
+        uiPrefs.edit().putString("theme_mode", mode).apply()
+    }
+
     var useSupabaseConfirm by mutableStateOf(false)
 
     // Deep links from Supabase emails (railx://auth-callback#...).

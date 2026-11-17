@@ -15,7 +15,11 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.animation.AnimatedContentTransitionScope
 import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.core.tween
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -51,6 +55,8 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.sp
+import com.kaushik.railway.ui.theme.GlassFill
+import com.kaushik.railway.ui.theme.GlassStroke
 import com.kaushik.railway.ui.theme.LiquidGlassBackdrop
 import com.kaushik.railway.ui.theme.Navy
 import com.kaushik.railway.ui.theme.Orange
@@ -92,7 +98,9 @@ class MainActivity : FragmentActivity(), PaymentResultWithDataListener {
         enableEdgeToEdge()
         vm.handleAuthLink(intent?.data?.toString())
         setContent {
-            RailwayTheme { RailwayApp(vm) }
+            RailwayTheme(glassIntensity = vm.glassIntensity, darkOverride = vm.darkThemeEnabled) {
+                RailwayApp(vm)
+            }
         }
     }
 
@@ -142,7 +150,17 @@ fun RailwayApp(vm: AppViewModel = viewModel()) {
         NavHost(
             navController = nav,
             startDestination = Routes.Splash,
-            modifier = Modifier.weight(1f)
+            modifier = Modifier.weight(1f),
+            enterTransition = {
+                fadeIn(tween(300)) +
+                    slideIntoContainer(AnimatedContentTransitionScope.SlideDirection.Start, tween(340))
+            },
+            exitTransition = { fadeOut(tween(220)) },
+            popEnterTransition = {
+                fadeIn(tween(300)) +
+                    slideIntoContainer(AnimatedContentTransitionScope.SlideDirection.End, tween(340))
+            },
+            popExitTransition = { fadeOut(tween(220)) }
         ) {
             composable(Routes.Splash) {
                 SplashScreen(ready = vm.gateReady) {
@@ -275,6 +293,7 @@ fun RailwayApp(vm: AppViewModel = viewModel()) {
             }
             composable(Routes.More) {
                 MoreScreen(
+                    vm = vm,
                     onPnr = { nav.navigate(Routes.Pnr) },
                     onRunning = { nav.navigate(Routes.Running) },
                     onProfile = { nav.navigate(Routes.Profile) },
@@ -286,10 +305,10 @@ fun RailwayApp(vm: AppViewModel = viewModel()) {
         }
         if (showBar) {
             Surface(
-                color = MaterialTheme.colorScheme.surface.copy(alpha = 0.98f),
-                shape = RoundedCornerShape(30.dp),
-                border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.6f)),
-                shadowElevation = 2.dp,
+                color = GlassFill,
+                shape = RoundedCornerShape(36.dp),
+                border = BorderStroke(1.dp, GlassStroke),
+                shadowElevation = 18.dp,
                 modifier = Modifier.navigationBarsPadding().padding(horizontal = 16.dp, vertical = 10.dp)
             ) {
                 Row(
@@ -318,8 +337,8 @@ fun RailwayApp(vm: AppViewModel = viewModel()) {
 @Composable
 private fun NavItem(label: String, selected: Boolean, icon: ImageVector, modifier: Modifier = Modifier, onClick: () -> Unit) {
     val colors = MaterialTheme.colorScheme
-    val tint by animateColorAsState(if (selected) colors.onPrimaryContainer else colors.onSurfaceVariant, label = "Navigation tint")
-    val background by animateColorAsState(if (selected) colors.primaryContainer else Color.Transparent, label = "Navigation selection")
+    val tint by animateColorAsState(if (selected) colors.onPrimary else colors.onSurfaceVariant, label = "Navigation tint")
+    val background by animateColorAsState(if (selected) colors.primary else Color.Transparent, label = "Navigation selection")
     Column(
         modifier = modifier.clip(RoundedCornerShape(24.dp)).background(background)
             .selectable(selected = selected, role = Role.Tab, onClick = onClick)
