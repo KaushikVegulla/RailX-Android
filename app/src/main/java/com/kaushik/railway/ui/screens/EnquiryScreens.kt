@@ -1,6 +1,10 @@
 package com.kaushik.railway.ui.screens
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.ui.draw.clip
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -11,7 +15,6 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material3.FilterChip
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Slider
 import androidx.compose.material3.Scaffold
@@ -227,18 +230,32 @@ fun MoreScreen(
                 Spacer(Modifier.height(8.dp))
                 Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                     listOf("system" to "System", "light" to "Light", "dark" to "Dark").forEach { (mode, label) ->
-                        FilterChip(
-                            selected = vm.themeMode == mode,
-                            onClick = { vm.setThemeMode(mode) },
-                            label = { Text(label) }
-                        )
+                        val chipSelected = vm.themeMode == mode
+                        Box(
+                            Modifier
+                                .clip(RoundedCornerShape(50))
+                                .background(
+                                    if (chipSelected) MaterialTheme.colorScheme.primary
+                                    else MaterialTheme.colorScheme.surfaceVariant
+                                )
+                                .clickable { vm.updateThemeMode(mode) }
+                                .padding(horizontal = 16.dp, vertical = 8.dp)
+                        ) {
+                            Text(
+                                label,
+                                color = if (chipSelected) MaterialTheme.colorScheme.onPrimary
+                                    else MaterialTheme.colorScheme.onSurfaceVariant,
+                                fontSize = 13.sp,
+                                fontWeight = FontWeight.Medium
+                            )
+                        }
                     }
                 }
                 Spacer(Modifier.height(16.dp))
                 Text("Liquid Glass intensity", color = Navy, fontWeight = FontWeight.Medium)
                 Slider(
                     value = vm.glassIntensity,
-                    onValueChange = { vm.setGlassIntensity(it) },
+                    onValueChange = { vm.updateGlassIntensity(it) },
                     valueRange = 0f..1f
                 )
                 Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {

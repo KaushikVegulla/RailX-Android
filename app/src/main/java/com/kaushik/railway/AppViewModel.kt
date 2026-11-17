@@ -111,12 +111,12 @@ class AppViewModel : ViewModel() {
             else -> null
         }
 
-    fun setGlassIntensity(value: Float) {
+    fun updateGlassIntensity(value: Float) {
         glassIntensity = value.coerceIn(0f, 1f)
         uiPrefs.edit().putFloat("glass_intensity", glassIntensity).apply()
     }
 
-    fun setThemeMode(mode: String) {
+    fun updateThemeMode(mode: String) {
         themeMode = mode
         uiPrefs.edit().putString("theme_mode", mode).apply()
     }
