@@ -5,8 +5,8 @@ import com.kaushik.railway.BuildConfig
 /**
  * Supabase project configuration.
  *
- * The URL and the publishable key are client configuration, like the Cognito
- * pool/client IDs: the publishable key is designed to ship in apps and is
+ * The URL and the publishable key are client configuration: the publishable
+ * key is designed to ship in apps and is
  * safe ONLY because every table in supabase/schema.sql has Row Level
  * Security policies scoped to auth.uid(). Never add the secret /
  * service_role key here, in local.properties, or anywhere in the app — it
