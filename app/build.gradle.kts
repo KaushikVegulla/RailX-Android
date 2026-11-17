@@ -28,6 +28,8 @@ android {
         fun prop(key: String, fallback: String) =
             localProps.getProperty(key)?.trim()?.takeIf { it.isNotEmpty() } ?: fallback
 
+        buildConfigField("String", "SUPABASE_URL", "\"${prop("supabase.url", "https://etaaufimazvjdmpladom.supabase.co")}\"")
+        buildConfigField("String", "SUPABASE_PUBLISHABLE_KEY", "\"${prop("supabase.publishable.key", "sb_publishable_XmViLB5DeAomuqBFzv4R8A_UFQNOZYY")}\"")
         buildConfigField("String", "RAILRADAR_API_KEY", "\"${prop("railradar.api.key", "YOUR_RAILRADAR_API_KEY")}\"")
         buildConfigField("String", "RAZORPAY_KEY_ID", "\"${prop("razorpay.key.id", "rzp_test_XXXXXXXX")}\"")
         buildConfigField("String", "RAZORPAY_KEY_SECRET", "\"${prop("razorpay.key.secret", "YOUR_RAZORPAY_SECRET")}\"")

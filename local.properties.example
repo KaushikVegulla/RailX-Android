@@ -3,6 +3,14 @@
 
 sdk.dir=/path/to/Android/sdk
 
+# Supabase (RailX backend — Auth + Postgres)
+# Defaults in build.gradle.kts already point at the RailX project, so these
+# are only needed to use a different project. The publishable key is client
+# configuration and is safe in the app because Row Level Security protects
+# every table. NEVER put the secret / service_role key here or in the app.
+# supabase.url=https://etaaufimazvjdmpladom.supabase.co
+# supabase.publishable.key=sb_publishable_...
+
 # RailRadar (required for live train search)
 railradar.api.key=rg_xxxxxxxxxxxxxxxxxxxxxxxx
 
