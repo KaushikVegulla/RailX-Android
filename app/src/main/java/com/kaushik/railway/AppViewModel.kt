@@ -11,8 +11,6 @@ import com.kaushik.railway.data.AccountProvider
 import com.kaushik.railway.data.AccountStore
 import com.kaushik.railway.data.AvailabilityResult
 import com.kaushik.railway.data.Booking
-import com.kaushik.railway.data.CognitoAuth
-import com.kaushik.railway.data.CognitoCall
 import com.kaushik.railway.data.IrctcRules
 import com.kaushik.railway.data.LastJourney
 import com.kaushik.railway.data.MockData
@@ -38,7 +36,6 @@ import com.kaushik.railway.nav.AccountGate
 import com.kaushik.railway.util.UiState
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
-import kotlinx.coroutines.async
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
@@ -99,13 +96,11 @@ class AppViewModel : ViewModel() {
     var pendingVerifyEmail by mutableStateOf("")
     var gateReady by mutableStateOf(false)
     var appUnlocked by mutableStateOf(false)
-    var cognitoBusy by mutableStateOf(false)
-    var useCognitoOtp by mutableStateOf(false)
-    var cognitoUsername by mutableStateOf("")
-    var cognitoDelivery by mutableStateOf("")
+    var cloudBusy by mutableStateOf(false)
+    var useSupabaseConfirm by mutableStateOf(false)
+    var supabaseDelivery by mutableStateOf("")
     private var sessionSeen = false
-    private var cognitoPassword = ""
-    private var pendingPassword = ""
+    private var pendingSupabaseEmail = ""
 
     // Search
     var fromCode by mutableStateOf("NDLS")
@@ -258,41 +253,6 @@ class AppViewModel : ViewModel() {
         authLoading = true
         authError = null
         viewModelScope.launch {
-            if (cognitoUsername.isNotBlank()) {
-                val confirmed = CognitoAuth.confirm(cognitoUsername, code)
-                if (confirmed is CognitoCall.Err || confirmed is CognitoCall.Offline) {
-                    val message = (confirmed as? CognitoCall.Err)?.message
-                        ?: (confirmed as CognitoCall.Offline).message
-                    authLoading = false
-                    authError = message
-                    onDone(message)
-                    return@launch
-                }
-                val pass = pendingPassword
-                if (pass.isNotBlank()) {
-                    val signed = CognitoAuth.signIn(cognitoUsername, pass)
-                    pendingPassword = ""
-                    if (signed is CognitoCall.Ok) {
-                        adoptCognitoUser(signed.username, pass, signed.email, signed.name, signed.phone)
-                        appUnlocked = true
-                        needsVerification = false
-                        authLoading = false
-                        onDone(null)
-                        return@launch
-                    }
-                    val message = (signed as? CognitoCall.Err)?.message
-                        ?: (signed as? CognitoCall.Offline)?.message
-                        ?: "Confirmed. Sign in with your user ID."
-                    authLoading = false
-                    authError = message
-                    onDone(message)
-                    return@launch
-                }
-                needsVerification = false
-                authLoading = false
-                onDone(null)
-                return@launch
-            }
             val result = authRepo.verifyEmail(pendingVerifyEmail, code)
             authLoading = false
             if (result.success) {
@@ -328,18 +288,6 @@ class AppViewModel : ViewModel() {
 
     fun resendCode(onDone: (String?) -> Unit = {}) {
         viewModelScope.launch {
-            if (cognitoUsername.isNotBlank()) {
-                val call = CognitoAuth.resend(cognitoUsername)
-                if (call is CognitoCall.Ok) {
-                    otpEmailed = true
-                    otpDisplayCode = null
-                    cognitoDelivery = call.delivery
-                    onDone(null)
-                } else {
-                    onDone((call as? CognitoCall.Err)?.message ?: (call as? CognitoCall.Offline)?.message)
-                }
-                return@launch
-            }
             val result = authRepo.resendCode(pendingVerifyEmail)
             if (result.success) {
                 otpEmailed = result.displayCode == null
@@ -354,12 +302,9 @@ class AppViewModel : ViewModel() {
     fun logout(onDone: () -> Unit = {}) {
         viewModelScope.launch {
             runCatching { supabaseAuth.signOut() }
-            CognitoAuth.signOut()
             PaymentApi.bearerToken = null
-            pendingPassword = ""
-            cognitoPassword = ""
-            cognitoUsername = ""
-            useCognitoOtp = false
+            pendingSupabaseEmail = ""
+            useSupabaseConfirm = false
             authRepo.logout()
             appUnlocked = false
             onDone()
@@ -384,7 +329,7 @@ class AppViewModel : ViewModel() {
     }
 
     suspend fun refreshPaymentSession() {
-        PaymentApi.bearerToken = CognitoAuth.idToken()
+        PaymentApi.bearerToken = supabaseAuth.currentSession()?.accessToken
     }
 
     fun updateProfile(name: String, mobile: String) {
@@ -414,84 +359,76 @@ class AppViewModel : ViewModel() {
         regStep = 0
         regIdMessage = ""
         regIdChecked = ""
-        useCognitoOtp = false
-        cognitoUsername = ""
-        cognitoDelivery = ""
-        cognitoBusy = false
-        cognitoPassword = ""
+        useSupabaseConfirm = false
+        pendingSupabaseEmail = ""
+        supabaseDelivery = ""
+        cloudBusy = false
     }
 
-    fun beginCognitoSignUp(onDone: (String?) -> Unit) {
-        if (useCognitoOtp && cognitoUsername.isNotBlank()) {
+    fun beginCloudSignUp(onDone: (String?) -> Unit) {
+        if (useSupabaseConfirm) {
             onDone(null)
             return
         }
-        cognitoBusy = true
+        cloudBusy = true
         viewModelScope.launch {
             val phone = IrctcRules.toIndianE164(regMobile)
             if (phone == null) {
-                cognitoBusy = false
+                cloudBusy = false
                 onDone("Enter a valid 10-digit mobile number")
                 return@launch
             }
-            var call = CognitoAuth.signUp(
-                regUserId.trim(),
-                regPassword,
-                regFullName.trim(),
-                regEmail.trim(),
-                phone
-            )
-            if (call is CognitoCall.Err && call.code == "EXISTS") {
-                val username = regUserId.trim()
-                val resent = CognitoAuth.resend(username)
-                call = if (resent is CognitoCall.Ok) {
-                    CognitoCall.NeedsConfirm(username, resent.delivery, regEmail.trim())
-                } else {
-                    resent
-                }
+            val call = withTimeoutOrNull(15_000) {
+                supabaseAuth.signUp(regEmail.trim(), regPassword, regFullName.trim(), regMobile.trim())
             }
-            cognitoBusy = false
+            cloudBusy = false
             when (call) {
-                is CognitoCall.Ok, is CognitoCall.NeedsConfirm -> {
-                    useCognitoOtp = true
-                    cognitoUsername = when (call) {
-                        is CognitoCall.Ok -> call.username
-                        is CognitoCall.NeedsConfirm -> call.username
-                        else -> regUserId.trim()
-                    }
-                    cognitoDelivery = when (call) {
-                        is CognitoCall.Ok -> call.delivery
-                        is CognitoCall.NeedsConfirm -> call.delivery
-                        else -> ""
-                    }
-                    cognitoPassword = regPassword
+                is SupabaseCall.SignedIn -> {
+                    useSupabaseConfirm = true
+                    pendingSupabaseEmail = regEmail.trim()
+                    supabaseDelivery = "Supabase account created for ${regEmail.trim()}. Tap VERIFY to finish setting up this device, then sign in."
                     onDone(null)
                 }
-                is CognitoCall.Offline -> {
-                    useCognitoOtp = false
-                    cognitoPassword = ""
+                is SupabaseCall.NeedsConfirmation -> {
+                    useSupabaseConfirm = true
+                    pendingSupabaseEmail = regEmail.trim()
+                    supabaseDelivery = "We emailed a confirmation link to ${regEmail.trim()}. Open it to activate your account, then tap VERIFY here and sign in with your email and password."
+                    onDone(null)
+                }
+                is SupabaseCall.Err -> {
+                    when {
+                        call.message.contains("already", ignoreCase = true) ->
+                            onDone("This email already has a Supabase account. Go back and sign in with it.")
+                        call.message.startsWith("Could not reach") -> {
+                            // Supabase unreachable: fall back to an on-device demo account.
+                            useSupabaseConfirm = false
+                            if (regEmailOtp.isBlank() || regMobileOtp.isBlank()) issueOtps()
+                            supabaseDelivery = "Cloud registration is unavailable. This creates a demo account stored only on this device. Use the codes shown here."
+                            onDone(null)
+                        }
+                        else -> onDone(call.message)
+                    }
+                }
+                null -> {
+                    useSupabaseConfirm = false
                     if (regEmailOtp.isBlank() || regMobileOtp.isBlank()) issueOtps()
-                    cognitoDelivery = "Cloud registration is unavailable. This creates a demo account stored only on this device. Use the codes shown here."
+                    supabaseDelivery = "Cloud registration is unavailable. This creates a demo account stored only on this device. Use the codes shown here."
                     onDone(null)
                 }
-                is CognitoCall.Err -> onDone(call.message)
             }
         }
     }
 
     fun resendRegistrationCode(onDone: (String?) -> Unit) {
         viewModelScope.launch {
-            if (useCognitoOtp) {
-                val call = CognitoAuth.resend(cognitoUsername.ifBlank { regUserId.trim() })
-                if (call is CognitoCall.Ok) {
-                    cognitoDelivery = call.delivery
-                    onDone(null)
-                } else if (call is CognitoCall.Offline) {
-                    useCognitoOtp = false
-                    issueOtps()
-                    onDone(null)
-                } else {
-                    onDone((call as? CognitoCall.Err)?.message ?: "Could not resend the code")
+            if (useSupabaseConfirm) {
+                val email = pendingSupabaseEmail.ifBlank { regEmail.trim() }
+                when (val call = supabaseAuth.resendConfirmation(email)) {
+                    is SupabaseCall.Err -> onDone(call.message)
+                    else -> {
+                        supabaseDelivery = "Confirmation link re-sent to $email. Open it, then tap VERIFY here."
+                        onDone(null)
+                    }
                 }
             } else {
                 issueOtps()
@@ -502,24 +439,10 @@ class AppViewModel : ViewModel() {
 
     fun submitRegistrationCodes(emailCode: String, mobileCode: String, onDone: (String?) -> Unit) {
         viewModelScope.launch {
-            if (useCognitoOtp) {
-                val confirmed = CognitoAuth.confirm(cognitoUsername.ifBlank { regUserId.trim() }, emailCode)
-                when (confirmed) {
-                    is CognitoCall.Err -> {
-                        onDone(confirmed.message)
-                        return@launch
-                    }
-                    is CognitoCall.Offline -> {
-                        onDone(confirmed.message)
-                        return@launch
-                    }
-                    is CognitoCall.NeedsConfirm -> {
-                        onDone("Enter the latest code sent to your email.")
-                        return@launch
-                    }
-                    is CognitoCall.Ok -> Unit
-                }
-            } else {
+            if (!useSupabaseConfirm) {
+                // Demo accounts confirm with the on-screen codes. Supabase
+                // accounts confirm through the email link, so there is no
+                // code to check for them.
                 val problem = when {
                     !IrctcRules.otpMatches(regEmailOtp, emailCode) -> "Email OTP does not match"
                     !IrctcRules.otpMatches(regMobileOtp, mobileCode) -> "Mobile OTP does not match"
@@ -531,22 +454,22 @@ class AppViewModel : ViewModel() {
                 }
             }
             try {
-                val password = cognitoPassword.ifBlank { regPassword }
                 val profile = accountStore.create(
                     userId = regUserId,
                     fullName = regFullName,
                     email = regEmail,
                     mobile = regMobile,
-                    password = password,
+                    password = regPassword,
                     language = regLanguage,
-                    authProvider = if (useCognitoOtp) AccountProvider.COGNITO else AccountProvider.LOCAL_DEMO,
-                    cloudUsername = if (useCognitoOtp) cognitoUsername.ifBlank { regUserId.trim() } else ""
+                    authProvider = if (useSupabaseConfirm) AccountProvider.SUPABASE else AccountProvider.LOCAL_DEMO,
+                    cloudUsername = ""
                 )
                 loginPrefill = profile.userId
                 regPassword = ""
-                cognitoPassword = ""
                 regEmailOtp = ""
                 regMobileOtp = ""
+                useSupabaseConfirm = false
+                pendingSupabaseEmail = ""
                 onDone(null)
             } catch (e: Exception) {
                 onDone(e.message ?: "Could not create the account")
@@ -627,7 +550,6 @@ class AppViewModel : ViewModel() {
                     val profile = accountStore.authenticate(idOrEmail, password)
                         ?: error("No demo account on this device. Register again.")
                     // Demo credentials never authenticate a cloud session or payment request.
-                    CognitoAuth.signOut()
                     PaymentApi.bearerToken = null
                     sessionStore.saveSession(profile.fullName, profile.email, profile.mobile, profile.userId)
                     applyProfile(profile)
@@ -643,9 +565,8 @@ class AppViewModel : ViewModel() {
                 return@launch
             }
             // Supabase accounts sign in against the Supabase backend first.
-            // Accounts explicitly tied to another provider skip this; a failed
-            // or unreachable Supabase attempt falls through to the existing
-            // Cognito / local flow so nobody is locked out by the migration.
+            // A failed or unreachable Supabase attempt falls through to the
+            // local / legacy flow so nobody is locked out by the migration.
             val supabaseAccount = savedProfile?.authProvider == AccountProvider.SUPABASE
             val trySupabase = supabaseAccount ||
                 (savedProfile == null && idOrEmail.contains("@"))
@@ -677,58 +598,6 @@ class AppViewModel : ViewModel() {
                     }
                     else -> Unit
                 }
-            }
-            val cloudUsername = savedProfile?.cloudUsername?.takeIf { it.isNotBlank() } ?: idOrEmail.trim()
-            val cognitoDeferred = async {
-                withTimeoutOrNull(12_000) { CognitoAuth.signIn(cloudUsername, password) }
-            }
-            var localProfile: RailProfile? = null
-            var localError: String? = null
-            try {
-                localProfile = accountStore.authenticate(idOrEmail, password)
-            } catch (e: Exception) {
-                localError = e.message ?: "Login failed"
-            }
-            when (val cognito = cognitoDeferred.await()) {
-                is CognitoCall.Ok -> {
-                    adoptCognitoUser(cognito.username.ifBlank { idOrEmail.trim() }, password, cognito.email, cognito.name, cognito.phone)
-                    appUnlocked = true
-                    authLoading = false
-                    onSuccess()
-                    return@launch
-                }
-                is CognitoCall.NeedsConfirm -> {
-                    cognitoUsername = cognito.username.ifBlank { idOrEmail.trim() }
-                    pendingPassword = password
-                    pendingVerifyEmail = idOrEmail.trim()
-                    useCognitoOtp = true
-                    otpEmailed = true
-                    otpDisplayCode = null
-                    needsVerification = true
-                    authLoading = false
-                    onNeedVerify(pendingVerifyEmail)
-                    return@launch
-                }
-                is CognitoCall.Err -> if (cognito.code == "INVALID") {
-                    authLoading = false
-                    val message = if (localProfile != null && savedProfile?.authProvider == AccountProvider.LEGACY) {
-                        "Cloud sign-in was rejected. This older local account has no account-type record. " +
-                            "If you registered with on-screen demo codes, create a new demo account with different details."
-                    } else cognito.message
-                    authError = message
-                    onError(message)
-                    return@launch
-                }
-                else -> Unit
-            }
-            val cognito = cognitoDeferred.await()
-            if (savedProfile?.authProvider == AccountProvider.COGNITO) {
-                val message = (cognito as? CognitoCall.Err)?.message
-                    ?: "Cloud sign-in is unavailable. Check your connection and try again."
-                authLoading = false
-                authError = message
-                onError(message)
-                return@launch
             }
             if (localProfile != null) {
                 sessionStore.saveSession(localProfile.fullName, localProfile.email, localProfile.mobile, localProfile.userId)
@@ -765,14 +634,7 @@ class AppViewModel : ViewModel() {
                 onNeedVerify(pendingVerifyEmail)
                 return@launch
             }
-            val cognitoMessage = (cognito as? CognitoCall.Err)?.message
-            val offline = cognito == null || cognito is CognitoCall.Offline ||
-                (cognito is CognitoCall.Err && cognito.code == "NOT_FOUND")
-            val message = when {
-                localError != null && offline -> localError
-                cognitoMessage != null -> cognitoMessage
-                else -> result.error ?: "No account for that user ID. Register first."
-            }
+            val message = localError ?: result.error ?: "No account for that user ID. Register first."
             authLoading = false
             authError = message
             onError(message)
@@ -882,61 +744,15 @@ class AppViewModel : ViewModel() {
         }
     }
 
-    private suspend fun adoptCognitoUser(
-        username: String,
-        password: String,
-        email: String,
-        name: String,
-        phone: String
-    ) {
-        val mail = email.trim().ifBlank { username.takeIf { it.contains("@") }.orEmpty() }
-        val phoneDigits = phone.filter { it.isDigit() }.let { if (it.length > 10) it.takeLast(10) else it }
-        val list = accountStore.profiles.first()
-        val match = list.find { it.userId.equals(username, ignoreCase = true) }
-            ?: list.find { mail.isNotBlank() && it.email.equals(mail, ignoreCase = true) }
-        val profile = if (match != null) {
-            accountStore.update(match.userId) {
-                it.copy(
-                    fullName = name.ifBlank { it.fullName },
-                    email = mail.ifBlank { it.email },
-                    mobile = phoneDigits.ifBlank { it.mobile },
-                    passwordHash = IrctcRules.secretHash(it.userId, password),
-                    authProvider = AccountProvider.COGNITO,
-                    cloudUsername = username
-                )
-            }
-        } else {
-            val id = if (IrctcRules.validateUserId(username) == null && !accountStore.isUserIdTaken(username)) {
-                username.trim()
-            } else {
-                accountStore.unusedUserId(IrctcRules.userIdFromEmail(mail.ifBlank { username }))
-            }
-            accountStore.create(
-                userId = id,
-                fullName = name.ifBlank { id },
-                email = mail.ifBlank { "$id@users.railx.local" },
-                mobile = phoneDigits,
-                password = password,
-                language = "English",
-                profileComplete = false,
-                authProvider = AccountProvider.COGNITO,
-                cloudUsername = username
-            )
-        }
-        sessionStore.saveSession(profile.fullName, profile.email, profile.mobile, profile.userId)
-        applyProfile(profile)
-        loggedIn = true
-    }
-
     /**
-     * Mirrors a signed-in Supabase user into a local profile, the same way
-     * [adoptCognitoUser] does for Cognito: bookings stay owned by the local
-     * user ID, while the Supabase UUID lives in cloudUsername and the
-     * Supabase tokens stay in SupabaseTokenStore for backend sync.
+     * Mirrors a signed-in Supabase user into a local profile: bookings stay
+     * owned by the local user ID, while the Supabase UUID lives in
+     * cloudUsername and the Supabase tokens stay in SupabaseTokenStore for
+     * backend sync.
      */
     private suspend fun adoptSupabaseUser(session: SupabaseSession, password: String) {
         val mail = session.email.trim()
-        val name = session.displayName
+        val name = session.fullName
         val list = accountStore.profiles.first()
         val match = list.find { it.cloudUsername == session.userId }
             ?: list.find { mail.isNotBlank() && it.email.equals(mail, ignoreCase = true) }

@@ -1,17 +1,17 @@
-# RailX backend (Cognito JWT + Razorpay test)
+# RailX backend (Supabase JWT + Razorpay test)
 
-Account sign-up, email OTP, and sign-in are Amazon Cognito (user pool `RailX-Users` in `ap-south-1`).
+Account sign-up, email confirmation, and sign-in are Supabase Auth (project `etaaufimazvjdmpladom`).
 
-`POST /register`, `/verify-email`, `/login`, and `/resend-code` return **410**. The Android app talks to Cognito directly.
+`POST /register`, `/verify-email`, `/login`, and `/resend-code` return **410**. The Android app talks to Supabase directly.
 
-Payment routes require `Authorization: Bearer <Cognito ID token>` unless `COGNITO_REQUIRE_JWT=0`.
+Payment routes require `Authorization: Bearer <Supabase access token>` unless `SUPABASE_REQUIRE_JWT=0`. Tokens are verified against the project JWKS (`/auth/v1/.well-known/jwks.json`); projects on the legacy HS256 secret can set `SUPABASE_JWT_SECRET`.
 
 | Env | Default |
 |---|---|
-| `COGNITO_REGION` | `ap-south-1` |
-| `COGNITO_USER_POOL_ID` | `ap-south-1_SspUmQyId` |
-| `COGNITO_CLIENT_ID` | `5s0vjm6vk4lttl2s326qh9mlmt` |
-| `COGNITO_REQUIRE_JWT` | `1` |
+| `SUPABASE_URL` | `https://etaaufimazvjdmpladom.supabase.co` |
+| `SUPABASE_JWT_AUD` | `authenticated` |
+| `SUPABASE_JWT_SECRET` | _(unset; legacy HS256 only)_ |
+| `SUPABASE_REQUIRE_JWT` | `1` |
 
 ## Payments
 

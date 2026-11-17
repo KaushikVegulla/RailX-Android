@@ -15,23 +15,30 @@ import com.kaushik.railway.data.SupabaseTokenStore
  * storage keeps working unchanged: the Supabase user UUID becomes the
  * SessionStore userId and therefore the Room/DataStore owner.
  *
- * This repository is additive for now. AppViewModel still drives the
- * Cognito + local demo flow; switching its sign-in/registration over to
- * this repository is a follow-up change once PR #3 (demo account sign-in)
- * has merged, so the two auth changes do not collide in the same files.
+ * AppViewModel drives sign-in and registration through this repository:
+ * Supabase is the cloud auth, and the local demo flow remains the offline
+ * fallback.
  */
 class SupabaseAuthRepository(context: Context) {
     private val tokenStore = SupabaseTokenStore(context.applicationContext)
     private val sessionStore = SessionStore(context.applicationContext)
 
     suspend fun signUp(email: String, password: String, fullName: String, mobile: String): SupabaseCall {
-        val call = SupabaseAuth.signUp(email, password, fullName, mobile)
+        val call = try {
+            SupabaseAuth.signUp(email, password, fullName, mobile)
+        } catch (e: Exception) {
+            return SupabaseCall.Err("Could not reach Supabase (${e.message ?: "network error"})")
+        }
         if (call is SupabaseCall.SignedIn) persist(call.session, fullName, mobile)
         return call
     }
 
     suspend fun signIn(email: String, password: String): SupabaseCall {
-        val call = SupabaseAuth.signIn(email, password)
+        val call = try {
+            SupabaseAuth.signIn(email, password)
+        } catch (e: Exception) {
+            return SupabaseCall.Err("Could not reach Supabase (${e.message ?: "network error"})")
+        }
         if (call is SupabaseCall.SignedIn) persist(call.session)
         return call
     }
@@ -45,7 +52,13 @@ class SupabaseAuthRepository(context: Context) {
             signOut()
             return null
         }
-        return when (val call = SupabaseAuth.refresh(stored.refreshToken)) {
+        val refreshed = try {
+            SupabaseAuth.refresh(stored.refreshToken)
+        } catch (e: Exception) {
+            signOut()
+            return null
+        }
+        return when (val call = refreshed) {
             is SupabaseCall.SignedIn -> {
                 // Refresh responses may omit metadata kept from sign-in.
                 val merged = call.session.copy(
@@ -65,16 +78,22 @@ class SupabaseAuthRepository(context: Context) {
 
     suspend fun signOut() {
         val stored = tokenStore.load()
-        if (stored != null) SupabaseAuth.signOut(stored.accessToken)
+        if (stored != null) runCatching { SupabaseAuth.signOut(stored.accessToken) }
         tokenStore.clear()
         sessionStore.clearSession()
     }
 
-    suspend fun resendConfirmation(email: String): SupabaseCall =
+    suspend fun resendConfirmation(email: String): SupabaseCall = try {
         SupabaseAuth.resendConfirmation(email)
+    } catch (e: Exception) {
+        SupabaseCall.Err("Could not reach Supabase (${e.message ?: "network error"})")
+    }
 
-    suspend fun sendPasswordReset(email: String): SupabaseCall =
+    suspend fun sendPasswordReset(email: String): SupabaseCall = try {
         SupabaseAuth.sendPasswordReset(email)
+    } catch (e: Exception) {
+        SupabaseCall.Err("Could not reach Supabase (${e.message ?: "network error"})")
+    }
 
     private suspend fun persist(
         session: SupabaseSession,

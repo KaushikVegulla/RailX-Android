@@ -62,7 +62,8 @@ acceptable; revisit before any real-user release.
 - `SupabaseDb` / `SupabaseSyncRepository`: bookings, passengers,
   favourite routes and profiles against PostgREST, failing soft when
   signed out or offline. Room remains the offline cache.
-- Follow-up: `AppViewModel` still drives the Cognito + local demo flow.
-  Switching its sign-in/registration to `SupabaseAuthRepository` is a
-  separate change once PR #3 (demo account sign-in) has merged, so the
-  two auth changes do not collide in the same files.
+- `AppViewModel` drives sign-in and registration through
+  `SupabaseAuthRepository` (since 1.8/1.9). Cognito and the Amplify SDK
+  were removed completely in 1.9; the local demo flow remains the
+  offline fallback, and accounts created under Cognito sign in locally
+  with their on-device password hash.

@@ -15,8 +15,8 @@ android {
         applicationId = "com.kaushik.railway"
         minSdk = 24
         targetSdk = 35
-        versionCode = 9
-        versionName = "1.8.0"
+        versionCode = 10
+        versionName = "1.9.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
         // Local demo configuration. BuildConfig values are recoverable from the APK.
@@ -84,8 +84,6 @@ dependencies {
     implementation(libs.androidx.room.ktx)
     ksp(libs.androidx.room.compiler)
     implementation(libs.androidx.datastore.preferences)
-    implementation(libs.amplify.core)
-    implementation(libs.amplify.auth)
     implementation(libs.androidx.biometric)
     implementation(libs.androidx.fragment)
     coreLibraryDesugaring(libs.desugar.jdk.libs)

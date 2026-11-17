@@ -212,7 +212,7 @@ private fun ConfirmContactsStep(
     onNext: () -> Unit,
     onBack: () -> Unit
 ) {
-    StepHeading(step, total, "Confirm email and mobile", "Cognito emails a code on the next step")
+    StepHeading(step, total, "Confirm email and mobile", "Supabase emails a confirmation link on the next step")
     RailCard {
         ColumnBlock {
             Text("User ID", color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 12.sp)
@@ -222,7 +222,7 @@ private fun ConfirmContactsStep(
             Text("Mobile  +91 ${IrctcRules.maskMobile(vm.regMobile)}", color = Navy, fontSize = 14.sp)
             Spacer(Modifier.height(12.dp))
             Text(
-                "The next step confirms the email code from Amazon Cognito. SMS OTP stays off until a TRAI DLT header is approved.",
+                "The next step creates your Supabase account and emails a confirmation link. SMS OTP stays off until a TRAI DLT header is approved.",
                 color = Orange,
                 fontSize = 12.sp,
                 fontWeight = FontWeight.SemiBold
@@ -247,24 +247,32 @@ private fun OtpStep(
     var error by remember { mutableStateOf<String?>(null) }
     var busy by remember { mutableStateOf(false) }
     LaunchedEffect(Unit) {
-        vm.beginCognitoSignUp { message -> if (message != null) error = message }
+        vm.beginCloudSignUp { message -> if (message != null) error = message }
     }
     StepHeading(
         step,
         total,
-        if (vm.useCognitoOtp) "Enter the email code" else "Enter email and mobile OTPs",
-        if (vm.useCognitoOtp) "Amazon Cognito sent this code" else "Demo codes, used only when Cognito is unreachable"
+        if (vm.useSupabaseConfirm) "Confirm your email" else "Enter email and mobile OTPs",
+        if (vm.useSupabaseConfirm) "Supabase emailed you a confirmation link" else "Demo codes, used only when the cloud is unreachable"
     )
     RailCard {
         ColumnBlock {
-            if (vm.cognitoBusy) {
-                Text("Creating the RailX account and emailing a code…", color = Navy, fontSize = 14.sp)
+            if (vm.cloudBusy) {
+                Text("Creating your RailX account with Supabase…", color = Navy, fontSize = 14.sp)
                 Spacer(Modifier.height(8.dp))
             }
-            LabeledField("Email OTP", emailCode, keyboardType = KeyboardType.Number) {
-                emailCode = it.filter { ch -> ch.isDigit() }.take(6)
-            }
-            if (!vm.useCognitoOtp) {
+            if (vm.useSupabaseConfirm) {
+                Text(
+                    vm.supabaseDelivery.ifBlank { "Check your email for the confirmation link, then tap VERIFY." },
+                    color = Orange,
+                    fontSize = 13.sp,
+                    fontWeight = FontWeight.SemiBold,
+                    modifier = Modifier.padding(top = 8.dp)
+                )
+            } else {
+                LabeledField("Email OTP", emailCode, keyboardType = KeyboardType.Number) {
+                    emailCode = it.filter { ch -> ch.isDigit() }.take(6)
+                }
                 Spacer(Modifier.height(8.dp))
                 LabeledField("Mobile OTP", mobileCode, keyboardType = KeyboardType.Number) {
                     mobileCode = it.filter { ch -> ch.isDigit() }.take(6)
@@ -276,19 +284,10 @@ private fun OtpStep(
                     fontWeight = FontWeight.SemiBold,
                     modifier = Modifier.padding(top = 8.dp)
                 )
-            } else {
-                val where = vm.cognitoDelivery.ifBlank { vm.regEmail }
-                Text(
-                    "Code sent to $where. SMS is not sent yet.",
-                    color = Orange,
-                    fontSize = 13.sp,
-                    fontWeight = FontWeight.SemiBold,
-                    modifier = Modifier.padding(top = 8.dp)
-                )
             }
             error?.let { Text(it, color = MaterialTheme.colorScheme.error, fontSize = 13.sp, modifier = Modifier.padding(top = 8.dp)) }
             Spacer(Modifier.height(16.dp))
-            OrangeButton(if (busy || vm.cognitoBusy) "PLEASE WAIT" else "VERIFY", enabled = !busy && !vm.cognitoBusy) {
+            OrangeButton(if (busy || vm.cloudBusy) "PLEASE WAIT" else "VERIFY", enabled = !busy && !vm.cloudBusy) {
                 busy = true
                 error = null
                 vm.submitRegistrationCodes(emailCode, mobileCode) { message ->
@@ -304,7 +303,7 @@ private fun OtpStep(
                     vm.resendRegistrationCode { message -> if (message != null) error = message }
                 },
                 modifier = Modifier.fillMaxWidth()
-            ) { Text(if (vm.useCognitoOtp) "Resend email code" else "Resend demo codes", color = Orange) }
+            ) { Text(if (vm.useSupabaseConfirm) "Resend confirmation link" else "Resend demo codes", color = Orange) }
             TextButton(onClick = onBack, modifier = Modifier.fillMaxWidth()) { Text("Back", color = Navy) }
         }
     }

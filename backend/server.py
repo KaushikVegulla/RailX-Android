@@ -31,10 +31,13 @@ KEY_SECRET = os.environ.get("RAZORPAY_KEY_SECRET", "")
 RESEND_API_KEY = os.environ.get("RESEND_API_KEY", "")
 RESEND_FROM = os.environ.get("RESEND_FROM", "RailX <beth.t@example.com>")
 PORT = int(os.environ.get("PORT", "8088"))
-COGNITO_REGION = os.environ.get("COGNITO_REGION", "ap-south-1")
-COGNITO_USER_POOL_ID = os.environ.get("COGNITO_USER_POOL_ID", "ap-south-1_SspUmQyId")
-COGNITO_CLIENT_ID = os.environ.get("COGNITO_CLIENT_ID", "5s0vjm6vk4lttl2s326qh9mlmt")
-COGNITO_REQUIRE_JWT = os.environ.get("COGNITO_REQUIRE_JWT", "1").lower() not in ("0", "false", "no")
+SUPABASE_URL = os.environ.get(
+    "SUPABASE_URL", "https://etaaufimazvjdmpladom.supabase.co"
+).rstrip("/")
+SUPABASE_JWT_AUD = os.environ.get("SUPABASE_JWT_AUD", "authenticated")
+# Only needed for projects still signing with the legacy HS256 shared secret.
+SUPABASE_JWT_SECRET = os.environ.get("SUPABASE_JWT_SECRET", "")
+SUPABASE_REQUIRE_JWT = os.environ.get("SUPABASE_REQUIRE_JWT", "1").lower() not in ("0", "false", "no")
 RAZORPAY_ORDERS = "https://api.razorpay.com/v1/orders"
 USERS_FILE = ROOT / "users.json"
 
@@ -145,53 +148,74 @@ def _b64url(data: str) -> bytes:
     return base64.urlsafe_b64decode(data + pad)
 
 
-def verify_cognito_jwt(token: str) -> dict:
-    """Validate a Cognito ID or access token. Pool id and client id are public app config."""
+def verify_supabase_jwt(token: str) -> dict:
+    """Validate a Supabase access token against the project JWKS.
+
+    Supabase signs access tokens with asymmetric keys (ES256/RS256) published
+    at {SUPABASE_URL}/auth/v1/.well-known/jwks.json; projects on the legacy
+    HS256 shared secret are verified with SUPABASE_JWT_SECRET instead.
+    """
     parts = token.split(".")
     if len(parts) != 3 or not all(parts):
         raise ValueError("Malformed token")
     header = json.loads(_b64url(parts[0]))
-    if header.get("alg") != "RS256":
-        raise ValueError("Unexpected alg")
     payload = json.loads(_b64url(parts[1]))
-    now = time.time()
-    if _JWKS["keys"] is None or now - float(_JWKS["fetched"]) > 3600:
-        url = (
-            f"https://cognito-idp.{COGNITO_REGION}.amazonaws.com/"
-            f"{COGNITO_USER_POOL_ID}/.well-known/jwks.json"
-        )
-        with urllib.request.urlopen(url, timeout=10) as resp:
-            _JWKS["keys"] = json.loads(resp.read().decode())["keys"]
-            _JWKS["fetched"] = now
-    kid = header.get("kid")
-    jwk = next((key for key in _JWKS["keys"] if key.get("kid") == kid), None)
-    if jwk is None:
-        raise ValueError("Unknown signing key")
-    from cryptography.hazmat.primitives import hashes
-    from cryptography.hazmat.primitives.asymmetric import padding, rsa
+    signing_input = f"{parts[0]}.{parts[1]}".encode()
+    signature = _b64url(parts[2])
+    alg = header.get("alg")
+    if alg == "HS256":
+        if not SUPABASE_JWT_SECRET:
+            raise ValueError("HS256 token but SUPABASE_JWT_SECRET is not set")
+        expected = hmac.new(
+            SUPABASE_JWT_SECRET.encode(), signing_input, hashlib.sha256
+        ).digest()
+        if not hmac.compare_digest(expected, signature):
+            raise ValueError("Bad signature")
+    elif alg in ("RS256", "ES256"):
+        now = time.time()
+        if _JWKS["keys"] is None or now - float(_JWKS["fetched"]) > 3600:
+            url = f"{SUPABASE_URL}/auth/v1/.well-known/jwks.json"
+            with urllib.request.urlopen(url, timeout=10) as resp:
+                _JWKS["keys"] = json.loads(resp.read().decode())["keys"]
+                _JWKS["fetched"] = now
+        kid = header.get("kid")
+        jwk = next((key for key in _JWKS["keys"] if key.get("kid") == kid), None)
+        if jwk is None:
+            raise ValueError("Unknown signing key")
+        from cryptography.hazmat.primitives import hashes
+        from cryptography.hazmat.primitives.asymmetric import ec, padding, rsa, utils
 
-    numbers = rsa.RSAPublicNumbers(
-        int.from_bytes(_b64url(jwk["e"]), "big"),
-        int.from_bytes(_b64url(jwk["n"]), "big"),
-    )
-    numbers.public_key().verify(
-        _b64url(parts[2]),
-        f"{parts[0]}.{parts[1]}".encode(),
-        padding.PKCS1v15(),
-        hashes.SHA256(),
-    )
-    issuer = f"https://cognito-idp.{COGNITO_REGION}.amazonaws.com/{COGNITO_USER_POOL_ID}"
-    if payload.get("iss") != issuer:
+        if jwk.get("kty") == "RSA":
+            numbers = rsa.RSAPublicNumbers(
+                int.from_bytes(_b64url(jwk["e"]), "big"),
+                int.from_bytes(_b64url(jwk["n"]), "big"),
+            )
+            numbers.public_key().verify(
+                signature, signing_input, padding.PKCS1v15(), hashes.SHA256()
+            )
+        elif jwk.get("kty") == "EC":
+            numbers = ec.EllipticCurvePublicNumbers(
+                int.from_bytes(_b64url(jwk["x"]), "big"),
+                int.from_bytes(_b64url(jwk["y"]), "big"),
+                ec.SECP256R1(),
+            )
+            # JWS signatures are raw R||S; cryptography wants DER.
+            r = int.from_bytes(signature[:32], "big")
+            s_int = int.from_bytes(signature[32:], "big")
+            der = utils.encode_dss_signature(r, s_int)
+            numbers.public_key().verify(der, signing_input, ec.ECDSA(hashes.SHA256()))
+        else:
+            raise ValueError("Unsupported signing key type")
+    else:
+        raise ValueError("Unexpected alg")
+    if payload.get("iss") != f"{SUPABASE_URL}/auth/v1":
         raise ValueError("Bad issuer")
     if int(payload.get("exp", 0)) < time.time():
         raise ValueError("Token expired")
-    use = payload.get("token_use")
-    if use == "id" and payload.get("aud") != COGNITO_CLIENT_ID:
+    aud = payload.get("aud")
+    audiences = aud if isinstance(aud, list) else [aud]
+    if SUPABASE_JWT_AUD not in audiences:
         raise ValueError("Bad audience")
-    if use == "access" and payload.get("client_id") != COGNITO_CLIENT_ID:
-        raise ValueError("Bad client")
-    if use not in ("id", "access"):
-        raise ValueError("Bad token_use")
     return payload
 
 
@@ -220,8 +244,8 @@ class Handler(BaseHTTPRequestHandler):
                 {
                     "ok": True,
                     "service": "railx-backend",
-                    "auth": "cognito",
-                    "userPoolId": COGNITO_USER_POOL_ID,
+                    "auth": "supabase",
+                    "supabaseUrl": SUPABASE_URL,
                     "keyIdPresent": bool(KEY_ID),
                     "resendPresent": bool(RESEND_API_KEY),
                 },
@@ -258,26 +282,26 @@ class Handler(BaseHTTPRequestHandler):
                 410,
                 {
                     "success": False,
-                    "error": "Account auth moved to Amazon Cognito (RailX-Users). Sign up in the Android app.",
+                    "error": "Account auth moved to Supabase. Sign up in the Android app.",
                 },
             )
             return
         self._send(404, {"success": False, "error": "Not found"})
 
     def _require_user(self) -> dict | None:
-        if not COGNITO_REQUIRE_JWT:
+        if not SUPABASE_REQUIRE_JWT:
             return {}
         header = self.headers.get("Authorization") or ""
         if not header.startswith("Bearer "):
-            self._send(401, {"success": False, "error": "Cognito sign-in required"})
+            self._send(401, {"success": False, "error": "Supabase sign-in required"})
             return None
         try:
-            return verify_cognito_jwt(header[7:].strip())
+            return verify_supabase_jwt(header[7:].strip())
         except ValueError as exc:
             self._send(401, {"success": False, "error": str(exc)})
             return None
         except Exception:
-            self._send(401, {"success": False, "error": "Invalid Cognito token"})
+            self._send(401, {"success": False, "error": "Invalid Supabase token"})
             return None
 
     def _create_order(self, body: dict) -> None:
@@ -445,9 +469,9 @@ def main() -> None:
         print("WARNING: RESEND_API_KEY missing — email OTP will fail.")
     httpd = ThreadingHTTPServer(("0.0.0.0", PORT), Handler)
     print(f"RailX backend listening on http://0.0.0.0:{PORT}")
-    print("  Auth is Amazon Cognito. /register /login /verify-email return 410.")
-    print("  POST /create-order   Authorization: Bearer <cognito id token>  {amount}")
-    print("  POST /verify-payment Authorization: Bearer <cognito id token>")
+    print("  Auth is Supabase. /register /login /verify-email return 410.")
+    print("  POST /create-order   Authorization: Bearer <supabase access token>  {amount}")
+    print("  POST /verify-payment Authorization: Bearer <supabase access token>")
     httpd.serve_forever()
 
 

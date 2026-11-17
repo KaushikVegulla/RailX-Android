@@ -232,7 +232,7 @@ fun MpinScreen(vm: AppViewModel, onDone: () -> Unit) {
                 }
             }
         }
-        DemoNote("The PIN is stored as a hash on this device. It is not sent to Cognito.")
+        DemoNote("The PIN is stored as a hash on this device. It never leaves this device.")
     }
 }
 

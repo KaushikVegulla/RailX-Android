@@ -75,9 +75,9 @@ class SessionIsolationTest {
         val store = AccountStore(context)
         val id = "cloud-${UUID.randomUUID()}"
         store.create(id, "Cloud", "$id@example.test", "", "Password!482", "English",
-            authProvider = AccountProvider.COGNITO, cloudUsername = "canonical-$id")
+            authProvider = AccountProvider.SUPABASE, cloudUsername = "canonical-$id")
         val reloaded = AccountStore(context).findProfile(id)!!
-        assertEquals(AccountProvider.COGNITO, reloaded.authProvider)
+        assertEquals(AccountProvider.SUPABASE, reloaded.authProvider)
         assertEquals("canonical-$id", reloaded.cloudUsername)
         val legacyId = "legacy-${UUID.randomUUID()}"
         store.create(legacyId, "Legacy", "$legacyId@example.test", "", "Password!482", "English")
