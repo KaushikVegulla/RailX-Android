@@ -36,17 +36,31 @@ Verified live on 17 Nov 2026:
 `functions/create-order` and `functions/verify-payment` hold the
 Razorpay secret server-side. Both require a signed-in Supabase user.
 
-Deploy with the Supabase CLI from the repo root:
+Status: **deployed and live** (17 Nov 2026, via the Management API —
+`create-order` and `verify-payment`, both ACTIVE, `verify_jwt` on; an
+unauthenticated call correctly returns 401). The functions are
+dependency-free (they call the Auth `/user` endpoint directly instead of
+importing supabase-js, whose `jsr:` import failed to boot when deployed
+through the API).
+
+Still missing: the Razorpay test secrets. Until they are set, both
+functions answer "Payments are not configured on the server" and the app
+keeps its existing demo payment modes. Set them with the Supabase CLI
+from the repo root:
 
 ```sh
 supabase link --project-ref etaaufimazvjdmpladom
-supabase secrets set RAZORPAY_KEY_ID=rzp_test_... RAZORPAY_KEY_SECRET=...
-supabase functions deploy create-order verify-payment
+supabase secrets set RAZORPAY_KEY_ID=rzp_test_... RAZORPAY_KEY_SECRET=<your-test-secret>
 ```
 
-Status: code is in the repo, **not deployed yet**. Deployment and the
-Razorpay test secrets are the remaining manual step. Until then the app
-keeps its existing demo payment modes.
+Redeploy after changing a function (Management API, JSON body variant —
+the multipart variant returns HTTP 500):
+
+```sh
+# create:  POST   /v1/projects/etaaufimazvjdmpladom/functions
+# update:  PATCH  /v1/projects/etaaufimazvjdmpladom/functions/<slug>
+# body: {"slug", "name", "verify_jwt": true, "entrypoint_path": "index.ts", "body": <source>}
+```
 
 ## Free tier note
 

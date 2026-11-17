@@ -62,7 +62,7 @@ The existing `use.local.keys=true` mode is for academic experimentation with tes
 
 Supabase is the RailX backend in progress: Auth for accounts, Postgres for synced bookings, passengers and favourite routes, and Edge Functions for the Razorpay steps that need a server secret. The app config defaults to the RailX project and can be overridden with `supabase.url` / `supabase.publishable.key` in `local.properties`. The publishable key is client configuration and is safe in the app because every table has Row Level Security policies scoped to the signed-in user. Never ship the secret / service_role key.
 
-The live schema was applied on 17 Nov 2026. Setup, auth settings and function deployment are documented in [supabase/README.md](supabase/README.md). Since 1.8 the sign-in screens use Supabase Auth for Supabase accounts and new email sign-ins, and bookings sync to Supabase when a session exists. Since 1.9 registration also goes through Supabase, Cognito is removed entirely, and the local demo flow remains the offline fallback.
+The live schema was applied on 17 Nov 2026, and the `create-order` / `verify-payment` Edge Functions were deployed the same day (ACTIVE, JWT-verified; they answer 401 without a signed-in user). Only the Razorpay test secrets remain to be set. Setup, auth settings and function deployment are documented in [supabase/README.md](supabase/README.md). Since 1.8 the sign-in screens use Supabase Auth for Supabase accounts and new email sign-ins, and bookings sync to Supabase when a session exists. Since 1.9 registration also goes through Supabase, Cognito is removed entirely, and the local demo flow remains the offline fallback.
 
 ## Existing data on upgrade
 

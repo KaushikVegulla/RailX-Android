@@ -172,10 +172,15 @@ fun LoginScreen(vm: AppViewModel, onLogin: () -> Unit, onRegister: () -> Unit, o
             title = { Text("Forgot account details") },
             text = {
                 Column {
-                    Text("Enter the registered email or mobile. This demo only shows the user ID on this device.", fontSize = 13.sp)
+                    Text("Enter the registered email or mobile to find the user ID on this device. Supabase accounts can also get a password reset link by email.", fontSize = 13.sp)
                     Spacer(Modifier.height(8.dp))
                     LabeledField("Email or mobile", forgotKey, keyboardType = KeyboardType.Email) { forgotKey = it }
                     forgotInfo?.let { Text(it, color = Navy, fontSize = 14.sp, modifier = Modifier.padding(top = 8.dp)) }
+                    if (forgotKey.contains("@")) {
+                        TextButton(onClick = {
+                            vm.sendSupabasePasswordReset(forgotKey) { message -> forgotInfo = message }
+                        }) { Text("Email me a Supabase password reset link", color = Orange) }
+                    }
                 }
             },
             confirmButton = {
