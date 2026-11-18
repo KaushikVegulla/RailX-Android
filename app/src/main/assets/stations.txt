@@ -1,0 +1,10723 @@
+9BP3|9Bp No3|
+AA|Ataria|
+AABH|Ambika Bhawani Halt|
+AADR|Amb Andaura|
+AAG|Angar|
+AAGH|Antagarh|
+AAH|Itehar|
+AAK|Ankai Kila|
+AAL|Amlai|
+AAM|Angadippuram|
+AAP|Ambiapur|
+AAR|Adesar|
+AAS|Asranada|
+AAU|Alapadu|
+AAV|Ambav|
+AAY|Aralvaymozhi|
+AB|Ambur|
+ABB|Abada|
+ABD|Ambli Road|
+ABE|Ambikeshwar|
+ABEO|Pattaravakkam|
+ABFC|Ambari Falakata|
+ABGM|Ambalgram|
+ABGT|Arbagatta Halt|
+ABH|Ambarnath|
+ABI|Ambaturai|
+ABKA|Ambika Kalna|
+ABKP|Ambikapur|
+ABLE|Ambale|
+ABO|Asthal Bohar|
+ABP|Akbarpur|
+ABR|Abu Road|
+ABRV|Ambari Richhavi|Ambari
+ABS|Abohar|
+ABSA|Ambasa|
+ABT|Ambagarattur|Kumbakonam-Karaikal Rd
+ABU|Ambattur|
+ABW|Abutara Halt|
+ABX|Ambari|
+ABY|Ambivli|
+ABZ|Adgaon Buzurg|
+ACAB|A-Cabin Bondamunda|
+ACCI|Adichunchanagiri Halt|
+ACG|Achegaon|
+ACH|Achalganj|
+ACK|Acharapakkam|
+ACL|Ancheli|
+ACLE|Azimganj City|
+ACLN|New Ancheli|
+ACN|Adhichchanur|
+ACND|Acharya Narendra Dev Nagar|
+ACOI|Allahabd Chheoki|
+ACPR|Archipathar Halt|
+ACRN|Achirne|
+ACT|Asakalattur Halt|
+ACU|Achuara Halt|
+ACV|Achchuntanvayal|
+AD|Adoni|
+ADB|Adilabad|
+ADD|Adas Road|
+ADE|Adari Road|
+ADF|Adina|
+ADH|Andheri|Mumbai
+ADHL|Adihalli|
+ADHT|Ashokdham|
+ADI|Ahmedabad Junction|Ahmedabad
+ADIJ|Ahmedabad Mg|
+ADL|Andul|
+ADP|Ahmadpur Jn Ng|
+ADPT|Andipatti|Andippatti
+ADQ|Adhikari|
+ADR|Mandi Adampur|
+ADRA|Adra Junction|
+ADRE|Adra East Cabin|
+ADSR|Adsr|
+ADST|Adi Saptagram|
+ADT|Aduturai|
+ADTL|Adhartal|
+ADTP|Adityapur|
+ADVI|Adavali|
+ADX|Adapur|
+AE|Amreli|
+AED|Aulenda|
+AEE|Alachor|
+AEH|Anant Paith|
+AEJ|Arnej|
+AEK|Anekal Road|
+AEL|Ateli|
+AEP|Amreli Para|
+AER|Asnera|
+AERH|Agrer Halt|Agrer
+AEX|Adderi|
+AF|Agra Fort|Agra
+AFK|Angamali|
+AFR|Asafpur|
+AG|Aranghata|
+AGA|Agra City|Agra
+AGAE|Agradwip|
+AGAS|Agas|Anand
+AGB|Ambagaon|
+AGC|Agra Cantt|Agra
+AGCI|Angadi|
+AGD|Agasod|
+AGDL|Agran Dhulgaon|
+AGE|Angai|
+AGI|Amguri|
+AGL|Amargol|
+AGM|Agaram Sibbandi|
+AGMN|Agomoni|
+AGN|Amgaon|
+AGP|Agarpara|
+AGQ|Asirgarh Road|
+AGR|Amargarh|
+AGT|Agthori|
+AGTL|Agartala|
+AGTR|Agauthar Halt|
+AGV|Angua|
+AGX|Agastiyampalli|614810
+AGY|Agori Khas|
+AGZ|Amagura|
+AH|Achhnera Junction|
+AHA|Abhaipur|
+AHD|Aherwadi|
+AHH|Ahmadgarh|
+AHI|Ashti|
+AHJU|Ahju|
+AHL|Ajharail|
+AHLR|Ahalyapur|
+AHM|Ahimanpur|
+AHMP|Adarsh Manpur|
+AHN|Ahiran|
+AHO|Adarshnagar|
+AHQ|Ahera Halt|
+AHT|Amghata H|Amghata
+AHU|Ahirauli|
+AHZ|Adhinpur|
+AI|Adipur|
+AIA|Ajaraka|
+AIG|Algawan|
+AIH|Alawalpur I Pur|
+AII|Ajmer Junction|
+AILM|Ailam|
+AIP|Attippattu|
+AIPP|Attippattu Pudu Nagar|
+AIR|Alindra Road|
+AIRL|Airoli|
+AIT|Ait|
+AJ|Ajgain|
+AJE|Anjar|
+AJH|Ajhai|
+AJI|Anjhi Shahabad|
+AJIT|Ajit|
+AJJ|Arakkonam|
+AJJN|Arakkonam Jn North|
+AJK|Ajakollu|
+AJKI|Ajitkheri|
+AJKT|Ajit Kheri|
+AJL|Ajitwal|
+AJLE|Azimganj Jn Cabin|
+AJM|Adraj Moti|
+AJN|Ajnod|
+AJNI|Ajni|
+AJP|Ajjampur|
+AJR|Ajaibpur|
+AJRE|Aujari|
+AJT|Anji Shahabad|
+AJTM|Ajitgill Matta|
+AJU|Arjuni|
+AJUG|Abjuganj|
+AJWA|Ajwa|
+AK|Akola Junction|
+AKAH|Artalakatta|Talabkatta Rd
+AKAT|Akkampet|
+AKD|Akodia|
+AKE|Akanapet|
+AKI|Adarki|
+AKIP|Akaipur H|Akaipur
+AKJ|Akbarganj|
+AKK|Akkihebbalu|
+AKL|Anakhol|
+AKLA|Aklera|
+AKLJ|Akluj O.A.|
+AKM|Arambakkam|
+AKN|Akbarnagar|
+AKNR|Adhyatmik Nagar|
+AKOR|Akalkot Road|
+AKOT|Akot|
+AKP|Anakapalle|
+AKR|Akolner|
+AKRA|Akra|
+AKRD|Akurdi|
+AKS|Ankuspur|
+AKSP|Anksapur|Telangana 503311
+AKT|Akaltara|
+AKU|Angalakuduru|
+AKV|Ankleshwar Junction|Ankleshwar
+AKVD|Akividu|
+AKVU|Ankleshwar Udyognagar|Hifazat Nagar
+AKVX|Akividu|
+AKW|Akora|
+AKY|Akkurti|
+AKZ|Akashi|
+AL|Attili|
+ALAI|Alai|
+ALAL|Alal|
+ALAT|Avuladatla|Junjurampalle
+ALAU|Alau|
+ALB|Alia Bada|
+ALD|Allahabad Junction|Allahabad
+ALE|Amletha|Unnamed Road
+ALER|Aler|
+ALGP|Algapur|
+ALI|Alai|
+ALJ|Alai|
+ALJN|Aligarh Junction|
+ALK|Alakkudi|
+ALL|Alal|
+ALLP|Alleppey|
+ALM|Alamanda|
+ALMG|Alamganj|
+ALMR|Alampur|
+ALMW|Almaw|
+ALN|Alandi|
+ALNI|Alniya|
+ALNP|Akelahanspur Halt|
+ALP|Alapakam|
+ALPD|Adalpahari|Narayanpur Road
+ALPR|Alampur Road|
+ALQ|Aulant|
+ALS|Amlori Sarsar|
+ALU|Ariyalur|
+ALUH|Alauli|Chharrapatti
+ALUR|Alur Halt|
+ALV|Anklav|
+ALW|Alwal|
+ALY|Allahabad City|Allahabad
+AMA|Atamanda|
+AMAN|Aman Lodge|
+AMB|Ambodala|
+AMBG|Arambag|Arambagh
+AMBH|Aghwanpur Block Hut|
+AMBR|Ambika Rohina|
+AMC|Amritapura|
+AMD|Amila H|Amila
+AMDI|Amdi Halt|
+AME|Amethi|
+AMG|Alamnagar|
+AMGA|Amjonga|
+AMGU|Ammuguda|Bolarum
+AMH|Azamgarh|
+AMHA|Amehta|
+AMI|Amravati|
+AMIN|Amin|
+AMJ|Amin Gaon|
+AML|Amalsad|
+AMLA|Amla Junction|
+AMLI|Amli|
+AMLO|Amlo|
+AMLP|Amalpur|
+AMLR|Amala Nagar|
+AMLX|Amlx|
+AMM|Atirampattinam|
+AMN|Amin|
+AMNE|Amalner B|Amalner State: Maharashtra
+AMNR|Ammanur|
+AMO|Amolwa|
+AMOD|Amod|
+AMP|Ahmadpur Junction|Ahmadpur
+AMPA|Ambalapuzha|
+AMPL|Ammapalli Halt|
+AMPR|Amarpura Rathan|
+AMQ|Ammuguda|
+AMQX|Ammuguda Chord Line|
+AMRA|Amha Pipra|Amaha
+AMRI|Anaj Mandi|
+AMRO|Amroha|
+AMS|Amausi|Lucknow
+AMSA|Ammasandra|
+AMT|Ammapet|
+AMTA|Amta|
+AMV|Lucknow Alambagh|
+AMVA|Amaravila Halt|
+AMW|Aman Vadi|
+AMX|Amlakhurd|
+AMY|Akathumuri|
+AMZ|Amta|
+AN|Amalner|
+ANA|Aslana|
+ANAH|Aunta Halt|
+ANAS|Anas|
+ANB|Ammanabrolu|
+ANC|Annechakanahali|
+ANCR|Anchuri|
+AND|Andampaliam|
+ANDI|Adrsh Ngr Delhi|Delhi
+ANDN|Anand Nagar|
+ANE|Anantarajupet|
+ANF|Anandapuram|
+ANG|Ahmadnagar|
+ANGL|Angul|
+ANGM|Aungari Dham|
+ANGR|Angadgeri Halt|
+ANH|Ankorah Akorha|
+ANI|Ajanti|
+ANJ|Anjangaon|
+ANJE|Angarpathra Halt|
+ANK|Ankai|
+ANKI|Anakhi|
+ANKL|Ankola|
+ANKX|Ank Mmr Direct|
+ANL|Antroli|
+ANLG|Aman Lodge|Neral - Matheran Rd
+ANM|Anaimalai Road|
+ANMD|Arang Mahanadi|
+ANMP|Arjun Nagar|Mathurapur
+ANND|Anand Junction|Anand
+ANNG|Anna Nagar|
+ANNR|Annanur|
+ANO|Anjani|
+ANP|Anandtandavpur|
+ANPM|Anupalem|
+ANPR|Anpara|
+ANQ|Amnapur|
+ANR|Anara|
+ANSB|Anandpur Sahib|
+ANT|Anantnag|
+ANTU|Antu|
+ANU|Anangur|
+ANV|Annavaram|
+ANVR|Anand Vihar|New Delhi
+ANVT|Anand Vihar Trm|
+ANW|Anawal|
+ANY|Arumuganeri|
+AO|Aonla|
+AON|Araon|
+AONI|Amoni|
+AOR|Argora|
+AP|Ashokapuram|
+APA|Amarpura|
+APAP|Agri Park|
+APB|Anuppambattu|
+APCH|Alipurduar College|
+APD|Alipur Duar|
+APDC|Alipur Duar Court|
+APDJ|Alipur Duar Junction|
+APE|Andanappettai|
+APG|Anupganj|
+APH|Anupgarh|
+API|Akkaraippatti|
+APJ|Amarpur Jorasi|
+APK|Aruppukkottai|
+APKH|Asanpur Kupha Halt|Bihar 852105
+APL|Appikatla|
+APMR|Appaipalli|Begumpet
+APN|Ayodhyapattanam|
+APP|Ambapendarpur Halt|
+APQ|Aditpara|
+APR|Anuppur Junction|
+APRD|Ashapurna Devi|
+APRH|Alehpur Halt|
+APT|Anaparti|
+APTA|Apta|
+APU|Anipur|
+AQG|Ashapura Gomat|
+AQX|Aqx|
+ARA|Ara|
+ARAG|Arag|
+ARCL|Arunachal|
+ARD|Amarda Road|
+ARE|Arnetha|
+ARG|Angar Ghat|
+ARGD|Arigada|
+ARGL|Argul|
+ARGP|Aralaguppe|
+ARH|Amhera|
+ARI|Antri|
+ARJ|Aunrihar Junction|
+ARK|Arakku|
+ARKA|Arkha|
+ARKV|Araku Valley|
+ARL|Aroul|
+ARMU|Armur|Armoor
+ARN|Arand|
+ARNA|Arnia|
+ARNB|Amarun|Arra
+ARNG|Arunnagar|
+ARNH|Arjunahalli|
+AROR|Aroor Halt|
+ARP|Atrampur|
+ARPI|Adurupalli|
+ARPL|Arepalli Halt|
+ARPR|Alirajpur|Saija
+ARQ|Arariya Court|
+ARR|Arariya|
+ARS|Arasur|
+ARU|Arasalu|
+ARV|Arni Road|
+ARVI|Arvi|
+ARW|Ahraura Road|
+ARX|Areli|
+AS|Arjansar|
+ASAF|Asifabad Road|
+ASAN|Asan|
+ASAR|Asra Halt|
+ASB|Asanboni|
+ASBS|Amar Shahid Bhale Sultan|Misharauli
+ASCE|Athsarai|
+ASD|Ambasamudram|
+ASE|Asaudah|
+ASH|Aishbagh|
+ASI|Arseni|
+ASJP|Amar Saheed Jagdev P Halt|
+ASK|Arsikere Junction|Arsikere
+ASKN|Ashok Nagar|
+ASKR|Ashoknagar Road|Mohari Road
+ASL|Aslaoda|
+ASLU|Aslu|
+ASM|Asarma|
+ASN|Asansol Junction|Asansol
+ASNE|Asansol East|
+ASO|Asangaon|
+ASP|Aspari|
+ASR|Amritsar Junction|Amritsar
+ASRA|Asra H|
+ASSH|Aishbagh|
+AST|Asaoti|
+ASTG|Ashtegaon|
+ASV|Asarva Junction|
+ASW|Harsawa|
+AT|Asnoti|
+ATA|Ata|
+ATB|Alattambadi|
+ATC|Arts College|
+ATDA|Atladara|
+ATE|Atarra|
+ATG|Atgaon|
+ATH|Antah|
+ATKS|Atwa Kursath|
+ATL|Athmal Gola|
+ATM|Altagram|
+ATMO|Aithal|
+ATNR|Awatarnagar|
+ATP|Anantapur|
+ATPA|Awantipura|
+ATQ|Arantangi|
+ATR|Attar|
+ATRI|Atri Ph|Atri
+ATRR|Atraura|
+ATRU|Atru|
+ATS|Attabira|
+ATT|Atari|
+ATTB|Atari Border|
+ATU|Attur|
+ATUL|Atul|
+ATW|Atwa Muthia Halt|
+ATWN|Asthwan|Bihar 803107
+ATX|Alinagar Tola|
+AUB|Aluabari Road|
+AUBR|Anugraha N Road|
+AUI|Aurahi|
+AUL|Agsauli|
+AUN|Aurang Nagar|
+AUNG|Aung|
+AUR|Atrauli Road|
+AUS|Anupshahr|
+AUWA|Auwa|
+AV|Asvali|
+AVA|Ambewadi|
+AVC|Amravathi Colony|
+AVD|Avadi|
+AVH|Avidha|Gujarat 393017
+AVK|Aravankadu|
+AVL|Amritvel|
+AVLI|Aravalli|
+AVN|Anavardikhanpet|
+AVP|Abhanpur Junction|
+AVRD|Aravali Road|
+AVS|Auvaneswsarem|
+AVT|Avati|
+AWB|Aurangabad|
+AWG|Awa Garh|
+AWH|Alewahi|
+AWL|Alawalpur|
+AWM|Aswapuram|
+AWP|Aghwanpur|
+AWPR|Awapur|
+AWR|Alwar|
+AWS|Aswani Halt|
+AWT|Alwar Tirunagri|
+AWY|Aluva|
+AWZ|Ahiwara|
+AXA|Amarsar|
+AXK|Asokhar|
+AXR|Alluru Road|
+AY|Ayodhya|
+AYB|Aliyabad|
+AYC|Ayodhya Cantt|Ayodhya
+AYD|Ayandur|
+AYI|Ayingudi|
+AYM|Adiyakkamangalam|
+AYN|Aiyanapuram|
+AYR|Ayyalur|
+AYRM|Akshaywat Rainagar|
+AYRN|Akshaywat R Ngr|
+AYU|Abhayapuri Asam|
+AYV|Aryankavu|Interstate Bus Terminal
+AYVN|Aryankavu New|Kollam-Tirumangalam Road
+AZ|Azimganj Junction|
+AZA|Azara|
+AZK|Azhwarkurichi|Virasamudram
+AZP|Ayyampet|
+AZR|Azamnagar Road|
+BA|Bandra|
+BAA|Barala|
+BAAR|Bandar P.H.|
+BAB|Babina|
+BABH|Bahalba Halt|Behlba
+BABR|Balanagar|
+BAC|Bargachia|Bargachia - Jagatballavpur Rd
+BAD|Bad|
+BADA|Bardha Halt|Bardaha
+BADH|Badhuna H|
+BADK|Barka|
+BADR|Bhader|
+BAE|Baliakheri|
+BAF|Bap|
+BAG|Bargachia|
+BAGA|Bhagega|
+BAGD|Bagwada (Halt)|
+BAGJ|Barharagani|
+BAGL|Baragopal|
+BAH|Bhabhar|
+BAHI|Ballenahalli|
+BAHL|Banihal|
+BAHN|Babhabgaon Halt|
+BAHP|Band Hamirpur|
+BAHW|Bahir Khanda|
+BAI|Bassi|
+BAJ|Bhalej|
+BAJE|Bajakare Halt|
+BAJN|Bajana|
+BAK|Bhan Kari|
+BAKA|Banka|
+BAKK|Bakkal|Dharot
+BAKL|Bakal|
+BAKT|Barhara Kothi|
+BAL|Budalur|
+BALE|Bale|
+BALI|Bhaili|
+BALR|Baitalpur|
+BALT|Baltikuri|
+BALU|Balugan|
+BAM|Brahmapur|
+BAMA|Birambad|
+BAMR|Bamur|
+BAND|Banaswadi|
+BANE|Basni|
+BANI|Bani|
+BANL|Bhatangli|
+BANO|Bano|
+BANR|Bhaner|
+BAO|Banmor|
+BAOL|Baoli|
+BAP|Belapur|
+BAPN|Baraipura Halt|
+BAPR|Ballupur|
+BAQ|Ganj Basoda|
+BAR|Bar|
+BARA|Bara|
+BARD|Duvri Kalan|
+BARH|Barh|
+BARI|Bari|
+BARJ|Bharatgarh|
+BARL|Baral|
+BARN|Baranagar Road|
+BARS|Barsana|
+BARU|Baharu|
+BASA|Banosa|
+BASN|Bhainswan|
+BASR|Batesar|Bah-Bateshwar Rd
+BAT|Batala Junction|
+BATA|Bantva|
+BATL|Baihatola|
+BATM|Batala Sugar Mills|
+BATS|Bhatsar|
+BATY|Cabin A Of Tomka|
+BAU|Burhanpur|
+BAV|Baruva|
+BAW|Chik Banavar|
+BAWA|Balwara|
+BAWD|Bhadwad|
+BAY|Bellary Junction|Bellary
+BAYD|Beyad|
+BAZ|Baran|
+BB|Bombay Vt|
+BBA|Babrala|
+BBAE|Baidyabati|
+BBAI|Bhadbhunja|
+BBAR|Bara|
+BBC|Bhachhbar|
+BBCE|Bulbulchandi|Village-Boaichandi
+BBD|Bablad|
+BBDA|Barbenda (Rnc Division)|
+BBDB|Benoy Badal Dinesh Gardens|
+BBDE|Babarpur|
+BBE|Baghi Bardiha|
+BBGN|Barua Bamungaon|
+BBHL|Bela Bela|
+BBHT|Barabar Halt|
+BBI|Barabani|Barabanki
+BBJ|Babaganj|
+BBK|Barabanki Junction|
+BBKR|Baba Bakalaraya|
+BBL|Balrai|
+BBLA|Bhyabla Halt|
+BBLK|B L Daspuri|
+BBM|Barabhum|
+BBMN|Bari Brahman|
+BBN|Barabil|
+BBO|Babugarh|
+BBPM|Balabhadrapuram|
+BBPR|Babupur|
+BBQ|Basin Bridge Junction|
+BBR|Bagh Bazar|
+BBRA|Bbra|
+BBRI|Banshbari Halt|Purandaha
+BBRM|Baba Bhagwan Ram Halt|
+BBS|Bhubaneswar|
+BBSL|Baba Sodhal Nagar|
+BBSN|Bhubaneswar New|
+BBT|Birati|
+BBTR|Barbatpur|
+BBU|Bhabua Road|
+BBV|Babhulgoan|
+BBW|Bodarwar|
+BBY|Bhadroli|
+BC|Bareilly City|Bareilly
+BCA|Bachwara Junction|
+BCB|Bhowra Junction|
+BCD|Bansdih Road|
+BCF|Bankapasi|
+BCGM|Bainchigram|
+BCH|Berchha|
+BCHL|Bacheli|
+BCHN|Bochasan Junction|
+BCHR|Bachar|
+BCHT|Barh Court Halt|Ibrahimpur
+BCJ|Bagahabishunpur|
+BCK|Balichak|
+BCL|Mumbai Central Local|Mumbai Central
+BCM|Buranpudi|
+BCMR|Bechimari|
+BCN|Bachhrawan|
+BCO|Bhachau|
+BCOB|Bhachau Bg|
+BCP|Bichpuri|
+BCPR|Bachharpur Halt|
+BCQ|Barachak|
+BCRD|Barchi Road|
+BCT|Mumbai Central|Mumbai
+BCU|Bhuchchu|
+BCW|Bhawi|Bhiwani
+BCY|Varanasi City|Varanasi
+BCYN|Budhdevchak Y Nagar|
+BD|Badnera Junction|
+BDA|Vadodara C Cabin|
+BDAG|Bonidanga|
+BDB|Vrindavan|
+BDBA|Badabandha|
+BDBG|Badhai Balamgarh Halt|
+BDBP|Basudebpur|
+BDBR|Bhogdbar Halt|Jiran Gachh
+BDBS|Bindubasini Hal|
+BDC|Bandel Junction|
+BDCR|Bhadrachalam Road|
+BDDR|Badodar|
+BDE|Bodeli|
+BDGM|Budgam|Degree College Budgam
+BDGN|Bhandegaon|
+BDGP|Badanaguppe|
+BDGU|Budagumpa|Dhangaldoddi
+BDH|Bhedia|
+BDHA|Badhada|
+BDHL|Badhal|
+BDHN|Bodhan|
+BDHP|Bhudpur|
+BDHT|Bardi Halt|
+BDHY|Budhi|
+BDI|Bhadli|
+BDIH|Bandhdih|
+BDIN|Bhadaiyan|
+BDJ|Vadakara|
+BDJR|Bhadora Jagir|
+BDK|Bedag|
+BDKD|Bhandarkund|
+BDKE|Bhadsivni|
+BDKN|Bandhua Kalan|
+BDKT|Badakhandita|
+BDL|Vindhyachal|
+BDLC|Bonidanga Link Cabin|
+BDLN|Bordolani|Kaibartta Gaon
+BDM|Badami|
+BDMA|Budhma|
+BDME|Baidyanathdham Deoghar|
+BDMJ|Bhodwal Majri|
+BDN|Bhadan|
+BDNH|Bhudevinagar Halt|Bhoodevinagar
+BDNK|Bodinayakkanur|Bodinayakanur
+BDNP|Bidanpur|
+BDO|Bahalda Road|
+BDP|Bahadurpur H|
+BDPA|Badalpur Ph|
+BDPG|Bada Padagaon|
+BDPK|Burhapanka|
+BDPL|Bandarupalle|
+BDPR|Brindabanpur|West Bengal 722207
+BDQ|Budora|
+BDRD|Bhadravadi|
+BDRI|Bhadrauli|
+BDRL|Byadarahalli|
+BDRN|Bhadran|
+BDS|Baradighi|Haihaipathar
+BDSW|Budhsinghwala|
+BDT|Bordubi Road|
+BDTS|Bandra Terminus|Mumbai
+BDU|Badnapur|
+BDUA|Basudeopur Chandail Halt|
+BDV|Badanavalu|
+BDVL|Budvel|
+BDVR|Xxxxxxxxxxxxxx|
+BDVT|Bhadravati|
+BDW|Bandanwara|
+BDWA|Badhwa Bara|
+BDWD|Bodwad|
+BDWL|Biradhwal|
+BDWS|Badarwas|
+BDX|Bdx|
+BDXT|Basai Dhankot|
+BDXX|Bade Arapur|
+BDY|Buddireddippati|
+BDYD|Bdyd|
+BDYK|Bindayaka|
+BDYP|Bidyadharpur|
+BDYR|Bidyadabri|
+BDZ|Badkulla|
+BE|Bareilly|
+BEA|Bihiya|
+BEAS|Beas|
+BEB|Beldanga|
+BEC|Berach Jn Cabin|
+BECN|Bikaner East|
+BED|Baseri|
+BEDM|Bedham|
+BEE|Bebejia|
+BEED|Beed|Palwan
+BEF|Bhupdeopur|
+BEG|Behtagokul|
+BEH|Bagdihi|
+BEHI|Bennehalli|Matihalli Rd
+BEHJ|Behj|
+BEHR|Beohari|
+BEHS|Bihar Sharif|
+BEHT|Bihat Halt|
+BEHY|Bennehalli|
+BEI|Shimoga Bidare|
+BEJ|Beniganj|
+BEK|Bundki|
+BELA|Bela|
+BELD|Belkhera|
+BELG|Belg|
+BELT|Bela Halt|
+BEM|Budaun|
+BEML|Beml Nagar|
+BEN|Benepole|Benapole
+BENA|Belonia|Sarasima part
+BENL|Benl|
+BEO|Birohe|
+BEP|Bheerpur|
+BEPR|Belapur C B D|Belapur
+BEQ|Belur|
+BER|Beawar|
+BERO|Bero|
+BES|Bes|
+BET|Bareth|
+BETA|Barethiya|
+BETI|Bhetasi|
+BEU|Bisheshwarganj|
+BEW|Betavad|
+BEX|Belboni|West Bengal 722203
+BEY|B Cement Nagar|
+BF|Bagetar|
+BFD|Borhat|
+BFE|Bahawal Basi|
+BFF|Barabhati|
+BFG|Bagthar|
+BFJ|Bhoras Budrukh|
+BFM|Bhalui|
+BFN|Bugana|
+BFP|Bilochpura Agra|
+BFPA|Bhopatpur|
+BFQ|Bendi|
+BFR|Bekal Fort|
+BFS|Bharawas|
+BFT|Bhabta|
+BFV|Bahelia Buzurg|
+BFW|Byatrayanhalli|
+BFX|Baghi Ghauspur|
+BFY|Bhesana|
+BFZ|Bhandartikuri|
+BG|Bhongir|
+BGA|Bagalia|
+BGAE|Balagarh|
+BGAN|Bangain|
+BGAR|Bangari|
+BGB|Budge Budge|
+BGBI|Bagribari|
+BGBR|Bagbahra|
+BGD|Bara Gudah|
+BGDA|Bogada|
+BGDI|Bagadia Ph|
+BGDS|Bhagwanpur Desu|
+BGF|Bagila|
+BGG|Banta Rnathgarh|
+BGH|Baghauli|
+BGHI|Bagahai Road|
+BGHT|Barkagaon Halt|
+BGHU|Borraguhallu|
+BGJT|Bagha Jatin|
+BGK|Bagalkot|
+BGKA|Bangurkela|
+BGKT|Bhagat Ki Kothi|
+BGL|Bagula|
+BGLI|Bargolai|
+BGM|Belgaum|
+BGMR|Bagumra|
+BGMU|Bangarmau|
+BGN|Borgaon|
+BGNA|Balgona|
+BGND|Boginadi|Tariani Borbil
+BGNP|Banaganapalle|Kyapa
+BGNR|B.G.Nagar|Agachalli Rd
+BGO|Bogri Road|
+BGP|Bhagalpur|
+BGPA|Bageshapura|
+BGPL|Baghuapal|
+BGPR|Bhagwanpura|
+BGQ|Bhongaon|
+BGR|Bhagdara|
+BGRA|Baghnapara|
+BGRD|Beliaghata Road|
+BGRM|Biggabas Ramsara|
+BGRR|Bagarpur Halt|
+BGS|Begu Sarai|
+BGSF|Bisugirsharif|
+BGTA|Bagra Tawa|
+BGTN|Bhagtanwala|Amritsar
+BGU|Bairagnia|
+BGUA|Baiguda|
+BGV|Balegundi|
+BGVN|Bhigwan|
+BGW|Begdewadi|
+BGWD|Bagewadi|
+BGWI|Begdaewadi|
+BGWR|Baghwar|
+BGX|Bagri Sajjanpur|
+BGY|Bangriposi|
+BGZ|Bahadurgarh|
+BH|Bharuch Junction|Bharuch
+BHA|Bhandai|
+BHAD|Barhapur Halt|
+BHAE|Bhadreshwar Ghat|
+BHAL|Bhatiel|
+BHAN|Bhoyani|
+BHAS|Bhojras|
+BHAT|Bhatpura|
+BHAU|Bhalua|Deoghar Rd
+BHAW|Block Hut A (Bha)|
+BHB|Badla Ghat|
+BHBK|Bodhadi Bujrug|
+BHBR|Bathua Bazar|
+BHBT|Block Hut Basantpur|
+BHBV|Block Hut B|
+BHC|Bhadrakh|
+BHCH|Block Cabin Chakki Bank|
+BHCL|Bahora Chandil|
+BHD|Badli|New Delhi
+BHDH|Bahadurpur Halt|
+BHDR|Bhadri|
+BHEL|Bhel|
+BHET|Bhestan|
+BHG|Bhaton Ki Gali|
+BHGH|Bhairgachhi|
+BHGJ|Bihariganj|
+BHGN|Bhilgaon|
+BHGP|Bhagirathpur|
+BHHT|Barhara|
+BHHZ|Behta Hazipur Halt|
+BHI|Baheri|
+BHID|Bhidi|MSH 3
+BHJ|Barhaj Bazar|
+BHJA|Bheja|
+BHK|Badhari Kalan|
+BHKA|Bahira Kalibari|
+BHKD|Bhurkunda|
+BHKH|Baghoi Kusa|
+BHKL|Bhakrauli|
+BHL|Bhilwara|
+BHLA|Behula|
+BHLE|Barahat|
+BHLI|Bohali|
+BHLK|Bhalki|
+BHLP|Bhulanpur|
+BHM|Bahram|
+BHMA|Baghmara Halt|
+BHME|Bhandaridah|
+BHMW|Bhambhewa|Bham Bhewa
+BHN|Bhuli|
+BHNA|Bhayna|
+BHNE|Bhone|
+BHNG|Bhalukpong|
+BHNP|Bishanpur Halt|
+BHNS|Bhansi|
+BHOI|Dhandarikalan Block Hut|
+BHOJ|Bhoj Padra|
+BHP|Bolpur S Niktn|
+BHPA|Bahrupiya Halt|
+BHPI|Bichhupali|Raghabapali
+BHR|Bhadreshwar|
+BHRB|Bhairabi|
+BHRD|Baghara Road|
+BHRH|Bhuyar Halt|
+BHRJ|Becharji|
+BHRL|Bharoli|
+BHRM|Bishramganj|Shillong-Agartala-Sabrum Rd
+BHS|Vidisha|
+BHSA|Bhisa Halt|
+BHT|Bhattu|
+BHTA|Bhatiya|
+BHTH|Bhairopatti Halt|
+BHTK|Bhanwar Tonk|
+BHTL|Bhatel|
+BHTN|Bhitoni|
+BHTR|Bhatpar Rani|
+BHTS|Bhatasa|
+BHU|Bhandu Motidau|
+BHUA|Bhua|
+BHUJ|Bhuj|
+BHUL|Bhauli|
+BHUN|New Motidau|
+BHV|Bhoma|
+BHVP|Bhavpura|Mota Bhela
+BHW|Barharwa Junction|
+BHWA|Bechhiwara|
+BHWD|Bhujvad|
+BHWR|Bhitiharwa Ashram|
+BHX|Bulluana|
+BHY|Bhayavadar|
+BHZ|Bihara|
+BI|Bari Sadri|
+BIA|Bhilai|
+BIB|Birpur|
+BIC|Bichia|
+BICI|Barkichampi|
+BID|Bidadi|
+BIDD|Bidiyad|
+BIDR|Bidar|
+BIE|Bhistenhatti|
+BIF|Bhaironpur|
+BIG|Belgahna|
+BIGA|Bigga|
+BIGH|Bagrigram Halt|
+BIGJ|Bibiganj|Kaalpeer
+BIH|Bairagarh|
+BII|Boridra|Kharchi Village
+BIJ|Birnagar|
+BIJR|Bijoor|
+BIK|Bhira Kheri|
+BILA|Bheslana|
+BILD|Bildi|
+BILK|Bilkha|
+BILP|Bhilpur|
+BIM|Bilimora Junction|Bilimora
+BIML|Bhimal|
+BINA|Bina Junction|
+BINR|Brij Nagar|
+BIO|Bordi|
+BIP|Bahilpurwa|
+BIPR|Bheempura|
+BIQ|Bansi Paharpur|
+BIR|Bir|
+BIRA|Bira|Amdanga-Bira Road
+BIRD|Bhiwandi Road|
+BIRL|Biraul|
+BIRP|Birarajpur|
+BIRT|Biratoli|
+BIS|Biswa Bridge|
+BISH|Bishengarh|
+BIU|Bidupur|
+BIV|Bamhani Banjur|
+BIWK|Bisalwas Kalan|
+BIX|Bhind|
+BIY|Bardoli|
+BIYA|Baniyana|Baniyana State: Rajasthan
+BIZ|Baihata|
+BJ|Bahjoi|
+BJA|Bijrotha|
+BJBA|Bijbiara|Bijbehara
+BJD|Barejadi|
+BJE|Bhojudih Junction|
+BJF|Bijni|
+BJG|Bajrangarh|
+BJI|Bijauli|
+BJIH|Bijuli Halt|
+BJK|Bijora|
+BJKN|Bajekan|
+BJL|Brahmajan|Chilathia
+BJLP|Barai Jalalpur|
+BJM|Bhagavathipuram|Puliyarai R.F. Part
+BJMA|Burj Mohar|
+BJMD|Bara Jamda|
+BJMR|Baijnath Mandir|
+BJN|Bejnal|
+BJNK|Bajekan Halt|
+BJNR|Bijainagar|
+BJO|Bijnor|
+BJP|Bijapur|
+BJPD|Bajipada|Bajipara
+BJPL|Baijnath Paprola|
+BJPR|Bijaipur Road|
+BJQ|Baghora|
+BJR|Barrajpur|
+BJRA|Bhajera|
+BJRI|Bijuri|
+BJT|Bajpatti|
+BJU|Barauni Junction|
+BJUD|Bajud|
+BJUP|Bjup|
+BJV|Bijauria|
+BJW|Bajva|
+BJWS|Bojawas|
+BJY|Bangalbaree|
+BK|Bakra Road|
+BKA|Barkhera|
+BKAC|Barkakana Avoiding Cabin|
+BKC|Bhikamkor|
+BKCA|Bokaro Steel City A Cabin|
+BKD|Bhankoda|
+BKDE|Budhakhera|
+BKDR|Begun Kudar|
+BKF|Bhikhna Thori|
+BKG|Banka Ghat|
+BKH|Bankhedi|
+BKHP|Bhikampur H|
+BKHR|Bakhri|
+BKI|Bandikui Junction|
+BKIT|Binkadakatti|
+BKJ|Barkur|
+BKKA|Bhukarka|
+BKKI|Bakarkudi|
+BKKS|Bakas|
+BKL|Bona Kalu|
+BKLA|Bakulha|
+BKLE|Bakudi|
+BKN|Bikaner Junction|
+BKNA|Bakaina Halt|
+BKNG|Bhakti Nagar|
+BKNM|Bankra Nayabaz|Nibra
+BKNO|Bikna|West Bengal 722203
+BKO|Bindki Road|
+BKP|Bakhtiyarpur Junction|
+BKPH|Baikunth|
+BKPR|Bakaspur|
+BKPT|Bhakarapet|
+BKRD|Bhaluka Road F|
+BKRH|Brij Kishor Halt|
+BKRL|Bakrol|
+BKRO|Bokaro Thermal|
+BKS|Balikotia|
+BKSA|Bakhsha|
+BKSC|Bokaro Stl City|Bokaro
+BKSL|Bikram Shila|
+BKSN|Bksc North Cabin|
+BKT|Bakshi Ka Talab|
+BKTB|Bindukuri|
+BKTH|Baikunth|
+BKTL|Baktal|
+BKTS|Bakothikhas|
+BKTU|Bari Khatu|Khatu
+BKTW|Baikunth|
+BKU|Bhiknur|
+BKWA|Bakayanwala|
+BL|Valsad|
+BLA|Bajalta|
+BLAE|Balarambati|
+BLAX|Barlai|
+BLC|Bolda|
+BLCA|Block Hut Beas|
+BLD|Bhilad|
+BLDA|Belda|
+BLDI|Bhildi|
+BLDK|Balauda Takun|
+BLDL|Balle-Da-Pir-La|
+BLDR|Baidana Road|
+BLF|Balajan|
+BLG|Bilhar Ghat|
+BLGA|Belagula|
+BLGH|Bishalgarh|Raghunathpur
+BLGR|Balangir|
+BLGT|Balurghat|
+BLH|Belgharia|
+BLHI|Bisalehalli|
+BLHR|Balahapur Halt|
+BLJA|Bhalojala H|Kapurthala
+BLK|Belakoba|
+BLKR|Ballekere Halt|
+BLL|Bantanahal|
+BLLI|Balli|
+BLLT|Ballupete|
+BLM|Balamu Junction|
+BLME|Bholldih|
+BLMK|Bhalumaska|
+BLMR|Bhalukmara|
+BLN|Ballygunge Jn|
+BLND|Bolinna Doaba|
+BLNG|Barlanga|
+BLNI|Bhalwani|
+BLNK|Belanki|
+BLNR|Birlanagar|
+BLO|Bhulon|
+BLOR|Bilaspur Road|
+BLP|Balrampur|
+BLPA|Bilasipara|Hanuman Mandir-NH 31 Link Rd
+BLPE|Balapalle|
+BLPL|Baiel Pipariya|
+BLPR|Badulipar|
+BLPU|Bilpur|
+BLQR|Bilaspur Road|
+BLR|Balganur|
+BLRA|Bilara|
+BLRD|Bala Road|
+BLRE|Belsiri|
+BLRG|Balasiring|
+BLRI|Belari Halt|
+BLRR|Belandur Road|
+BLS|Balasore|
+BLSA|Bolsa|
+BLSD|Balsamand|
+BLSN|Belsonda|
+BLSR|Belasar|
+BLT|Balotra Junction|
+BLTR|Belthara Road|
+BLU|Bilhaur|
+BLV|Bhelwa|
+BLW|Balawali|
+BLWD|Bolwad|
+BLWL|Balawala|
+BLWR|Bileshwar|
+BLX|Bolai|
+BLY|Bally|
+BLYC|Blyc|
+BLYG|Bally Ghat|
+BLYH|Balihalt|
+BLZ|Budhlada|
+BM|Bodma|
+BMA|Bagmar|
+BMAE|Belmuri|
+BMB|Bamra|
+BMBE|Bimbari|
+BMC|Bhimalgondi|
+BMCK|Bissamcuttack|
+BMD|Bhimadolu|
+BMDI|Brahmanwada|
+BMDR|Bamandongri|Ulwe
+BME|Barmer|
+BMF|Basmat|
+BMG|Bamangacchi|Bamangachi
+BMGA|Bhimgara|
+BMGM|Brahmanagudem|
+BMGN|Bamuni Gaon|
+BMGR|Bamangram|
+BMH|Betamcherla|
+BMHR|Bamanheri|
+BMHT|Baraw More|
+BMI|Bamnia|
+BMJ|Bridgemanganj|
+BMK|Birang Khera|
+BMKD|Bellamkonda|
+BMKI|Bapudm Motihari|
+BMKJ|Bhimkhoj|
+BMLL|Bamla|
+BMM|Bhaskarpara|
+BMMP|Bommayapalli|
+BMN|Bhimana|
+BMNI|Bamani|
+BMNL|Bamanwali|
+BMO|Bolarum|
+BMP|Bramhapuri|
+BMPL|Brahmanpalli|
+BMPR|Badampahar|
+BMPT|Banni Mahamman|
+BMQ|Bhimarlai|
+BMR|Bikrampur|
+BMRN|Bhimrana|
+BMSB|Bhimasar Bg|
+BMSN|Bamsin|
+BMSR|Bhimasar|
+BMT|Begampet|Hyderabad
+BMU|Bamhrauli|
+BMVR|Bhaner Minawada|GJ SH 210
+BMW|Bamhni|
+BMWS|Bamanwas|Bamanwas Patti Kal
+BMX|Bamankuva|
+BMY|Bamiana|
+BMZ|Bamour Gaon|
+BN|Bibinagar|
+BNA|Banni Koppa|
+BNAA|Bibhuti Bhushan H|Bibhuti Bhushan Halt
+BNAR|Binaur|
+BNB|Banstola|
+BNBA|Biman Bandar|
+BNBH|Bani Bihar|
+BNBR|Bahanaga Bazar|
+BNC|Bangalore Cant|Bangalore
+BNCE|Bangalore East|Bangalore
+BNCR|Banchari|
+BND|Bhandup|
+BNDA|Banda Junction|Banda
+BNDI|Barundini|
+BNDM|Bondamunda|
+BNDN|Bhandana|
+BNDP|Buniadpur|
+BNDR|Bhanduri|
+BNE|Bohani|
+BNF|Bandhua|
+BNG|Barnagar|
+BNGL|Bhangala|
+BNGM|Bangurgram Halt|
+BNGN|Bongaigaon|
+BNGO|Bingaon|
+BNGY|Bahman Jyotia|
+BNH|Bhimnath|
+BNHL|Bellenahalli|
+BNHR|Banbihari Gwalipur|
+BNHT|Bannihatti|
+BNI|Budni|
+BNJ|Bangaon Jn|Bangaon
+BNJL|Binjhol Halt|
+BNJN|Binjana|
+BNK|Banasankarai Ha|
+BNKA|Bankim Nagar|
+BNKH|Bhairanayakanah|
+BNKI|Banmankhi Junction|
+BNKJ|Banke Ganj|
+BNKM|Vinaekma Halt|Bihar
+BNKR|Banka Road Oa|
+BNKT|Bankat H|
+BNL|Bevinahalu|
+BNLS|Bangi Nihal Singh|
+BNLW|Bansthali Niwai|
+BNLY|Bhanupli|
+BNM|Baragaon|
+BNN|Barnala|
+BNNR|Bhindar|
+BNO|Banar|
+BNOD|Benoda|
+BNOI|Bindori|Bilona Kalan
+BNOL|Bhankala|
+BNP|Bhanapur|
+BNPA|Baniapur H|
+BNPH|Basantpur Halt|Malmaliya
+BNPL|Bondapalli Halt|
+BNPP|Banpimpla|
+BNPR|Banikpur Halt|
+BNPT|Bennipatti Pirapur|
+BNQ|Banarhat|
+BNQL|Bhankala Halt|
+BNR|Bhagwanpur|
+BNRD|Balangir Road|
+BNRS|Banaras|
+BNS|Banas|
+BNSA|Banbasa|
+BNSL|Bansinala Halt|
+BNSP|Bansapahar|
+BNSR|Bhagwansar|
+BNT|Bharthana|
+BNTH|Bandhnath|
+BNTL|Bantawala|
+BNU|Bandakpur|
+BNUD|Bhanvad|
+BNV|Binnaguri|
+BNVD|Bhanvad|
+BNW|Bhiwani|
+BNWC|Bhiwani City|
+BNWD|Bhandewadi Halt|
+BNWS|Bhanwasa|
+BNXR|Bidhan Nagar|
+BNY|Barhni|
+BNZ|Badshahnagar|
+BO|Borsad|
+BOA|Baheriya Road|
+BOBS|Bobas|
+BOD|Bangrod|
+BODG|Bodagram Ph|Boda
+BOE|Barsoi Junction|
+BOF|Barog|
+BOG|Bhairongarh|
+BOI|Bainchi|
+BOJ|Bhojo|
+BOK|Borkhedi|
+BOKA|Bokra|
+BOKE|Bhoke|
+BOKO|Boko|
+BOKR|Bhokar|
+BOM|Bomadra|
+BOMN|Bommagundanakere|
+BON|Bh Onra|
+BONA|Boinda|
+BOP|Bhogpur|
+BOR|Boisar|
+BORA|Baghdogra|
+BORD|Bolagarh Road|
+BORT|Bolagarh Town Ph|Orissa
+BOT|Boroti|
+BOTI|Baori Thikria|
+BOTR|Bhavdhari|
+BOUH|Boudh|Badhigaon
+BOV|Bhatgaon|
+BOW|Borawar|
+BOX|Bhojasar|
+BOY|Bhadohi|
+BOYA|Bothiya|Unnamed Road
+BOZ|Bolarum Bazar|
+BP|Barrackpore|
+BPA|Belampalli|
+BPAE|Begumpur|
+BPAH|Benipur Halt|
+BPB|Badarpur Junction|
+BPBS|Ballalpur|Ballalpur Brahmattar
+BPC|Berhampore Crt|
+BPD|Bahadurpur|
+BPE|Benapur|
+BPF|Banapura|
+BPG|Badurpur Ghat|
+BPGJ|Bharpura Pahlejaghat Jn|
+BPGR|Benipurgram Halt|
+BPH|Belpahar|
+BPHB|Bhilai Pwr Hs|
+BPHI|Baiyyappanahalli Cabin|
+BPJ|Bara Hapjan|Bara Bhangal School
+BPK|Bhugaon|
+BPKA|Bhopalka|
+BPKH|Budha Pushkar Halt|Ajmer
+BPL|Bhopal Junction|
+BPM|Bagpat Road|
+BPMH|Bishunpur Mahuari Halt|
+BPN|Banpur|
+BPO|Baripada|
+BPP|Bapatla|
+BPQ|Balharshah|
+BPR|Bhojipura Junction|
+BPRA|Baripura|
+BPRD|Barpeta Road|
+BPRH|Balpur Halt|
+BPRS|Bhogpur Sirwal|Bhogpur
+BPS|Banpas|
+BPTB|Ballard Pier|
+BPTP|Bhanupratappur|Chhattisgarh 494635
+BPTW|Wadala|
+BPU|Bhaupur|
+BPUR|Baidpur|Kurawali - Mainpuri - Etawah Rd
+BPV|Bhotepatti|Bhote Patty
+BPW|Burhpura|
+BPY|Badampudi|
+BPZ|Bazpur|
+BPZA|Bharathapuzha H|
+BQA|Bankura|
+BQE|Bakanian Bhaunr|
+BQF|Barahmuafi|
+BQG|Bhagwangola|
+BQH|Bhanohad Punjab|
+BQI|Bommidi|
+BQK|Bankura|
+BQM|Barelipur|
+BQN|Bagri Nagar|
+BQP|Bighapur|
+BQQ|Bakhleta|
+BQR|Bhilainagar|
+BQSP|Basuchak Halt|Ramal Bigha
+BQT|Baktar Nagar|
+BQU|Bhattiprolu|
+BQW|Barakalan|
+BQY|Belerhat|
+BQZ|Ballalpur|
+BR|Bandh Bareta|
+BRA|Birsola|India
+BRAG|Barang|
+BRAM|Balabnramapuram|
+BRB|Boribial|
+BRBD|Borabanda|
+BRBG|Barbigha|
+BRBH|Bhojpur Rohtas Border Halt|Bihar 802212
+BRBL|Birahalli|
+BRBR|Barbera|
+BRBS|Birbans|
+BRBY|Barahibari|
+BRC|Vadodara Junction|Vadodara
+BRCK|Baruachak|
+BRCY|Vadodara Marshalling|
+BRD|Bhandara Road|
+BRDA|Baradiya|
+BRDB|Barda|
+BRDH|Bardhana Halt|
+BRDT|Beria Daulat|
+BRDV|Baradev|
+BRE|Bharwari|
+BRG|Bargarh|
+BRGA|Bargarh Road|
+BRGJ|Bargaon Gujar|
+BRGL|Burgula Halt|
+BRGM|Baraigram Jn|
+BRGP|Bajrangpura|
+BRGT|Bheraghat|
+BRGW|Bargawan|
+BRGY|Vadodara D Cabin|
+BRGZ|Vadodara E Cabin|
+BRH|Baikunthpur Road|
+BRHD|Baba Raghuni Halt Dwarika|
+BRHI|Barhi|
+BRHL|Baryal Himachal|
+BRHM|Barhragram Halt|
+BRHT|Bailey Road H|Bailey Road
+BRHU|Barahu|
+BRI|Bhiringi|
+BRIH|Bairi Halt|
+BRIP|Barogopinathpur|
+BRJ|Brace Bridge|
+BRJN|Brajrajnagar|
+BRK|Bahraich|
+BRKA|Barka Kana|
+BRKB|Bharatkhand Halt|
+BRKD|Bharatkhand Halt|
+BRKH|Bisapurkalan|
+BRKP|Barkipona|
+BRKY|Boraki|
+BRL|Barwala Road|
+BRLA|Brayla Chaurasi|
+BRLF|Bar Langfer S|
+BRLI|Barauli|
+BRLY|Biroliya|
+BRM|Barabambo|
+BRMA|Barmasia|Mohanpur
+BRMD|Biramdih|
+BRMH|Belur Math|
+BRMI|Brahmani Ph|
+BRML|Baramulla|
+BRMO|Bermo|
+BRMP|Biramitrapur|
+BRMR|Bharmar|
+BRMT|Baramati|
+BRMX|Barmi|
+BRN|Barhan|
+BRNA|Berawanya|
+BRND|Boridand|
+BRNI|Barwasni Halt|Haryana 131001
+BRNR|Baruanagar|
+BROR|Berore|
+BRP|Baruipur Junction|
+BRPA|Baruipara|
+BRPK|Bisharpara Kodaliya|
+BRPL|Barpali|
+BRPM|Baripur Mandala|
+BRPS|Barapalasi|Dumka Hansdiha Road
+BRPT|Birapatti|
+BRQ|Bagrakot|
+BRR|Barakar|
+BRRD|Bordi Road|
+BRRG|Biyavra Rajgarh|
+BRRI|Birari|
+BRRZ|Barara Buzurg|
+BRS|Birsinghpur|
+BRSA|Barwa Kalan|
+BRSQ|Brar Square|
+BRSR|Biranarsinghpur|Champapur
+BRST|Bir Purushottampur|
+BRT|Brahmavart|Ktaribithoorkurd
+BRTA|Bartara|
+BRTG|Barithengarh|
+BRTK|Bhortex|
+BRTL|Bharthali|
+BRU|Bhairoganj|
+BRUD|Barud|
+BRVR|Borvihir|
+BRW|Bariwala|
+BRWD|Barwadih Junction|
+BRWH|Baherwa Halt|
+BRY|Bareilly|
+BRYA|Barhiya|
+BRYC|Bareilly Cantt|Cantt. Bypass
+BRZ|Bareta|
+BRZR|Barari Bazar|
+BS|Banisar|
+BSA|Bhainsa|
+BSAE|Bansh Baria|
+BSAR|Bhaiyasar|
+BSB|Varanasi Junction|Varanasi
+BSBH|Bhainsbodh|Bangaon
+BSBN|Bhusawal B Cabin|
+BSBP|Bir Shibpur|
+BSBR|Banshlai Bridge|
+BSBS|Banaras|
+BSBY|Varanasi Yard|
+BSC|Bulandshahr|
+BSCK|Basuchak|
+BSCN|Bhusawal C Cabin|
+BSCP|Baskatwa B. H.|
+BSD|Basuldanga|
+BSDA|Baniya Sanda Dhora|
+BSDL|Bharsendi|
+BSDP|Bhusandpur|
+BSDR|Bansadhara Halt|
+BSE|Badshahpur|
+BSGD|Bais Godam|
+BSGN|Basugaon|
+BSGR|Bhagsar|
+BSGS|Bsgs|
+BSHT|Basirhat|
+BSI|Basbari|
+BSJ|Bhupalsagar|
+BSKH|Basukinath|
+BSKN|Bhesana Manknaj|
+BSKO|Banskho|
+BSKR|Basi Kiratpur|
+BSL|Bhusaval Junction|
+BSLA|Bhasila|
+BSLE|Bataspur|
+BSLX|Bslx|
+BSM|Bisanattam|
+BSMH|Birshamunda Halt|Siromanipur
+BSN|Banasandra|
+BSNP|Bishunpur|Dhusmuri Bishanpur
+BSP|Bilaspur Junction|
+BSPC|Bspc|
+BSPD|Biaspind|
+BSPH|Bishanpur Haryana|
+BSPK|Bispur|
+BSPL|Basampalle|
+BSPN|Bassi Pathanam|
+BSPR|Bishrampur|
+BSPX|Banspani|
+BSQ|Barsi Takli|
+BSQP|Bansipur|
+BSR|Vasai Road|Mumbai
+BSRA|Basarhia Halt|
+BSRI|Basari|Dalon
+BSRL|Besroli|
+BSRX|Bagevadi Road|
+BSS|Bahadur Singh W|
+BSSL|Basi Beriasal|
+BST|Basti|
+BSTP|Basantapur|
+BSUR|Bisalpur|
+BSW|Baneswar|
+BSWA|Baiswara|
+BSWD|Bhemswadi|
+BSX|Basar|
+BSY|Barsathi|
+BSYA|Barkisalalya|
+BSZ|Bharwa Sumerpur|
+BT|Barasat|
+BTA|Bihta|
+BTBR|Buti Bori|
+BTC|Balaghat Junction|
+BTCN|Balaghat|
+BTD|Botad Junction|
+BTDF|Botad Jn|
+BTDR|Batadrowa Road|
+BTE|Bharatpur Junction|
+BTF|Bathnaha|
+BTG|Basharatganj|
+BTGA|Bhutgoria|
+BTGH|Bettadnagenhali|
+BTH|Bettiah|
+BTHL|Bithauli|
+BTHN|Bithan|Hasanpur - Bithan Rd
+BTI|Bhatinda Junction|
+BTIA|Bhatinda A Cabin|
+BTIB|Bhatinda B Cabin|
+BTIC|Bathinda Cantt.|
+BTJ|Bishnathganj|
+BTJL|Bhatkal|
+BTK|Bankata|
+BTKB|Bathna Krittibas Halt|
+BTKD|Bharatkund|
+BTKL|Bhatkal|
+BTKP|Bharat Kup|
+BTL|Bortalao|
+BTM|Battulapuram|
+BTNG|Bhattanagar|
+BTNR|Bhartnagar|
+BTO|Bhitaura|
+BTP|Babatpur|
+BTPD|Bethampurdi|
+BTPG|Betheria Ghola|
+BTPH|Chakia Thermal Halt|
+BTPR|Bhatpur|
+BTPS|Bandel Thermal Power Station|
+BTQ|Betnoti|
+BTR|Butari|
+BTRA|Banthra|
+BTRB|Betur|Beta Tech Pro Univ
+BTRH|Bhatar H|Palar
+BTRI|Bitrol|
+BTRO|Bastoi Halt|
+BTS|Basta|
+BTSD|Bhatisuda(Halt)|
+BTSI|Batasi|
+BTSR|Bhuteshwar|
+BTT|Bhatni Junction|
+BTTN|Bhatian|
+BTTR|Bitragunta|
+BTU|Baraut|
+BTV|Baitarani Road|
+BTVA|Batuva|
+BTW|Barsi Town|
+BTWN|Betwa Cabin|
+BTX|Bela Tal|
+BTY|Bethuadahari|
+BTYA|Bhatariya|
+BTZ|Balimara|
+BU|Baswa|
+BUA|Baradwar|
+BUB|Bissau|
+BUBA|Bijubigha Halt|Sahebnagar
+BUBR|Bhutakia Bhimsa|
+BUBT|Buraha Bhartha|
+BUD|Badlapur|
+BUDA|Bhuda|
+BUDI|Bundi|
+BUDM|Badmal|
+BUDR|Baudpur|
+BUE|Baruna|
+BUF|Bimlagarh Junction|
+BUG|Bagaha|
+BUGL|Buglanwali|
+BUGM|Berugram|Memari-Tarkeswar Rd
+BUGN|Bhurjiha Baragn|
+BUGY|Bugia Halt|
+BUH|Burhar|
+BUI|Ballia|
+BUJ|Barauni Flag|
+BUJA|Bhujia|Gauri
+BUKR|Bukru|
+BUL|Bhalulata|
+BUM|Bommasamudram|
+BUMH|Balumath|
+BUP|Bariarpur|
+BUPH|Babupeth|
+BUQ|Bargi|
+BUR|Bindaura|
+BURA|Bahuara|
+BURN|Burnpur|
+BUS|Badausa|
+BUT|Baytu|
+BUTA|Bhadutala|
+BUTN|Butana Halt|Butana Khetlan
+BUU|Bhadanpur|
+BUW|Burhwal|
+BUX|Bhandak|
+BV|Babhnan|
+BVA|Bauria Junction|
+BVAC|Bvac|
+BVAR|Bevra|
+BVB|Bhadbhadaghat|
+BVBC|Bvbc|
+BVC|Bhavnagar Trmus|
+BVH|Ballabgarh|
+BVI|Borivali|Mumbai
+BVL|Bikkavolu|
+BVM|Bayyavaram|
+BVN|Biswan|
+BVNR|Bhavani Nagar|
+BVO|Bogolu|
+BVP|Bhavanagar Para|
+BVQ|Bhilavdi|
+BVR|Banavar|
+BVRM|Bhimavaram Junction|
+BVRT|Bhimavaram Town|
+BVRX|Bhimavaram Town|
+BVS|Bhivpuri Road|
+BVU|Balipara|National Highway 52
+BVV|Bedetti|Behali
+BVW|Bahminiwala|
+BVZ|Naloi Barwa|
+BW|Biwai|
+BWA|Bhinwaliya|
+BWB|Bagwali|
+BWBN|Bewar Bhojan|
+BWC|Banwali|
+BWCN|Bowaichandi|Bardhaman
+BWD|Belvandi|
+BWF|Butewala|
+BWH|Bhadaura|
+BWI|Bilwai|
+BWIP|Bhawanipatna|
+BWK|Bawani Khera|
+BWL|Bawal|
+BWM|Bhawani Mandi|
+BWN|Barddhaman Junction|
+BWND|Bwnd|
+BWO|Buramara|
+BWP|Bhawanipur Kalan|
+BWPB|Bhawanipur Bihar|
+BWPL|Balwant Pura Chelasi|
+BWR|Barwa Sagar|
+BWRA|Bharatwada|
+BWS|Badwasi|
+BWSN|Bijwasan|
+BWT|Bangarapet|
+BWV|Bhiwapur|
+BWW|Barwaha|
+BWX|Bahman Diwana|
+BWY|Bangarapet|
+BWZ|Baddowal|
+BXA|Balod|
+BXB|Banga|
+BXC|Barwala|
+BXF|Barsuan|
+BXG|Bhanga|
+BXHT|Boxirhat|
+BXJ|Bokajan|
+BXK|Bandarkhal|
+BXL|Bheduasol|
+BXLL|Billi|
+BXM|Belrayan|
+BXN|Bayana Junction|Bayana
+BXO|Boparai H|Boparai
+BXP|Barpathar|
+BXQ|Brundamal|
+BXR|Buxar|
+BXS|Pichchandarkovl|
+BXT|Bamanhat|
+BXW|Barddhaman N G|
+BXY|Bordhal|
+BY|Byculla|
+BYC|Bellary Cant|
+BYD|Byadgi|
+BYE|Bansi Bohera|
+BYG|Bahram Ghat|
+BYH|Bhiti|
+BYHA|Barya Ram|
+BYKT|Burakayalakota|
+BYL|Belha|
+BYN|Banahi|
+BYNR|Byndoor|
+BYO|Bayaluvaddigeri|
+BYP|Baijnathpur|
+BYPA|Baiyyappanahalli|
+BYPL|Baiyyappanahali|
+BYPY|Baiyyappanahalli Yard Cabin|
+BYQ|Bahai|
+BYR|Bhayandar|
+BYS|Barsali|
+BYSA|Basulyasutahata|
+BYT|Bhatapara|
+BYX|Bolanikhadan|
+BYXA|Betgara|
+BYY|Byree|
+BYZA|Begunia|
+BZ|Bharur|
+BZA|Vijayawada Junction|Vijayawada
+BZB|Barra Bazar|
+BZC|Beliator|
+BZE|Baseria|
+BZG|Bilga|
+BZGT|Bazurghat|
+BZJT|Bazida Jatan|
+BZK|Bhaini Khurd|
+BZL|Belanagar|
+BZLE|Bazarsau|
+BZM|Bhimsen|
+BZN|Bagnan|
+BZO|Barsola|
+BZR|Bisra|
+BZS|Bansjora|
+BZU|Betul|
+BZY|Basai|
+CAA|Chakia|
+CABN|Bhilai Cabin|
+CAC|Chand Pipar Halt|Chandpiper
+CAER|Chhanera|
+CAF|Chanda Fort|
+CAG|Chhabra Gugor|
+CAI|Chanpatia|
+CAJ|Chakraj Mal|
+CAL|Howrah Jn|
+CAM|Chhota Ambana|
+CAMU|Chamua|
+CAN|Kannur|
+CAO|Chauradano|
+CAP|Chatrapur|
+CAPA|Chhapra Jn|
+CAPC|Chatrapur Court|
+CAPE|Kanyakumari|
+CAPG|Chapaguri|Dumniguri
+CAR|Chunar|
+CARD|Charadu|Charada
+CAS|Chas Road|
+CASA|Chhansara|
+CAT|Chattar Hat|
+CATA|Chhata Aschaura|
+CATD|Chataud|
+CAZ|Chauhani|
+CBCC|Chandlodiya B Cabin|
+CBD|Changrabandha|Nagar Changrabandha
+CBDH|Cbd Ph|
+CBE|Coimbatore Junction|Coimbatore
+CBF|Coimbatore Nrth|Coimbatore
+CBG|Charbhuja Road|
+CBH|Chaube|
+CBJ|Clutterbuckganj|
+CBK|Chachaura Bngj|
+CBM|Cumbum|
+CBN|Chit Baragaon|
+CBP|Chik Ballapur|
+CBR|Chaubepur|
+CBS|Chunbhati|
+CBSA|Chaibasa|
+CBT|Charbatia|
+CBU|Chinna Babu Samudram|
+CBX|Chand Bhan|
+CBY|Khambhat|
+CBYB|Khambhat (Bandar)|
+CBZ|Churaibari|
+CC|Chauri Chaura|
+CCA|Chigicherla|
+CCAB|Bmy C Cabin|
+CCB|Carnac Bridge|
+CCBG|Chicholi Buzurg|
+CCD|Chichonda|
+CCG|Churchgate|
+CCH|Chinchvad|Pune
+CCHR|Chhachhar|
+CCI|Chinnekuntapali|
+CCK|Chichaki|
+CCL|Chanchelav|
+CCLW|Cclink-West|
+CCO|Chicholi|
+CCP|Chhuchhapura Junction|
+CCR|Chinchuria|Monohar Bahal B
+CCRL|Cc Rly Link Cab|
+CCSJ|Ccsj|
+CCT|Kakinada Town|
+CD|Chandrapur|
+CDA|Chuda|
+CDAE|Chandanpur|
+CDB|Chaudhribandh|
+CDBH|Candrabanda H|Karnataka 584102
+CDBN|Chedhabanni Halt|
+CDC|Chandan Chauki|
+CDD|Chandod|
+CDG|Chandigarh|
+CDGR|Chandrakona Road|
+CDH|Chakdaha|
+CDI|Chandni|
+CDK|Chandkhera Road|
+CDL|Chodiala|
+CDLD|Chandlodiya|
+CDM|Chidambaram|
+CDMA|Chandeshwarsthan|
+CDMR|Chandauli Mjhwr|
+CDNR|Chandanagar|
+CDP|Chandpara|
+CDQ|Chadotar|
+CDRA|Chandera|
+CDRL|Chhandrauli|
+CDS|Chandisar|
+CDSL|Chandresal|
+CDV|Chandarwa|Polarpur
+CE|Chharodi|
+CED|Cossipore Road|
+CEL|Chebrol|
+CEM|Cheekateegalplm|
+CEME|Chegro|
+CEU|Chiheru|
+CFG|Chakiting|
+CG|Canning|
+CGA|Chengel|
+CGE|Charghat Pipari|
+CGF|Charali|
+CGH|Cholang|
+CGHD|Chinnadagudi|
+CGI|Chandragiri|
+CGKP|Chandagirikopal|
+CGKR|Chandagirikopal|
+CGL|Chengalpattu|
+CGLA|Changotola|
+CGN|Chirgaon|
+CGO|Chhidgaon|
+CGON|Chaygaon|
+CGR|Chandan Nagar|
+CGS|Changsari|
+CGTA|Chegunta|
+CGV|Chingavanam|
+CGX|Chargola|
+CGY|Changanaseri|
+CH|Chandausi Junction|Chandausi
+CHA|Chawapall|
+CHAA|Chapar|
+CHAF|Chaf Halt|
+CHAH|Chailaha Halt|
+CHAP|Chhattarpur|
+CHAR|Charmal|
+CHAS|Chass|
+CHB|Chabua|
+CHBN|Chandkhira Bagn|
+CHBR|Chaure Bazar|
+CHBS|Chaubisi|
+CHBT|Chakarbhatha|
+CHC|Chanchai|
+CHCR|Chacher|
+CHD|Chandia Road|
+CHDA|Chanda (Halt)|
+CHDN|Chandan|
+CHDX|Chhada|
+CHE|Srikakulam Road|Srikakulam
+CHF|Chunabhatti|Chuna Bhatti
+CHG|Mumbai Chinchpokli|
+CHGA|Chirugoda|
+CHH|Chaukhandi|
+CHHU|Chhanva|
+CHI|Chiplun|
+CHIB|Chirai Bg|
+CHII|Chirai|
+CHIT|Chithari Halt|
+CHJ|Chata|
+CHJC|Chitoda|
+CHK|Chakeri|
+CHKB|Chakki Bank|
+CHKE|Challakere|
+CHL|Chola|
+CHLD|Chitalda|
+CHLK|Chavalkhede|
+CHLR|Chhalesar|
+CHM|Chalthan|
+CHMG|Chintpurni Marg|Kuneran
+CHN|Chhina|
+CHNH|Channi Halt|
+CHNN|Channani|
+CHNR|Chhan Arorian|
+CHNU|Chhanua|
+CHOD|Charduar|Dhekeri Gaon
+CHOK|Chauk|
+CHP|Chhapi|
+CHPD|Cheppad Halt|
+CHPG|Chhapra Gramin|
+CHPT|Chatrappatti|
+CHQ|Choka|
+CHR|Chilkahar|
+CHRA|Chharra|
+CHRD|Charodiya|
+CHRG|Chorgi|
+CHRI|Charhi|National Highway 33
+CHRK|Churki|
+CHRM|Chirmiri|
+CHRT|Churhat|
+CHRU|Chamrua|
+CHSM|Chinna Salem|
+CHT|Champahati|
+CHTI|Chaneti|
+CHTL|Churaru Takrala|
+CHTS|Cochin Hrbr Tms|
+CHTT|Chitta Halt|
+CHTX|Cochin|
+CHU|Champion|
+CHUA|Chourai|
+CHV|Charvattur|
+CHWT|Chhaprawat|
+CHZ|Charlapalli|
+CI|Chhapra Kacheri|
+CIA|Chheharta|
+CIC|Chand Pipar Halt|
+CID|Chiraidongri|
+CIF|Chhapra Kacheri Jn.|
+CIH|Chilhia|
+CII|Chettiyapatti|
+CIK|Chiksana|
+CIKA|Cika|
+CIKR|Chandikhole Road|Dist- Jajpur
+CIL|Chilbila Junction|
+CIN|Chintakunta|
+CIO|Chikhli Road|
+CIP|Chichpalli|
+CIRL|Chirula|
+CIT|Chitali|
+CIV|Chinnaravuru|
+CJ|Kanchipuram|
+CJA|Chongajan|
+CJE|Kanchipuram East|
+CJL|Chajli|
+CJM|Chinna Ganjam|
+CJN|Chhatna|
+CJQ|Champajharam|
+CJR|Chamaraj|
+CJS|Charamula Kusum|
+CJW|Chajawa|
+CK|Chiksugar|
+CKA|Chak Pakhhewala|
+CKB|Chauth Ka Brwra|
+CKBK|Chikkabenakal|Hire Benkal
+CKD|Charkhi Dadri|Dadri
+CKDL|Chakdayala|
+CKE|Choki Sorath|
+CKG|Chowka Ghat|
+CKH|Chakand|
+CKHS|Chikhli|
+CKHT|Chanka Halt|Jakhani
+CKI|Chalakudi|
+CKK|Chakarpur|
+CKKD|Charkhera Khurd|
+CKKN|Chak Kalan|
+CKLA|Chak Banwala|
+CKLT|Chak Kali Lait|
+CKM|Chauki Man|
+CKMI|Chhotaki Masaudhi Halt|
+CKN|Chinta Kani|
+CKNA|Chikna|
+CKNI|Chikni Road|
+CKOD|Chakrod|
+CKP|Chakradharpur|
+CKR|Chikodi Road|
+CKRD|Chakmakrand|
+CKS|Chaksu|
+CKSR|Chak Safaura Halt|
+CKTD|Chitrakot|
+CKU|Chakulia|
+CKV|Cherukuvada|
+CKVD|Chikkandawadi|
+CKW|Chalkhoa|
+CKX|Chakur|
+CKYD|Chakra Road|
+CLA|Kurla Junction|
+CLAT|Lokmanyatilak T|
+CLC|Chalala|
+CLD|Chalsa Junction|
+CLDB|Chandlodiya (B)|
+CLDR|Chilikidara|
+CLDY|Chandlodiya|
+CLE|Chintalpalli|
+CLF|Chhulha|
+CLG|Kahalgaon|
+CLHT|Chulheta|
+CLI|Chalgeri|
+CLJ|Colonelganj|
+CLKA|Chilka|
+CLKN|Chuchela Kalan|
+CLMD|Chullimada|
+CLN|Kollidam|
+CLO|Chilo|
+CLPE|Challavaripalli|
+CLR|Castle Rock|
+CLT|Kozhikode|
+CLU|Chilakalapudi|
+CLVR|Chiluvur|
+CLW|Chilwariya|
+CLWS|Clws|
+CLX|Chirala|
+CM|Campierganj|
+CMA|Cinnamara|
+CMBR|Chembur|
+CMC|Chemancheri|
+CMDG|Chamardighi|Kharjuli
+CMDP|Chimidipalli|
+CMGR|Chikkamanglur|
+CMJ|Chamarajapuram|
+CMK|Chamak|
+CMMG|Chamunda Marg|
+CMNR|Chamarajanagar|
+CMP|Chromepet|
+CMR|Chamrola|
+CMU|Chau Mahla|
+CMW|Chima Pahad|
+CMX|Chamagram|
+CMY|Chintamani|
+CMZ|Chalama|
+CNA|Chanderiya|
+CNB|Kanpur Central|Kanpur
+CNBI|Chandari|
+CNC|Chinchli|
+CND|Chandur|
+CNDB|Chandur Bazar|
+CNDI|Chandi H|
+CNDM|Chandi Mandir|
+CNDN|Chandan|
+CNE|Chandranathpur|
+CNF|Chianki|
+CNGR|Chengannur|
+CNH|Chaunrah|
+CNHL|Chink Hill|
+CNI|Chandil Junction|
+CNJ|Chander Nagar|
+CNJO|Juhi Outer Cabin|
+CNJW|Holding Line|
+CNK|Chandok|
+CNKH|Chinnakote Halt|
+CNKP|Chanakyapuri|
+CNL|Chandawal|
+CNM|Chengmari|
+CNN|Chintaman Ganes|
+CNO|Cancona|
+CNP|Cnp|
+CNPA|Channarayapatna|Hassan
+CNPI|Chandanpahari|
+CNPR|Chainpur|
+CNR|Chandar|
+CNRF|Chhandar|Chandra Taal
+CNS|Chuchura|
+CNT|Contai Road|
+CNV|Kinattukkadavu|Kinathukadavu
+CNX|Chandauna Halt|
+CNY|Kolanalli|
+COA|Kakinada Port|
+COAC|Coac|
+COAX|Kakinada Port|
+COB|Cooch Behar|
+COD|Chhota Gudha|
+COE|Chitrod|
+COI|Cheoki|
+COL|Coromandel|
+COM|Chomun Samod|
+COO|Chhoti Odai|
+COP|Kanpur M. G. Goods|
+COR|Chittaurgarh|
+CORD|Bilaspur Chord Cabin|
+COT|Cuddalore Jn|
+CP|Kolkata|
+CPA|Kanpur Anwrganj|Kanpur
+CPB|Kanpur Bridge Left Bank|
+CPBH|Chiraila|
+CPD|Chinchpada|
+CPDR|Chhipadohar|
+CPE|Chandiposi|
+CPH|Champa|
+CPHT|Coopers Halt|
+CPJ|Kaptanganj Junction|
+CPK|Chaparmukh Junction|
+CPL|Chakarlapalli|
+CPLE|Chinpai|
+CPM|Cholapuram|
+CPMR|Cpmr|
+CPN|Champaner Road Jn|
+CPNL|Kanpur C Panel|
+CPP|Chipurupalle|
+CPPR|Cppr|
+CPQ|Chaprakata|
+CPR|Chhapra|
+CPS|Chand Siau|
+CPSN|C Sambhajinagar|MIDC
+CPT|Channapatna|
+CPU|Chopan|
+CPW|Chotipadoli|
+CPY|Chapramari|
+CQA|Cherukara|
+CQL|Chirakkal|
+CQR|Champapukur|
+CQS|Capper Quarry|
+CRA|Churulia|
+CRAE|Cheragram Bh.|
+CRC|Charkhari Road|
+CRD|Mumbai Currey Road|
+CRDA|Chakardaha H|Barhepara
+CRE|Chorghatpiparia|
+CRG|Churaman Nagri|
+CRJ|Chittaranjan|
+CRK|Charkhera|
+CRKR|Chaurakheri|
+CRL|Choral|
+CRLM|Karamelaram|
+CRN|Charegaon|
+CRND|Choranda Junction|
+CROA|Chautara|
+CROP|Cherlopalli|
+CRP|Chandrapura|
+CRPM|Chandrampalem|
+CRQ|Charpokhari Halt|
+CRR|Karagola Road|
+CRS|Chourashi|
+CRU|Chudawa|
+CRV|Chureb|
+CRW|Charaud|
+CRWA|Chirawa|
+CRWL|Chak Rakhwal|
+CRX|Carron|
+CRY|Chirayinkil|
+CRZ|Caranzol|
+CS|Kannur South|
+CSA|Chausa|
+CSB|Shivaji Bridge|
+CSDR|Chennasandra|
+CSL|Chosla|
+CSM|Cansaulim|
+CSMA|Chanasma Junction|
+CSMT|C Shivaji Maharaj T|Mumbai
+CSN|Chalisgaon Junction|Chalisgaon
+CSR|Chak Sikandar|
+CSTM|Mumbai Cst|Mumbai
+CSY|Cossye|
+CSZ|Cossimbazar|
+CT|Chittapur|
+CTA|Chitradurg|
+CTC|Cuttack|
+CTD|Chhota Udepur|
+CTE|Chhitauni|
+CTF|Chitgidda|
+CTGN|Cotton Green|Abhyudaya Nagar
+CTH|Chikalthan|
+CTHR|Chitahra|
+CTHT|Chatar Halt|
+CTJ|Chhataini|
+CTKT|Choti Khatu|
+CTL|Chital|
+CTLI|Chatouli|
+CTM|Kattangulattur|
+CTMP|Chhit Makhanpur|
+CTND|Chettinad|
+CTO|Chittor|
+CTPE|Chandanattop|
+CTPR|Chinta Parru Ha|
+CTQ|Chetar|
+CTR|Chatra|
+CTRD|Chitrawad|
+CTRE|Chitteri|
+CTRL|Chhatral|
+CTS|Chattriput|
+CTT|Chitrasani|
+CTTP|Chitrapur Halt|
+CTU|Chhatapur Road H|Bhimpur
+CTW|Chhintanwala|
+CTY|Chintaparti|
+CTYL|Chityala|
+CTZ|Chauntra Bhaterh|
+CU|Chagallu|
+CUD|Tiruppappuliyur|
+CUE|Choupale|
+CUK|Churk|
+CUKI|Cuki|
+CUL|Chuli|
+CUPJ|Cuddalore Port|
+CUR|Churu|
+CUX|Chaura|
+CV|Kaveri|
+CVB|Cavalry Barrcks|
+CVD|Chavadipalaiyam|
+CVJ|Chavaj|
+CVP|Kovilpatti|
+CVR|Chorvad Road|
+CVV|Cheruvu Madhavaram|
+CW|Chainwa|
+CWA|Chhindwara Junction|
+CWDA|Chuhriwala Dhanna|
+CWI|Chondi|
+CWLE|Chowrigacha|
+CWN|Charawan|
+CWR|Chovvara|
+CWT|Chowhatta|Chauhata
+CX|Chanol|
+CXA|Chandsara|
+CYB|Cambay Bandar|
+CYI|Chhayapuri|
+CYN|Cheriyanad|
+CYR|Charni Road|Saifee Hospital
+CYZ|Chipyana Buzurg|
+DAA|Datia|
+DAB|Dharmabad|
+DABN|Dhaban|
+DAC|Dahinsara Jn|
+DACT|Dhaka Cantt|
+DAD|Devargudda|
+DADN|Dr Ambedkar Ngr (Mhow)|Jawahar Nagar
+DAE|Dahegaon|
+DAG|Dhang|
+DAH|Dehare|
+DAJ|Duroji|
+DAKA|Dhaka|
+DAKD|Dekakund|Kolya Bayda
+DAKE|Dakhineswar|
+DAL|Daliganj|
+DALF|Dali Ganj|
+DAM|Dhamora|
+DAN|Dhaneta|
+DANE|Danre|Sukhiabarait
+DAO|Daghora|
+DAP|Dagmagpur|
+DAPD|Dapodi|
+DAQ|Daud Khan|
+DAR|Danwar|
+DARA|Dara|
+DARI|Dhari Junction|
+DAS|Dhasa Junction|
+DASF|Dhasa Jn|
+DATR|Daitari|
+DAU|Dagru|
+DAV|Devalgaon Auchr|
+DAVC|Jalalabad Dav College|
+DAVJ|D.A.V.C.H. Jalandhar|
+DAVM|Dhanuvachapuram|
+DAYG|Dariyaganj|Madhya Pradesh 471105
+DAZ|Delhi Azadpur|
+DB|Dabhoi Junction|
+DBA|Dabra|
+DBB|Dhubri|
+DBD|Deoband|
+DBEC|Devbaloda Chrda|
+DBF|Dabpal|
+DBG|Darbhanga Junction|
+DBHL|Dobh Bahali|Taja Majra
+DBI|Dabli Rathan|
+DBK|Darbari|
+DBKA|Dabka|
+DBL|Dodbele|
+DBLA|Dabla|
+DBLG|Dibolong|
+DBLI|Debrabandhauli Halt|
+DBM|Dabolim|
+DBN|Dhablan|
+DBNK|Derababa Nanak|Dera Baba Nanak Rd
+DBNR|Dibnapur|
+DBO|Dabhoda|
+DBOU|Dabhou|
+DBP|Debipur|
+DBQ|Dhulabari|
+DBR|Dabhaura|
+DBRG|Dibrugarh|
+DBRT|Dibrugarh Town|Dibrugarh
+DBS|Dobbspet|
+DBSC|Dbsi Byepass A Cabin|
+DBSI|Daya Basti|
+DBT|Dakshin Barasat|
+DBU|Dodballapur|
+DBV|Dabilpur|
+DBW|Dubia|Santipur Deori Gaon
+DBY|Digboi|
+DBZ|Dhing Bazar|
+DC|Magudanchavadi|
+DCA|Damchara|
+DCAB|Dcab|
+DCH|Dinhata College Halt|Karishal
+DCK|Dhandhuka|
+DCOP|Durgapur Coke Oven Plant Exchange Yard Sdg Waria|
+DCP|Dal Chapra|
+DCSP|Damagoria Asstt Sdg|
+DCTL|Dombivli Ctl|
+DCU|Damalcheruvu|
+DCX|Dhanichha|
+DD|Daund Junction|
+DDA|Duraundha Junction|
+DDAC|Ddac|
+DDAM|Daund A Mmr|
+DDAP|Daund Patas Road|
+DDBC|Ddbc|
+DDC|Dum Dum Cantt.|
+DDCC|Daund Chord Lin|Girim
+DDCE|Dundi|
+DDCL|Domvivali Control Ca|
+DDD|Dhondha Dih|
+DDDA|Duddeda|SH1
+DDDM|Deen Dayal Dham|Farah
+DDE|Dondaicha|
+DDG|Digha Ghat|
+DDGA|Dugda|
+DDGJ|Deedarganj|
+DDJ|Dum Dum|
+DDJA|Daund Goods Yard|
+DDK|Dhindsa|
+DDL|Dhandari Kalan|
+DDM|Dam Dim|
+DDMT|Darimeta|
+DDN|Dehradun|
+DDNA|Dudhaunda|
+DDNI|Dudhnoi|
+DDP|Daudpur|
+DDQ|Dhandhuka City|
+DDR|Dadar|Mumbai
+DDS|Dudh Sagar|
+DDU|Dd Upadhyaya Jn|Mughal Sarai
+DDV|Dadhdevi|
+DDW|Dudwa|
+DDWA|Deedwana|Didwana
+DDX|Dhamdhamia|
+DDY|Dudwindi|
+DDYX|Ddyx|
+DDZ|Dadgaon|
+DE|Delhi Mg|
+DEA|Diara|
+DEB|Debagram|
+DEC|Delhi Cantt|New Delhi
+DED|Dandeli|
+DEE|Delhi S Rohilla|New Delhi
+DEEG|Deeg|
+DEG|Delang|
+DEHR|Dehu Road|
+DEIA|Deoria|Salahpur
+DEIT|Dehit|
+DEL|Denduluru|
+DELI|Deoli|
+DELO|Deorakot|
+DEMU|Demu|
+DEO|Deokali|
+DEOR|Diyodar|
+DEOS|Deoria Sadar|
+DEP|Depalsar|
+DEPI|Deenapatti|
+DER|Dadri|
+DERN|New Dadri Jn|
+DES|Desari|
+DET|Det|
+DEU|Devsana|
+DEV|Devarayi|
+DEW|Dewalgaon|
+DEWA|Dewa|
+DEY|Dhar O.A.|
+DFN|Dhani Rathauram|
+DFR|Deogan Road|
+DG|Dindigul Junction|
+DGA|Dighwara|
+DGB|Dindu Gopala Puram Halt|
+DGBH|Digha Bridge Halt|Danapur Main Road
+DGBZ|Dongri Buzurg|
+DGD|Dangidhar|
+DGDG|Durgada Gate|
+DGF|Dhagaria|Bankura
+DGFJ|Dahej|
+DGG|Dongargarh|
+DGHA|Digha Flag Stn|
+DGHL|Dighal|MDR 122
+DGHR|Deoghar|
+DGHT|Digha H|
+DGI|Dungri|
+DGJ|Dungar Jn|
+DGLE|Dhulian Ganga|
+DGN|Dongargaon|
+DGNH|Dergaon Halt|
+DGNR|Durganagar|
+DGO|Durgauti|
+DGPI|Durgapuri|
+DGPP|Dhengli Pp Goan|
+DGQ|Dugdol|
+DGR|Durgapur|
+DGS|Dagori|
+DGT|Dhulghat|
+DGU|Digaru|
+DGW|Dhigawara|
+DGX|Dagaon|
+DGY|Dighori Buzurg|
+DGZ|Deviganj|Khaira
+DH|Diamond Harbour|
+DHA|Dheena|
+DHAE|Dainhat|
+DHAT|Dhat|
+DHBI|Dhabauli Halt|
+DHCA|Dhaca Cantt|
+DHD|Dahod|
+DHE|Dodhi|
+DHF|Dahej|
+DHG|Dhrangdhra|
+DHH|Dinhata|
+DHI|Dhule|
+DHJ|Dhinoj|
+DHK|Dhakuria|
+DHKR|Dhoda Khedi|
+DHL|Devanhalli|
+DHLI|Dethli|
+DHM|Dadhal Inam|Dadhal
+DHMA|Dhamarda|
+DHMZ|Dhola Mazra|
+DHN|Dhanbad Junction|Dhanbad
+DHNA|Dhachna|
+DHND|Dhinda|
+DHNE|Dhone|
+DHNL|Dhanala|
+DHNR|Dhanora Deccan|
+DHO|Dhaulpur|
+DHOA|Dhaulpur|
+DHP|Dichpalli|
+DHPD|Dhapara Dham|
+DHPR|Dappar|
+DHQ|Dharakhoh|
+DHR|Dharnaoda|
+DHRJ|Dhirganj|
+DHRL|Dhrol|
+DHRN|Dhurana|
+DHRR|Dhirera|
+DHRY|Dhalpukhuri|
+DHS|Dhavalas|
+DHT|Dhamara Ghat|
+DHU|Dhubulia|
+DHVR|Dhanvala Wada|
+DHW|Dhariwal|
+DHWN|Dhaniyawan|
+DHWS|Dhosawas|
+DHY|Dharodi|
+DHZM|Dhola Mazra|
+DI|Dombivili|
+DIA|Didwana|
+DIB|Dibai|
+DIBL|Dholi Bhal|
+DIC|Dahisar|
+DIE|Demai|
+DIG|Duggirala|
+DIGH|DIGH|
+DIH|Dharuadihi|
+DIL|Dilawarnagar|
+DIM|Dhansimla|Red Hills Rd
+DING|Ding|
+DINR|Divine Nagar|
+DIP|Dipore|
+DIPA|Dipa|
+DIQ|Dinagaon H|
+DIR|Dhanapur Orissa|
+DISA|Disa|
+DIT|Dohrighat|
+DIU|Dhing|
+DIVA|Diva|
+DIW|Dhilwan|
+DIWR|Diwr|
+DJ|Darjeeling|
+DJA|Daotuhaja|
+DJB|Dijaobra|
+DJD|Didarganj Road|
+DJG|Duliajan|
+DJHR|Deojhar|
+DJI|Dhoraji|
+DJJ|Daijar|
+DJKR|Dolaji Ka Khera|
+DJL|Dodajala Lake|
+DJR|To Darjeeling|
+DJRZ|To Darjeeling|
+DJS|Dhurant Jwas Halt|
+DJX|Dungripali|
+DK|Dakor|
+DKAE|Dankuni|
+DKB|Dakshinbari|Dakshindari
+DKBJ|Dahar Ka Balaji|
+DKC|Devarkadre|
+DKCH|Dakacha|
+DKD|Donakonda|
+DKDE|Dankaur|
+DKDP|Dakshin Durgapur|
+DKE|Dihakho|
+DKGN|Dekargaon|
+DKGS|Barhiya|
+DKI|Dharmkundi|
+DKJ|Dornakal Junction|
+DKJB|Dornakal Bye Pass|
+DKJC|Dkjc|
+DKJR|Dhekiajili Road|
+DKLU|Doikallu|
+DKM|Dikom|
+DKMN|Deoria Kurhma Naresh Halt|Kadiahi Khurd
+DKN|Devangonthi|
+DKNT|Dakaniya Talav|
+DKO|Devakottai Road|
+DKPM|Dekapam|
+DKQ|Dhani Kasar|
+DKR|Dekpura Halt|
+DKRA|Dhuankheri|
+DKRD|Dockyard Road|Dockyard Rd
+DKS|Darekasa|
+DKSA|Draksharama|Draksharamam
+DKT|Dhulkot|
+DKU|Dumri Khurd|
+DKUR|Dokur|
+DKW|Dhanakwada|
+DKWA|Dokwa|
+DKX|Dudhwakhara|
+DKY|Dhoki|
+DKZ|Delhi Kishangnj|New Delhi
+DL|Daladi|
+DLA|Doulta|
+DLB|Daulatabad|
+DLC|Dalmera|
+DLCB|Durg Link Cabin|
+DLCR|Dullabcherra|
+DLD|Dalauda|
+DLDE|Daldali|
+DLF|Dalan|
+DLGN|Dhalgaon|
+DLGS|Duklangia|
+DLI|Delhi|New Delhi
+DLJ|Dhola Junction|
+DLK|Dalkolha|
+DLM|Daskalgram|Daskolgram
+DLMH|Dhaulimuhan|
+DLMN|Dhaulimuhan Ph|
+DLN|Dildarnagar Junction|
+DLNA|Dhelana|
+DLO|Dalgaon|
+DLP|Dalpatpur|
+DLPC|Daulatpur Chowk|Daulatpur
+DLPH|Daulatpur Hat|
+DLPI|Indrapuri|
+DLPR|Dayalpur|
+DLPT|Dulakhapatna|
+DLQ|Dalelnagar|
+DLR|Dullahapur|
+DLSR|Dalhogi Road|
+DLTR|Daulatpur H|
+DLV|Dolavi|Raigad
+DLW|Dilwa|
+DLWS|Dlws|
+DLX|Dalimgaon|
+DLZ|Dholbaja|
+DM|Dimow|
+DMA|Damodar Junction|
+DMBR|Dumri Bihar|
+DMC|Dhemaji|
+DMCA|Damaracherla|
+DMD|Dharmadam|
+DME|Damnagar|
+DMF|Dumerta|
+DMG|Domingarh|
+DMGN|Dhamalgaon|
+DMH|Dauram Madhpura|
+DMJ|Dharmaj|
+DMJR|Domjur Road|Baghpara
+DMK|Dilmili|
+DMKR|Dumka O.A.|
+DML|Dharamtul|
+DMLE|Dumurdaha|
+DMLI|Damlai|
+DMM|Dharmavaram Junction|
+DMN|Dhamangaon|
+DMNJ|Damanjodi|
+DMO|Damoh|
+DMP|Dharmpur Hmchl|
+DMPR|Dharampur|
+DMR|Dharmanagar|
+DMRT|Dumuriput|
+DMRX|Dumri Halt|
+DMSR|Dhimsiri|
+DMT|Diguvametta|
+DMU|Dhamua|
+DMV|Dimapur|
+DMW|Dalmau Junction|
+DMWP|Dmw Patiala Halt|
+DMYA|Damoy|
+DMZ|Dumdangi|
+DN|Dhanari|
+DNA|Degana Junction|
+DNC|Dhone|
+DND|Dandupur|
+DNDI|Dhondi|
+DNDL|Dandi Mal|
+DNE|Dhamni|
+DNEA|Danea|
+DNGD|Dungarda|
+DNGI|Dangari|Dengari
+DNH|Deonagar|
+DNHK|Dhindhora Hkmkd|
+DNHL|Dhaniakhali|
+DNI|Dansi Ph|Tentulkuli
+DNJ|Daundaj|
+DNK|Dhanakya|
+DNKL|Dhenkanal|
+DNL|Dhanoli|
+DNM|Dhanmandal|
+DNN|Dina Nagar|
+DNPR|Dhanpura|
+DNQ|Dandkhora|
+DNR|Danapur|
+DNRA|Dhandhera|
+DNRE|Dhanauri|
+DNRP|Dungarpur|
+DNT|Dantan|
+DNU|Dalsanur|
+DNUA|Dhansura|
+DNV|Donkinavalasa|
+DNW|Dangarwa|
+DNWF|Dangarwa|
+DNWH|Daniyawan Bzr H|
+DNWR|Dhanwar|Rajdhanwar
+DNX|Dhansu|
+DNZ|Dhanori|
+DO|Dausa|
+DOA|Doraha|
+DOB|Dundlod Mkdgrh|
+DOBH|Deobahal|
+DOC|Daun Kalan|
+DOD|Dhodhar|
+DODH|Dodh|
+DOE|Deori|
+DOG|Donigal|
+DOGL|Donigal|
+DOH|Dhodra Mohar|
+DOHM|Devgarh Madriya|
+DOI|Domohani|Teesta Bridge - Singimari Bypass
+DOK|Dholka|
+DOKM|Dokra Halt|
+DOKY|Dukheri|
+DOL|Dholi|
+DOLK|Dholikua|
+DON|Derawan Halt|
+DONP|Deonathpur|
+DOR|Dundara|
+DORD|Deo Road|
+DOS|Dehri On Sone|
+DOT|Dhakia Tiwari|
+DOTL|Deotala|
+DOW|Davol|
+DOX|Dohna|
+DOY|Dornahalli|
+DOZ|Daurai|
+DPA|Durgapura|
+DPC|Darliput|
+DPD|Dosapadu|
+DPDH|Dhanpatdih|
+DPDP|Dhapdhapi|
+DPE|Devarapalli|
+DPF|Dabpal|
+DPH|Dadhapara|
+DPI|Doddampatti|
+DPJ|Dharmapuri|
+DPK|Dholipal|
+DPL|Danauli Phlwria|
+DPLN|Diplana|
+DPNR|Deepnagar Halt|
+DPO|Damanpur|
+DPP|Dhirpur|
+DPR|Dhampur|
+DPRA|Dhup Dhara|
+DPS|Dangoaposi|
+DPSR|Dapsaura|
+DPT|Dalpat Singhpur|
+DPU|Diphu|
+DPUR|Depur Ph|
+DPW|Dhapewara|
+DPX|Dadpur|
+DPZ|Devpura|
+DQG|Dhupguri|
+DQH|Daulakot Bhai H|
+DQL|Dhalaibi|Dhalaibil
+DQN|Dhanera|
+DQR|Kacheguda Dbr|
+DQS|Dhansar|
+DQV|Daula Kot Bhai|
+DR|Dadar|Mumbai
+DRA|Dularia|
+DRB|Debari|
+DRBR|Deoraha Baba Road|
+DRD|Dahanu Road|Mumbai
+DRE|Dhogri|
+DRG|Darshannagar|
+DRGJ|Daraganj|
+DRGM|Deoragram|
+DRGU|Damru Ghutu|
+DRH|Dharhara|
+DRHI|Dagarhkeri|
+DRI|Dumri Juara|
+DRL|Derol|
+DRLA|Daurala|
+DRMT|Dhrumath|
+DRN|Deoranian|
+DRO|Daryaogonj|
+DRPH|Devri Ph|
+DRQ|Dharminiya|
+DRR|Dharur|
+DRRN|Dr. R K Nagar|
+DRS|Dhareshwar|
+DRSA|Darsana|
+DRSN|Dhurwasin|
+DRSV|Dharashiv|
+DRTA|Dronagiri Rail Terminal|
+DRTP|Dasharathpur|
+DRU|Kadur|
+DRV|Darauli|
+DRW|Dharewada|
+DRWN|Derowan P. H.|
+DRZ|Dalli Rajhara|
+DS|Dasna|
+DSA|Delhi Shahdara|New Delhi
+DSAP|Delhi Shahdara A Panel|
+DSB|Sadar Bazar|New Delhi
+DSBC|Delhi Shahdara Block Cabin|
+DSBP|Delhi Shahdara B Panel|
+DSD|Dosvada|
+DSHI|Doddasiddavanha|
+DSJ|Delhi Safdarjng|New Delhi
+DSK|Duskheda|
+DSKG|Dskg|
+DSL|Deswal|
+DSLP|Deshalpur|
+DSM|Darasuram|
+DSME|Dasara|
+DSN|Darsana|
+DSNB|Darsana Border|
+DSNI|Dausni|
+DSNR|Dashnagar|
+DSO|Deshnok|
+DSPL|Daspalla|
+DSPN|Deshapran P.H.|
+DSPR|Dhansiripar|
+DSPT|Danishpet|
+DSR|Dhansiri|
+DSRD|Desar Road|
+DSS|Dalsingh Sarai|
+DST|Dasampatti|
+DSVS|D Samudravalli|B.Samudravalli
+DSX|Desang|
+DTAE|Dhatrigram|
+DTAP|Dhatura Alipur|MP SH 11A
+DTC|Ditokcherra|
+DTD|Dasalwada-Antroli Road|
+DTE|Deulti|
+DTF|Dantla|
+DTG|Dignagar|
+DTJ|Detroj|
+DTK|Dattapukur|
+DTL|Darritola|
+DTN|Dhamtan Sahib|
+DTO|Daltonganj|
+DTP|Diviti Palli|
+DTQ|Dantarda Kalan|
+DTR|Dhamtari|
+DTRA|Dantra|
+DTRD|Diyatara Road|
+DTT|Doddanatta Halt|
+DTV|Dhutra|
+DTVL|Dativli|
+DTW|Datewas|
+DTX|Dangtal|
+DUA|Dhaura|
+DUAN|Duan|
+DUB|Dabtara|
+DUBH|Dubaha|
+DUD|Dudhani|
+DUE|Dhuri Jn|
+DUGA|Duga|Dugha
+DUH|Dudda|
+DUI|Dhuri Junction|
+DUJ|Dubrajpur|
+DUK|Dudia|
+DULP|Daulatpur Haryana|
+DUM|Dhaurmui Jaghna|
+DUMK|Dumka|
+DUMR|Dumra|
+DUN|Duganpur|
+DUO|Dhaursalar|
+DUP|Dhulipalla Halt|
+DUQ|Dukhnawaran H|
+DUR|Desur|
+DURE|Dumraon|
+DURG|Durg|
+DURP|Durgapuri|
+DUS|Dulrasar|
+DUSI|Dusi|
+DUT|Dum Duma Town|Dum Duma
+DUTR|Duriatanr H|Nima Pahri
+DUU|Dupadu|
+DUV|Dungapur Quarry|
+DUY|Dumiyani|
+DV|Dhuva|
+DVA|Delvada|
+DVBH|Makudan Virapandi Block Hut|
+DVD|Duvvada|
+DVG|Davangere|
+DVGM|Devgam|
+DVH|Devi Halt|
+DVJ|Dilli Dewan Ganj|
+DVL|Devlali|
+DVM|Dalbhumgarh|
+DVN|Devthana|
+DVNR|Devendra Nagar|
+DVR|Doravari Chatram|
+DVY|Devaliya|
+DWA|Dailwara|
+DWD|Dhekvad|
+DWDI|Dighwa Dubauli|
+DWF|Dudh Sagar Water Falls|
+DWG|Dewanganj|
+DWI|Dingwahi|
+DWJ|Dwarkaganj|
+DWJN|Diva Jn. Cabin|
+DWK|Dwarka|
+DWL|Dhuwala|
+DWLE|Dhauni|
+DWM|Darwha Moti Bagh Junction|
+DWNA|Diwana|
+DWO|Doiwala|
+DWP|Dwarapudi|
+DWR|Dharwar|
+DWT|Dewan Hat|
+DWV|Diwankhavati|
+DWX|Dewas|
+DWZ|Dantewara|
+DXD|Digod|
+DXG|Dharangaon|
+DXH|Duhai|
+DXK|Dhana Kherli|
+DXN|Duddhinagar|
+DXR|Digsar|
+DXU|Duhru|
+DY|Dumariya|
+DYD|Daryabad|
+DYE|Dayanand Nagar|
+DYK|Dudhia Khurd|
+DYP|Daryapur|
+DYS|Dalapathy Samudram|
+DYU|Diyuri|
+DYW|Diyawan Halt|
+DZA|Dasuya|
+DZB|Dahina Zainabad|
+DZK|Durgachak|
+DZKT|Durga Chak Town|
+DZL|Dhana Ladanpur|
+DZP|Darazpur|
+EC09|Champapur Halt|
+EC14|Block Hut B|
+EC28|Pura Halt|
+EC31|Kharuara Halt|
+EC32|Imlibigha H|
+ED|Erode Junction|
+EDA|Itwan Dundaila|
+EDD|Edduladoddi|
+EDG|Eden Gardens|
+EDN|Edamann|Edamon
+EDP|Edapalayam|691309
+EDU|Eriodu|
+EE|Eluru|
+EGT|Egattur Halt|
+EGU|Iranagallu|
+EKC|Ekchari|
+EKH|Eksari Halt|
+EKI|Eklakhi|
+EKL|Ekdil|
+EKM|Ekambarakuppam|
+EKMA|Ekma|
+EKN|Ezhukone|
+EKNR|Ekta Nagar|Kevadiya
+EKR|Ekangarsarai|
+EL|Elamanur|
+ELL|Eraligu|
+ELM|Elimala|
+ELP|Achalpur|
+ELR|Elavur|
+EM|Ekma|
+EN|Isand|
+ENB|Ellenabad|
+ENBG|Enbg|
+ENR|Ennore|
+EO1|Budhapank Jn Cabin|
+EOC|Udl East Outer Cabin|
+EOCM|Eocm|
+EPR|Mumbai Elphinstone Road|
+ER05|Tp No 6/3|
+ER06|Tp No 7/11|
+ER08|Kalinagar|
+ERC|Erich Road|
+ERL|Eraniel|
+ERN|Ernakulam Town|Kochi
+ERO5|Tp No 6/3|
+ERS|Eranakulam Junction|Kochi
+ERSC|Ernakulam Jn. C|
+ERSD|Ernakulam D Cabin|
+ERSS|Ernakulam|
+ESV|Isivi|
+ET|Itarsi Junction|
+ETAH|Etah|
+ETB|Itarsi B Cabin|
+ETF|Itarsi F Cabin|
+ETK|Etakkot|
+ETM|Ettumanur|
+ETMD|Ettimadai|
+ETP|Ettapur Road|
+ETR|Elattur|
+ETUE|Etmadpur|
+ETW|Etawah|
+ETYD|Etyd|
+EVA|Edavai|
+EZP|Ezhuppunna|
+FA|Falna|
+FAB|Fatehabad|
+FAH|Fateha Halt|
+FAN|Fatehnagar|
+FAP|Fakharpur Halt|
+FAR|Farah|
+FBD|Farrukhabad|
+FBG|Forbesganj|
+FD|Faizabad Junction|
+FDB|Faridabad|
+FDK|Faridkot|
+FDN|Faridabad Nw Tn|
+FGCN|Fatehgarh Churian|
+FGH|Fatehgarh Haryana|
+FGN|Fagunagaon|
+FGR|Fatehgarh|
+FGSB|Fatehgarh Sahib|
+FHR|Farhantnagar Halt|
+FHT|Farah Town|
+FK|Ferok|
+FKA|Fazilka|
+FKB|Fakhrabad|
+FKD|Farrukhabad|
+FKG|Furkating Junction|
+FKK|Farakka|
+FKM|Fakiragram Junction|
+FL|Phulera Junction|
+FLCK|Fazalchak|Patna
+FLD|Phulad|
+FLK|Falakata|
+FLM|Falimari|
+FLR|Phuleswar|
+FLU|Phulia|
+FM|Kcg Falaknuma|
+FN|Farukhnagar|
+FNB|Fatehnagar|
+FNG|Faridnagar|
+FNO|Fungo Halt|
+FOCM|Flyover Cabin Mughalsarai|
+FPAW|Fatehpur Atwa Halt|Kotawalipur
+FPMP|Fatehpur Makrandpur|Mahepa Jagir
+FPS|Fatehpur Skhwti|
+FRD|Farhedi|
+FRDH|Faridaha Halt|
+FRG|Faringapete Halt|
+FRGD|Fair Ground P.H.|
+FRH|Farhatnagar|
+FRN|Fareni|
+FRTK|Fartikui|
+FSG|Phursungi|
+FSP|Fateh Singhpura|
+FSR|Faqarsar|
+FSW|Fateh Singhwala|
+FTC|Fatehpur Chursi|
+FTD|Fatehabad Ch.Jn|
+FTG|Fursatganj|
+FTH|Fatuhi|
+FTP|Fatehpur|
+FTS|Fatehpur Sikri|
+FUT|Fatwa|
+FYZ|Faizullapur|
+FZD|Firozabad|
+FZGH|Ferozguda Halt|Ferozguda
+FZL|Fazalpur|
+FZP|Firozpur City|
+FZR|Firozpur Cant|
+GA|Gudha|
+GAA|Galan|
+GAD|Gevra Road|
+GADH|Goaldih|
+GADJ|Gandhinagar Jpr|
+GADM|Ganga Dham|
+GAE|Gaipura|
+GAG|Gangaghat|
+GAGA|Galgalia|
+GAH|Gawnaha|
+GAHT|Ghusia Halt|
+GAI|Gouchhari|
+GAJ|Ganeshganj|
+GAJB|Gajara Bahara|
+GAJU|Gaju Halt|
+GAL|Ghatla|
+GALA|Gunadala|
+GALE|Gankar|
+GALG|Goldingganj|
+GAM|Ganjam|
+GAMI|Gogameri|
+GAMN|Gamani|
+GANG|Gangaganj|
+GANI|Gharni|
+GANL|Ghanauli|
+GAO|Gaigaon|
+GAP|Gurpa|
+GAQ|Ganj Khawaja|
+GAR|Gadarwara|
+GARA|Garha|
+GATD|Gautamdhara|
+GATL|Ghatoli|
+GAUR|Gaur|
+GAV|Gavadaka|
+GAW|Gainjahwa|
+GAX|Gangaposh|
+GAYA|Gaya Junction|
+GB|Gauri Bazar|
+GBA|Garhbeta|
+GBB|Gubbi|
+GBD|Gauribidanur|
+GBE|Gayabari|
+GBG|Gobardanga|
+GBH|Gurrah Bridge|
+GBHA|Garobigha Halt|
+GBK|Gopalpur Balkda|
+GBN|Garh Banaili|
+GBO|Girgaum|
+GBP|Gulabpura|
+GBPM|Garhi Beri|Sanaura
+GBQ|Godbhaga|
+GBRA|Gobra|
+GBRI|Gobarwahi|
+GBRS|Gobarsanda H|
+GBX|Govindpur Road|
+GBY|Guabari|
+GC|Ghatkopar|
+GCAB|Gcab|
+GCH|Gachhipura|
+GCN|Gocharan|
+GCT|Ghazipur City|
+GD|Gonda Junction|Gonda
+GDA|Godhra Junction|Godhra
+GDB|Giddarbaha|
+GDBR|Goonda Bihar|
+GDD|Gadra Road|
+GDE|Garladinne|
+GDG|Gadag Junction|
+GDGN|Gaudgaon|
+GDH|Gidnahali|
+GDHA|Godha|
+GDI|Gudgeri|
+GDJ|Gunda Road Jn.|
+GDK|Gonda Kachahri|
+GDKP|Ghundankhapa|
+GDL|Gondal|
+GDM|Gudma|
+GDN|Gangaikondan|
+GDO|Goverdhan|
+GDP|Gudupulli|
+GDPL|G Pochampalli|
+GDPT|Gudaparti|
+GDQ|Godamgura|
+GDR|Gudur Junction|
+GDRA|Gangadhara|
+GDSN|Gadhada Swaminarayan|
+GDU|Gudru Halt|
+GDV|Gudivada Junction|
+GDVX|Gudivada Jn|
+GDW|Gadhwala|
+GDWR|Garudeshwar|
+GDX|Ghoksadanga|
+GDY|Guindy|
+GDYA|Ghoradongri|
+GDZ|Gundardehi|
+GE|Nagar|
+GEA|Ghatera|
+GEB|Garh Baruari|
+GEBL|Gorebal|Venkatagiri Camp
+GED|Guledagudda Road|
+GEDE|Gede|
+GEG|Gir Gadhara|
+GEK|Gegal Akhri|
+GELA|Ghadela|
+GEOR|Gunjaria|
+GER|Geratpur|
+GFAE|Garifa|
+GG|Gandhigram|
+GGA|Ghoga|
+GGAR|Gangadhara|
+GGB|Garhmuktesar Br|
+GGC|Gangapur City|
+GGD|Gullaguda|
+GGG|Gangagarh Halt|
+GGGS|Garha Goods Shed|Jabalpur
+GGH|Ghogardiha|
+GGJ|Goshainganj|
+GGKR|Govindgarh Khokhar|
+GGLE|Gangatikuri|
+GGM|Gora Ghuma|
+GGN|Gurgaon|
+GGNP|Ganganapalle|
+GGO|Goram Ghat|
+GGP|Gangnapur F|Gangnapur
+GGR|Gangrar|
+GGS|Ghugus|
+GGSY|Ganga Sahai|
+GGT|Ghunghuti|
+GGTA|Ghoraghata|
+GGV|Ghovarash Ghona|
+GGVT|Gangavathi|Gangawati Rural
+GGWA|Gangwara Halt|Kharbari
+GGWT|Govindgarh White Tiger|
+GGY|Gagariya|
+GH|Ghughuli|
+GHA|Golehwala|
+GHAA|Ghaghra|
+GHAI|Ghatigaon|
+GHB|Gahri Bhagi|
+GHD|Garwa Road|
+GHDA|Gholbagda|
+GHE|Ghevra|
+GHER|Gher|
+GHG|Ghagghar|
+GHGL|Ghagwal|
+GHH|Garhi Harsaru|
+GHI|Gambhirpura|
+GHJ|Gursahaiganj|
+GHL|Golhalli|
+GHLE|Gadadharpur|
+GHLU|Ghallu|
+GHN|Ghorparan|
+GHNA|Gohana|
+GHNH|Ghantikhal Ndpr|
+GHPU|Gandhipuram Hal|
+GHQ|Garhwa|
+GHR|Gidhaur|
+GHRI|Ghori Halt|
+GHS|Guru Harsahai|
+GHSR|Ghasara Halt|
+GHT|Ghaghara Ghat|
+GHTI|Ghantoli F|
+GHUM|Ghum|
+GHX|Garhara|
+GHY|Guwahati|
+GHZ|Garhara Goods Marshalling Yard|
+GI|Guduvancheri|
+GIA|Garia|
+GIBP|Ghoghi Bariarpur|
+GID|Giddalur|
+GIF|Gani Dham Halt|
+GIG|Gohrigaon Halt|Gohri
+GIHT|Gaighat Halt|Gayaghat
+GII|Gidni|
+GIL|Gaisal|
+GILA|Ghiala|
+GILL|Gill|
+GIM|Gandhidham Junction.|
+GIMB|Gandhidham Bg|
+GIMC|Gandhidham Cabin|
+GIN|Ginigera|
+GIO|Goriyan|
+GIR|Gainsari Junction|
+GIS|Garhi Sandra|
+GIT|Ghorpuri Transh|
+GIW|Girdharpur|
+GIZ|Gidam|
+GJ|Gangajhari|
+GJD|Gujhandi|
+GJH|Goldinganj|
+GJJ|Gajjelakonda|
+GJL|Gajraula Junction|Gajraula
+GJMB|Ganjmuradabad|
+GJN|Gajner|
+GJR|Gojhariya|Gozaria
+GJS|Gajsinghpur|
+GJT|Gannaghatta|
+GJTA|Garudijhatia|
+GJUT|Gangsar Jaitu|
+GJW|Gajuwala|
+GJWL|Gajwel|Toopran Road
+GK|Gola Gokaranath|
+GKA|Gokhula|
+GKB|Ghataka Varana|
+GKC|Gorakhpur Cant|Gorakhpur
+GKD|Gadhakda|
+GKG|Gokalgarh|Jhajjar Road
+GKH|Guskara|
+GKHT|Gram Kharika|
+GKJ|Golakganj Jn|
+GKK|Gokak Road|
+GKL|Gokulpur|
+GKM|Gundalukamma|
+GKP|Gorakhpur Junction|Gorakhpur
+GKPE|Gorakhpur East|
+GKPI|Gate Karepalli|
+GKT|Gankhera Halt|
+GKV|Gottihalli Halt|
+GKX|Ghai Kalan|
+GKY|Gorakhpur City|Gorakhpur
+GL|Nagal|
+GLA|Garla|
+GLBA|Golabai|
+GLBN|Gujran Balwa|
+GLD|Ghelda|
+GLE|Gajulaguden|
+GLG|Gulabhganj|
+GLGT|Golaghat|
+GLH|Gulaothi|
+GLI|Galsi|
+GLKN|Gugalwa Kirtan|
+GLL|Gill|
+GLMA|Gulma|
+GLNA|Golana Halt|
+GLP|Gollaprolu|
+GLPT|Goalpara Town|
+GLTA|Gahlota|
+GLU|Gullipadu|
+GLV|Gulvanchi|
+GLY|Gollapally|
+GM|Garmadi|
+GMA|Gudimetta|
+GMAN|Gumani|
+GMC|Kanpur Goods Marshal|
+GMD|Guramkhedi|
+GMDA|Gumada|
+GMDN|Girimaidan|
+GMDP|Gramdadpur|Habaspur
+GME|Gumandev|
+GMG|Gumgaon|
+GMGM|Gomangalam|Tamil Nadu 642107
+GMH|Gamharia|
+GMI|Gond Umri|
+GMIA|Gumia|
+GMK|Gulma Khola|
+GMM|Gumman|
+GMMG|Gram Masagram|Masagram
+GMN|Goregaon|
+GMO|Gomoh Junction|
+GMP|Garh Madhupur|
+GMR|Gahmar|
+GMS|Garhmuktesar|
+GMTO|Gumto|
+GMU|Gauriyamau|
+GMX|Gurmura|
+GMZ|Gumani Hat|
+GN|Gopalnagar F|Gopalnagar
+GNA|Goneana|
+GNAN|Gonda Jn|
+GNB|Jnana Bharti Halt|
+GNBA|Gaon Baroda|Jind
+GNC|Gandhinagar Cap|
+GNCN|Gurla N Cabin|
+GND|Govindgarh Malk|
+GNDI|Gondwali|
+GNDM|Gunrajpur Dhama|
+GNG|Gauriganj|
+GNGD|Gangadharpur|
+GNGL|Gangauli|
+GNGR|Gungrana|
+GNGT|Gangatolia|
+GNH|Gangakher|
+GNHI|Gandhi Halt|
+GNI|Gourandi|
+GNJ|Gunji|
+GNJB|Gopinathjew Banikunda Ph|Odisha 754140
+GNJP|Gokulnagar Joypore|Salda
+GNK|Garhnokha|
+GNL|Gongle|
+GNN|Gangineni|
+GNNA|Gangani|
+GNND|Jnandas Kandra|West Bengal 713129
+GNO|Goregaon Road|
+GNP|Ghanpur|
+GNPR|Gunupur|
+GNPT|Ganpatpura|
+GNQ|Godhani|
+GNR|Gadiganuru|
+GNRD|Genoli Road|
+GNRL|Gangraul|
+GNS|Ghonsor|
+GNSL|Ghansoli|
+GNST|Gandhismriti|
+GNSYM|Gnsym|
+GNT|Guntur Junction|
+GNTR|Gauntra Halt|
+GNU|Ganaur|
+GNV|Gandevi|
+GNVR|Gondwanavisapur|
+GNW|Gangiwara|
+GNWA|Ghunwara|Maihar
+GNZ|Gahndran Halt|
+GO|Ghoti|
+GOA|Gohad Road|
+GOC|Ponmlai Gld Rck|
+GOD|Gidarpindi|
+GODA|Godda|Gorhighat Chhit
+GOE|Ghograpur|
+GOF|Ghutiari Sharif|
+GOG|Ghorghat|
+GOGH|Gossaigaon Hat|
+GOGT|Goghat|
+GOH|Garot|
+GOI|Gevarai H|
+GOK|Gokarna Road|
+GOL|Goilkera|
+GOLE|Gole|
+GOM|Gogamukh|
+GON|Gotegaon|
+GOP|Gop Jam|
+GOPA|Ghosipura|
+GOPG|Gopalganj|
+GOPL|Gundla Pochampalli|
+GOR|Gopinathpur|Bardhaman
+GOS|Ghosrana|
+GOT|Got|
+GOTD|Gorintada H|
+GOTN|Gotan|
+GOV|Govindpuri|
+GOVR|Govindnagar|
+GOX|Gobindpur Dugli|
+GOY|Govindpuri|
+GOZ|Golsar|
+GP|Raj Gangpur|
+GPA|Ghaspura|
+GPAE|Guptipara|
+GPB|Ghatprabha|
+GPBN|Gandhi Park Halt|
+GPC|Ghatpindrai|
+GPD|Gummidipundi|
+GPDE|Gudipudi|
+GPE|Gogipothia Halt|
+GPF|Gauri Phanta|
+GPH|Garpos|
+GPI|Gajapatinagaram|
+GPJ|Gorapur|
+GPLG|Gopalpurgram|
+GPMA|Gop Mota|
+GPNB|Gopinathpur Nilgiri|Gopinathpur
+GPPR|Gopalpur|
+GPR|Ghorpuri|
+GPRW|Ghorpuri West|
+GPS|Gojpur Sankheda|
+GPSA|Ghatparsia Halt|
+GPSL|Gokulpur Saboli Halt|Saboli
+GPT|Gopalapatnam|
+GPU|Gulapalyamu|
+GPW|Ghaunspur|
+GPX|Gautampura Road|
+GPY|Gangayaplle|
+GPZ|Gohpur|
+GQD|Gourdaha Halt|
+GQL|Gurla|
+GQLN|Gurla N|
+GQLW|Gurla W|
+GQN|Garhani|
+GR|Gulbarga|
+GRA|Gharaunda|
+GRAE|Gurap|
+GRAK|Garkha|
+GRB|Garh Dhrubeswar|
+GRBH|Garea Bihar|
+GRBL|Garudubilli|
+GRCP|G.Ramachandrapu|
+GRD|Giridih|
+GRE|Gola Road|
+GRF|Gambhiri Road|
+GRFB|Gambhir Br|
+GRG|Guwarighat|
+GRH|Ghorasahan|
+GRHI|Garhi|
+GRHM|Gir Hadmatiya|
+GRHX|Garra|Garra River
+GRI|Guriya|
+GRJ|Gatra Halt|Balaghat
+GRJA|Gorinja|
+GRKA|Gurha Kemla|
+GRKN|Gorakhnath|
+GRL|Goraul|
+GRM|Garhmau|
+GRMA|Ghormara|
+GRMP|Gangarampur|
+GRMR|Garhi Manikpur|
+GRMT|Gur Market|
+GRN|Gurnay|
+GRNA|Gurhanwa|
+GRO|Gurra|
+GRP|Gangpur|
+GRPA|Garhpura|
+GRR|Gorphar|
+GRRG|Gurli Ramgarhwa|
+GRRU|Guraru|
+GRS|Gurusar Sutlani|
+GRTA|Goratiya|
+GRU|Garopara|
+GRV|Gohlwar Varpal|
+GRWD|Ghorawadi|
+GRX|Gaura|
+GRY|Goraya|
+GRZ|Gurthuri|
+GS|Godhaneshwar|
+GSA|Guagachha|
+GSB|Garna Sahib|
+GSD|Ghosunda|
+GSDH|Garsanda Halt|
+GSGB|Gosaingram|
+GSGJ|Ghausganj|
+GSI|Ghosi|
+GSK|Ghusia Kalan Halt|Purandarpur
+GSL|Godapiasal|
+GSO|Ghaso|
+GSP|Gurdaspur|
+GSPR|Gosalpur|
+GSPU|Gauspur Halt|Gawaspur
+GSQ|Guir Saranga|Bardhaman
+GSR|Garhshankar|
+GSRM|Gauri Sriram|
+GSW|Gursar Shnewala|
+GSX|Gandhi Smrak Rd|Sultanpet
+GSY|Ghanshymgadh Road|
+GT|Ghatkesar|
+GTA|Golanthra|
+GTBN|Guru Teghbahadurnagar|Guru Teg Bahadur Nagar
+GTD|Gourinathdham|
+GTE|Gothaj|
+GTF|Gumthal|
+GTH|Ghanta|
+GTHT|Ghataro Halt|Vaishali
+GTI|Ghutai|
+GTJT|Getor Jagatpura|
+GTK|Ghutku|
+GTKD|Gerita Kolvada|Gujarat
+GTL|Guntakal Junction|
+GTLM|Gotlam|
+GTLW|Guntakal West|
+GTM|Ghatampur|
+GTNR|Gomati Nagar|Lucknow
+GTP|Ghatpuri|
+GTQ|Gumtali Halt|
+GTR|Grant Road|Grant Rd
+GTRA|Gotra Halt|
+GTS|Ghatsila|
+GTST|Gautamsthan|
+GTT|Gomta|
+GTU|Ghat Nandur|
+GTW|Gatora|
+GTWD|Ghatwad|
+GTX|Gothangam|
+GTY|Gola Pati|
+GUA|Gua|
+GUB|Gularbhoj|
+GUD|Galudih|
+GUDM|Gudum|
+GUG|Garh Jaipur|
+GUGD|Guru Gorakhnath Dham|Uttar Pradesh
+GUH|Guldhar|
+GUJ|Gunja|Mehsana
+GUK|Guntakonduru|
+GUL|Gujjangivalasa|
+GULR|Guler|
+GUM|Gummanur|
+GUMA|Guma|Guma Rajibpur Road
+GUMI|Gorumahisani|
+GUNA|Guna|
+GUNS|Ghunas|
+GUP|Gauripur|
+GUR|Ganagapur Road|
+GURN|Gurudas Nagar|
+GUS|Ghumasan|
+GUSB|Ghumasan Bg|
+GUU|Gundratimadugu|
+GUV|Guruvayur|
+GUX|Gurhi|
+GUZ|Gumani Hat|
+GV|Govandi|
+GVA|Ganguwada|
+GVB|Guneru Bamori|
+GVD|Gholvad|
+GVDP|Gvdp|
+GVG|Govindgarh|
+GVH|Govind Garh|
+GVI|Garividi|
+GVL|Gudlavalleru|
+GVMH|Gangavaram|
+GVMR|Govindi Marwar|
+GVN|Godavari|
+GVP|Gate Vanampalli|
+GVR|Goresuar|
+GVV|Galvav|
+GW|Girwar|
+GWA|Ganj Dundwara|
+GWD|Gadwal|
+GWH|Ghoshawar|
+GWL|Gwalior|
+GWM|Gannavaram|
+GWO|Gwalior Ng|
+GWP|Gangawapur Halt|
+GWS|Gaushala|
+GWSB|Goindwal Sahib H|Khawaspur
+GWV|Gowdavalli|
+GWYR|Greenways Road|
+GXG|Geong|
+GY|Gooty|
+GYF|Gooty Fort|
+GYJ|Gooty Junction Cabin|
+GYL|Gharyala|
+GYM|Gudiyattam|
+GYN|Gyanpur Road|
+GYT|Gypsum|
+GZA|Gurujalas|
+GZB|Ghaziabad|
+GZH|Gulzarbagh|
+GZKA|Gzka|
+GZL|Gazulapalli|
+GZM|Gour Malda|
+GZN|N Ghaziabad|
+GZO|Gazole|
+GZS|Giani Zail Singh Sandhwan|
+GZT|Ghazipur Ghat|
+HA|Hargaon|
+HAA|Harwada|
+HAB|Bah|Uganpura
+HAD|Harippad|
+HAG|Haligudi H|
+HAH|Hosa Agrahara|
+HAK|Hadala|
+HALT|Halt|
+HAM|Hamirhati|West Bengal 722207
+HAN|Hindaun City|
+HAPA|Hapa|
+HAPR|Hanamapur|G.Jarkunti
+HAQ|Hastavarmu|
+HAR|Hamirpur Road|
+HAS|Hassan|
+HAT|Hathuran|
+HATB|Hatibari|
+HATI|Hati|
+HAUR|Haur|
+HAY|Hautley|
+HB|Habra|
+HBB|Hendlaso Bhokta Bagicha|Hesal
+HBD|Hoshangabad|
+HBE|Habibpur|
+HBF|Hadobhangi Halt|
+HBG|Howbadh Jablpur|
+HBI|Hagaribommanahalli|
+HBJ|Habibganj|
+HBL|Hombal|
+HBLN|Hbl Nagar|
+HBN|Haibargaon|
+HBP|Harpar Bochaha|
+HBQ|Hubli East Cab|
+HBS|Hebsur|
+HBSH|Hasan Bazar Station Halt|Bihar 802204
+HBU|Halbarga|
+HBW|Habibwala|
+HC|Hindu College|
+HCAB|Bmy H Cabin|
+HCM|Harishchandrapuram|
+HCNR|Harichandanpur|
+HCP|Harchandpur|
+HCR|Harischandrpur|
+HD|Harda|
+HDA|Hirnoda|
+HDB|Haldibari|
+HDC|Harishdadpur Ph|Dakshin Ramchandrapur
+HDD|Haddinagundu|
+HDE|Hardas Bigha|
+HDGR|Hadgaon Road|
+HDIH|Hoodi Halt|Krishnarajapuram
+HDK|Handia Khas|
+HDL|Hodal|
+HDM|Hirdamali|
+HDN|Haidarnagar|
+HDP|Hadapsar|
+HDS|Haridaspur|
+HDT|Hardattpur|
+HDU|Hardua|
+HDW|Haldwani|
+HDWL|Hardorawal|Hardo Rawal
+HEB|Hebbal|
+HEI|Heggere Halt|
+HEM|Himayatnagar|
+HEN|Heria Ph|
+HER|Her|
+HESK|Hireshellikeri|Hire-Shellikeri
+HET|Hetampur|
+HFG|Haflong Hill|
+HFZ|Hafizpeta|
+HG|Hotgi|
+HGA|Hogla|
+HGH|Haidergarh|
+HGI|Hagari|
+HGJ|Harduaganj|
+HGL|Harangul|
+HGR|Hemagiri|
+HGT|Hinganghat|
+HGY|Hooghly|
+HHD|Hunsihadgil|
+HHG|Hehegara Halt (E)|
+HHL|Hirehali|
+HHP|Harhar Fatehpur|
+HHR|Hridaypur|
+HHT|Habanghata|
+HIH|Hajigarh|
+HIJ|Hijilli|
+HIKD|Hallikhed K|Hallikhed
+HIL|Hilsa|
+HIND|Hind|
+HIP|Haldipada|
+HIR|Harinagar|
+HIS|Hisua|
+HISE|Hirisave|
+HIVR|Hiwarkheda|
+HJI|Hojai|
+HJL|Hejjala|
+HJLI|Hugrajuli|
+HJN|Howrah Jn. Cabin|
+HJO|Harangajao|
+HJP|Hajipur Junction|
+HK|Helak|
+HKD|Hailakandi|
+HKG|Hirakud|
+HKH|Haranya Kheri|
+HKL|Harkia Khal|
+HKNT|Hiwarkheda|
+HKP|Hakimpur|
+HKR|Kiwar Khed|
+HLAR|Hole Alur|
+HLB|Hadala Bhal|
+HLD|Haludpukur|
+HLDD|Haldi Road|
+HLDR|Haldaur|
+HLE|Heelalige|
+HLG|Hilligrove|
+HLGR|Halgeri|
+HLIN|Holding Line|
+HLK|Holalkere|
+HLKH|Hallikhed|
+HLKK|Hallikhed K|Karnataka 585330
+HLKT|Halakatta|
+HLL|Halol|
+HLN|Hole Narsipur|
+HLP|Haldharpur|
+HLR|Halisahar|
+HLTS|Halkatta Sharief|
+HLV|Haliyuru|
+HLW|Hirnawali|
+HLX|Hilara|
+HLZ|Haldia|
+HM|Hadmatiya Junction|
+HMA|Humma|
+HMB|Harebetta|
+HMBD|Humnabad|
+HME|Hamre|
+HMG|Hamirgarh|
+HMH|Hanumangarh Junction|
+HMI|Himmatana|
+HMK|Hindumalkote|
+HML|Helem|
+HMO|Hanumangarhtown|
+HMP|Hempur|
+HMPR|Hurmujpur Halt|
+HMQ|Himmatpura|
+HMR|Hamira|
+HMRR|Hamarapur|
+HMT|Himmatnagar|
+HMY|Harmuti|
+HMZ|Hind Motor|
+HN|Hathbandh|
+HNA|Honnavar|
+HNB|Hasanabad|
+HNC|Hindan Cabin|
+HND|Hindol Road|
+HNDR|Hendegir|
+HNEO|Hathbandh|
+HNG|Hirangaon|
+HNH|Hanumanahalli|
+HNHL|Harnahalli|
+HNK|Hanakere|
+HNL|Hingoli Deccan|
+HNM|Hinautaramban|
+HNMN|Hanuman Station|
+HNN|Harana Kalan|
+HNPA|Handapa|
+HNR|Hansara|Kansara
+HNS|Hansi|
+HNSL|Haslang P.H.|
+HNU|Hanspura|
+HNZM|Delhi Hazrat Nizamuddin|
+HOD|Haldita Bihar|
+HOH|Honaganahalli|
+HOJ|Hamitonganj|
+HOL|Hol|
+HP|Haripur|
+HPA|Hampapura|
+HPG|Huppuguda|
+HPGM|Haripur Gram|
+HPH|Hanumapura|
+HPHI|Harpanhallli|Harpanahalli
+HPI|Harapatti|
+HPIL|Hempur Ismile|
+HPKA|Hinotia Pipalkhera|
+HPL|Haripal|
+HPLB|Hatpuraini|
+HPLE|Hatpuraini|
+HPM|Hampapatnam|Marabbihal
+HPO|Hasanpur Road|
+HPP|Harpalpur|
+HPR|Hirapur|
+HPRD|Hapa Road|
+HPT|Hospet Junction|Hospet
+HPU|Hapur|
+HPUR|Habaspur|
+HQR|Hirenanduru|
+HR|Harpalu|
+HRB|Harri|
+HRBR|Harubera|
+HRD|Harsud|
+HRDR|Harsar Dehri|
+HRE|Hirodih|
+HRF|Hathras Kila|
+HRG|Hirdagarh|
+HRGR|Harnagar|Harinagar Rd
+HRH|Harthala|
+HRI|Hardoi|
+HRLI|Harlaya|RJ SH61
+HRLT|Harlatanr|
+HRM|Hadmadiya|
+HRN|Harauni|
+HRNG|Harpur Nag Halt|
+HRNR|Hira Nagar|
+HRNS|Harinsing|
+HRO|Harua Road|
+HRPG|Harpalganj|
+HRR|Harihar|
+HRS|Hathras Junction|
+HRSB|Hillar Shahabad Halt|Hillar Shahabad
+HRSG|Harsingra Halt|Waira
+HRSN|Harisinga|
+HRSR|Harish Nagar Halt|
+HRT|Harnaut|
+HRTK|Hortoki|Kawnpui
+HRV|Harrad|
+HRW|Harrawala|
+HSA|Hasimara|
+HSB|Hasanbazar Halt|
+HSD|Hosdurga Road|
+HSDA|Hansdiha|
+HSI|Harsauli|
+HSJ|Hussain Sagar J|
+HSK|Harishanker Road|
+HSL|Hisvahal|
+HSM|Hausnagar|
+HSP|Hasanparthi Road|
+HSQ|Husainpur|
+HSR|Hisar|
+HSRA|Hosur|
+HSW|Husainiwala|
+HSWS|Hansiawas|
+HSX|Hoshiarpur|
+HSY|Harsingpur Goba|
+HT|Hotar|
+HTA|Hatighisa|
+HTC|Hathras City|
+HTCY|Hitech City|
+HTD|Hatundi|
+HTE|Hatia|
+HTGR|Hathigadh|
+HTJ|Hathras Road|
+HTK|Hatkanagale|
+HTL|Hatikhali|
+HTLA|Hatola|Aasti
+HTN|Hatna Pur|
+HTNL|Hitnal|
+HTR|Hatkarota Halt|
+HTT|Hatra Road|Surti Hatta Rd
+HTW|Hathua|
+HTZ|Hathidah Junction|
+HTZ1|Hathidah Link Cabin|
+HTZU|Hathidah Upper|
+HUD|Hudukula|
+HUDU|Hundur Halt|Kanke - Ormanjhi Rd
+HUFP|Harauli Fatehpur|Anrra
+HUI|Hundri|
+HUK|Holambi Kalan|
+HUN|Hunsenahalli|
+HUP|Hindupur|
+HVD|Halvad|
+HVL|Honnavalli Road|
+HVM|Hamsavaram|
+HVR|Haveri|
+HW|Haridwar Junction|Haridwar
+HWH|Howrah Junction|Kolkata
+HWHG|Howrah Goods|
+HWR|Hatwar|
+HWT|Hanwant|
+HWX|Habaipur|
+HX|Cuddapah|
+HXR|Hansapore|
+HYA|Hadiaya|
+HYB|Hyderabad Decan|Hyderabad
+HYG|Hooghly Ghat|
+HYL|Hadyal|
+HYT|Haiaghat|
+HZBN|Hazaribagh Town|VishnuPuri
+HZD|Hazaribagh Road|
+HZH|Hazratpur|
+HZN|Hazrat Nagar Halt|
+HZR|Hafizpur|
+IAA|Indara Junction|
+IAM|Mai Halt|
+IB|Ib|
+IBH1|Ibh1|
+IBH2|Ibh2|
+IBH3|Ibh3|
+IBH4|Ibh4|
+IBH5|Ibh5|
+IBH6|Ibh6|
+IBHA|Ibha|
+IBHC|Ibhc|
+IBHD|Ibhd|
+IBHE|Ibhe|
+IBHF|Ibhf|
+IBHG|Ibhg|
+IBHH|Ibhh|
+IBL|Indrabil|
+ICBN|Icbn|
+ICG|Ichchangadu|
+ICGH|Ichchangadu Halt|Eachangadu
+ICL|Ichauli|
+ICP|Ichchiputtur|
+IDAR|Idar|
+IDG|Indargarh|
+IDGH|Indargarh|
+IDGJ|Iradatganj|
+IDH|Idgah Agra Junction|Agra
+IDJ|Idalhond|
+IDL|Indalvai|
+IDM|Indemau|
+IDP|Indupalli|
+IDR|Indi Road|
+IDS|Ishardaspur|
+IDT|Sidlaghatta|
+IFCO|Iffco Cabin|
+IFFC|Iffco Cabin|
+IGL|Iringal|
+IGP|Igatpuri|
+IGPX|Igpx|
+IGR|Ingur|
+IGRL|Ingorala|
+IGTA|Ingohta|
+IGU|Irugur|
+IHP|Inchhapuri|
+IJ|Itaunja|
+IJK|Irinjalakuda|
+IK|Ikran|
+IKC|Ikarchala|
+IKD|Ikdori|
+IKI|Itkyala|
+IKK|Ikkar|
+IKR|Iklehra|
+IKRA|Ikra Jn.|West Bengal
+ILA|Silsiman|
+ILO|Illoo|
+ILU|Illoo|
+IMAM|Imampuram|
+IMBG|Imlibigha Halt|
+IMGE|Ismailpur|
+IMLI|Imli|
+IMR|Ibrahimpur|
+INCI|Ishan Chandi Halt|
+INDB|Indore Junction Bg|Indore
+INDM|Indore Jn Mg|
+INDR|Indira Nagar|
+INDRG|Indrg|
+INJ|Innanje|
+INK|Intakanne|
+INP|Indapur|
+INS|Indas|
+IP|Ichhapur|
+IPG|Ippuguda|
+IPL|Idaplli|
+IPM|Ichchpuram|
+IPPM|Ipurupalem|
+IPPN|Ipurupalem Halt|
+IPR|Islampur|
+IPRA|Ipra|
+IPT|Ichchiputtur Halt|
+IPTN|Ispatnagar|
+IQB|Iqbalpur|
+IQG|Iqbal Gadh|
+IRA|Israna|
+IRN|Irgaon|
+IRP|Iravipuram|
+ISA|Isarda|
+ISH|Isarwara|
+ISHN|Ishanagar|Isha Nagar
+ISM|Ismaila Haryana|
+ISRI|Ishapur Kheri Halt|Issapur Kheri
+ITA|Itola|
+ITE|Intiyathok|
+ITK|Itky P H|
+ITKL|Itayakalan|
+ITKY|Itky|
+ITMA|Itarsi Marshaling Yard|
+ITR|Itwari|
+ITRN|Itwari Jn (Ng)|
+IVL|Ilavelangal|
+IZN|Izzatnagar|
+JA|Jaliya|
+JAA|Jhalida|
+JAB|Yamuna Bdg Agra|Agra
+JAC|Jalsu|
+JACN|Jalsu Nanak|
+JADR|Jadar|
+JAG|Jalargarh|
+JAIC|Jais City|Rae Bareli
+JAIS|Jais|
+JAJ|Jhajha|
+JAK|Jakanur|
+JAKA|Junakhera|
+JAL|Jawali|
+JALD|Jaliya Devani|
+JAM|Jamnagar|
+JAMA|Jama|
+JAN|Jarangdih|
+JAO|Jaora|
+JAPN|Jhalrapatan|Chandrawati Growth Centre
+JAQ|Jandrapeta|
+JAR|Junair Halt|
+JARI|Jari|
+JAS|Jasdan|
+JASH|Jorasankh H|Poraia
+JAT|Jammu Tawi|Jammu
+JATP|Jaitpura|Chandarpur Khurd
+JAU|Jhaua|
+JAUA|Jamua|
+JAW|Jarwa|
+JBB|Jambur|
+JBC|Jambrung|
+JBCN|Joda Block Cabin|
+JBD|Jallalabd|
+JBG|Jung Bahadurgnj|
+JBGD|Jabbalgudda|
+JBJC|Jamuna Block Hut Junction|
+JBK|Jgmbla Kshnprm|
+JBL|Jabli|
+JBN|Jogbani|
+JBO|Jamadobu|
+JBP|Jabalpur|
+JBPN|Jabalpur Jn (Ng)|
+JBR|Jahangirabad Road|
+JBS|Jadoli Ka Bas|
+JBSR|Jambusar Road|Bharuch Jambusar Rd
+JBU|Jabugam|
+JBW|Jhabelwali|
+JBX|Jabri|
+JBY|Jorebunglow|
+JCH|Jetha Chandan|
+JCL|Jadcherla|
+JCN|Junichavand|
+JCNR|Juchandra|
+JCR|Juchandra|
+JCU|Jaicholi|
+JCY|Jind City|
+JD|Jarod|
+JDA|Jasoda|
+JDB|Jagdalpur|
+JDD|Jerthi Dadhia|
+JDDA|Jatha|
+JDGP|Jamaldaha Gopalpur|Dakshin Kharija Gopalpur
+JDH|Jam Jodhpur Junction|
+JDHH|Jandhera Halt|Jandhera Samaspur
+JDI|Jharradih|
+JDK|Jandoke|
+JDL|Jagdevwala|
+JDN|Jagudan|
+JDNA|Jogindrnagar Oa|
+JDNF|Jagudan|
+JDNM|Jagudan|
+JDNX|Joginder Nagar|
+JDP|Jadabpur|
+JDPR|Jagdishpur|
+JDPT|Jagdishpur|
+JDR|Jiwdhara|
+JDW|Jarauda Nara|
+JEA|Nakaha Jungle|
+JEN|Jenapur|
+JEO|Jitoda|
+JEP|Jeonathpur|
+JER|Jaleswar|
+JERD|Jenapur Ph|
+JES|Jaitsar|
+JET|James Street|
+JEUR|Jeur|
+JFD|Jiadhal|
+JFG|Jafarganj|
+JGA|Jogiara|
+JGBR|Jogeshwar Bihar|
+JGD|Jagadishpur|
+JGDL|Jagadal|
+JGE|Jagannath Temple Gate|
+JGF|Jogidih|
+JGG|Jangiganj|
+JGI|Jhagadiya Jn|Jagadia Rd
+JGJ|Jagesharganj|
+JGJN|Jugijan|
+JGKS|Jigni Khas|
+JGLP|Jatinga Lumpur|
+JGM|Jhargram|
+JGN|Jagraon|
+JGNR|Jogendranagar|
+JGP|Jalalpur|
+JGR|Jaswantnagar|
+JGW|Jogiwala|
+JGWL|Jagjivan Halt|
+JGX|Jariagarh|
+JGZ|Jamgaon|
+JHA|Jakhaura|
+JHAR|Jhar|
+JHBN|Jhamatpur Baharan|
+JHD|Jehanabad|
+JHDC|Jehanabad Court|
+JHG|Jhingura|
+JHH|Jhalra Halt|
+JHIR|Jhir|
+JHJ|Jhajjar|
+JHK|Jethuke|
+JHL|Jakhal Junction|
+JHMR|Jhimri|
+JHN|Jakhim|
+JHP|Juhjarpur|
+JHS|Jhansi Junction|
+JHSA|Jhansi A Cabin|
+JHT|Junehta|
+JHW|Jhalawar Road|
+JHWR|Jhawar|
+JI|Jhusi|
+JIA|Jigna|
+JIBI|Jolaibari|
+JID|Jagi Road|
+JIGT|Jirighat|
+JIL|Jalila Road|
+JIND|Jind Junction|
+JIR|Jira Road|
+JIT|Jirat|
+JITE|Jite|
+JJ|Jajau|
+JJA|Jajan Patti|
+JJBR|Jhanjharpur Bazar H|Jhanjharpur Bazar Halt RS
+JJG|Jiaganj|
+JJJ|Jaijon Doaba|
+JJK|Jhinjhak|
+JJKR|Jajpur K Road|
+JJN|Jhunjhunun|
+JJP|Jhanjharpur|
+JJPR|Jhanjharpur Bazar Halt|
+JJR|Jejuri|
+JJT|Jai Jai Wanti|
+JJTI|Jhanjhitoli Halt|Hindebili
+JJW|Jojwa|
+JK|Jakolari|
+JKA|Jakhvada|
+JKAR|Jaklair|
+JKB|Jakhalabandha|
+JKDK|Jharkhand Dham|Patardih
+JKDP|Jankidaipur|
+JKE|Jukehi|
+JKH|Jahanikhera|
+JKHI|Jakhod Khera|
+JKI|Kauriaa Jungle|
+JKL|Jalal Khali|
+JKM|Jankampet Junction|
+JKMH|Jharkhand Mahadev Halt|Bihar 802207
+JKN|Jakhanian|
+JKNI|Jharkhandi|
+JKO|Jakkalacheruvu|
+JKP|Jharekapur|
+JKPR|Jakhapura|
+JKR|Jaulkhera|
+JKS|Jaksi|
+JKT|Jekot|
+JKZ|Jitakheri|
+JL|Jalgaon Junction|Jalgaon
+JLBR|Jhaluarbar|Harbor Line
+JLD|Jarwal Road|
+JLF|Julmi|
+JLG|Julgaon Deccan|
+JLHI|Jhilahi|
+JLI|Jalalsi P H|Jalali
+JLL|Jalalganj|
+JLLO|Jhilo|
+JLM|Jaliya Math|
+JLN|Jakhalaun|
+JLP|Jalalpur Mandwa|
+JLPH|Jalalpur Halt|Pachmahla
+JLQ|Jalpur|
+JLR|Jetalsar Junction|
+JLRF|Jetalsar Jn|
+JLS|Jalesar Road|
+JLT|Jhamat Halt|
+JLW|Jhalwara|
+JLWC|Jhalawar City|
+JLY|Jhilmili|
+JM|Jalamb Junction|
+JMA|Jamuria|
+JMB|Jambusar Junction|
+JMBC|Jambusar City|
+JMBL|Jambhali Halt|
+JMD|Jamdha|
+JMDG|Jammalamadugu|
+JME|Jamsher Khas|
+JMG|Jamga|
+JMI|Jamguri|
+JMIR|Jamira Halt|
+JMK|Jamunamukh|
+JMKL|Jamunia Kalan|
+JMKR|Jawlmukhi Road|
+JMKT|Jamikunta|
+JML|Jumnal|
+JMM|Jaimurtinagar F|
+JMN|Jamuawan|
+JMNR|Jamner|
+JMP|Jamalpur Junction|Jamalpur
+JMPT|Jimidipeta|
+JMQ|Jamirghata|
+JMRA|Jamira|
+JMS|Jamsar|
+JMSY|Jmsy|
+JMT|Jamtara|
+JMU|Jamui|
+JMV|Jambara|
+JMX|Jamuni|
+JN|Jhund|
+JNA|Julana|
+JNCV|Moranda Jn. Cabin|
+JND|Junagadh Junction|
+JNDC|Junagadh C B|
+JNDO|Jehanabad Court|
+JNE|Janiyana|
+JNH|Janghai Junction|
+JNJ|Juinagar|
+JNK|Jhinkpani|
+JNKR|Janakinagar|
+JNL|Jandiala|
+JNM|Jayanagar Majilpur Halt|
+JNN|Jamuniatand|
+JNNA|Jamuniatanr Halt|
+JNO|Junnor Deo|
+JNP|Jagan Nathapur|
+JNR|Janakpur Road|
+JNRD|Nilaje|
+JNRI|Jalindri|
+JNT|Jaintipura|
+JNTR|Jinti Road|
+JNU|Jaunpur Junction|
+JNUK|Jaunpur Kutcherry|
+JNX|Jagnath Road Halt|
+JNZ|Jenal|
+JO|Jo Jagabor|
+JOA|Janwal|
+JOB|Asalpur Jobner|
+JOBA|Joba|
+JOBT|Jobat|
+JOC|Joychandi Pahar|
+JOH|Juharpura|
+JOK|Jodhka|
+JOKT|Jokatte|
+JOL|Jogal|
+JOM|Jogi Magra|
+JON|Jonha|
+JONA|Jonha|
+JONR|Jeonara Ph|
+JOO|Kacheguda Jamia Osmania|
+JOP|Jaunpur City|Jaunpur
+JOQ|Jorai|
+JOR|Jalor|
+JOS|Jogeshwari|
+JOX|Janai Road|
+JP|Jaipur|
+JPAH|Jagdishpur Halt|
+JPD|Jalalpur Dhai|
+JPE|Jalpaiguri Road|
+JPG|Jalpaiguri|
+JPH|Jhantipahari|
+JPI|Jhadupudi|
+JPL|Japla|
+JPM|Jiyapuram|
+JPML|Jai Prakash Mahuli|
+JPO|Jora Alapur|
+JPP|Jalalpur Panwara|
+JPQ|Jhapandanga|
+JPR|Jakpur|
+JPRD|Jenapur Road|
+JPS|Jmlpr Shaikhan|
+JPTN|Jaggayya Peta Town|
+JPTR|Jitpur|
+JPV|Jmtra Paraswara|
+JPZ|Jogighopa|
+JRA|Jaraikela|
+JRAE|Jaugram|
+JRBI|Jayrambati|
+JRBM|Jiribam|
+JRC|Jalandhar Cant|Jalandhar
+JREA|Jhareda|
+JRG|Jugpura|
+JRI|Jharia|
+JRJ|Jargaon|
+JRJE|Garjee|Tripura 799125
+JRK|Jeruwa Khera|
+JRKN|Jorkian|
+JRKT|Jadarama Kunte|
+JRL|Jharili|
+JRLE|Jangipur Road|
+JRLI|Jaroli|
+JRMA|Jharamunda|Jharsamunda
+JRMG|Jairamnagar|
+JRNA|Jirania|
+JRO|Jiron|
+JRPD|Jarapada|
+JRQ|Jharokhas|
+JRR|Jugaur|
+JRRI|Jrri|
+JRS|Joravasan|
+JRT|Jarti|
+JRTB|Jhartarbha|PPX5+MV Jhartarbha
+JRTR|Jurtara|
+JRU|Chikjajur Junction|
+JRV|Juna Rajuvadiya|Gujarat 393140
+JRW|Joramow|
+JRWN|Jirwan|
+JRX|Juriagaon|
+JRZ|Joranda Road|
+JS|Jessore Jn|
+JSA|Jasai|
+JSB|Yamuna South Bank|
+JSC|Jalesar City|
+JSD|Jaisingder|
+JSE|Jamsole|
+JSG|Jharsuguda Junction|
+JSGR|Jharsuguda Road|
+JSH|Jaswantgarh|
+JSI|Jasali|
+JSKA|Jataula Samphka|
+JSL|Jassowal Halt|
+JSLE|Jasai Chirle|
+JSM|Jaisalmer|
+JSME|Jasidih Junction|
+JSOR|Jessore Road|
+JSP|Jayasingpur|
+JSPN|Jaspalon|
+JSPR|Jashapar|
+JSR|Jasra|
+JSRD|Jhankad Sarala Road|
+JSRY|Jharsuguda R Yard|
+JSS|Jasia|
+JSV|Jarandeshwar|
+JT|Jorhat|
+JTB|Jagatbela|
+JTDM|Jatdumri Halt|
+JTG|Jatinga|
+JTH|Jhoktahal Singh|
+JTHR|Jethantri H|
+JTHT|Junction Hut Ddu|
+JTI|Jaithari|
+JTIN|Jethian|
+JTJ|Jolarpettai|
+JTK|Jhitkia|
+JTKN|Jaitpur Kalan|
+JTL|Jhapater Dhal|
+JTN|Jotana|
+JTNU|Jatnandur|
+JTO|Jutogh|
+JTP|Jetpur|
+JTPR|Jitpur|
+JTR|Jatkanhar|
+JTRD|Jath Road|
+JTS|Jatusana|
+JTSR|Jyotisar H|
+JTT|Jumapatti|
+JTTN|Jorhat Town|
+JTU|Jaitipur|
+JTV|Jetalvad|
+JTW|Jaitwar|
+JTX|Jatpipli|
+JTY|Jethi|
+JU|Jodhpur Junction|Jodhpur
+JUA|Jarauna|
+JUBS|Jubbasahani|
+JUC|Jalandhar City|Jalandhar
+JUCT|Jodhpur Cantt|
+JUD|Jagadhri|Yamunanagar
+JUDW|Jagadhri Wshop|
+JUH|Jujharpur|
+JUJA|Jujumura|
+JUK|Jaulka|
+JUL|Jhulasan|
+JULF|Jhulasan|
+JUNC|Junc|
+JUNX|Junona Halt|
+JUP|Jhunpa|
+JUR|Jutturu|
+JUYA|Jodhpuriya|
+JVA|Javale|
+JVL|Jamwala|
+JVN|Jorawarnagar Junction|
+JVT|Jivanti Halt|
+JW|Jatwara|
+JWB|Jawai Bandh|
+JWHR|Jawaharnagar|
+JWK|Jawaharpur Kamsan|
+JWKA|Jandwala Kharta|
+JWL|Jajiwal|
+JWLS|Jawan Wala Shehar|
+JWN|Jiwa Arain|
+JWNR|Jawaharnagar|
+JWO|Jawad Road|
+JWP|Jwalapur|
+JWS|Jharwasaa|
+JXN|Jirona|
+JYG|Jaynagar|
+JYK|Jone Karrang|Unnamed Road
+JYM|Jai Samand Road|
+JYP|Jeypore|
+KAA|Kaurara|
+KAC|Kasap|
+KAD|Khandala|
+KADA|Khandala(M.P.)|Khandala
+KADH|Khairadih Halt|
+KADI|Kadi|
+KADL|Kumradol|
+KADR|Kadiyadra|
+KAG|Kodaganur|
+KAGA|Kurhagada|
+KAGJ|Kaliaganj|Terhagachh
+KAGR|Kagangarh|
+KAH|Kalhar|
+KAHL|Karhal|
+KAI|Kairla|
+KAJ|Kaliyanganj|
+KAJG|Karanjgaon|
+KAK|Khaki Jaliya|
+KAKI|Kakni|Jamua
+KAKN|Kaimarkalan|
+KAKO|Kadaram Kondam|
+KAL|Kallal|
+KALD|Kalanad|
+KALE|Kalay|
+KALI|Kaili|
+KALM|Kalamb|Kamathwada
+KALN|Kalana|
+KALS|Kalas Halt|
+KAMA|Kamta Halt|
+KAMG|Kamakhyaguri|
+KAMP|Kamalpur|
+KAMR|Khurrampur|
+KAMU|Karumattur|
+KAN|Khana Junction|
+KAND|Kandla|
+KANG|Karan Nagar|
+KANJ|Kanil|
+KANL|Kanl|
+KANO|Kanoh|
+KANR|Kukanur|Kuknoor
+KANS|Kansiya Nes|
+KAO|Kalubathan|
+KAOT|Kaotha|
+KAP|Kalianpur|Kanpur
+KAPE|Kakapora|
+KAPG|Kalupara Ghat|
+KAPM|Kottapalem|
+KAPP|Khariapipra Halt|
+KAPT|Krishnapatnam|
+KAPU|Kiratpur|
+KAQ|Kolanukonda|
+KAR|Karna|
+KARD|Kaman Road|
+KARH|Kakraha Rest House|
+KARI|Khari|Village Khari
+KARJ|Karjhausa|Tola Phulwaria Kalan
+KARK|Karaikkurichchi|
+KARO|Khario P.H.|
+KARP|Kharkopar|Ulwe
+KARR|Kharar|
+KART|Kiratpur Sahib|Kiratpur
+KAS|Kankret|
+KASA|Kansa|
+KASH|Kulthamabdullashah Halt|
+KASR|Kanas Road|
+KASU|Kasu|
+KAT|Khatauli|
+KATA|Katili|
+KATB|Khatkura|
+KATI|Kanthi P H|
+KATL|Katol|
+KATR|Katariya|
+KAU|Kachna|
+KAUA|Kathautia|Kathoutia
+KAV|Kalamna|
+KAVI|Kavi|
+KAVM|Kathivakkam|
+KAVR|Kalavur Halt|
+KAW|Khajri|
+KAWL|Kandwal Halt|
+KAWR|Karwar|
+KAWT|Kanwat|
+KAY|Karaimadai|
+KAYI|Kaydi Halt|Balaghat
+KAYR|Kayar|
+KB|Khairatabad|
+KBA|Kurabalakota|
+KBBP|Kambiron|
+KBCB|KBCB|
+KBE|Kurebhar|
+KBGB|Komagata Maru Budge Budge|
+KBGH|Karea Kadambagachhi|
+KBGN|Khubagaon|
+KBH|Khandbaara|
+KBI|Kambrganvi|
+KBJ|Kantabanji|
+KBK|Khamil Ghat|
+KBKN|Khabra Kalan|
+KBL|Koppal|
+KBM|Kotabommali|
+KBN|Karbigwan|
+KBP|Kuberpur|
+KBPR|Kabakaputtur|
+KBQ|Kumrabad Rohini|
+KBR|Kabrai|
+KBRV|Kanjari Boriyav|
+KBS|Kusmuda Block Station|
+KBSH|Krishna Ballabh|
+KBSN|Kasbe-Sukene|
+KBT|Kadambattur|
+KBU|Kasu Begu|
+KBV|Khan Bhankri|
+KBY|Khoirabari|
+KCA|Kuchman|
+KCAB|K-Cabin Bondamunda|
+KCB|Kuslamb|
+KCC|Krishna Canal|
+KCCN|Kccn|
+KCD|Kurichedu|
+KCE|Kings Circle|Kings Cir
+KCF|Kalchini|
+KCG|Kacheguda|Hyderabad
+KCH|Kasim Kota Halt|
+KCHA|Karchiya|
+KCHV|Kachchanvilai|
+KCI|Kallkiri|
+KCJ|Kasimpur|
+KCKI|Keckhi|
+KCLA|Kenchanalu Halt|
+KCM|Kalasumudram|
+KCN|Karchana|
+KCNR|Kachnara Road|
+KCO|Kachhia Bridge|
+KCP|Kalgupur|
+KCR|Khonker|
+KCT|Kirakat|
+KCU|Kachhiaa|
+KCV|Krishna Ch Pura|
+KCVL|Kochuveli|Trivandrum
+KCY|Kaichar|
+KCYN|Kachhiyana Halt|
+KCZ|Kairon|
+KD|Kundarkhi|
+KDAA|Kada|MH SH 157 State: Maharashtra
+KDAG|Kyatsandra Goods|
+KDBA|Kodimbala Halt|
+KDBM|Khed Brahma|
+KDBR|Khadki Bazar|
+KDBS|Kotda Bavishi|
+KDCR|Sanvardam Crchm|
+KDCY|Kevadiya|
+KDE|Koradacheri|
+KDER|Kunder Halt|
+KDF|Khundaur|
+KDG|Kedgaon|
+KDGH|Kodigehalli|
+KDGI|Kudgi|
+KDGL|Kondrapol|
+KDGO|Kadogaon Halt|Sabodangi
+KDH|Khardaha|
+KDHA|Karchha|
+KDHI|Kaladehi|
+KDHL|Kundhela|
+KDHN|Kandharan Halt|
+KDI|Kundli|
+KDJ|Khudaganj|
+KDJB|Khudaganj Bazar|Panahar
+KDJR|Kendujhargarh|
+KDK|Kohdad|
+KDKL|Kodakandla|Ananthasagar
+KDKN|Kendukana|
+KDL|Kankroli|
+KDLG|Kundalgarh|
+KDLP|Kandla Port|
+KDLR|Kandel Road|
+KDM|Kesamudram|
+KDMD|Kandambakkam|
+KDMR|Kodiyar Mandir|
+KDN|Kudatini|
+KDNL|Kadaynallur|
+KDO|Kadakola|
+KDP|Kondapuram|
+KDPA|Khadapa|
+KDPR|Kumedpur|
+KDPS|Kadipur Sani Ha|
+KDQ|Kadipur|
+KDRA|Kadampura|
+KDRD|Khuldil Road|
+KDRI|Kendri|
+KDRL|Kondrapol|
+KDRP|Kandarpur|
+KDS|Kasunda Jn|
+KDSB|Khadur Sahib H|Khadur Sahib
+KDSD|Kudsad|
+KDT|Khadarpet|
+KDTN|Kadethan|
+KDTR|Kirodimalnagar|
+KDTY|Kaduturutti Halt|
+KDU|Kadambur|
+KDUH|Kunduru|
+KDV|Khadavli|
+KDVI|Kadavai|Maharashtra 415609
+KDX|Kadabari Hat|
+KDY|Kettandapatti|
+KDYA|Kadarpur|
+KDZ|Kandaghat|
+KE|Khardi|
+KEA|Katra|
+KEB|Karambeli|
+KEC|Kesimpa|
+KED|Kenduapada|
+KEE|Kaseetar|
+KEF|Krishnama Kona|
+KEG|Karengi|
+KEH|Kapseti|
+KEI|Kashi|
+KEJ|Kathleeghat|
+KEK|Karkheli|
+KEM|Kem|
+KEMA|Kukma|
+KEMK|Khem Karan|
+KEMP|Kempalsad|
+KEMR|Kemri|
+KEN|Kotala|
+KENP|Kendrapara|Dhuria market
+KEP|Kelanpur|
+KEPR|Koiripur|
+KEQ|Kachhpura|
+KER|Kirihrapur|
+KES|Kesri|
+KESR|Kesri Singhpur|
+KETI|Keoti|Chhattisgarh 494669
+KEU|Kettur|
+KEV|Kela Devi|
+KEX|Khekra|
+KEY|Kagankarai|
+KEZ|Kelzar|
+KFA|Koparia|
+KFC|Kalpattichatram|
+KFD|Karanjadi|
+KFE|Kurikad|
+KFF|Kolda|
+KFH|Katphal|
+KFI|Kappil|
+KFK|Katka|
+KFN|Kanor|
+KFP|Kukra Khapa|
+KFPR|Kafurpur|
+KFQ|Kumaranallur|
+KFT|Kajri|
+KFU|Kohand|
+KFV|Kundara East|
+KFX|Kochewahi|Badi Kochewahi
+KFY|Karapgaon|
+KGA|Khaga|
+KGB|Kargi Road|
+KGBP|Khongsang|Jiribam - Imphal Rd
+KGBS|Kishengarh Blws|
+KGD|Kalligudi|
+KGE|Katangi|
+KGF|Kathghar|
+KGFE|Kathghar East|
+KGFR|Kathghar Right Bank|
+KGG|Khagaria Junction|
+KGH|Kotegangur|
+KGI|Kengeri|
+KGIH|Kalgurki Halt|
+KGK|Kankurgachhi Road|
+KGKD|Kang Khurd|
+KGL|Kupgal|
+KGLE|Khagraghat Road|
+KGM|Kathgodam|
+KGMR|Kangra Mandir|
+KGN|Kurseong|
+KGND|To Kurseong|
+KGP|Kharagpur Junction|
+KGPW|Kgpw|
+KGQ|Kasaragod|
+KGRA|Kangra|
+KGS|Khongsara|
+KGT|Kauriyalaghat H|
+KGV|Konagayalli|Konagavalli
+KGVE|Konagavalli Halt|
+KGVL|Kadagaravalli|
+KGW|Kariganuru|
+KGWD|Kagwad|
+KGX|Kanginhal|
+KGY|Kulgachia|
+KGZ|Karunguzhi|
+KH|Kahiliya|
+KHA|Khaigaon|
+KHAA|Khariadih|GR5H+9G
+KHAG|Kharghar|
+KHAI|Khirai|
+KHAR|Khar|
+KHAT|Khat|
+KHBJ|Khanna Banjari|
+KHBV|Kharbao|
+KHC|Khorana|
+KHCN|Khinchan|
+KHD|Khodiyar|
+KHDA|Khandiya|
+KHDB|Khodiyar|
+KHDH|Karahdih Halt|
+KHDI|Khanderi|
+KHDP|Khudlapur|
+KHDR|Khandari Halt|Haryana 131301
+KHE|Kankather|
+KHED|Khed|
+KHF|Khantapara|
+KHGP|Khargapur|Phuter Chak-2
+KHGR|Kashinagar Halt|
+KHH|Kichha|
+KHHJ|Khatkar Kalan|
+KHI|Kurhani|
+KHJ|Khajraha|
+KHJA|Khanja Halt|
+KHKN|Khera Kalan|
+KHKT|Khotkhoti|
+KHLL|Ketohalli|
+KHM|Kusmhi|
+KHMA|Khatima|
+KHMP|Khempur|
+KHN|Khanyan|
+KHND|Khunvad|
+KHNM|Kunda Harnamgnj|
+KHNP|Khanapur Deccan|
+KHNR|Kachnara|
+KHOH|Khoh|
+KHPI|Khopoli|
+KHPL|Khalipali|
+KHPR|Khalipur|
+KHQ|Kharik|
+KHR|Khairee Halt|
+KHRA|Khachera|
+KHRI|Kharkhari|
+KHRJ|Kumbhraj|
+KHRK|Kharak|
+KHRS|Khareshwar Road|
+KHRT|Karhauta|
+KHRY|Khairahi|
+KHS|Kharsia|
+KHSN|Khera Sandhan Halt|
+KHST|Kashanatti|
+KHT|Sri Kalahasti|
+KHTG|Khatgaon|
+KHTI|Kushtagi|Kushtagi State: Karnataka
+KHTN|Khutauna|
+KHTU|Khatu|
+KHTX|Khed Temple Halt|
+KHU|Khurhand|
+KHUH|Kharuara Halt|Kharuara
+KHUT|Khuntla|Khuntla Salauna
+KHV|Karainthi|
+KHW|Kheroda|
+KHXB|Khakhrechi|
+KI|Kondapalli|
+KIA|Khari Amrapur|
+KIAD|Kempagowda International Airport|Boovanahalli
+KIAT|Kyatsandra|
+KIB|Kizha Ambur|
+KIC|Kallidai Kurichi|Kallidaikurichi
+KID|Khairar Junction|
+KIE|Khiria Khurd|
+KIF|Kuri|
+KIG|Kolaghat Goods|
+KIGL|Kunigal|S V Nilaya
+KII|Kille|
+KIJ|Kuldiha|
+KIK|Karaikal|
+KIKA|Kurwai Kethora|
+KILE|Kandivli|
+KILN|Khatlabana|
+KIM|Kim|
+KIN|Kapasan|
+KIP|Khalilpur|
+KIPK|Komuravelli Punyakshetram|
+KIQ|Khai Phemeki|
+KIR|Katihar Junction|
+KIRB|Katihar Cbo Mb|
+KIRP|Khidirpur|
+KIRW|Katihar South Cabin|
+KIS|Kapilas Road|
+KISN|Kalisen|
+KIT|Khallikot|
+KITA|Kita|
+KITN|Khiri Town|
+KIU|Kinana|
+KIUL|Kiul Junction|
+KIV|Kaialsa|
+KIW|Kanwalpura|
+KIY|Kalayat|
+KIZ|Kansudhi|
+KJ|Kajgaon|
+KJA|Khajurhat|
+KJC|Kasganj City|
+KJDI|Khajjidoni|
+KJG|Karajgi|
+KJGY|Khanalampura Gy|
+KJH|Kajra|
+KJI|Khajauli|
+KJJ|Kodavaluru|
+KJKD|Kanjikode|
+KJL|Khumgaon Burti|
+KJLU|Khari Jhalu|
+KJM|Krishnarajapurm|Bangalore
+KJME|Kajoragram|
+KJMG|Kanjur Marg|
+KJN|Kannauj|
+KJNC|Kannauj City|
+KJNY|Khajpur Naya|
+KJP|Khojeepura|
+KJPD|Kurinjipadi|
+KJR|Kalajhari|
+KJRA|Karjara|Karjjana
+KJRD|Kanjur Marg|Kanjurmarg
+KJRG|Keshra-Katjuridanga|
+KJRM|Karjanagram|Karjjana
+KJS|Krishnarajasagar|
+KJT|Karjat|Mumbai
+KJTW|Kajgaon Terhwan|
+KJU|Kuntighat|
+KJV|Khijadiya Junction|
+KJW|Khajwana|
+KJY|Khurja City|
+KJZ|Karonji|
+KK|Khadki|Pune
+KKA|Kanki|
+KKAE|Kaikala|
+KKAH|Kankaha|
+KKAS|Katkamasandi|Jharkhand 825201
+KKB|Karak Bel|
+KKBA|Kakbara|Kakwara
+KKD|Kalkund|
+KKDE|Kurukshetra Junction|
+KKDI|Karaikkudi Junction|
+KKEC|Kankaria South Cabin|
+KKET|Kamrup Khetri|
+KKF|Kankaria|
+KKG|Kekatumar|
+KKGA|Kunkalagunta|
+KKGM|Kakirigumma|
+KKGT|Kalkalighat|
+KKHT|Kakarghatti|
+KKI|Karkeli|
+KKJ|Kakori|
+KKK|Khakharia|
+KKL|Kala Bakra|
+KKLR|Kaikolur|
+KKLU|Kaklur|
+KKLX|Kaikolur|
+KKM|Kamalapuram|
+KKMB|Kastla Kasambad|
+KKMI|Kerakalamatti|Karnataka 587206
+KKMP|Katlakunta Medipally|KMC Inspection Path
+KKN|Khirkiya|
+KKNA|Khunkhuna|
+KKNH|Karukhirharnagar Halt|
+KKP|Kot Kapura|
+KKPM|Kallakkudi Plgh|
+KKPR|Kokpara|
+KKQ|Kalaikunda|
+KKR|Khakhrala Road|
+KKRD|Kikakui Road|
+KKRH|Karahia|
+KKRL|Kakrala|
+KKRM|Kaikoram|
+KKRV|Kukarvada|Kukarwada
+KKS|Kurasti Kalan|
+KKT|Kath Kuiyan|
+KKTA|Kollikhutaha|
+KKTI|Kuttakudi|
+KKU|Kanakpura|
+KKV|Kunkavav Junction|
+KKW|Kankavali|
+KKY|Kila Kadaiyam|
+KKZ|Kottarakara|
+KL|Kheril|
+KLA|Kulwa|
+KLAD|Kalanad Halt|
+KLAR|Kulpahar|
+KLAT|Khelpatta|
+KLB|Kiraoli|
+KLBA|Kalambha|
+KLBG|Kalaburagi|
+KLBN|Kalambani Budrk|Kalambani Bk.
+KLBR|Kolida Beri|
+KLCR|Katlicherra|
+KLD|Khalilabad|
+KLDA|Kalediya|
+KLDI|Kaldhari|
+KLE|Kaithal|
+KLG|Kalunga|
+KLGA|Kalagar|Bauda State: Odisha
+KLGD|Kollengode|
+KLGM|Kallagam|
+KLGN|Kalangani|
+KLGR|Khalaigram|
+KLH|Khemli|
+KLHD|Kolhadi|
+KLI|Kauli|
+KLJ|Kamalganj|
+KLJI|Kalijai|
+KLJM|Kalhemajra H|
+KLK|Kalka|
+KLKA|Koilakuntla|
+KLKD|Kalladaka|
+KLKH|Kalladaka|
+KLKR|Kalikapur|
+KLL|Kalol|
+KLLF|Kalol Jn|
+KLM|Kadlimatti|
+KLMC|Kalamboli|
+KLMD|Kollumangudi|
+KLMG|Kalamboli|
+KLMJ|Kalhe Majra|
+KLMR|Kalamassery|
+KLNA|Kolhana Halt|
+KLNB|Khulna|
+KLNC|Kullanchavadi|
+KLNK|Kalanaur Kalan|
+KLNP|Kalinarynpur Junction|
+KLNT|Kalinagar|
+KLOD|Kelod|
+KLP|Kotalpukur|
+KLPG|Kamalpurgram|
+KLPM|Kailasapuram|
+KLQ|Kilikollur|
+KLRD|Kali Road|
+KLRE|Khalari|
+KLRS|Kolaras|
+KLS|Kolatur|
+KLSP|Kushal Pura|
+KLSR|Kalasar|
+KLSX|Kaulseri|
+KLT|Kulitalai|
+KLTR|Kalmitar|
+KLU|Kalluru|
+KLV|Kelva Road|
+KLVA|Kalva|
+KLVD|Kalavad|
+KLVR|Kolvihir|
+KLW|Kalwan Halt|
+KLWD|Kalitalavdi|Kalitala
+KLWL|Kilanwali Punjab|
+KLWN|Kalwan|
+KLX|Kolakalur|
+KLY|Kelavi|Karjat Khopoli Marg
+KLYG|Kalyani Ghoshpara|
+KLYH|Kallur Yedahli|
+KLYM|Kalyani Simanta|
+KLYN|Khileriyan|
+KLYS|Kalyani Silpanchal|
+KLYT|Kolayat|
+KLZ|Keolari|
+KM|Kaleem|
+KM26|Kazipara|
+KMA|Kaima|
+KMAE|Khamargachhi|
+KMAH|Kamathe|
+KMB|Kalv Amba|
+KMBH|Kamalabad Barhauli H|
+KMBK|Kadambankulam|
+KMBL|Khambhaliya|
+KMC|Kamareddi|
+KMD|Kodumudi|
+KMDC|Kurmadanga H|SH6
+KMDR|Karimuddin Pur|
+KMEZ|Kumhar Marenga|
+KMGE|Kumahu|
+KMGH|Kamarganj|
+KMH|Kalamalia|
+KMHN|Kamthan|Kamathan
+KMHT|Karmahat|
+KMI|Kumhari|
+KMJ|Kaimganj|
+KMK|Komakhan|
+KMKD|Khamkhed|
+KML|Kamtaul|
+KMLI|Kamli|
+KMLK|Kamalapur|Karnataka 585313
+KMLM|Kelamangalam|
+KMLP|Kommarapudi|
+KMLR|Kamalur|
+KMM|Kannamangalam|
+KMMD|Kirmiti Mendha|
+KMME|Kumardubi|
+KMN|Khamgaon|
+KMNA|Khemana|
+KMNC|Kuchaman City|
+KMND|Kumendi|
+KMNG|Kamranga|Kamranga Bond Pt I
+KMNN|Khamanon|
+KMNP|Kishan Manpura|
+KMNR|Kamalnagar|
+KMP|Kamlapur|
+KMPD|Karampada|
+KMPH|Kamalpur Halt|
+KMPR|Komarpur|
+KMPS|Kumara Patnam Bg Sdg|
+KMPT|Komatipalli|
+KMPU|Kamalapur|Kamalpur
+KMQ|Kumbla|
+KMQA|Komali|
+KMRA|Kamnara|Katwa Bardhaman Rd
+KMRD|Kalamb Road|
+KMRJ|Kumarganj|
+KMRL|Kumrul|Bankura
+KMS|Karamnasa|
+KMSD|Kumar Sadra|
+KMSI|Kumsi|
+KMST|Kamshet|
+KMT|Khammam|
+KMTI|Kumarhatti|
+KMU|Kumbakonam|
+KMV|Karmad|
+KMX|Komatipalli|
+KMY|Kamudakkudi|
+KMZ|Katni Murwara|
+KMZA|Kankra Mirzanagar|
+KN|Kadalundi|
+KNAD|Kanad|
+KNAG|Kanaji H|
+KNAJ|Kanaji H|
+KNAR|Khanpur Ahir|
+KNB|Kaniyambadi|
+KNBR|Kanaibazar|
+KNC|Kanchanpur Road|
+KNCJ|Krishnanagar City Jn Ng|
+KND|Kandra|
+KNDG|Kanhad Gaon|Kanhegaon
+KNDI|Kandrori|
+KNDL|Khandel|
+KNDP|Khandip|
+KNDR|Kandari|
+KNDS|Khandeshwar|
+KNDV|Kndv|
+KNDX|Khandi|
+KNE|Kishanganj|
+KNF|Khanudih|
+KNG|Kathunangal|
+KNGM|Kangam|
+KNGN|Kanhegaon|
+KNGR|Kashinagar Halt|
+KNGT|Karnawas|
+KNH|Konch|
+KNHE|Kanhe|
+KNHL|Kantenahalli H|
+KNHN|Kanthan Junction|
+KNHP|Kanhaipur|
+KNHR|Kirnahar|
+KNJ|Krishngr Cty Junction|
+KNJI|Karanjali|
+KNJJ|Kannjara Halt|
+KNKD|Kankanadi|
+KNKP|Kondikoppa|
+KNKT|Kanakot|
+KNL|Kalanwali|
+KNLE|Kanale|
+KNLI|Kangali H|Kangal
+KNLP|Kanamalo Palle|
+KNLS|Kanalas Junction|
+KNM|Kanimahuli|
+KNN|Khanna|
+KNNA|Khinaniyan|
+KNNK|Kanina Khas|
+KNNT|Kunnathur|
+KNO|Kundgol|
+KNP|Khanapur|
+KNPL|Kandanur Puduvayal|
+KNPR|Kendrapara Road|
+KNPS|Kendposi|
+KNR|Kankinara|
+KNRA|Kachnaria|
+KNRG|Kanhargaon Naka|
+KNRI|Kunuri|
+KNRN|Kanaroan|
+KNRT|Kuneru|
+KNRU|Konanur|
+KNS|Kanchausi|
+KNSN|Karna Subarna|
+KNSR|Kanasar|
+KNT|Kanth|
+KNTR|Kanthariya|
+KNU|Kanjh|
+KNVH|Kanivehalli|
+KNVT|Kinwat|
+KNW|Khandwa|
+KNWF|Khandwa Jn|
+KNWS|Karanwas|
+KNYR|Kaniuru Halt|
+KNZ|Kalanour|
+KO|Kosgi|
+KOA|Karonda|
+KOAA|Kolkata|
+KOD|Kharaghoda|
+KODI|Kodi|
+KODN|Kodumunda|
+KODR|Kodinar|
+KOF|Marwar Kori|
+KOG|Konnagar|
+KOHL|Kohli|
+KOHR|Kohir Deccan|
+KOI|Khodri|
+KOJ|Kokrajhar|
+KOK|Korukkupet Junction|
+KOKA|Koka|
+KOL|Kolad|
+KOLA|Kotla|
+KOLE|Kole|
+KOLI|Kesholi|
+KOLR|Kolnur|
+KOM|Kodikkalpalaiym|
+KON|Kudalnagar|
+KONA|Kona Ph|Khaliya
+KONN|Konnur|
+KONY|Kisoni|
+KOO|Khusropur|
+KOP|C Shahumharaj T|Kolhapur
+KOPR|Kopar Road|
+KOQ|Kuthur|
+KORA|Kora|
+KORI|Khori|
+KORL|Kural|
+KORU|Kopar Upper Level|
+KOTA|Kota Junction|
+KOTI|Koti|
+KOTR|Korattur|
+KOTT|Kottur|
+KOU|Koduru|
+KOV|Kirloskarvadi|
+KOVH|Kovvada|Duvvada
+KOWN|Khowang|
+KOX|Kachujor|
+KOY|Kherol|
+KOZ|Kosma|
+KP|Kamptee|
+KPA|Kanchrapara|
+KPAW|Kanchrapara Workshop Gate|
+KPB|Kharpokhra|
+KPCM|Kuwarchintawa|
+KPD|Katpadi Junction|Katpadi
+KPDH|Kapurdha Halt|
+KPE|Kauwapur|
+KPG|Kopargaon|
+KPGM|Karpurigram|
+KPH|Kamepalli|
+KPHH|Kushalpur Harnaha Halt|Bihar 802133
+KPHI|Kothapalli|Telangana 505451
+KPHN|Kopar Khairna|Kopar Khairane
+KPI|Kalpi|
+KPJ|Kopaganj H|Kopaganj
+KPJG|Kerejanga|
+KPJR|Kerejanga|
+KPK|Kalipahari|
+KPKD|Khapri Kheda|
+KPKI|Qasimpur Kheri|
+KPL|Kantakapalle|
+KPLD|Kapali Road|
+KPLE|Kopai|
+KPLH|Kotipalli|
+KPLL|Kotta Pndlpalli|
+KPLR|Koparlahar|
+KPM|Kumarapuram|
+KPN|Kuppam|
+KPNA|Kapan|
+KPO|Karanpura|
+KPP|Kalapipal|
+KPPR|Karuppur|
+KPQ|Kannapuram|
+KPR|Kopar|
+KPRD|Kalyanpur Road|
+KPRR|Kotapar Road|
+KPS|Kopa Samhota|
+KPT|Kambarasampetai|
+KPTM|Kanjiramittam|
+KPTN|Keshorai Patan|
+KPTO|Karanpur Ato|
+KPU|Krishnapuram|
+KPV|Kashipur|
+KPXR|Kaipada Road|
+KPY|Karunagapalli|
+KPZ|Kapren|
+KQA|Kondagunta|
+KQD|Khairatabad Dcn|
+KQE|Kala Akhar|
+KQF|Khadeen|
+KQI|Kalachand|
+KQK|Kotikulam|
+KQL|Kandhla|
+KQLS|Kamarkundu|
+KQN|Kodaikanal Road|
+KQQ|Kaukuntla|
+KQR|Koderma|
+KQRT|Koderma Town|Kundai
+KQS|Kailaras|
+KQT|Kurgunta|
+KQU|Kamarkundu|
+KQV|Kinkhed|
+KQW|Kheduli|
+KQX|Kachujor|
+KQY|Kharikatia|
+KQZ|Kolar|
+KR|Kevdi|
+KR11|Mayem|
+KRA|Karepalli|
+KRAI|Kahet|
+KRAN|Koratti Angadi|
+KRAP|Karapa|
+KRAR|Khariar Road|
+KRBA|Korba|
+KRBO|Karaboh|
+KRBP|Khudiram B Pusa|
+KRBR|Kerkhabari|
+KRBU|Kiruburu|
+KRC|Kiroda|
+KRCA|Karachiya Yard|
+KRCD|Kharwa Chanda|
+KRD|Karad|
+KRDH|Koradih|
+KRDL|Kirandul|
+KRDN|Karaundhana|
+KRE|Kartarpur|
+KRG|Koregaon|
+KRGA|Kuranga|
+KRGN|Kargaon Halt|
+KRH|Khairthal|
+KRHA|Korahia|
+KRHI|Karhi|
+KRHR|Kharar|
+KRHT|Kharahat|
+KRI|Khapti|
+KRIH|Korai Halt|
+KRJ|Khurja Junction|
+KRJA|Karanja|
+KRJD|Karjoda|
+KRJL|Karanjhol|
+KRJN|Karanjali Halt|
+KRJR|Karjara|
+KRJT|Karanja Town|
+KRKD|Karakkad|
+KRKH|Kharkara Halt|Kharkara
+KRKM|Khara-Kameri|
+KRKN|Karkend|
+KRKP|Kyarkop|
+KRKR|Kurkura|
+KRL|Kotarlia|
+KRLA|Koratla|Korutla
+KRLI|Kurali|
+KRLR|Karaila Road Junction|
+KRLS|Kurlas|
+KRMA|Karamtola|
+KRMB|Karmabad Bh|
+KRMD|Kuarmunda|
+KRMG|Kumaramangalam|
+KRMI|Karmali|Goa
+KRMP|Kumaripur Halt|
+KRMR|Karimnagar|
+KRMY|Karmaliyapura|
+KRND|Khorason Road|
+KRNG|Kargaon Halt|
+KRNH|Karanahalli|
+KRNI|Krishnai|
+KRNN|Karnauti Halt|
+KRNR|Krishanrajanaga|
+KRNT|Kurnool Town|
+KRNU|Konanur|
+KRO|Kurawan|
+KRON|Karona Halt|
+KRP|Krishnapur|
+KRPA|Khariapipra Halt|
+KRPB|Koraput B Cabin B.H.|
+KRPC|Kharia-Pipra Halt|
+KRPN|Kharepatan Road|Chinchavali Sherpe Rd
+KRPP|Kuruppanthara|
+KRPR|Karepur|
+KRPT|Koraput Dist Oa|
+KRPU|Koraput|
+KRQ|Karari|
+KRR|Karur|
+KRRA|Karra|
+KRRH|Kharuara Halt|
+KRRI|Khairranji|
+KRS|Karisath|
+KRSA|Kharsaliya|
+KRSH|Karamgarh Sdrgh|
+KRSL|Krishnashilla|
+KRSW|Kohar Singhwala|
+KRT|Khurahat|
+KRTA|Karkata|
+KRTH|Kiratgarh|
+KRTL|Kartauli|
+KRTN|Kirti Nagar|
+KRTP|Kartoli Punjab|Daulatpur Road
+KRTR|Karota Patri Halt|
+KRU|Kheralu|SH 132
+KRUR|Keeranur|
+KRV|Karavadi|
+KRVL|Koravangala|
+KRW|Kharwa|
+KRX|Kurud|
+KRXA|Khara Mp|Khara
+KRXM|Krishnamohan Halt|
+KRY|Kadiri|
+KRYA|Kurraiya|
+KRYP|Kadiridevarapalli|Kadiri Devara Palli
+KRYR|Karamsad|
+KRZ|Kharawar|
+KS|Kheta Sarai|
+KSA|Khasa|
+KSAE|Kosai|
+KSAI|Kosadi Halt|
+KSAR|Kudala Sangam|
+KSB|Kosamba Junction|Kosamba
+KSBG|Khusta Buzurg|
+KSBI|Kashiabari|
+KSBP|Keshabpur|
+KSC|Kashi Chak|
+KSD|Keshod|
+KSDE|Karsindhu|
+KSE|Kosad|
+KSF|Khalispur|
+KSG|Kishangarh|
+KSGL|Karasangal|
+KSH|Kali Sindh|
+KSHR|Keshwari|
+KSHT|Khetia|Tentral
+KSI|Kosli|
+KSIH|Khodseoni|
+KSJ|Kasganj|
+KSJF|Kasganj Mg|
+KSK|Kasimkota|
+KSLA|Kesla|
+KSLP|Kushalpura|
+KSM|Kamasamudram|
+KSMB|Kastla Kasmabad|
+KSN|Krishna|
+KSNA|Kansarnawada|Kachanpur
+KSNG|Kesinga|
+KSNR|Khushal Nagar|
+KSO|Khemasuli|
+KSP|Kishanpur|
+KSPR|Kashipura Sarar|
+KSQ|Kanspur Gugauli|
+KSR|Kasturi|
+KSRA|Kasara|
+KSRK|Kasrak Halt|
+KSTA|Kastha|
+KSTE|Kistamsettipali|
+KSTH|Kashti|
+KSTS|Krishnamsettipalli Halt|
+KSU|Kushtaur|
+KSUA|Kashipura|
+KSV|Kosi Kalan|
+KSVM|Kesavaram|
+KSVR|Keshav Nagar Halt|Anupgarh - Sri Vijaynagar Rd
+KSW|Kheri Salwa|
+KSWD|Kasar Wadi|
+KSWR|Kalmeshwar|
+KSX|Kotshila|
+KSY|Kusiargaon|
+KT|Kumta|
+KTA|Kushtala|
+KTAI|Kattalli|
+KTAL|Kathalal|
+KTAR|Katra J&K|
+KTBR|Kasturba Nagar|
+KTCE|Katoghan|
+KTCH|Kaithalkuchi|
+KTCR|Kothacheruvu|
+KTD|Kantadih|
+KTDA|Katuda|
+KTDD|Kataiya Dandi|
+KTE|Katni|
+KTES|Katni South|
+KTF|Kot Fatteh|
+KTGA|Keutguda|
+KTGD|Koth Gangad|
+KTGG|Karatagi|
+KTGM|Kayasthagram|
+KTGN|Kotla Gujran|
+KTGO|Kotgaon|
+KTH|Katrasgarh|
+KTHA|Khutaha|
+KTHD|Kothari Road|
+KTHE|Katahri|
+KTHL|Kathola|
+KTHN|Kathoun|Sahra
+KTHU|Kathua|
+KTHY|Kalthuruthy H|Kazhuthurutty
+KTI|Kanti|
+KTJ|Khaltipur|
+KTJI|Katha Jori|
+KTK|Kyataneakeri Rd|
+KTKA|Kotakadra|
+KTKD|Katangi Khurd|
+KTKH|Kotlakheri|
+KTKL|Kotli Kalan|
+KTKR|Kumtha Khurd|
+KTKS|Kantakosh Halt|
+KTKU|Kottekad|
+KTLA|Katkola Jn|
+KTLN|Khat Labana|
+KTLO|Kotlo|
+KTLP|Katalpur Halt|
+KTLR|Kanthaliya Road|
+KTM|Kutralam|
+KTMA|Kotma|
+KTNA|Kathana|
+KTNI|Kapustalni|
+KTNR|Kirtyanand Nagar|
+KTO|Katora|
+KTOA|Kotana|
+KTOR|Katoriya|Katoria
+KTP|Katepurna|
+KTPK|Kotha Pakki|
+KTPM|Kotturpuram|
+KTPR|Kathal Pukhuri|
+KTQ|Kudra|
+KTR|Kothar|
+KTRA|Kotra|
+KTRD|Katosan Road|
+KTRH|Katareah|
+KTRI|Katari|Bihar 823311
+KTRK|Kuturukhamar Ph|Badli
+KTRR|Kathara Road|
+KTSC|Kota Jn South C|
+KTSH|Kotmi Sonan Hlt|
+KTT|Khutbav|
+KTTL|Katrathal|
+KTTR|Kattur|
+KTTY|Ktty|
+KTU|Kuttippuram|
+KTV|Kottavalasa|
+KTW|Kotdwara|
+KTWD|Karatwadi Halt|
+KTWS|Kathuwas|
+KTX|Katakhal Junction|
+KTY|Kotturu|
+KTYM|Kottayam|
+KTYR|Kottaiyur|
+KTZ|Khutwansa|
+KU|Kulikarai|
+KUA|Kulharia|
+KUB|Kasba|
+KUC|Karukkutty|
+KUCE|Kuchai|
+KUCH|Kuchavaram Halt|
+KUD|Kudachi|
+KUDA|Kundapura|
+KUDL|Kudal|
+KUDN|Kudni|
+KUE|Kursela|
+KUF|Kaurha|
+KUG|Kusugali|
+KUGT|Kumarghat|
+KUH|Khachrod|
+KUHI|Kuhi|
+KUHM|Kusmahi|
+KUI|Kulali|
+KUJU|Kuju|National Highway 33
+KUK|Korukonda|
+KUKA|Khui Khera|
+KUKT|Kurukotta|
+KUL|Kallayi|
+KULE|Kolamb|
+KULH|Kulha-Halt|
+KUM|Kuram|
+KUMB|Kumarbagh|
+KUMM|Kumbalam|
+KUMT|Kurmahat|
+KUMU|Kasumuru|
+KUN|Karnal|
+KUND|Kund|
+KUP|Kup|
+KUPR|Khurdpur|
+KUQ|Kuretha|
+KUR|Khurda Road Junction|
+KURJ|Khajuraho|
+KURN|Khukrana|
+KURO|Korari|
+KURT|Khurda Town|Khurdha
+KURV|Kurva|Kurwa
+KUSI|Kunsi|
+KUT|Kanauta|
+KUTI|Khumtai|
+KUTL|Kuwanthal|
+KUTR|Kulathur|
+KUU|Kuhuri|
+KUV|Kundara|
+KUW|Kanwar|
+KUX|Khirsadoh Junction|
+KUY|Tiruppur Kulipalayam|
+KV|Kayavarohan|
+KVA|Kavas|
+KVBD|Kavi Bunder Kavi|
+KVC|Kaparpura|
+KVD|Khurmabad Road|
+KVDU|Kadavakuduru|
+KVE|Kavalande|
+KVG|Kuneanganj|
+KVGM|Kolvagram|
+KVH|Khambhel|
+KVJ|Keshavganj|
+KVK|Kavathe Mahankl|
+KVL|Kizhelur|
+KVLK|Kavalkinaru Halt|Tamil Nadu 627105
+KVLR|Karuvalli|
+KVLS|Karakavalasa|
+KVM|Kavutaram|
+KVN|Kavanur|
+KVNJ|Kapadvanj|
+KVO|Kevdi Road|
+KVP|Kavaraippettai|
+KVPT|Karai Kovil Pathu|Thirunallar Bypass Rd
+KVQ|Kosiara|
+KVR|Kovvur|
+KVS|Kalsur|
+KVTA|Karuvatta Halt|
+KVU|Kadakavur|
+KVV|Kuravappulam|Kuravappulam Downtown
+KVX|Kusumbhi|
+KVZ|Kavali|
+KW|Khervadi|
+KWAE|Katwa|
+KWAR|Kawar|Dhobia Singha
+KWB|Kaniwara|
+KWBR|Katwar Bazaar|
+KWC|Kundwa Chainpur|
+KWD|Karwandia|
+KWDP|Kakdwip|
+KWE|Khurial|
+KWF|Katwa|
+KWGN|Kawargaon|
+KWH|Kachhwa Road|
+KWI|Kivarli|
+KWJ|Khojewala|
+KWKC|Kherwa Kocha|
+KWM|Kampur|
+KWMD|Kumbhawas Munda|
+KWN|Kachewani|
+KWNI|Kawnpui|Mizoram 796070
+KWO|Karauta|
+KWP|Khatipura|
+KWPR|Khawaspur|Khabaspur
+KWR|Koelwar|
+KWT|Khanalampura West|
+KWV|Kurduvadi|
+KWW|Kuswa|
+KXA|Kuanriya|
+KXB|Kanjai|
+KXC|Kagmala|
+KXD|Kokalda|
+KXE|Kalian Chak|
+KXF|Kampil Road|
+KXG|Kharia Khangarh|
+KXH|Kapurthala|
+KXI|Kurumurthi|
+KXJ|Karimganj Junction|
+KXK|Kharkhauda|
+KXL|Kamarbandha Ali|
+KXM|Kitham|
+KXN|Kanshbahal|
+KXO|Kudikadu|
+KXP|Kaniyapuram|
+KXR|Kuria|
+KXRA|Kuria|Kunria
+KXT|Ketti|
+KXV|Karman|
+KXX|Kata Road|
+KXY|Kariyappattinam|Marudur Vadakku
+KXZ|Kesariya Road|
+KY|Kareli|
+KYA|Kauriya|
+KYB|Kalyar|Bardhaman
+KYBR|Khairatiya Bandh Road|
+KYE|Khurai|
+KYF|Kajrat Nawadih|
+KYG|Kidiyanaga|
+KYH|Khairah|
+KYI|Kalyani|
+KYJ|Kayankulam Junction|
+KYM|Kadiyan|
+KYN|Kalyan Junction|Mumbai
+KYND|Kalyanadurga|Kalyandurg
+KYNT|Kalyankot|
+KYO|Khandikar|
+KYOP|Kottapalli|
+KYP|Kalyanpur|
+KYQ|Kamakhya|
+KYR|Karuppatti|
+KYS|Kusumkasa|
+KYSB|Kaiyal Sedhavi|
+KYSD|Kaiyal Sedhavi|
+KYT|Kailahat|
+KYV|Koyilvenni|
+KYW|Karchhue|
+KYX|Karhiya Bhadeli|
+KYY|Kariha|
+KYZ|Kizha Puliyur|Tenkasi
+KZA|Khada|
+KZB|Kurumbur|
+KZC|Kulukkalur|
+KZE|Kanhangad|
+KZH|Kila Zafargarh|
+KZI|Khandrawali|
+KZJ|Kazipet Junction|
+KZJE|Kazipet E Cabin|
+KZJF|Kazipet F Cabin|
+KZJT|Kazipet Town|
+KZK|Kazhakuttam|
+KZPB|Kazipara Barasat|
+KZPE|Kazipara Halt|
+KZPR|Kazipara|
+KZQ|Khimel|
+KZS|Kuakhera Halt|
+KZT|Kulitthurai|
+KZTW|Kulitturai West|
+KZU|Kunki|
+KZW|Katar Singhwala|
+KZX|Khudda Korala|
+KZY|Kayalpattinam|
+LAA|Lakhpat|
+LAC|Lachhipura|
+LAD|Lohardaga|
+LAE|Lakholi|
+LAK|Lakho|
+LAL|Lushala|
+LAMP|LAMP|
+LAN|Lotana|
+LAP|Lohapur|
+LAR|Lalitpur|
+LAT|Lathi|
+LATH|Lath Halt|Haryana 131301
+LATI|Latia Cabin|
+LAU|Ladnun|
+LAUL|Laul|
+LAV|Labha|
+LB|Lain Bazar|
+LBA|Lambhua|
+LBD|Limbodra|Limbodara Rd
+LBG|Limbgaon|
+LBH|Dilkusha Cabin|
+LBHK|LBHK|
+LBI|Lilabari|Janu Basti
+LBN|Laban|
+LBO|Latabor|
+LBP|Labpur|
+LBT|Lalgarh Bihar Halt|
+LBTL|Lebutala|
+LBW|Laiburwa Halt|
+LBZ|Lalbag Bh|
+LC|Lucknow City|Lucknow
+LCAB|Lcab|
+LCAE|Lalbagh Crt Road|
+LCH|Linch|
+LCK|Lakhochak Halt|
+LCME|Lachhmanpur Road|
+LCN|Lalpur Chandra|
+LCNC|Lucknow City|
+LCR|Lokur|
+LCT|Langcholiet|
+LD|Londa Junction|Londa
+LDA|Lidhora Khurd|
+LDCY|Lodi Colony|
+LDD|Ladkhed|
+LDE|Lokdhikhera|
+LDH|Ludhiana Junction|Ludhiana
+LDK|Ladhuka|
+LDM|Ledarmer|
+LDP|Lodipur Bishnpr|
+LDR|Landaura|
+LDU|Lunidhar|
+LDVD|Laddivadi|
+LDW|Ladhowal|
+LDX|Ladda|
+LDY|Lakkiti|
+LEB|Lemuabad|
+LEDO|Ledo|
+LEK|Lakhakhera|
+LER|Lehra|
+LFG|Lower Haflong|
+LGB|Lohgarh Abub|
+LGCE|Lagargawan|
+LGD|Lallaguda|
+LGDH|Lalaguda Gate|
+LGH|Lalgarh Junction|
+LGI|Lamgai|
+LGL|Lalgola|
+LGN|Lehgaon|
+LGO|Lalgopalganj|
+LGRE|Lingiri|
+LGT|Langting|
+LGTR|Lingaraj Temple Road|
+LH|Lahing|
+LHA|Lehra Gaga|
+LHB|Lahabon|
+LHBK|Lothal Bhurki|
+LHD|Lohogad|
+LHK|Laihra Khana|
+LHL|Lahoal|
+LHLL|Lahli|
+LHM|Lehra Muhabbat|
+LHN|Lachyan|
+LHNA|Lohanda|
+LHNR|Lakshmanpur Halt|
+LHR|Lahore (Pakistan)|
+LHU|Loharu|
+LHW|Loharwara|
+LIG|Linga|
+LIJ|Lakshmiganj|
+LIL|Lilma|
+LIM|Sonalium|
+LIN|Lingamguntla|
+LING|Ling|
+LIR|Lachmipur|
+LJKR|Lajkura Cabin|
+LJN|Lucknow Ne|Lucknow
+LJO|Longrangajao|
+LJR|Lanjigarh Road|
+LKA|Lanka|
+LKB|Lakshmipur Bhorang|
+LKBL|Lakhabawal|
+LKBR|Lakshmi Bai Nagar|
+LKD|Lakodara|
+LKDM|Lakhudaram|Ainapur - Lakudaram Rd
+LKDU|Lankalakoderu|
+LKE|Lakheri|
+LKF|Lake Gardens|
+LKG|Lamsakhang|
+LKJN|Link Jn. Cabin|
+LKK|Lyalpur Khalsa College Jalandhar H|
+LKKA|Lal Kuan|
+LKKD|Lakkadkot|
+LKMN|Lokmanya Nagar|
+LKMR|Laxmipur Road|
+LKN|Lakhminia|
+LKNA|Lakhna|
+LKNR|Lakhpat Nagar|
+LKO|Lucknow Nr|Lucknow
+LKOY|Lkoy|
+LKPE|Lekhapani|
+LKPL|Lakdikapul|
+LKPR|Lakshmikantpur|
+LKQ|Laukaha Bazar|
+LKR|Luckeesarai Junction|
+LKS|Lunkaransar|
+LKSH|Lakshminarayanapuram|
+LKT|Hulkoti|
+LKU|Lal Kuan|
+LKW|Lakhewali|
+LKX|Lakshmipur|
+LKY|Lakhmapur|
+LKZ|Lakadiya|
+LLBR|Lalabazar|
+LLD|Lalawadi|
+LLGM|Leliguma|
+LLH|Liluah|
+LLHW|Llhw|
+LLI|Lalgudi|
+LLJ|Lalganj|
+LLJP|Lalganj Pakri|Pakri Kanth
+LLKN|Lal Kalan|
+LLO|Ledo|
+LLP|Lalitgram|
+LLPR|Lalit Lakshmipr|
+LLR|Lalpur|
+LLST|Lalsot|
+LLTG|Lalitagiri|Barada-Boujanga Rd
+LLU|Lalru|
+LM|Limbdi|
+LMA|Lambiya|
+LMB|Limbara|
+LMC|Lakhamanchi|
+LMD|Linganenidoddi|
+LMG|Lumding Junction|
+LMGF|Lumding Jn|
+LMGS|Lumding South|
+LMK|Limkheda|
+LMM|Lailakh Mamlkha|
+LMN|Lachhmanpur|
+LMNR|Lakshmibai Ngr|
+LMO|Liliya Mota|
+LMP|Lakhimpur|
+LMT|Almatti|
+LMTD|Latemda|
+LMU|Limarua|
+LMY|Laimekuri|Luhitpuria
+LNA|Lamana|
+LNBI|Linganabandi|Hirearalihalli
+LNH|Lachhmangarh Sk|
+LNJ|Langhnaj|Langnaj
+LNK|Lohian Khas Junction|
+LNKC|Link C-Cabin|
+LNL|Lonavala|
+LNMA|Lnma|
+LNN|Lonand|
+LNO|Lohna Road|
+LNP|Langarpeth|
+LNQ|Lakhnauria|
+LNR|Luni Richha|
+LNS|Lunsu Halt|
+LNT|Lingti|
+LNV|Lunavada|
+LNW|Lakhanwara|Lakhabawal
+LNWT|Lucknow West (Alh)|
+LO|Loliya|
+LOA|Lorha|
+LOD|Lekoda|
+LOG|Lohgara|
+LOGH|Lottegollahalli|
+LOHA|Loha|
+LOK|Loknath|
+LOL|Loliem|
+LOM|Lodhma|
+LONI|Loni|
+LOT|Lohra|
+LOV|Lovedale|
+LP|Lalapet|
+LPA|Latipura|
+LPB|Lodipur Bishanp|
+LPG|Lapanga|
+LPH|Lotapahar|
+LPI|Lingampalli|
+LPJ|Lalpur Jam|
+LPJL|Lingampet Jagityal|Jagityal Lingampet
+LPK|Lepetkata|Thangal Gaon
+LPN|Laopani|
+LPNR|Lajpat Nagar|
+LPR|Lilapur Road|
+LPTA|Longpatia|
+LPU|Lakhpuri|
+LPW|Loharpurwa|
+LR|Ladpura|
+LRA|Lodra|
+LRB|Larabad|
+LRD|Lar Road|Lar
+LRI|Lihuri Halt|
+LRJ|Laksar Junction|
+LRJC|Laksar North Cabin|
+LRNC|Laksar North Cabin|
+LRU|Lalpur Umri|
+LS|Lasalgaon|
+LSD|Lusadiya|
+LSE|Laseri|
+LSG|Lawa Sardargarh|
+LSGS|Lavan Satyagraha Smarak P.H|
+LSI|Laheria Sarai|
+LSMP|Laxmapur|
+LSN|Lasina|
+LSR|Lasur|
+LSX|Loisingha|
+LT|Lahavit|
+LTA|Lamta|
+LTD|Lathidad|
+LTG|Lataguri|
+LTHR|Latehar|
+LTI|Latteri|
+LTK|Lathikata|
+LTKR|Lalit Khera Halt|Lalit Khera
+LTMD|Latemda|
+LTR|Lakhtar|
+LTRR|Latur Road|
+LTT|Lokmanyatilak T|Mumbai
+LTV|Lotarva|
+LUA|Laluri Khera|
+LUBA|Lachhubigha H|
+LUN|Lavanpur|
+LUNI|Luni Junction|Luni
+LUR|Latur|
+LUSA|Lusa|
+LVK|Lakkavarapukota|
+LVR|Lokvidyapith Nagar|
+LW|Lorwada|
+LWJ|Lowjee|
+LWR|Alnavar Junction|
+LWS|Lukwasa|
+LXA|Lakswa|
+LXD|Lakshannath Road|
+LXMP|Lakxmipur|Lakshmi Pur
+LXR|Lunseriya|
+LYD|Layabad|
+MA|Madha|
+MAA|Maval|
+MAAR|Malhar|
+MABA|Mandi Bamora|
+MABB|Mabbi Halt|
+MABD|Mahbubabad|
+MABG|Matana Buzurg|
+MABM|Maa Ahorwa Bhawani Dham|Akbarganj
+MABN|Maban|
+MAC|Machiyala|
+MACI|Marachi Halt|Bihar
+MACR|Manguli Chowdwar|
+MACU|Mellacheruvu|
+MAD|Maddur|
+MADA|Maonda|
+MADM|Matradham Halt|
+MADP|Madhapur Road|
+MADR|Madure|
+MADU|Madduru|
+MAE|Matheran|
+MAEL|Mael|
+MAF|Manur|
+MAG|Mangalagiri|
+MAGH|Manikgarh|
+MAGN|Mahagaon|
+MAH|Madhoganj|
+MAHD|Mohadi Praganel|
+MAHE|Mahe|
+MAHI|Mahipur|Bhiruda
+MAHM|Meham|
+MAHO|Maholi|
+MAI|Mehsi|
+MAJ|Majhergram|Jhargram
+MAJN|Mangalore Junction|Mangalore
+MAK|Mallikpur|
+MAKG|Mualkhang|
+MAKH|Mokhampura|
+MAKM|Mararikulam|
+MAKP|Manikpura|SH 62
+MAKR|Malkhedi|
+MAL|Mal Jn|
+MALA|Mala|
+MALB|Maliya Miyana|
+MALK|Malkapur Road|
+MALM|Manthralayam Road|
+MALR|Mallur|
+MALX|Maliya|
+MAM|Mangal Mahudi|
+MAMK|Mangiakami|
+MAN|Maninagar|
+MANA|Mana|
+MAND|Mandurai|
+MANE|Maneswar|
+MANG|Mahanagar|
+MANI|Mani Nagar|
+MANK|Manki|
+MANR|Mansarovar|
+MANU|Monu|
+MANW|Manwa|
+MAO|Madgaon|Goa
+MAP|Morappur|
+MAQ|Mangalore Cntl|Mangalore
+MAR|Mulanur|
+MARD|Mavur Road|
+MAS|Chennai Central|Chennai
+MASE|Mathanshipur|
+MASK|Maisar Khana|
+MASS|Mgr Chennai Central Suburban|
+MATL|Matla|
+MAU|Mau Junction|
+MAUL|Maula Ali|
+MAUR|Maur|
+MAV|Mariammankovil|
+MAX|Mangudi|
+MAY|Mariahu|
+MAYA|Makakhad|Mansa - Badpura Rd
+MAYP|Mayapur|
+MAYR|Mayar|
+MAZ|Mangra|
+MB|Moradabad|
+MBA|Mahoba|
+MBAH|Mirabigha Halt|Kohara
+MBB|Murshidabad|
+MBC|Mahananda Bge|
+MBCT|Moradabad City|
+MBD|Mustabada|
+MBDD|Maa Barahi D Dh|Pratapgarh
+MBDP|Maa Belha Devi Dham Pratapgarh Jn|Bela
+MBE|Mirzapur Bankipur|
+MBF|Munabao|
+MBG|Maibang|
+MBGA|Marwar Bagra|
+MBH|Mobha Road|
+MBI|Madhubani|
+MBL|Manubolu|
+MBLP|Maharaja Bijli Pasi|Jagdishpur
+MBM|Mambalam|
+MBNL|Marwar Bhinmal|
+MBNR|Mahbubnagar|
+MBO|Mairabari|
+MBP|Mohibullapur|
+MBQ|Mumbra|
+MBS|Madhosingh|
+MBSK|Marwar Balia|
+MBT|Marwar Birthi|
+MBU|Melpattam Bakkam|
+MBV|Mirzapur Bachhaud|
+MBVT|Mumbai Cst|
+MBW|Malwara|
+MBWC|Moradabad West|
+MBY|Mandi Dabwali|
+MC|Mandapam Camp|
+MCA|Mecheda|
+MCDA|Maa Chandika Devi Dham Antu|Pratapgarh
+MCF|Manik Chauree Halt|
+MCI|Mancheral|
+MCJ|Manjattidal|
+MCL|Madimangalam|
+MCLA|Macherla|
+MCLE|Manchili|
+MCN|Mukundarayapurm|
+MCO|Motihari Court|
+MCPE|Marwar Chapri|
+MCPK|Chepauk|
+MCPT|Chintadripet|
+MCQ|Mirchadhori|
+MCRD|Mecheri Road|
+MCS|Mancheswar|
+MCSC|Chhatarpur|Chandrapura
+MCTM|Mtyr C Tushar M|
+MCU|Mulacalacheruvu|
+MCV|Macharya|
+MCVM|Machavaram|
+MCY|Machriawan|
+MCZ|Mahabuang|
+MD|Madar|
+MDA|Mandhana Jn|
+MDAK|Medak|Chaman Road
+MDB|Mandor|
+MDBP|Madhabpur|
+MDC|Makardaha|Makardah
+MDCR|Masaudhi Court Halt|
+MDD|Malad|
+MDDG|Malad Gaon|
+MDDP|Mandi Dip|
+MDE|Makhdumpur Gaya|
+MDF|Muradi|
+MDG|Mandal Ghat|
+MDGB|Madhabnagar Halt|
+MDGR|Manendragarh|
+MDH|Mandhar|
+MDHA|Madhada|
+MDHP|Madhapar|
+MDJ|Muhammadganj|
+MDJN|Madar Jn|
+MDKD|Madhukunda|
+MDKI|Madukarai|
+MDKL|Mandiyai Kalan|
+MDKM|Madattukulam|Tamil Nadu 642113
+MDKU|Modukuru|
+MDL|Mandal|
+MDLA|Mundlana|
+MDLE|Mandar Hill|
+MDLL|Muddalingahalli|
+MDLM|Mundalaram|
+MDN|Midnapore|
+MDNP|Madanpur Halt|
+MDNR|Modinagar|
+MDP|Madhupur Junction|
+MDPA|Mandpiya|
+MDPB|Madhopur Punjab|
+MDPD|Mandapadu|
+MDPJ|Madanapur Halt|
+MDPR|Modpur|
+MDR|Madhira|
+MDRA|Medra|
+MDRR|Madavnagar Road|
+MDRW|Murdeshwar|
+MDS|Mandasor|
+MDSA|Modasa|
+MDSE|Madhu Sudanpur|
+MDT|Madarihat|
+MDU|Madurai Junction|
+MDUN|Madhura Nagar|
+MDVB|Mandar Vidyapith Halt|
+MDVD|Mandavad|
+MDVE|Mahendra Vadi|
+MDVK|Mahadeokhedi|
+MDVL|Mandavalli|
+MDVR|Madhavnagar|
+MDW|Marwar Mundwa|
+MDWI|Mandawari|
+MDXR|Mudaria|
+ME|Masaipet|
+MEC|Merta City|Merta
+MED|Medchal|
+MEE|Methai|
+MEG|Meleng|
+MEGN|Mehgaon|
+MEH|Melalathur|
+MEJ|Maniyachchi Junction|
+MEKM|Melakkonnakkulam|
+MEL|Marine Lines|Marine Lane
+MELH|Melusar|
+MEM|Mau Aimma|
+MENP|Meenapur|
+MEP|Mahidpur Road|
+MEQ|Malethu Kanak|
+MER|Metpanjra|
+MES|Madurai East|
+MESR|Mesra|Hombai
+MET|Malerkotla|
+METR|Methi Tikur|
+MEU|Mendu|
+MEW|Marhaura|
+MEX|Mukerian|
+MEZ|Marenga|
+MFA|Mukuria|
+MFB|Mustafabad|
+MFC|Monabari|
+MFCK|Mustapha Chak|West Bengal 713401
+MFH|Mahrauli|
+MFJ|Muftiganj|
+MFKA|Musafir Khana|
+MFL|Misrauli|
+MFM|Mahalam|
+MFP|Muzaffarpur Junction|
+MFQ|Mahroi|
+MFR|Mandla Fort|
+MFX|Madaraha|
+MFZ|Malahar|
+MG|Modelgram|
+MGAE|Morgram|
+MGB|Mudigubba|
+MGC|Mugat|
+MGD|Mugad|
+MGDR|Magardharra Ph|
+MGE|Migrendisa|
+MGF|Mandagere|
+MGG|Mangliya Gaon|
+MGHP|Meghpur|
+MGI|Manigachi|
+MGK|Mulangunnathukavu|
+MGKM|Mungaiakami|
+MGKP|Mansingh Ka Pura|Gadhia Pratappura
+MGL|Mangela|
+MGLE|Manigram|
+MGLI|Mangli|
+MGLP|Mangolpuri|
+MGM|Muragacha|
+MGME|Mccluskieganj|
+MGMY|Mughal Sarai Marshaling Yard|
+MGN|Meghnagar|
+MGND|Magnad|
+MGO|Mahisgaon|
+MGPA|Munda Gopal Ashram|
+MGPI|Mangarpatti Halt|
+MGPM|Mangapuram|
+MGPR|Mangampet Road|
+MGR|Munger|
+MGRD|Magardoh|
+MGRL|Mangrolla|
+MGRP|Megh Raj Pura|
+MGRR|Magarpur|
+MGS|Mughal Sarai Junction|
+MGSJ|Magnesite Jn|
+MGSO|Mgso|
+MGT|Magra Hat|
+MGTD|Meghpur Titodi|
+MGV|Molagavalli|
+MGVK|Malegaon Vyenku|
+MGW|Magarwara|
+MGWD|Mahngarwal Doaba|
+MGWN|Mahgawan Halt|
+MGX|Mailongdisa|
+MGZ|Maharajganj|
+MH|Marahra|
+MHA|Marahra|
+MHAD|Mohadi Prgn Lng|
+MHBA|Mathabhanga|Bhangamore - Mathabhanga Rd
+MHBD|Mohanbari|
+MHBG|Mahadev Buzurg|
+MHBT|Mahbubnagar Town Halt|
+MHBZ|Mahtha Bazar|
+MHC|Masrakh|
+MHD|Mhmdvd Kheda Road|
+MHDA|Mahdeiya|
+MHDB|Mahadia Ph|
+MHDP|Mahadevpara|
+MHF|Mohari Junction|
+MHH|Maghar|
+MHHR|Mahesra|
+MHI|Manihari|
+MHJ|Mahajan|
+MHKT|Mohkhuti|
+MHL|Mahwal|
+MHLC|Monkey Hill|
+MHLN|Mahendralalnagar|Maju Rd
+MHLT|Mahesh Leta Halt|
+MHMB|Mahimba|
+MHN|Mahanadi|
+MHND|Mohandi|
+MHNR|Mahesh Nagar Halt|Rajasthan
+MHO|Mahpur|
+MHOW|Mhow|
+MHP|Muhammadpur|
+MHPE|Mohope|
+MHPR|Mahiyarpur|
+MHQ|Mahuda|
+MHRG|Mahendragarh|
+MHRI|Machhrauli|Jhajjar
+MHRL|Mahrail|
+MHRN|Mahendranath|
+MHSA|Maheshpur Halt|
+MHSP|Mahespur|
+MHT|Manjhi|
+MHTR|Malihati Talibpur Road|
+MHU|Manheru|
+MHUA|Mahudha|
+MHUL|Mehuwala Halt|
+MHUR|Mohanpur|
+MHV|Mahuva Junction|
+MHWL|Machrowar|
+MIA|Mania|
+MIAL|Milaoli|
+MIAN|Miangram|
+MIB|Nagpur Moti Bagh|
+MID|Madhi|
+MIDP|Mamidipalli|Mamidipalle
+MIG|Midghat|
+MIH|Mihrawan|
+MIJ|Majhdia|
+MIK|Manikul|
+MIKD|Mahikhand Halt|
+MIL|Milak|
+MILA|Milakpur Halt|
+MILE|Mile-Fiveb|
+MIM|Maniram|
+MIN|Mihinpurwa|
+MINA|Miyana|
+MINJ|Maikalganj|
+MIO|Molisar|
+MIPM|Marripalem Ph|
+MIQ|Mirhakur|
+MIR|Maijapur|
+MIRA|Mira Road|
+MITA|Mitha|
+MIU|Maripat|
+MIW|Mighauna|
+MIX|Manipuram Cabin|
+MIYN|Maniyan|
+MJ|Marwar Junction|
+MJA|Meja Road|
+MJBK|Manjari Budruk|
+MJBT|Majbat|
+MJE|Mujnal|
+MJF|Malkajgiri|
+MJG|Majhagawan|
+MJGP|Majhgawan Phata|
+MJH|Maju Ph|Maju Rd
+MJHL|Majada Halt|
+MJHR|Majhiari|
+MJKN|Majri Khadan|
+MJL|Majhowlia|
+MJM|Manjhauligram H|
+MJMG|To Marwar Jn|
+MJN|Makum Junction|
+MJNL|Majri Nangal|
+MJNS|Maa Jagdamba Nawada Halt|Kishunpur
+MJO|Majorda|
+MJP|Moharajpur|
+MJPB|Manjhra Purab|
+MJR|Minjur|
+MJRI|Majri Junction|
+MJRL|Manjrol|
+MJS|Manjeshwar|
+MJT|Majerhat|
+MJTA|Majitha|
+MJV|Manjhagarh|
+MJY|Maramjhiri|
+MJZ|Majhola Pakarya|
+MK|Miranpur Katra|
+MKA|Mokameh Junction|
+MKAK|Mundakakanni Amman Koil|Mundakanni Amman Kovil
+MKB|Mankatha|
+MKBH|Manwala Kot Bakhtu|
+MKC|Maksi|
+MKD|Markundi|
+MKDD|Mukundawadi Ha|
+MKDI|Makudi|
+MKDM|Maa Kalikan Dham|Pratapgarh
+MKDN|Morkadhana|
+MKG|Manak Nagar|
+MKGD|Manikagoda|Orissa
+MKH|Malakhera|
+MKHI|Makhi|
+MKHR|Marwar Khara|
+MKHS|Mokar Halt|Mokar
+MKI|Bapudm Motihari|
+MKJ|Makkajipalli|
+MKK|Kodambakam|
+MKL|Maklidrug|
+MKLI|Makrauli|
+MKM|Marikuppam|
+MKMN|Mokhra Madina|Mokhra
+MKN|Makrana Junction|
+MKO|Markona|
+MKP|Manikpur Junction|
+MKPR|Muktapur|
+MKPT|Malikpeth|
+MKR|Maddikera|
+MKRA|Makrera|
+MKRD|Machhakunda|
+MKRH|Mallickpur Hat|
+MKRL|Moti Koral|
+MKRN|Makronia|
+MKS|Muktsar|
+MKSP|Mukhasa Parur|
+MKSR|Mokalsar|
+MKT|Mukhtiar Balwar|
+MKTL|Makthal|Makthal Rd.
+MKTP|Muketashwar|
+MKU|Malkapur|
+MKWI|Makarwadi Halt|Ajmer
+MKX|Morak|
+MKY|Mekkudi|
+MKZ|Mahkepar Road|
+ML|Malhour|
+MLA|Malpura|
+MLAR|Malanpur|
+MLB|Modnimb|
+MLBN|Mohalboni|
+MLBZ|Mal Bazar|
+MLC|Malkisar|
+MLD|Malihabad|
+MLDA|Maldatown|
+MLDE|Madlauda|
+MLDR|Melamarudur|
+MLDT|Malda Town|
+MLFC|Malda Court|Old Malda Rd
+MLG|Malhargarh|
+MLGH|Mandalgarh|
+MLGT|Mallappa Gate|
+MLH|Manaklao|
+MLHA|Maliya Hatina|
+MLHS|Light House|
+MLI|Mangaliyawas|
+MLIH|Mauli Halt|
+MLJ|Mohanlalganj|
+MLK|Malkapuram|
+MLKA|Maluka|
+MLKH|Mulewal Khaihra|
+MLKN|Mundhal Kalan|Mundhal
+MLKP|Malikpur|
+MLM|Malthan|
+MLMG|Mallemadugu|
+MLMI|Mal Mohri|
+MLMR|Melmaruvattur|
+MLN|Mailani|
+MLND|Mulund|
+MLNH|Malancha|
+MLNR|Gawada Malosan|Mehsana
+MLO|Malur|
+MLP|Mallapur|
+MLPM|Melpakkam|
+MLPR|Malipur|
+MLQ|Malkera Junction|
+MLR|Malkhed|
+MLS|Malasa|
+MLSA|Mallasandra|
+MLSR|Malsar|
+MLSU|Malsailu|
+MLT|Malatipatpur|
+MLTI|Malti|
+MLTJ|Malataj|
+MLTR|Melattur|
+MLU|Malugur|
+MLV|Mallarpur|
+MLW|Mallanwan|
+MLX|Mullanpur|
+MLY|Maula Ali|
+MLYA|Maliya|
+MLYC|Maula Ali|
+MLYG|Mlyg|
+MLYR|Melnariyapanur|
+MLZ|Malarna|
+MM|Mumbai Mahim Jn|
+MMA|Muhammadabad|
+MMB|Mahmudabad Avdh|
+MMC|Mahamandir|
+MMCC|Moor Market|
+MMCS|Pandra Branch Sdg Loop Line|
+MMCT|Mumbai Central|
+MMD|Maheshmunda|
+MMDA|Muthalamada|
+MMDL|Mohini Mandal(H|
+MMDP|Mohamadpur|
+MME|Mul Marora|
+MMG|Madhyamgram|
+MMH|Mahadanapuram|
+MMI|Mariyamanahalli|Danayakanakere
+MMK|Madurantakam|
+MMKB|Memrakhabad|
+MML|Madan Mahal|
+MMLN|Mahuamilan|
+MMM|Mandapam|
+MMNK|Maraimalam Nagar|
+MMP|Mambalappattu Jn|
+MMPL|Mantapampalle|
+MMPR|Mamdapur|
+MMR|Manmad Junction|Manmad
+MMRB|Manmad B Cabin|
+MMS|Mandasa Road|
+MMU|Mugma|
+MMV|Mahali Marup|
+MMVR|Murgamahadev Rd|
+MMY|Marwar Mathanya|
+MMZ|Mandamari|
+MN|Minambakkam|
+MNAE|Mankar|
+MNC|Madankata|
+MNCR|Monacherra|
+MND|Munderwa|
+MNDA|Mandura|
+MNDH|Mandir Hasaud|
+MNDK|Maganoor|Maganur
+MNDP|Mendipathar|Mendipathar Railway Road
+MNDR|Mandi Dhanaura|
+MNDU|Mandu Halt|National Highway 33
+MNDV|Mandawariya|
+MNDY|Mandaveli|
+MNE|Mansi Junction|
+MNF|Manda Road|
+MNG|Manihari Ghat|
+MNGD|Muniguda|
+MNGL|Mangli Halt|
+MNGR|Mohan Nagar|
+MNGT|Mysore New Good|
+MNGV|Mota Miya Mangrol|
+MNH|Munsirhat P H|
+MNHA|Mindha|
+MNHL|Majhairan Himachal|
+MNI|Mangaon|
+MNJ|Manoharganj|
+MNJR|Manjhlepur|
+MNKB|Miyonka Bara|
+MNKD|Mankhurd|
+MNKH|Maranayakanahalli|
+MNKN|Manikalan Halt|
+MNKR|Mallankinar|
+MNL|Minchnal|
+MNLI|Manali Halt|
+MNM|Manamadurai Junction|
+MNMA|Mandan Mishra|Mandan Mishra Halt
+MNME|Manamadurai East|
+MNMU|Mani Mau|
+MNO|Mehnar Road|
+MNP|Mananpur|
+MNPR|Minapur|
+MNPT|Mungilipattu|
+MNQ|Mainpuri|
+MNR|Makkhanpur|
+MNS|Manshahi|
+MNSR|Manaksar|
+MNTT|Mulanturutti|
+MNU|Mundikota|
+MNUR|Mannanur|
+MNV|Mungaoli|
+MNVL|Mnvl|
+MNWL|Manwal|
+MNX|Manganallur|
+MNY|Mankarai|
+MNZ|Manani|
+MO|Mohol|
+MOA|Manopad|
+MOAR|Manipur Bagan|
+MOB|Manoharabad|
+MOBD|Moabund|
+MOD|Morampudi|
+MOF|Mondh|
+MOG|Mohiuddinnagar|
+MOGA|Moga|
+MOH|Mohisila|
+MOHR|Mohana Haryana|Mohana
+MOI|Mori Bera|
+MOJ|Mohana|
+MOL|Muli Road|
+MOLK|Molakarampatti|
+MOM|Maman|
+MOMU|Molakalmuru|
+MON|Modran|
+MONE|Mone|
+MONJ|Monglajhora|
+MONR|Mohanur|
+MOO|Muddanuru|
+MOP|Mohitnagar|
+MOPR|Mohanpura|
+MOR|Mor|
+MORA|Moraiya|
+MORD|Mohammad Ali Road|
+MORY|Moriya|
+MOT|Malout|
+MOTA|Mota|
+MOTC|Motichur|
+MOTG|Motiganj|
+MOTH|Moth|
+MOU|Manoharpur|
+MOW|Mananwala|
+MOX|Moran|
+MOY|Mohri|
+MOZ|Muzaffarnagar|
+MP|Melappalaiyam|
+MPA|Manaparai|
+MPC|Muttampatti|
+MPD|Madpur|
+MPE|Malatipur|
+MPF|Muirpur Road|
+MPG|Manpur Nagaria|
+MPH|Mundha Pande|
+MPI|Melpatti|
+MPJ|Madanpur|
+MPK|Chennai Park|
+MPKT|Chennai Park Town|
+MPL|Madanapalle Road|
+MPLE|Mahipal|
+MPLI|Minnampalli|
+MPLM|Marthipalayam|
+MPLR|Mahipal Road|
+MPLY|Meppuliyur|
+MPM|Muktapuram|
+MPML|Mohapani Mal|
+MPN|Madhyampur|
+MPNH|Majnupur Nawada|
+MPO|Manpur Jn|
+MPR|Makarpura|
+MPRA|Mahamadpur Assam|Mosod Ali Hazir Zangal Rd
+MPRD|Mathurapur Road|
+MPT|Mangalampeta|
+MPU|Medapadu|
+MPUE|Mainpuri Kachri|
+MPUR|New Madanpur|
+MPX|Merpanaikkadu|
+MPY|Murarpur|
+MQ|Mannargudi|
+MQA|Matoda|
+MQC|Mundka|
+MQE|Mohammadkhera|
+MQG|Milangarh|
+MQH|Madhorajpur|
+MQJ|Maradam Halt|
+MQL|Mirkhal|
+MQN|Manyamkonda|
+MQO|Munroturuttu|
+MQP|Makrandpur|
+MQQ|Markahandi U Ht|
+MQR|Malkhaid Road|
+MQS|Malsian Shahkht|
+MQU|Murukkampuzha|
+MQW|Mallannagar|
+MQX|Meralgram|
+MQZ|Mota Jadra|
+MR|Martur|
+MRA|Morena|
+MRB|Munirabad|
+MRBD|Moinarband|
+MRBL|Muribahal|
+MRC|Marichethal|
+MRD|Manund|
+MRDA|Maroda|
+MRDD|Mordar|
+MRDG|Maradanga|
+MRDL|Meramandolil|
+MRDP|Muradpur H|Muradpur
+MRDW|Murdeshwar|
+MRE|Manauri|
+MRF|Marpalli|
+MRG|Margherita|
+MRGA|Miryalaguda|
+MRGM|Maurigram|
+MRH|Marmagao Harbour|
+MRHA|Murahara|
+MRHT|Moranhat|
+MRIJ|Murliganj|
+MRJ|Miraj Junction|
+MRJD|Marajdwa|
+MRJN|Mirjan|Karnataka 581440
+MRK|Markapur Road|
+MRKL|Marikal|Telangana 509351
+MRL|Maroli|
+MRLA|Mariyal Gangava|
+MRLI|Murli Halt|
+MRLM|Marudalam|
+MRM|Mamanduru|
+MRN|Morwani|
+MRND|Morinda|
+MROA|Mora|
+MRPL|Marampalli|
+MRPM|Mathurapur Mor Halt|
+MRPR|Mau Ranipur|
+MRQ|Matari|
+MRR|Murarai|
+MRSH|Morshi|
+MRT|Mathura Cant|
+MRTA|Muraitha|
+MRTD|Mortad|Morthad
+MRTL|Mirthal|
+MRTY|Murti|
+MRU|Mumbai Matunga Road|
+MRV|Marsul|
+MRVL|Mariyal Gangavadi Halt|
+MRWS|Marwar Ranawas|
+MRX|Murud|
+MRYA|Meriyana|
+MRZA|Mirza|
+MS|Chennai Egmore|Chennai
+MSAE|Masagram|
+MSB|Chennai Beach|Chennai
+MSBH|Mewa Nawada B H|
+MSBJ|Chennai Beach J|
+MSBR|Musahibpur|
+MSC|Chennai Chetpat|
+MSD|Bombay Masjid|
+MSDG|Mhasoda Dongar|
+MSDH|Masnadih|
+MSDL|Mahisadal|
+MSDN|Masudan|
+MSDR|Murshadpur|
+MSE|Masani|
+MSF|Chennai Fort|
+MSGJ|Maheshganj H|
+MSGR|Marshaghai Road|NH53
+MSH|Mahesana Junction|Mahesana
+MSHF|Mahesana|
+MSHM|Mahesana|
+MSHW|Musharwa Halt|
+MSK|Mahes Khunt|
+MSKT|Mc Sunil Kathua|Kathua
+MSL|Machhalandapur|Jhandapur
+MSMD|Mahasamund|
+MSMI|Misamari|
+MSN|Mursan|
+MSO|Misrod|
+MSOD|Masodha|
+MSP|Mansurpur|
+MSQ|Marwar Ratanpur|
+MSR|Masur|
+MSRP|Murhesi Rampur|
+MSS|Masarahalli|
+MSSD|Maheshari Sandhuan|
+MSSN|Maishashan|Nagkapan Pt II
+MST|Masit|
+MSTH|Misrikh Tirath|
+MSU|Mosur|
+MSV|Mustara|
+MSVN|Meswan|
+MSW|Maskanwa|
+MSWA|Masaniwala|
+MSZ|Mansa|
+MT|Matera|
+MTA|Mathela|
+MTAP|Matania Anantpur|
+MTB|Matlabpur|
+MTBG|Matia Barghat Halt|
+MTBH|Mahatbania Halt|Bhojpur
+MTC|Meerut City|Meerut
+MTCN|Triplicane|
+MTD|Merta Road Junction|
+MTDB|Merta Rd Bypass|Merta Road
+MTDI|Maltekdi|
+MTDM|Metur Dam|
+MTE|Mettur|
+MTFA|Mertala Phaleya|
+MTGE|Muthani|
+MTH|Mataundh|
+MTHH|Mothala H|
+MTHP|Mithapur|
+MTI|Mitawal|
+MTIA|Mothala|
+MTIP|Mathnashipur|
+MTJ|Mathura Junction|Mathura
+MTJL|Motijheel|
+MTJR|Moterjhar|
+MTKD|Moti Khawdi|
+MTKN|Motasar Khuni|
+MTKR|Matokhar|
+MTL|Mailam|
+MTLA|Mothala|
+MTLP|Mithila Deep|Madhubani
+MTM|Machelipatnam|
+MTMI|Motimari|
+MTMP|Mattampalle|
+MTMY|Thirumayilai|
+MTN|Mumbai Matunga|
+MTNC|Mattancheri|
+MTND|Mattagajpur|
+MTNL|Muttarasanallur|
+MTO|Maitha|
+MTP|Metupalaiyam|
+MTPC|Motipura Chauki|
+MTPI|Metapalli|Metpally
+MTPR|Raimehatpur|
+MTR|Motipur|
+MTRA|Matigara|
+MTSI|Motisadhli|Kanas
+MTSK|Mota Surka|
+MTT|Mutupet|
+MTU|Matmari|
+MTUJ|Mtuj|
+MTUR|Mathur|
+MTV|Matalkunta|
+MTWN|Mitewani|
+MTY|Multai|
+MU|Makansar|
+MUA|Musra|
+MUBR|Manu Bazar|
+MUC|Mullurkara|
+MUD|Muradnagar|
+MUDI|Mududi|
+MUE|Mudkhed|
+MUG|Magra|
+MUGA|Mahugarha|
+MUGI|Marugutti|
+MUGN|Mahutgaon|
+MUGR|Manuguru|
+MUH|Murthiha|
+MUHI|Murhari Halt|
+MUK|Munumaka|
+MUKE|Mukkali|
+MULK|Mulki|
+MUM|Mangapatnam|
+MUO|Masangaon|
+MUP|Murhipar|
+MUPA|Mupa|
+MUQ|Marudur|
+MUR|Mankapur Junction|Mankapur
+MURD|Mandawar M Road|
+MURI|Muri|
+MUT|Meerut Cant|Meerut
+MUU|Mankundu|
+MUUA|Mahuawa Khurd|
+MUV|Manduadih|
+MUVL|Muval Tank|
+MUW|Mathurapur|
+MUY|Mugaiyur|
+MUZ|Mohiuddinpur|
+MV|Mayiladuturai J|
+MVA|Malaka Vemala|
+MVC|Mavinkere|
+MVD|Mulvad|
+MVE|Mundhewadi|
+MVF|Manabar|
+MVG|Maligura|
+MVH|Mantatti|
+MVHL|Mavinahalli H|
+MVI|Morbi|
+MVJ|Mavli Junction|
+MVKR|Mahawan Khor Halt|
+MVL|Malavli|
+MVLI|Mevli|
+MVLK|Mavelikara|
+MVN|Milavittan|
+MVO|Manwath Road|
+MVP|Mokhasa Kalvpdi|
+MVPM|Mavelipalaiyam|
+MVR|Manavadar|
+MVRD|Maivadi Road|Myvadi
+MVRM|Mallavaram|
+MVS|Manavasi|
+MVV|Maheshi|
+MVW|Mallividu|
+MVY|Malavi|Karnataka 583212
+MW|Mairwa|
+MWA|Mandwa|
+MWAD|Mowad|
+MWAI|Mawai|Mavai
+MWC|Mandawali Chander Vihar|
+MWD|Mhasavad|
+MWE|Mewa Nawada|
+MWF|Magardaha|
+MWG|Mindala|
+MWH|Malwan|
+MWJ|Marwasgram|
+MWK|Mordad Tanda|
+MWL|Muthirevula Halt|
+MWM|Malleswaram|
+MWP|Mahrani Pachhim|
+MWQ|Motari Halt|
+MWR|Mahansar|
+MWRN|Madwarani|
+MWT|Marwar Lohwat|
+MWUE|Mahrawal|
+MWW|Mahwa|
+MWX|Mallanwala Khas|
+MWY|Mailaram|
+MWZ|Mahishadahari|
+MX|Mumbai Mahalakshmi|
+MXA|Marauda|
+MXD|Masor Road|Vadodara
+MXH|Makhu|
+MXJ|Mangurjan|
+MXK|Mandrak|
+MXL|Mokholi|
+MXM|Minatchipuram|
+MXN|Mariani Junction|
+MXO|Morthala|
+MXP|Malupota|
+MXR|Mahur|
+MXS|Mohasa|
+MXT|Malakpet Kcg|
+MXW|Mahadevsal|
+MXY|Mahuariya|
+MXZ|Mohdara Halt|
+MY|Malliyam|
+MYA|Mandya|
+MYD|Manderdisa|
+MYE|Mandhali|
+MYG|Miyagam Karjan|
+MYGD|Maynaguri Road|Uttar Dangapara
+MYGL|Miyagam Karjan Junction Ng|
+MYHT|Mayurhat|
+MYJ|Maheji|
+MYK|Mayakonda|
+MYKR|Matyakheri Halt|
+MYL|Malliyala|
+MYM|Memari|
+MYN|Miyana|
+MYO|Moridhal|
+MYP|Mundilyampakkam|
+MYPR|Maynapur|Unnamed Road
+MYR|Maihar|
+MYS|Mysore Junction|Mysore
+MYU|Mayanoor|
+MYX|Metyal Sohar|
+MYY|Mayyanad|
+MZA|Mezenga S|
+MZB|Mahuli Halt|
+MZC|Mirza Cheuki|
+MZGI|Manzurgarhi|
+MZH|Mauhari|
+MZHL|Majhaoli|
+MZL|Mirzapali|
+MZM|Muzzampur Nryn|
+MZMA|Mazhom|
+MZN|Mahmudpur Saraiyan|
+MZP|Mirzapur|
+MZQ|Majgaon Assam|
+MZR|Murtajapur|
+MZRT|Murtajapur Town|
+MZS|Murkeongselek|
+MZU|Marandahalli|
+MZV|Maralahalli|
+MZW|Manjhwe|
+MZX|Matatila|
+MZY|Machapur|
+MZZ|Manjuri Road|
+NAB|Nagbhir Junction|
+NABN|Nagbhir Jn (Ng)|
+NAC|Nawa City|
+NACC|New Alipur (Calcutta)|
+NAD|Nagda Junction|
+NADA|Nada|
+NADI|Nawadgi|
+NAG|Nagargali|
+NAGC|Nagargali|
+NAGD|Nagod|
+NAH|Nahiyer|
+NAHT|New Ashti|Unnamed Road
+NAI|Nangi|
+NAK|Naksalbari|
+NAKD|Naik Dih|
+NAL|Nal Halt|
+NALR|Nalpur|
+NAM|Namrup|
+NAN|Nandgaon Road|
+NANA|Nana|
+NAND|Nandikur|
+NANH|Navanagar Halt|Sigikeri
+NANR|Naranpur|
+NAR|Nar|
+NARA|Nara Halt|
+NARD|Naika Road|
+NAS|Nasrala|
+NASP|Narasingapalli|
+NAT|Nathnagar|
+NAU|Nadapuram Road|
+NAVI|New Amravat|
+NAW|Nawandgi|
+NAWN|Nawan|
+NAZJ|Nazirganj|
+NB|Nimbhora|
+NBA|Nabha|
+NBAE|Nabagram|
+NBD|Najibabad Junction|
+NBE|New Barrackpore|
+NBG|Nabenagar Road|
+NBGH|Nowbagh|
+NBH|Nimbahera|
+NBHM|Nana Bhamodra|
+NBI|Nadbai|
+NBJU|New Barauni Jn|Barauni
+NBK|Nungambakkam|
+NBKH|Naba Gram Kanku|
+NBL|Nimbal|
+NBM|Navabpalem|
+NBP|Nibhapur|
+NBPH|New Balarampur|
+NBQ|New Bongaigaon|
+NBQY|New Bongaigaon Yard|
+NBR|Namburu|
+NBRL|Nani Beral|Gujarat 363670
+NBRN|Naba Raynagar H|Naba Raynagar
+NBS|New Baneswar|
+NBT|Nayabagirthipur|
+NBU|Narasambudhi|
+NBUE|Nibkarori|
+NBUJ|New Bhuj|
+NBVJ|New Bhuj|
+NBX|Nizbarganj|Bargang
+NCA|Nizchatia|No.1 Nalbari
+NCB|New Cooch Behar|
+NCBD|New Changrabandha|Kamat Chandrabandha
+NCE|Nalacheruvu East|
+NCH|Nakachari|
+NCHS|Nature Cure Hospital|
+NCJ|Nagercoil Junction|
+NCN|Nachinda Ph|
+NCP|Nishchindapur|
+NCPM|Nishchindapur Market Halt|
+NCR|Nagore|
+NCRM|Nacharam|Doulatabad - Gajwel Rd
+NCTP|NCTP|
+NCU|Nallacheruvu|
+ND|Nadiad Junction|Nadiad
+NDAE|Nabadwip Dham|
+NDAM|Nadigam Halt|Naidgam Road
+NDAZ|Naya Azadpur|
+NDB|Nandurbar|
+NDBT|Nandpur Bhatauli|
+NDD|Nidadavolu Junction|
+NDE|Nandre|
+NDF|Nabadwip Ghat F|
+NDG|Nadgam|
+NDGJ|Nandahganja|
+NDH|Nindhar Benar|
+NDIM|Nandaigram Halt|
+NDJ|Nandganj|
+NDK|Nankhas|
+NDKD|Nadikode|
+NDKH|Nandarkha|
+NDKR|Nandakumar P.H.|
+NDL|Nandyal|
+NDLH|Nandlalee Halt|
+NDLS|New Delhi|
+NDM|Nidamanuru|
+NDMH|Neredmet Halt|Bank Colony
+NDN|Nardana|
+NDNI|Nidhani|
+NDNR|New Dhanora|Ahmednagar - Loni - Dhanora Rd
+NDO|Nidubrolu|
+NDON|Nadaon Halt|Bihar
+NDPL|Ndpl|
+NDPM|Narmadapuram|
+NDPR|Nandapur|
+NDPU|Nudurupadu|
+NDR|Nandesari|
+NDRT|Nangal Degrota|
+NDT|Nathdwara|
+NDU|Nadauj|
+NDV|Nidvanda|
+NDW|Nadwan|
+NDY|Nandi Halt|
+NDZ|Nidigallu|
+NEA|Neykkarapatti|
+NEC|Nemilicherry Halt|
+NED|Huzur Sahib Nanded|
+NEHL|Nethranahalli H|
+NEI|Neoli|
+NEM|Nemem|
+NEMA|Nema Halt|
+NEO|Neora|
+NEP|Nenpur|
+NERH|Ner Halt|
+NERI|Neri|
+NES|Natesar|
+NET|Netrang|
+NEU|Nerul|
+NEUA|Nemua H|Madhubani
+NEW|Nivari|
+NEWC|New West Cabin|
+NEYT|Ntpc Exchange Yard Talcher|
+NFK|New Farakka Junction|
+NFKB|New Farakka-B-Cabin|
+NFKN|Nfkn|
+NFKS|Nfks|
+NG|Nagari|
+NGA|Ningala Junction|
+NGAN|Nagaon|
+NGB|Nawabganj Gonda|
+NGC|New Guwahati|
+NGD|Nagardevla|
+NGDM|Nagra Dham Ph|Gondia
+NGE|Nagar|
+NGF|Nagarnabi|
+NGG|Nagina|
+NGHW|Nageshwadi Halt|
+NGI|Nagari|
+NGIM|Nagrigram Halt|Nagri
+NGJA|Narayanappavalasa H|Gollapeta
+NGJN|Ngrjunanagaramu|
+NGK|Nagercoil O A|
+NGL|Nangal|
+NGLL|Nagla Tula|
+NGLT|Naglatula|
+NGM|Nagasamudram|
+NGMN|New Gumandev|GJ SH 165
+NGMP|New Garh Madhopur|
+NGMW|Nagamalai West|
+NGN|Nandgaon|
+NGNC|New Guntur Cabin|
+NGNH|Nandagaon Halli|
+NGNT|New Guntur|
+NGO|Nagaur|
+NGON|Naugaon|
+NGP|Nagpur|
+NGPB|Nagpur (Se)|
+NGPK|Nayagaon Pura Kumara|
+NGPM|Nidiguntapalem|
+NGR|Annigeri|
+NGRD|Nilgiri Road|
+NGRH|New Giridih|Giridih
+NGRI|New Garia|
+NGRS|Nagrota Suriyam|
+NGRT|Nagrota|
+NGS|Nagansur|
+NGT|Nagappattinam|
+NGTG|New Gitaldaha|
+NGTN|Nagothane|
+NGV|Naglavi|
+NGW|Nauganwan|
+NGWN|Noganwan|
+NGX|Nigan|
+NGY|Nath Ganj|
+NGZ|S K Nagjihari|
+NH|Naihati Junction|
+NHB|Noh Bachhamdi|
+NHF|Nihasta Halt|
+NHGJ|New Harangajao|
+NHH|Nihalgarh|
+NHK|Naharkatiya|
+NHLG|New Haflong|
+NHLN|Naharlagun|
+NHM|Nandol Dehegam|
+NHN|Nigohan|
+NHR|Nohar|
+NHT|Nalhati Junction|
+NHU|Nahur|
+NHX|Narthar|
+NHY|Naganahalli|
+NI|Naydongri|
+NIA|Naila|
+NID|Nidur|
+NIDI|Nidi|
+NIG|Naigaon|
+NIIJ|Nilaje|
+NIL|Nilambur Road|
+NILD|Nilaje|
+NILE|Nimtita|
+NIM|Nimdih|
+NIMA|Nim Ka Khera|
+NIMG|Nima Gopalpur|
+NIN|Nimkana|
+NIP|Nizampur|
+NIQ|Nigaura|
+NIR|Nainpur Junction|
+NIRA|Nira|
+NIT|Naikot|
+NITR|Nsc Bose Itwari|Itwari Railway Overbridge
+NIU|Nabipur|
+NIV|Nivasar|
+NJA|Nagjua|
+NJAJ|New Jhajha Jn|Bhaptiyahi
+NJB|Nijbari|
+NJM|Naruana Jodhpur Ramana|
+NJN|Naojan|
+NJP|New Jalpaiguri|
+NJPS|New Jalpaiguri|
+NJT|Nager Coil Town|
+NK|Nasik Road|Nasik
+NKB|Nagrakota|
+NKBR|Narkatia Bazar|
+NKD|Nekonda|
+NKDO|Nakkanadoddi|
+NKE|Narkatiaganj Junction|
+NKG|Narkaldenga Coaching Yard|
+NKH|Nathukheri|
+NKI|Naikheri|
+NKJ|New Katni Junction|
+NKK|Narikkudi|
+NKL|Nalikul|
+NKLE|New Kaithal Halt|
+NKM|Namkon|
+NKMG|New Karimganj|New Market Rd
+NKN|Nyoli Kalan|
+NKOT|New Kota|Rajasthan
+NKP|Nirakarpur|
+NKPL|Narketpalli|
+NKPU|Nekpur|
+NKR|Nimar Kheri|
+NKRA|Nokhra|
+NKU|Nakardei|
+NKV|Nakardei|
+NKW|Nilakantheswar|
+NKX|Naktisemra|
+NKXJ|New Karimganj|
+NLA|Nancherla|
+NLBR|Nilambazar|
+NLC|Naliya Cantt|
+NLD|Nalanda|
+NLDA|Nalgonda|
+NLDM|Nangal Dam|
+NLDS|Dd|
+NLE|Nileshwar|
+NLH|Naultha|
+NLI|Namli|
+NLK|Navlakhi|
+NLKR|Nilokheri|
+NLKT|Nalkata|
+NLL|Nalli|
+NLN|Nailalung|
+NLNI|New Loni|Loni
+NLNR|Nulemuru Halt|
+NLP|North Lakhimpur|
+NLPD|Nallapadu|
+NLPI|Nemalipuri|
+NLQ|Nangal Pathani Halt|
+NLR|Nellore|
+NLRD|Necklace Road|
+NLS|Nellore South|
+NLSF|Niyalish Para|
+NLV|Nalbari|
+NLY|Naliya|
+NM|Naimisharanya|
+NMA|Nirmali|
+NMBR|N Mayurbhanj Road|
+NMC|Nimcha|
+NMD|Nomoda|
+NMDA|New Morinda|
+NMDR|Nimdanri|
+NMF|Nimo|
+NMG|Nimiaghat|
+NMGA|Nelamangala|Madhav Nagar
+NMGT|Nmg Tamdalge|
+NMGY|Numaligarh|
+NMH|Nimach|
+NMHI|New Manjhi|
+NMJ|Nidamangalam|
+NMK|Nim Ka Thana|
+NMKA|Namkhana|
+NMKL|Namakkal|
+NML|Nellimaria|
+NMLU|Nemakallu|
+NMM|New Misamari|
+NMN|Namanasamudram|
+NMO|Nedi Mollyanur|
+NMP|Nimpura|
+NMT|Namtiali|
+NMUE|Numaishgarh Halt|
+NMX|New Maynaguri|
+NMY|Noonmati|
+NMZ|New Mal Junction|
+NN|Nandura|
+NNA|Naugachia|
+NNB|Nimblak|
+NNCN|Nagnath Cabin|
+NNE|Nonera|
+NNGE|Narangi|
+NNGL|Naya Nangal|
+NNHT|Nonihat|
+NNKR|Nanaksar|
+NNL|Narnaul|
+NNM|Nannilam|
+NNN|Nanguneri|
+NNNL|Nandani Lagunia|
+NNO|Nangloi|
+NNP|Nanpara Junction|
+NNPR|Nonapar|
+NNR|Narayanpur|
+NNU|Nangal Mundi|
+NNV|Nanwara|
+NNW|Nrynpur Tatwar|
+NNWH|New Nawadih|Nawadih
+NNX|Nanauta|
+NOA|Nosaria|
+NOB|Nobanda|
+NOG|Nogong Assam|
+NOH|Nigohi|
+NOI|Nariaoli|
+NOK|Nokha|
+NOL|Niyol|
+NOLB|Nolbari|Mendi - Damra Road
+NOLI|Noli|
+NOMD|Noamundi|
+NON|Nonar Halt|
+NOQ|New Alipurdaur|
+NOR|Neora Naddi|
+NOSM|Nossam|SH 28
+NOY|Noyal|
+NPB|Nagapattinam Beach|
+NPBR|Narayanpur Bazar|Uttar Pradesh
+NPD|Nawapara Road|
+NPH|Nurpura|
+NPI|Nipania|
+NPJE|Nichitpur|
+NPK|N. Panakudi|
+NPKM|Nandiyampakkam|
+NPL|Nagalapalle|
+NPM|Nellaikuppam|
+NPML|Mallial Nukapalli|
+NPMR|Narayan Pakuria|
+NPNR|Nepanagar|
+NPR|Nepalganj Road|
+NPRD|Nagpur Road|
+NPS|Napasar|
+NPT|Narasingampet|
+NPTY|Nimpura Through Yard|
+NPU|Nadiapur|
+NPV|Narpatganj|
+NPW|Nipani Vadgaon|
+NPX|Narindarpura|
+NPZ|Nawapatra|
+NQH|New Domohani|
+NQR|Naraj Marthapur|
+NR|Niphad|
+NR1|Dbsi Byepass A Cabin|
+NR4|Pfm Byepass B Cabin|
+NR5|Pfm Byepass A Cabin|
+NR6|Pfm Byepass Jn Cabin|
+NR7|Lrj South Cabin|
+NR8|Lrj North Cabin|
+NRA|Nunkhar|
+NRD|Naroda|
+NRDP|Nagireddipalli|
+NRE|Nandalur|
+NRF|Neralakatte Halt|
+NRG|Nergundi|
+NRGO|Narganjo Halt|
+NRGR|Naranjipur|
+NRH|Nahargarh|
+NRI|Naraina|
+NRJ|Narimogaru|
+NRK|Naraikkinar|
+NRKE|Nari Khetri|
+NRKG|Narkatiaganj Jn|
+NRKP|Narkopi|
+NRKR|Narkher|
+NRL|Neral|
+NRLM|Nirolgram|
+NRLN|Neral Jn.|Ratnadeep Colony
+NRLR|Norla Road|
+NRM|Nurmahal|
+NRMH|Nava Raipur|
+NRN|Narhan|
+NRNR|Nurnagar|
+NRO|Nakodar Junction|
+NROD|Nari Road|
+NRP|Narsipatnam Road|
+NRPA|Naraynpur Anant|
+NRPD|Narayanpet Road|
+NRPM|Narayanpur Murli Halt|
+NRPR|Narendrapur Halt|
+NRR|Nagarur|
+NRS|Nagaria Sadat|
+NRSD|New Runnisaidpur Halt|
+NRSI|Noorsarai H|
+NRSP|Narasimhapura|
+NRT|Narasaraopet|
+NRUR|Nareshwar Road|
+NRV|Nariyar|
+NRVR|Naraina Vihar|
+NRW|Narwana Junction|
+NRWI|Narwasi|
+NRWN|Nangal Rajawatan|Nangal Rajawatan State: Rajasthan
+NRX|Noadar Dhal|
+NRY|Nyoriya Husenpur|
+NRYP|Narayanapuram|
+NRZB|Nowrozabad|
+NS|Narasapur|
+NSA|Nishangara|
+NSBG|New Sisiborgaon|Chakamara
+NSCL|New Silchar|Rongpur Pt II
+NSD|Nasirabad|
+NSF|Nasibpur|
+NSGR|Narasinghgarh|Narsing garh
+NSI|Nikursini|
+NSKL|Naskhal|
+NSL|Nagarsol|
+NSN|Nasirpur Halt|
+NSO|Nashipur Road|
+NSP|Nalla Sopara|
+NSPH|Narasapurapupeta|Narasaraopet
+NSRH|Niz-Sariha Halt|
+NSS|Nawanshahr Doaba Junction|
+NSU|Nisui|
+NSVP|Npa Shivarampalli Halt|
+NSW|Naswadi|
+NSX|Narsipuram Halt|
+NSZ|Bhopal Nishatpura|
+NT|Nathpura|
+NTA|Netra|
+NTDM|Nityanand Dham|
+NTG|Nursratabad Kharkhar|
+NTM|Narthamalai|
+NTN|Nar Town|Nar
+NTR|Nittur|
+NTS|Nattrasankottai|
+NTSK|New Tinsukia Junction|
+NTT|Nathapettai|
+NTU|Nigatpur|
+NTV|Nautanwa|
+NTVT|Nethravathi|
+NTW|Nanjangud Town|
+NTWL|Netawal|
+NTZ|Nathwana|
+NU|Narsinghpur|
+NUA|Nua|
+NUB|Nurabad|
+NUD|Navagadh|
+NUGN|Nuagan|NH53
+NUH|Naugarh|
+NUHR|Nahur|
+NUIH|Neuri Halt|
+NUJ|Nujella|
+NUPR|Nurpur Road|
+NUQ|Nagar Untari|
+NUR|Narela|
+NVA|Nindra|
+NVC|Nagalwancha|
+NVD|Navalgund Rd|
+NVF|Nagavangala|
+NVG|Nawagaon|
+NVK|Neyvilakku|Neivilakku
+NVL|Neyveli|
+NVLN|Nawalgohan|
+NVP|Navalpura|
+NVRD|Navade Road|
+NVS|Navsari|
+NVT|Navipet|
+NVU|Navalur|
+NW|Nalwar|
+NW2|Chanani H|
+NW3|Bikaner East Cabin|
+NWA|Nagarwara|
+NWB|Niwas Road|
+NWBV|Nwbv|
+NWC|Naya Nagar|
+NWD|Nawadah|
+NWDH|Nawadih|Lohrio
+NWH|Nawalgarh|
+NWKT|Kateli Halt|
+NWMS|Noapara Mahisha|
+NWN|Nanwan|
+NWP|Naupada Junction|
+NWR|Niwar|
+NWSI|Nawal Sahi H|Nawalsahi
+NWU|Navapur|
+NX|Nal Halt|
+NXH|Nidaghatta|
+NXL|Nirol F|West Bengal 713140
+NXN|Nuagaon|
+NXNR|Nuagaon Road|Unnamed Road
+NXR|Nagsar|
+NYA|Narayangarh|
+NYDO|Narayandoho|Dist. Ahmednagar
+NYG|Nayagarh|
+NYGT|Nayagarh Town|Orissa
+NYH|Nayandahalli|
+NYI|Nellayi|
+NYK|Naya Kharadia|
+NYM|Neyamatpur|
+NYN|Naini|
+NYO|Nayagaon|
+NYP|Nayadupeta|
+NYRH|Nayarhat|Panigram
+NYT|Nayatola|
+NYY|Neyyattinkara|
+NZB|Nizamabad|
+NZD|Nuzvid|
+NZG|Nazarbag|
+NZH|Nidaghatta|
+NZM|H Nizamuddin|New Delhi
+NZP|Niyazipur Halt|
+NZR|Nazira|
+NZT|Nazareth|
+OBAC|Obra-A-Cabin|
+OBM|Obalapuram|
+OBR|Obra Dam|
+OBR1|Obradam Cabin A|
+OBVP|Obulavaripalli|
+OCH|Odhaniya Chacha|
+OCR|Ochira|
+OD|Od|
+ODB|Oodlabari|
+ODC|Oddam Hatram|
+ODG|Obaidulla Ganj|
+ODHA|Odha|
+ODM|Ondagram|
+ODUR|Odur|
+OEA|Odela|
+OEL|Oel|
+OGL|Ongole|
+OGM|Oorgaum|
+OHAN|Ohancabin|
+OHV|Odhava|
+OKA|Okhla|New Delhi
+OKAC|Okac|
+OKD|Okha Madhi|
+OKHA|Okha|
+OKL|Ottakkal|691308
+OLA|Olakur|
+OLP|Olapur|
+OLR|Thrissur Ollur Halt|
+OM|Omkareshwar Rd|
+OMB|Oombermali|
+OML|Omalur|
+OMLF|Old Malda|
+ON|Unnao Junction|Unnao
+OND|Aunlajori Junction|
+ONR|Coonoor|
+OPL|Uppal|
+OPM|Onnupuram H|Onnupuram
+OPN|Onnupuram Halt|
+ORAI|Orai|
+ORC|Orchha|
+ORD|Orcha Dham|
+ORDI|Ordi|
+OREH|Ore Halt|
+ORGA|Orga|
+ORH|Oddarahalli|
+ORKI|Orki|
+ORR|Orr|
+ORW|Orwara|
+OSA|Ausa Road|
+OSH|Old Sachivalay Halt|Veerchand Patel Road Area
+OSHI|Oshi|
+OSN|Osiyan|
+OSRA|Osra|
+OTD|Ootwar|
+OTK|Ottakovil|
+OTN|Oating|
+OTP|Ottappalam|
+OTR|Moturu|
+OV|Otivakkam|
+OYR|Waria|
+PAA|Patas|
+PAAL|Pala|
+PAB|Pattabiram|
+PAC|Palliyad Road|
+PAD|Pardi|
+PADH|Pipradih|Chandwara - Kanko Rd
+PADI|Padi|
+PADL|Padil|
+PAE|Palana|
+PAGM|Pennada Agraharam|
+PAHB|Pura Halt|Partabpur
+PAI|Pabai|
+PAIL|Pali A|
+PAJ|Paraj|
+PAK|Pakala Junction|
+PAKI|Pawakhali|Pauakhali
+PAL|Palasner|
+PALI|Pali|
+PALM|Palaiyam|
+PALR|Palur|
+PAM|Panapakam|
+PAN|Panagarh|
+PANP|Pandavapura|
+PAO|Panoli|
+PAP|Pithapuram|
+PAPM|Palat Potaram|
+PAQ|Padiya Naqla|
+PAR|Pandhurna|
+PARD|Pathrad|
+PARH|Parakheda|
+PAS|Pasur|
+PASA|Parashshala|
+PASG|Panisagar|
+PASR|Panduranga Swamy Road|Kondapur
+PATA|Pata|
+PATI|Parsa Tewari|
+PATL|Patel Halt|
+PATM|Patam Halt|
+PATR|Paramjeevar Tarajeevar|
+PAU|Purna Junction|
+PAV|Pedana|
+PAVI|Pavi|
+PAVP|Pedda Avutapale|
+PAW|Pandabeswar|
+PAX|Patti|Punjab 143416
+PAY|Payyanur|
+PAZ|Payangadi|
+PB|Puntamba|
+PBA|Piardoba|
+PBAP|Pabbapuram Halt|Pabbapuram
+PBB|Parbatonia|
+PBC|Parvatsar City|Parbatsar
+PBD|Pedabramadvam|
+PBE|Pilibhit Junction|
+PBH|Partapgarh Junction|
+PBHD|Prabhadevi|Jagannath Bhatankar Marg
+PBJM|Pabnawa Jasmahinder Halt|
+PBKS|Pmbakvl Shandy|
+PBL|Pathsala|
+PBM|Pamban Junction|
+PBN|Parbhani Junction|
+PBP|Pembarti|
+PBQ|Pathardih Bazar|
+PBR|Porbandar|
+PBS|Purab Sarai|
+PBV|Paliba|
+PBW|Pantnagar|
+PBZ|Porabazar|
+PC|Pachora Junction|Pachora
+PCAB|Pcab|
+PCC|Prachi Road Junction|
+PCD|Pattakkudi|Unnamed Road State: Puducherry
+PCDR|Panchdeori Halt|Bihar 841441
+PCF|Penchi|
+PCG|Pench|
+PCGN|Pachegaon|
+PCH|Pachhapur|
+PCHA|Pachola|
+PCHT|Punaichak H|Sri Krishna Puri
+PCK|Pachrukhi|
+PCKM|Pachachakupam|
+PCL|Pulicherla|
+PCLI|Palachauri|
+PCLM|Panchalam|
+PCLS|Pcls|
+PCM|Pavurchutram|
+PCMK|Pacharmalikpura|
+PCN|Panch Pipila|
+PCO|Palayankottai|
+PCOI|Prayagrajcheoki|Chheoki
+PCP|Palsap|
+PCQ|Pichkurirdhal|
+PCR|Panchra|
+PCT|Panchtalavda Road|
+PCTM|Puduchatram|Kudi Street
+PCU|Putlacheruvu|
+PCV|Palakkodu|
+PCW|Perambur Carriage Works|
+PCX|Pagla Chandi|
+PCY|Pipar City|Pipar
+PCZ|Pocharam|
+PD|Pharadahan|
+PDA|Pundooah|
+PDD|Padubidri|
+PDE|Pindrai|
+PDF|Padampur|
+PDG|Paradgaon|
+PDGL|Pondugula|
+PDGM|Pudunagaram|
+PDGN|Padhegaon|
+PDGP|Pudgam Ganeshpura|Mehsana
+PDH|Padadhari|
+PDI|Palasdari|
+PDJ|Phiding|
+PDKM|Pedanyknpalayam|
+PDKN|Gogamukh|
+PDKT|Pudukkottai|
+PDL|Pendekallu|
+PDM|Pandikanmoi|
+PDMA|Padma|
+PDMI|Pendlimarri|
+PDNA|Peddadinne|
+PDNR|Padnur|
+PDO|Puduru|
+PDP|Padse|
+PDPH|Padapahar Junction|
+PDPK|Padmapukar|
+PDPL|Peddapalli|
+PDPR|Purandarpur|
+PDQ|Padla|
+PDR|Payagpur|
+PDRA|Padra|
+PDRD|Pindra Road|
+PDS|Pindarsi|
+PDSN|Peddasana|
+PDT|Pendurti|
+PDU|Ponduru|
+PDV|Pandaravadai|
+PDW|Pandaul|
+PDWA|Pindwara|
+PDX|Payradanga|
+PDY|Puducherry|
+PDZ|Pilioda|
+PEA|Pettai|Tamil Nadu 627004
+PEC|Pencharthal|
+PED|Pipardahi|
+PEE|Paterhi|
+PEH|Pathardih Junction|
+PEI|Perani|
+PEL|Polireddipalem|
+PEM|Peralam Jn|
+PEN|Pen|
+PEP|Phephna Junction|
+PER|Perambur|
+PERN|Pernem|
+PES|Phesar|
+PETA|Pandetola|
+PEU|Perssannur|
+PEW|Perambur Locomotive Works|
+PFL|Piprala|
+PFM|Phaphamau Junction|
+PFMA|Pfma|
+PFMB|Pfm Byepass B Cabin|
+PFMJ|Pfm Byepass Jn Cabin|
+PFR|Pachor Road|
+PFT|Pothahi|
+PFU|Padua|
+PG|Pergaon|
+PGA|Pagara|
+PGC|Panchgachia|
+PGDI|Pagidirai Halt|
+PGDP|Pgdp|
+PGG|Penganga|
+PGI|Parpanangadi|
+PGK|Pili Bangan|
+PGL|Pagdhal|
+PGMD|Pragati Maidan|
+PGN|Perugamani|
+PGP|Panduranga Pura|
+PGR|Pugalur|
+PGRL|Piduguralla|
+PGRN|Piduguralla New Jn|
+PGT|Palakkad|
+PGTN|Palghat Town|
+PGU|Padugupadu|
+PGW|Phagwara Junction|
+PGZ|Perunguzhi|
+PH|Panoh|
+PHA|Patharia|
+PHC|Panchot|
+PHD|Phaphund|
+PHE|Pahaleja Halt|
+PHI|Panikhaiti|
+PHK|Punarakh|
+PHLG|Phlg|
+PHM|Patapatnam|
+PHN|Pokhrayan|
+PHOP|Phooph|Phuphkalan
+PHQ|Pardhande|
+PHR|Phillaur Junction|
+PHRH|Panch Rukhi|
+PHS|Ferozeshah|
+PHU|Pahur|
+PHV|Pirthiganj|
+PHVP|Phvp|
+PHWI|Phulwari|
+PHWR|Pehowa Road|
+PHX|Pathakpur|
+PHY|Phariha|
+PI|Padli|
+PIA|Pipraigaon|
+PIC|Paricha|
+PID|Pipardi|
+PIGT|Pilighat|
+PIH|Parhihara|
+PIJ|Pij|
+PIL|Piler|
+PIO|Pilol|
+PIP|Piplia|
+PIRN|Pipran|
+PIRO|Piro|
+PIS|Piska|
+PIT|Palitana|
+PIZ|Pingli|
+PJ|Peppeganj|
+PJA|Pajian|
+PJB|Paniajob|
+PJGM|Panjgam|
+PJH|Pirjhalar|
+PJK|Panj Kosi|
+PJLE|Panjwara Road|
+PJN|Panjhan|
+PJP|Panjipara|
+PJPI|Prajapati Halt|
+PJPR|Pjp Road Halt|
+PJPT|Prajapati Halt|
+PJR|Pangri|
+PJY|Para Jani Halt|
+PK|Pakni|
+PKA|Pradhankhunta|
+PKB|Patharkhola S|
+PKBS|Peeplee-Ka-Bas|
+PKC|Pakra|
+PKD|Penukonda|
+PKDE|Pilu Khera|
+PKE|Pimpar Khed|
+PKEO|Panskura East Outer|
+PKF|Pokla|
+PKGM|Phakhoagram|
+PKJ|Pakhajan|
+PKJN|Pakhajan|
+PKK|Pakki|
+PKL|Papinayaknahali|
+PKM|Periyanaikanpalayam|
+PKNA|Pakhna|
+PKNS|Pokharni Nrsnha|
+PKO|Palakollu|
+PKP|Pallikere|
+PKPU|Peddakurapadu|
+PKQ|Pattikkad|
+PKR|Pakur|
+PKRA|Parsa Khera|
+PKRD|Pakara Road|
+PKRH|Parsa Kerwan Halt|
+PKT|Pattukottai|
+PKU|Panskura|
+PKW|Pilkhua|
+PKX|Pakhruli|
+PKY|Pilkhani|
+PKZ|Pipli Pakhi Kalan|
+PL|Mumbai Lower Parel|
+PLA|Palia|
+PLAE|Palsit|
+PLBS|Phulbasia|
+PLC|Phalodi|
+PLCJ|Phalodi Junction|
+PLD|Paldhi|
+PLDR|Piludra|
+PLE|Piplee|
+PLF|Piali|
+PLG|Palghar|Mumbai
+PLGH|Paligarh|
+PLH|Parlakhemundi|
+PLHL|Pallahalli Halt|
+PLHW|Palhawas|
+PLI|Pettaivayatalai|
+PLJ|Palej|
+PLJE|Phulwartanr|
+PLK|Palia Kalan|
+PLKN|Palakkanuthu|
+PLL|Parli|
+PLLD|Phaltan|Chaudharwadi
+PLM|Paneli Moti|
+PLMA|Palampur Hp Oa|
+PLMD|Pilamedu|
+PLMG|Puliyamangalam|
+PLMX|Palampur Himachal|
+PLN|Piplani|
+PLNI|Palani|
+PLO|Pulgaon Junction|
+PLP|Phulpur|
+PLPM|Palappuram|
+PLQ|Pulakurthi|
+PLRD|Padaliya Road|Padaliya
+PLS|Pipalsana|
+PLSG|Palasingi|
+PLSN|Palsana|
+PLT|Pirthala Llauda|
+PLU|Patakottacheru|
+PLV|Palsi|
+PLVA|Pallevada|
+PLVI|Paluvayi H|
+PLVR|Palam Vihar Halt|
+PLW|Pingleshwar|
+PLWR|Phulwaria|
+PLY|Plassey|
+PM|Palam|New Delhi
+PMB|Pullambadi|
+PMD|Pamidi|
+PMDB|Pamidi|
+PME|Pandu Mewas|
+PMGN|Pimpalgaon|
+PMH|Parao Mahna|
+PMI|Paimar|
+PMK|Paramakkudi|
+PMKT|Pimpalkhuti|
+PML|Papanasam|
+PMM|Parsehra Mal|
+PMN|Paman|
+PMO|Pandoli|
+PMP|Pimpri|Pune
+PMPE|Pampore|
+PMPR|Pampore|
+PMQ|Parna Nand|
+PMR|Pitambarpur|
+PMS|Parmalkasa|
+PMT|Pullampet|
+PMU|Parmanandpur|
+PMY|Pali Marwar|Pali
+PMYA|Parminiya Halt|
+PN|Pansar|
+PNB|Panbari|
+PNBE|Patna Junction|Patna
+PNC|Patna Saheb|Patna
+PNCB|Pancheberia|
+PND|Pendra Road|
+PNDI|Pachandi|West Bengal 713140
+PNDM|Pennadam|
+PNDP|Pandillapalli|
+PNDR|Pandori|
+PNE|Prantik|
+PNF|Pangaon|
+PNGI|Panangudi|
+PNGM|Panchgram|
+PNGR|Pingora|
+PNHI|Panhai|
+PNHR|Panihar|
+PNI|Puraini|
+PNJ|Padriganj|
+PNK|Panki|Kanpur
+PNKD|Pankidham|
+PNM|Panyam|
+PNMB|Panamburu|
+PNME|Parasnath|
+PNO|Pandu|
+PNP|Panipat Junction|Panipat
+PNPI|Purunapani|Odisha 762015
+PNPL|Panpali|
+PNPN|Panpana|
+PNPR|Punnapura|
+PNQ|Punkunnam|
+PNRA|Paniara|
+PNRD|Pauni Road|
+PNS|Pillamshat|
+PNSA|Punsia|
+PNSD|Pangarshinde Halt|
+PNSR|Pnsr|
+PNT|Panitola|
+PNTR|Pennathur Halt|
+PNU|Palanpur Junction|Palanpur
+PNUG|Punpun Ghat Halt|
+PNV|Panevadi|
+PNVL|Panvel|Mumbai
+PNVT|Pancharatna|
+PNW|Pundhag|
+PNWN|Pachwan|
+PNY|Pandi H|
+PNYA|Paniahwa|
+PO|Parangipettai|
+POA|Palikona|
+POD|Porda Bhatera|
+POE|Pawapuri Road H|
+POF|Piparsand|
+POHE|Pohe|
+POI|Ponpadi|
+POK|Pokran|
+POKL|Peokol|
+POL|Pinjrapol|
+POM|Punthottam|
+PON|Ponneri|
+POO|Potlapadu|
+POR|Pipalda Road|
+PORA|Pora|
+POT|Pothia|
+POTI|Potheri Halt|
+POU|Padrauna|
+POX|Pola-Patthar|
+POY|Pollachi Jn|
+POZ|Potul|
+PP|Puranpur|
+PPA|Pipra|
+PPB|Partabpura|
+PPBR|Pipavav Bandar|
+PPC|Pipraich|
+PPCK|Pipalwali Chowk|
+PPD|Piplod Junction|
+PPDA|Panchpatia Deoria Halt|
+PPDE|Pandu Pindara|
+PPDI|Pipradih|
+PPE|Paintepur|
+PPEA|Paprera|
+PPF|Piplaj|
+PPG|Piploda Bagla|
+PPGT|Princep Ghat|
+PPH|Pipri Dih|
+PPI|Pipariya|
+PPJ|Pophlaj|
+PPK|Pachpokharia|
+PPKD|Paprakund|
+PPLA|Piplai|NH23
+PPLC|Pimpla Chaure Halt|
+PPLI|Pipli|
+PPM|Phirangipuram|
+PPN|Punpun|
+PPNI|Paras Pani|
+PPNS|Pappinissery|
+PPO|Panposh|
+PPR|Pipar Road Junction|
+PPRH|Piparahan Halt|
+PPRN|Pipran|
+PPS|Pipiliya Road|
+PPSP|Pipavav Siding|
+PPT|Pirpainti|
+PPTA|Patliputra|
+PPTN|Piprithan|
+PPTR|Pushpattur|Iyvar Malai Asiramam Rd
+PPU|Piparpur|
+PPV|Pratapganj|
+PPVL|Pirappanvalasai|
+PPVS|Pipavav|
+PPW|Pachperwa|
+PPY|Papatapalli|
+PPZ|Peddempet|
+PQA|Pipla Halt|
+PQD|Pranpur Road|
+PQE|Pawapuri Road|
+PQH|Pindkepar Halt|
+PQK|Pratap Khata|
+PQL|Pindlai|
+PQM|Pakkam|
+PQN|Pwn Klaknder Road|
+PQS|Park Circus|
+PQT|Puniyavant|
+PQU|Parhana Mau|
+PQY|Pabli Khas|
+PQZ|Pundibari|
+PR|Mumbai Parel|
+PRA|Phularitand Rly Asst Sdg|
+PRAE|Palla Road|
+PRAR|Paror|
+PRB|Parbati|
+PRBG|Pratap Bagh|Rana Pratap Bagh
+PRBR|Parsa Basuari|Supaul
+PRBZ|Parsa Bazar|
+PRCA|Perecherla|
+PRDG|Poradanga Halt|
+PRDH|Pirdulesha Halt|
+PRDL|Paradol|
+PRDP|Paradip|
+PRDT|Proddatur|Dorasanipalli
+PRE|Pahara|
+PRES|Pattabiram East|
+PRF|Parsipur|
+PRG|Prayag|
+PRGA|Paharjagangau|
+PRGD|Perungudi|
+PRGL|Perungulattur|
+PRGR|Pinargaria|
+PRGT|Pargothan|
+PRH|Powerpet|
+PRI|Pathri|
+PRJ|Prantij|
+PRK|Parkham|
+PRKA|Parikha|
+PRKD|Powerkheda|
+PRKE|Purua Khera|
+PRKH|Parkanhatti|
+PRKL|Parikkal|
+PRL|Polur|
+PRLI|Parli Vaijnath|
+PRM|Pirumadara|
+PRN|Parauna|
+PRNA|Purnia Junction|
+PRNC|Purnia Court|
+PRND|Perinad|
+PRNG|Pritam Nagar|
+PRNL|Parsa Navroli H|
+PRNR|Porjanpur|
+PRNT|Periyanagathunai|
+PRP|Paharpur|
+PRPM|Pt Ram Prasad Bismil|
+PRPT|Prshtampatnam|
+PRR|Purulia Junction|
+PRRB|Prayagrajrambag|Rambagh
+PRSL|Pandrasali|
+PRSN|Parsa Nagar|
+PRSP|Prasadpur|
+PRSR|Paharsar|
+PRT|Panruti|
+PRTL|Pirtala|
+PRTN|Pratapnagar|
+PRTP|Partapur|
+PRTR|Putarra Halt|Dharrachi
+PRU|Parlu|
+PRUR|Prithwirajpur|
+PRV|Pukkirivari|
+PRWA|Parwakhurd Halt|
+PRWD|Parewadi|
+PRWS|Pattabiram West|
+PRY|Paraiya|
+PRYJ|Prayagraj Jn|
+PRYZ|PRYZ|
+PRZ|Parsa|
+PRZR|Barari Bazar|
+PS|Paras|
+PSA|Palasa|
+PSAE|Purbasthali|
+PSB|Parsabad|
+PSD|Parsoda|
+PSDA|Pasivedala|
+PSE|Pusauli|
+PSF|Patrasaf|West Bengal
+PSJ|Patasahi|
+PSK|Paradsinga Halt|
+PSL|Parisal|
+PSLI|Parsoli|
+PSLP|Pasalapudi|
+PSME|Palasthali|
+PSN|Parsendi|
+PSO|Palsora Makrawa|
+PSPH|Purushotampur Halt|
+PSPY|Prasannayanapal|
+PSR|Pasraha|
+PSRY|Pashwashraya|
+PSS|Padsali|
+PST|Posotia|
+PSV|Parsneu|
+PSX|Ptnsngi Twn Hlt|
+PSZ|Parsauni|
+PT|Patli|
+PTA|Patiala|
+PTAB|Patia Halt|
+PTAE|Patuli|
+PTB|Pattambi|
+PTBY|Puttaparthi Oa|
+PTC|Kodikkarai|
+PTCR|Patancheru|
+PTD|Petlad Junction|
+PTE|Patiala Cantt.|
+PTF|Palta|
+PTG|Patna Ghat|
+PTH|Patranga|
+PTHD|Patohan|
+PTHL|Pantihal|Panther
+PTI|Patiali|
+PTJ|Podanur Junction|Coimbatore
+PTK|Pathankot|
+PTKC|Pathankot Cantt|
+PTKD|Patharkandi|
+PTKN|Pathankot (Ng)|
+PTKP|Potkapalli|
+PTKR|Patipukur|
+PTLD|Patiladaha|
+PTLI|Pathauli|
+PTLR|Putlur Halt|
+PTM|Padalam|
+PTMS|Pattabiram Military|
+PTN|Patan|
+PTNR|Patel Nagar|
+PTP|Patal Pani|
+PTPL|Petrapol|NH35
+PTPR|Pratabpur|
+PTPU|Prattiapadu|
+PTR|Patdi|
+PTRA|Patra|Uttar Pradesh 209303
+PTRD|Pataudi Road|
+PTRE|Patara|
+PTRJ|Patti Rajpura Halt|
+PTRL|Pathrala|
+PTRT|Pathrot|
+PTRU|Patratu|
+PTS|Patansaongi|
+PTSC|Parichaa Therma|
+PTT|Putalapattu|
+PTTN|Pattan|Patan
+PTU|Partur|
+PTWA|Patwara|
+PTX|Pata|
+PTYR|Patiyara|
+PTZ|Patsul|
+PU|Patchur|
+PUA|Pulla|
+PUC|Puduchatiram|
+PUD|Phanda|
+PUDI|Pudi|
+PUDR|Podur|Poodur
+PUE|Palari|
+PUF|Pauta|
+PUG|Punggudi|
+PUHT|Pushkar Terminus|Pushkar
+PUK|Pudukad|
+PUKK|Purunakatak|Redhakhol - Boudh - Phulbani Rd
+PUKS|Paru Khas|Jaffarpur - Paroo - Manikpur Rd
+PUL|Rampura Phul|
+PUM|Pallippuram|
+PUMU|Penumarru|
+PUN|Pundi|
+PUNA|Paunia P.H.|Pauniyan
+PUNE|Pune Junction|Pune
+PUO|Pir Umrod|
+PUPR|Punnapra|
+PUQ|Puranigudam|
+PURA|Pura Halt|
+PURI|Puri|
+PUS|Phusro|
+PUSA|Pusla|
+PUT|Puttur|
+PUU|Punalur|
+PUV|Khudiram B Pusa|
+PUW|Patuwas Mehrana|
+PUWA|Pauwara Halt|
+PUX|Parasia|
+PUY|Phulaguri|
+PV|Pallavaram|
+PVD|Peddavadiapudi|
+PVG|Pavagarh|
+PVI|Peravurani|
+PVL|Pasupatikovil|
+PVM|Pattaravkkam|
+PVN|Pavunur|
+PVP|Parvatipuram|
+PVPT|Parvatipuram Tn|
+PVR|Pandharpur|
+PVRD|Piravam Road|
+PVU|Paravur|
+PVZ|Parvezpur|
+PW|Pirwa|
+PWA|Powai|
+PWBN|Pawai Brohmasthan Halt|
+PWI|Padwaniya|
+PWK|Pipariya Kalan|
+PWL|Palwal|
+PWR|Pilwai Road|Mehsana
+PWS|Phulwari Sharif|Patna
+PWU|Paranur|
+PWXP|Pawani Kumarpur Halt|
+PXR|Palpara|
+PY|Perundurai|
+PYA|Pedapariya|
+PYD|Palliyadi|
+PYG|Prayag Ghat|
+PYGS|Prayagrajsangam|Prayagraj
+PYHT|Prayahat Halt|Amwar
+PYI|Payli|Ratangarh
+PYJE|Poyanje|
+PYK|Periyakottai|Pananvayal
+PYLA|Piyala Block Hut|
+PYM|Pandiyapuram|
+PYOL|Payyoli|
+PYQ|Prayagpura|
+PYV|Pazhaya Seevaram|
+PYX|Peyanapalli|
+PZA|Palavanthangal|
+PZV|Puzhuthivakkam|
+QBW|Qubarwala|
+QCAB|Qcab|
+QDN|Qadian|Punjab 143516
+QG|Quazigund|Qazigund
+QGT|Kolaghat|
+QLD|Quilandi|
+QLM|Kulem|
+QLN|Kollam Junction|
+QLNN|Kollam Town|
+QLR|Kallar|
+QMRS|Kayamsar|
+QRP|Kila Raipur|
+QRS|Quarry Siding|
+QSR|Kansrao|
+QTP|Quatabpur|
+QTR|Kothara|
+QXR|Kuchesar Road|
+RA|Ramparda|
+RAA|Barara|
+RABE|Rabale|
+RADE|Rabada|
+RAG|Raigir|
+RAGM|Rajagambiram|
+RAH|Ramgarh|
+RAHA|Raha|
+RAI|Raibha|
+RAIR|Rairakhol|
+RAJ|Rajpipla|
+RAJP|Rajapur Road|Rajapur
+RAJR|Rajur|
+RAK|Ramkot|
+RAKD|Radha Kund|
+RAKL|Rethorakalan|
+RAL|Repalle|
+RAM|Ramapuram|
+RAMA|Ramva|
+RAMP|Rampuri|
+RAMR|Ramaipur Halt|
+RANG|Ramling|
+RANI|Rani|
+RAPR|Rapuru|
+RAPU|Rampura|Rampur
+RAS|Ras|
+RASP|Rasipuram|
+RAU|Rau|
+RAWS|Rahatwas|
+RAY|Ray|
+RAYA|Raya|
+RBA|Rambha|
+RBCS|Ramachandrapuram|Ramachandra Puram
+RBD|Rahimabad|
+RBG|Raybag|
+RBGJ|Roberts Ganj|
+RBH|Rajbandh|
+RBHR|Rabhra Halt|Gohanarural
+RBHT|R Block H|R Block Bus Stop
+RBJ|Raibojha|
+RBK|Reoti B Khera|
+RBL|Rae Bareli Junction|
+RBN|Raghubans Nagar|
+RBQ|Ram Bishanpur H|Gausabad
+RBR|Ribada|
+RBS|Rupbas|
+RBZ|Rambhaddarpur|
+RC|Raichur|
+RCA|Rentachintala|
+RCD|Rajchandrapur|
+RCF|Kapurthala Rail Coach Factory|
+RCG|Rachagunnari|
+RCGT|Richughutu|
+RCJ|Ranyal Jasmiya|
+RCP|Ramachandrapur|
+RCPT|Ramchandrapuram Ts|Bharat Heavy Electricals Limited
+RCR|Ratar Chhattar|143604
+RCRA|Ramchaura|
+RCT|Raipur City|
+RCTC|Raghunathpur|
+RD|Ram Dayalu Nagar|
+RDBP|Radhikapur Border Point|
+RDBR|Randia Baudpur|Baudpur
+RDD|Rikhabdev Road|
+RDDE|Rathdhana|
+RDE|Rundhi|
+RDF|Radhagaon|
+RDG|Rayadrug|
+RDHP|Radhanpur|
+RDHR|Riddhapur|Ridhapur
+RDI|Kardi|
+RDJ|Randheja|
+RDK|Rasheedpura Khori|
+RDL|Rudauli|
+RDM|Ramgundam|
+RDN|Rudain|
+RDP|Radhikapur|
+RDR|Radhanagar|
+RDRA|Ramdevra|
+RDS|Ramdas|
+RDT|Ravtha Road|
+RDU|Radhamohanpur|
+RDUM|Rampur Dumra|
+RDV|Radha Balampur|
+RDY|Redipalayam|
+RE|Rewari|
+REAI|Riasi|Chaurakot
+RECH|Rechni Road|
+REG|Regupalem|
+REI|Rithi|
+REJ|Rejinagar|
+REM|Reddigudem|
+REMA|Rema|Jagman Raidih
+REN|Ren|
+RENH|Renhat|
+REP|Resauli|
+REPI|Rangepalli|
+RES|Rasull|
+RET|Rentia|
+REW|Rewa|
+REWA|Rewa|
+RF|Rafaleshwar|
+RFJ|Rafiganj|
+RFR|Rafinagar|
+RG|Rajghat Narora|
+RGA|Rajgoda|
+RGB|Ramganga|
+RGBD|Ramganga|
+RGBP|Rani Gaidinliu|Muktokhal
+RGCR|Ratangarh Jn Cabin|
+RGD|Rajgir|
+RGDA|Rayagada|
+RGG|Radogarh|
+RGH|Ramgarhwa|
+RGI|Ramgiri|
+RGJ|Raiganj|
+RGJI|Rangjuli|
+RGJN|Ramganga Jn|
+RGL|Rengali|
+RGLI|Rangauli|
+RGM|Rangapuram|
+RGNH|Raghunathgarh|
+RGO|Rotegaon|
+RGP|Raghunathpalli|
+RGPM|Raghavapuram|
+RGQ|Raigadh Road|
+RGS|Ringas Junction|
+RGT|Rajghat Halt|
+RGU|Ragaul|
+RGV|Rathopur|
+RGX|Raghunathbari|
+RGZ|Rangra|
+RHA|Ranaghat Junction|
+RHBH|Rakesh Bagh H|Rakesh Bagh Halt
+RHE|Rakha Mines|
+RHG|Rajgarh|
+RHI|Rakhi|
+RHMA|Rahama|
+RHMP|Rahamatpur|Haria
+RHN|Roshanpur|
+RHNE|Rohini|
+RHO|Rohna|
+RHOT|Rohna Town|
+RHR|Rajhura|
+RHU|Rahon|
+RHW|Rohira Ghalughra|
+RIBP|Ramakunda Ibp Halt|
+RID|Ridhore|
+RIG|Raigarh|
+RIGA|Riga|
+RIKA|Ratikheda|
+RIKD|Rishikund|
+RIM|Rajim|
+RIS|Rishra|
+RJ|Rawat Ganj|
+RJA|Rajanagar|
+RJAK|Rajnagar|
+RJAP|Rajapur|
+RJB|Rajabera|
+RJC|Rajsitapur|Prathugadh
+RJD|Raj Pardi|
+RJG|Rajgram|
+RJGR|Rajthagarh|
+RJI|Rajawari|
+RJIN|Rajuri (Navgan)|Rajuri Navgan
+RJJN|Rajajan Halt|
+RJK|Raja Ka Sahaspr|
+RJL|Rajmahal|
+RJLA|Rajla|
+RJLK|Rajalukah|
+RJMA|Rajomajra|
+RJMP|Rajmalpur Road|
+RJN|Raj Nandgaon|
+RJO|Rajendra Pul|
+RJP|Razampeta|
+RJPB|Rjndr Ngr Bihar|Patna
+RJPM|Rajapalayam|
+RJQ|Rajendranagar|
+RJR|Rajaldesar|
+RJS|Rajiyasar|
+RJT|Rajkot Junction|
+RJU|Rajula City|
+RJUA|Rajura|
+RJW|Rajevadi|
+RJY|Rajamundry|
+RK|Roorkee|
+RKAE|Ramkistopore|
+RKB|Raika Bagh|
+RKD|Rukadi|
+RKDI|Raukheri|
+RKG|Rattoke Gurdwara H|143419
+RKH|Rakhiyal|
+RKI|Ramkanali Jn|
+RKJE|Rakhitpur|
+RKK|Ratangarh Kanakwal|
+RKL|Ramkola|
+RKM|Raja Ki Mandi|
+RKMP|Rani Kamlapati(Bhopal)|
+RKN|Rati Ka Nagla|
+RKO|Rmkrshnaprm Gte|
+RKR|Ranikund Rarah|
+RKRI|Rao Khedi|
+RKS|Sarai Rani|
+RKSH|Rishikesh|
+RKSI|Rakshi|
+RKSN|Rajkharsawan Junction|
+RKX|Rukhi|
+RKY|Kothariya|
+RKZ|Rajkiawas|
+RLA|Rajula Junction|
+RLD|Randala|Randall St
+RLE|Railey English Halt|
+RLG|Relangi|
+RLJC|Rljc|
+RLK|Rohal Khurd|
+RLL|Regadipalli|
+RLO|Rayalcheruvu|
+RLP|Harlapur|
+RLR|Raila Road|
+RLS|Romana Albel Singh|
+RLT|Ralapet|
+RLW|Repalliwada|
+RLX|Ramanujampalli|
+RM|Rajmane|
+RMA|Ramganj Mandi|
+RMAR|Ram Mandir|Oshiwara
+RMB|Rampura Beri|
+RMBG|Ramghat Halt|
+RMC|Ram Chaura Road|
+RMD|Ramanathapuram|
+RMF|Ramna|
+RMGD|Ramgad|
+RMGJ|Ramganj|
+RMGM|Ramanagaram|
+RMH|Rangmahal|
+RMJ|Ramrajatala|
+RMJK|Ram Nagar J K|
+RML|Rompalle Ph|Vizianagaram
+RMM|Rameswaram|
+RMN|Raman|
+RMNP|Ramannapet|
+RMNR|Rahmat Nagar|
+RMO|Ramakona|
+RMOA|Raimoha|
+RMP|Rahimatpur|
+RMPB|Rampur Bazar|
+RMPH|Rampahari|
+RMPR|Rampur Halt|
+RMQ|Ramri|
+RMR|Ramnagar|
+RMRB|Ramnagar Bengal|
+RMSR|Ramsinghpur|
+RMT|Ramgarh Cant|
+RMTR|Remount Road|
+RMU|Rampur|
+RMV|Ramavarappadu|
+RMW|Roshan Mau|
+RMX|Ramsar|
+RMY|Rukmapur|
+RMZ|Routhpuram Halt|
+RN|Ratnagiri|
+RNA|Rohana Kalan|
+RNB|Ranpura|
+RNBD|Rana Bordi|
+RNBT|Rahenbata|
+RNC|Ranchi|
+RNE|Ranjani|
+RNG|Raniganj|
+RNGG|Rangaliting|
+RNGN|Ranigaon|NH 53
+RNGR|Rainagar|
+RNH|Runkhera|
+RNI|Rangapani|
+RNIR|Rajnarainpur|
+RNIS|Ranolishishu|
+RNJ|Runija|
+RNJD|Ranjangaon Road|
+RNJP|Ranajitpura|
+RNKA|Runkuta|
+RNL|Ranala|
+RNN|Rajankunti|
+RNO|Ranoli|
+RNPR|Rupnarayanpur|
+RNQ|Renukut|
+RNR|Ranibennur|
+RNRD|Ranipur Road|
+RNT|Ranthambhore|
+RNTE|Ramanand|
+RNTL|Ranital|
+RNU|Ratnapur|
+RNV|Raniwara|
+RNW|Renwal|
+RNX|Ranipatra|
+RNY|Rangiya Junction|
+ROA|Rusera Ghat|
+ROB|Robertson|
+ROH|Roha|
+ROHA|Roha|
+ROHN|Rohednagar Halt|
+ROI|Reoti|
+ROK|Rohtak Junction|
+ROL|Rajuli|
+ROP|Rupsa Junction|
+RORA|Rora|
+ROS|Rajosi|
+ROU|Rourkela|
+ROZA|Roza Junction|
+RPAN|Rangapara North|
+RPAP|Ratnipora Halt|Ratnipora
+RPAR|Rupnagar|
+RPB|Rupasibari|
+RPCA|Rompicherla|
+RPCS|Ramachandrapuram|
+RPD|Rupaund|
+RPGU|Rasulpurgogamau|
+RPH|Rampur Hat|
+RPHR|Raipur Hariyana Junction|
+RPI|Rupaheli|
+RPJ|Rajpura Junction|
+RPK|Ravalpali Kalan|
+RPL|Reddipalle|
+RPLY|Rupauli|
+RPM|Royapuram|
+RPMN|Rampurmani Hara|
+RPMY|Rpmy|
+RPNN|Rampur Naikin|
+RPO|Rawatpur|
+RPP|Ranu Pipri|
+RPR|Raghunathpur|
+RPRD|Rupra Road|
+RPRL|Raparla Halt|
+RPSC|Rudrapur Sidcul Halt|Haldwani Rudrapur Road
+RPT|Ranippettai|
+RPUR|Ratanpur|
+RPV|Rajapatti|
+RPWN|Rambhawan Halt|
+RPY|Rupai|Rupa
+RPZ|Ranapratapnagar|
+RQJ|Rningr Jlpaigri|
+RQP|Radhakishorepur|
+RR|Richha Road|
+RRAL|Rure Asal H|Rure Asal
+RRB|Birur Junction|Birur
+RRD|Reay Road|Barrister Nath Pai Marg
+RRE|Rahul Road|
+RRGA|Rangareddy Guda|
+RRH|Rura|
+RRI|Rahuri|
+RRJ|Ramaraju Palli|
+RRL|Rewral|
+RRME|Ranchi Road|
+RRNH|Ramrupnagar|
+RRP|Rairangpur|
+RRPM|Revoor Ramapuram|
+RRS|Raghuraj Singh|
+RRU|Rayaru|
+RRW|Roranwala|
+RS|Risia|
+RSA|Risama|
+RSC|Ramganga South|
+RSG|Ramsagar|
+RSH|Ratan Shahr|
+RSI|Raisi|
+RSJ|Rayser|
+RSKA|Rajsunakhala|Raj Sunakhala Rd
+RSLR|Rasulpur|
+RSM|Rasmara|
+RSME|Raswan|
+RSMN|Ramgovindsingh Mahuli Halt|
+RSNA|Rasana Halt|
+RSNR|Rai Singh Nagar|
+RSQ|Rajendra Nagar|
+RSR|Rasra|
+RSRI|Raishree|
+RSWN|Rameshwar Nagar|
+RSWT|Rmgrh Shekhwati|
+RSY|Rushabhdev Upariyala|
+RSYI|Rasayani|
+RT|Rohat|
+RTA|Ruthiyai|
+RTB|Raja Talab|
+RTBR|Ratabari|
+RTD|Ratlam A Cabin|
+RTG|Rangtong|
+RTGH|Ratangarh Junction|
+RTGN|Ratangaon|
+RTI|Raoti|
+RTJ|Rantej|
+RTK|Ramtek|
+RTLM|Ratlam Jn|
+RTM|Ratlam Junction|Ratlam
+RTME|Ratlam East Cabin|
+RTMN|Ratlam New|Ratlam
+RTN|Retang|
+RTP|Ratanpura|
+RTR|Ramnathpur|
+RTRA|Ramnathpur|788162
+RTS|Rehta|
+RTU|Ratan Sarai|
+RTW|Rehatwas|
+RTWS|Rahatwas|
+RTZ|Ratona|
+RU|Renigunta Junction|
+RUB|Rasulabad|
+RUG|Rajlu Garhi|
+RUI|Rukni|
+RUJ|Ranuj|
+RUKH|Rukhai H|
+RUL|Rauli|
+RUM|Rupamau|
+RUP|Rupahigaon|
+RUPC|Rudrapur City|
+RUPR|Rudrapur Road|
+RUR|Ranpur|
+RURA|Rura|
+RUSD|Runni Saidpur|
+RUT|Ratnal|
+RV|Raver|
+RVD|Ravikampadu|
+RVG|Revelganj Ghat Halt|
+RVH|Raipur R-V Block|
+RVJ|Ravli Jn|
+RVK|Raja Bhat Khawa|
+RVKH|Ravindrakhani|
+RVN|Rajiv Nagar H|Rajiv Nagar
+RVS|Ravanasamudram|
+RVSN|Rvs Nagar|
+RVT|Revelganj Ghat|
+RW|Rankua|
+RWA|Rautara|
+RWH|Rowriah Sdg|
+RWJ|Rawania Dungar|
+RWL|Raiwala|
+RWO|Ranavav|
+RWSR|Rajwansher|
+RWT|Rowghat|
+RWTB|Rowta Bagan|
+RXL|Raxual Junction|
+RXM|Rooma|
+RXN|Ramsan|
+RXR|Rangapahar|
+RXRX|Rangapahar Crs|
+RXW|Ratangarh West|
+RY|Rayaka|
+RYC|Rayakkottai|
+RYL|Rahiiyol|
+RYM|Ramidi Halt|
+RYP|Rayanapad|
+RYPS|Rayanapaduws|
+RYS|Rasuriya|
+RYT|Rayat Pura|
+RZJ|Razaganj|
+RZN|Rauzagaon|
+SA|Salem Junction|Salem
+SAA|Sathiaon|
+SAB|Santamagulur|
+SABD|Salabad|
+SAC|Sanichara|
+SACH|Suchitra Centre Halt|Suchitra Circle
+SAD|Sonada|
+SADL|Sadla|
+SADP|Saidapur|
+SAE|Simaria|
+SAF|Salkhapur|
+SAG|Sangrur|
+SAGM|Sagma|
+SAGR|Shrirajnagar|
+SAH|Saphale|
+SAHA|Sarahula|
+SAHI|Sathi|
+SAHL|Saheli|
+SAHP|Sahijpur|
+SAHR|Saheri|
+SAHT|Samhuta Halt|
+SAI|Sarai|
+SAJH|Sahja Halt|
+SAK|Sak Bahadurpur|
+SAKA|Simariya Kajanwada|
+SAKD|Suprakandi|
+SAL|Salwa|
+SALE|Salar|
+SALI|Sali|
+SALR|Salur|
+SAMN|Samni Jn.|
+SAMT|Salem Market|
+SAN|Sandila|
+SANG|Sairang|Aizawl Mamit Road
+SANH|Sanha Halt|
+SANI|Shanki|Chito
+SANK|Sank|
+SANR|Sardarnagar|
+SAO|Sagoni|
+SAP|Sattenapalle|
+SAPD|Sanapadar Ph|Sanapadar
+SAPE|Sape Wamne|
+SAPR|Sarangpur Road|
+SAPT|Sugapahari|
+SAR|Shahzad Nagar|
+SARR|Sidhauna Rampur Halt|Sidhauna
+SARY|Saraiya Halt|Saraiya
+SAS|Shdspra Padmpra|
+SASG|Sasan Gir|
+SASN|Sahibzada Asngr|
+SASR|Sausar|
+SAT|Sant Road|
+SATR|Satr Halt|
+SAU|Sanand|
+SAV|Savda|
+SAW|Suriawan|
+SAWN|Sohansra|
+SAY|Sayama|Anand
+SAZ|Samni|
+SB|Sarai Bhopat|
+SB04|Mana|
+SBB|Sahibabad|
+SBBJ|Sbb Jogulamba H|
+SBBP|Sardar Ballabh Bhai Patel Halt|Madhubani
+SBC|Bangalore Cy Junction|Bangalore
+SBD|Sleemanabad Road|
+SBDP|Sabdalpur Jn.|Sabdalpur
+SBDR|Sonbhadra|Tagore Nagar
+SBE|Sorbhog Junction|
+SBG|Sahibganj Junction|
+SBGA|Shravanabelagola|
+SBGB|Sutei Badagan|Bighnapur
+SBGN|Sisibargaon|Kachari Pathar
+SBGR|Subhas Gram|
+SBH|Sulebhavi|
+SBHN|Shri Bhavnath|
+SBHR|Subrahmanya Roa|
+SBI|Sabarmati Junction|
+SBIB|Sabarmati Bg|Ahmedabad
+SBIC|Sabarmati Bridge|
+SBID|Sabarmati D Cabin|
+SBIS|Sabarmati South|
+SBJ|Sarai Banjara|
+SBK|Shahbaz Kuli|
+SBL|Sabalgarh|
+SBLJ|Shri Balaji|
+SBLT|Shribdrya Lathi|
+SBM|Sonbarsa Kcheri|
+SBNM|Subarnamrigi|
+SBNR|Shri Vijainagar|
+SBO|Sabaur|
+SBP|Sambalpur|
+SBPD|Sambalpur Road|
+SBPS|Sahid Baba Parv Halt|Dafal Dih
+SBPY|Sambalpur City|
+SBR|Sambhar Lake|
+SBRA|Sarbahara|
+SBRM|Sabroom|Paschim Jalefa
+SBS|Sangrana Sahib|
+SBT|Sabarmati Junction|
+SBTA|Sabarmati A Cabin|
+SBTF|Sabarmati F Cabin|
+SBTI|Sambheti|
+SBTJ|Shanidev Dham Bishnathganj|Pratapgarh
+SBV|S Bhakhtiyarpur|
+SBW|Sbewbabudih|
+SBY|Solan Brewery|
+SBZ|Siswa Bazar|
+SC|Secunderabad Junction|Hyderabad
+SCA|Salchapra|
+SCC|Sitapur Cant|Sitapur
+SCE|Senchoa Jn|
+SCH|Sachin|
+SCI|Sanchi|
+SCKR|Salichauka Road|
+SCL|Silchar|
+SCM|Simhachalam|
+SCMN|Simhachalam North|
+SCN|Sondha Road|
+SCO|Satuna|
+SCP|Sirnapalli|
+SCPD|Suchipind|
+SCPR|Shyama Charanpur Halt|
+SCQ|Sham Chaurasi|
+SCSU|Pure Sitalpur Asstt Sdg|
+SCT|Sengottai|
+SCTN|Sec Bad Twn Cb|
+SCV|Sukhchain|
+SCY|Sachiwalay Halt|
+SD|Sidhauli|
+SDAH|Sealdah|Kolkata
+SDAM|Sundhiamau|
+SDB|Shahabad|
+SDBH|Sindriblock Hut|
+SDBR|Shedubhar|
+SDC|Saidabad|
+SDD|Sindhawadar|
+SDDN|Siddharth Nagar|
+SDE|Sadisopur|
+SDF|Sudsar|
+SDG|Sahadai Buzurg|
+SDGH|Sri Dungargarh|
+SDGM|Sardargram|
+SDH|Saradhna|
+SDHA|Sidhari Halt|
+SDHR|Sandhanidhar|
+SDHS|Sidhirsai|Jojodih
+SDI|Sagardighi|
+SDL|Shahdol|
+SDLE|Swadinpur|
+SDLK|Sundlak|
+SDLP|Sadulpur Junction|
+SDM|Surareddipalem|
+SDMD|Sudamdih|
+SDMK|Sidmukh|
+SDN|Sholavandan|
+SDNR|Seydunganallur|
+SDPA|Sundarpura|
+SDPH|Sardar Patel Halt|
+SDPN|Sindpan|
+SDPR|Sardar Patel Road|
+SDPT|Sedarampattu|
+SDRA|Sudhrana|
+SDRN|Shendurni|
+SDS|Sadulshahr|
+SDSL|Sandasal|
+SDT|Sadat|
+SDUA|Sadura|
+SDV|Somidevipalle|
+SDVL|Soldevanahalli|
+SDWR|Sidhwar|
+SDY|Sadhoo Garh|
+SDZ|Sindhar|
+SE|Semla|
+SEA|Seawood Darave|
+SEB|Son Nagar|
+SEC|Salkhia Cbo|
+SED|Shedbal|
+SEE|Sonpur Junction|
+SEG|Shegaon|
+SEGM|Sevagram|
+SEH|Sehore|
+SEI|Shendri|
+SEJ|Sarkhej|
+SEL|Sankrall|
+SELU|Selu|
+SEM|Seram|
+SEN|Senapura|
+SEO|Seohara|
+SEP|Sodpur|
+SEPN|Sepon|
+SEPR|Sherpur|
+SEQ|Sekha|
+SER|Samayanallur|
+SES|Semari|
+SET|Settihally|
+SETB|Sessa|
+SEU|Sendra|
+SEV|Sithalavai|
+SEW|Sehal|
+SEX|Seroni Road|
+SEY|Seoni|
+SF|Settigunta|
+SFA|Sanhera Halt|
+SFC|Saintala|
+SFDE|Safidon|
+SFE|Sanodiya|
+SFF|Sunera Pirkheri|
+SFG|Subedarganj|
+SFH|Safedabad|
+SFK|Sikir|
+SFM|Sunam|
+SFMU|Sunam Udham Singh Wala|Balmiki Basti
+SFNR|Saifinagar Halt|
+SFPR|Safipur|
+SFQ|Safedpura|
+SFR|Safrai|
+SFS|Safiasarai H|
+SFW|Sarangpur|
+SFX|Safilguda|
+SFY|Shajapur|
+SFZ|Sinduriya Kachari|
+SG|Shahgarh|
+SGA|Shergarh|
+SGAC|Sogariya Cabin|
+SGAM|Sareigram|
+SGBA|Sir Gurudas Banerjee Halt|
+SGBB|Sgbb|
+SGBJ|Surgaon Banjari|
+SGC|Saongi|Balaghat
+SGD|Songadh|
+SGDM|Sigadam|
+SGDN|Sangaldan|
+SGDP|Sagadapata|
+SGDV|Soma Guddu|
+SGE|Sankaridrug|
+SGF|Sangat|
+SGG|Sultanganj|
+SGJ|Safdarganj|
+SGKM|Srungavruksham|
+SGL|Sagauli Junction|
+SGLA|Sangola|
+SGLM|Sengulam|
+SGM|Solgampatti|
+SGND|Shrigonda Road|
+SGNL|Sanganal|Sanganahala
+SGNR|Shri Ganganagar|Ganganagar
+SGO|Saugor|
+SGP|Sohagpur|
+SGPA|Sugapahari|
+SGR|Sangmeshwar|
+SGRA|Sangaria|
+SGRD|Sulgare|
+SGRE|Sulgare|
+SGRL|Singrauli|
+SGRM|Singaram|
+SGRP|Singhirampur|
+SGRR|Sangar|
+SGS|Shoghi|
+SGTY|Sankrail Goods Terminal|
+SGUD|Siliguri|
+SGUJ|Siliguri Junction|
+SGUT|Siliguru Town|
+SGV|Saragchni|
+SGW|Singwal|
+SGWF|White Field Satellite|
+SGYW|Singriawan|
+SGZ|Shamgarh|
+SH|Sher|
+SHAD|Shahad|
+SHAN|Srinivasa Nagar|
+SHB|Shahibag|
+SHBA|Sahebtala|
+SHBC|Sibaichandi|
+SHBL|Shiblun|
+SHC|Saharsa Junction|
+SHDM|Shahbad Marknda|
+SHDR|Shadhoragaon|
+SHE|Seoraphuli|
+SHEO|Shisho|
+SHER|Sher|
+SHF|Shirud|
+SHG|Shahganj Junction|
+SHGN|Shri Ghasinagar|
+SHH|Shapur Jn|
+SHHT|Singhaul Halt|
+SHI|Singanallur|
+SHIH|Sarhari Halt|Paterha - Bhagwanpur Rd
+SHIT|Salhaitola|Dondi
+SHIV|Shindawane|
+SHJ|Sahaspur Road Ph|Bankura
+SHJP|Sahajipur Halt|
+SHK|Sheikpura|
+SHKL|Shankrul|Bankura
+SHKY|Saharsa Kutchery Halt|
+SHL|Sadhli|
+SHLK|Sholaka|
+SHLT|Shalashah Thana|
+SHLU|Shelu|
+SHLV|Selavi|Gorad Bus Stop
+SHM|Shalimar|
+SHMI|Shiroor|
+SHMR|Shyamsunder|Bardhaman
+SHN|Suchan Kotli|
+SHNG|Shivnagar|
+SHNR|Shadnagar|
+SHNX|Sheo Singh Pura|
+SHR|Sihora Road|
+SHRA|Shahera|
+SHRD|Saij Sertha Road|
+SHRG|Sri Ramgarh Halt|
+SHRM|Sharma|
+SHRN|S Hirdaramnagar (Bhopal)|Hemu Kalani
+SHSK|Saharsrakund|
+SHT|Sahari Halt|
+SHTA|Shertallai Oa|
+SHTS|Sambhal Hatim Sarai|
+SHTT|Silghat Town|
+SHU|Sholinghur|
+SHV|Shivani|
+SHW|Samhon|
+SHWL|Sahuwala|
+SHX|Shukharullapur|
+SHYP|Sakarayapatna|
+SHZ|Summer Hill|
+SI|Sonalli|
+SIA|Shivlankha|
+SIBR|Shribar|Lalang Pt I
+SIC|Sonik|
+SICY|Shaheed Ishwar Chowdhary Halt|
+SID|Siddhpur|
+SIDG|Siddapur Grama|Bargur Road
+SIDP|Siddapur Halt|
+SIE|Siddampalli|
+SIF|Sirli|
+SIGA|Shantigrama|Shanti Grama
+SIHI|Shihori|Umbri
+SIHO|Siho|
+SIHT|Sameli Halt|Basuhar
+SII|Sitimani|
+SIJU|Siju|
+SIK|Sikkampatti|
+SIKA|Sikka|
+SIKD|Sikroda Kwanri|
+SIKI|Sulikeri|Karnataka 587205
+SIKR|Sikar Junction|
+SIL|Sakhi Gopal|
+SILO|Silao|
+SILP|Silpara|
+SILR|Silari|Solari Hill
+SIM|Shri Amirgadh|
+SIMR|Srirampur F|Mathuraberia
+SIN|Mumbai Sion|
+SINA|Srinagar|
+SINI|Sini Junction|
+SINR|Sinor|
+SIO|Samakhiali|
+SIOB|Samakhiali B G|
+SION|Sion|
+SIP|Suraimanpur|
+SIPA|Singhookharia|
+SIPI|Saiphai|Saifai
+SIPR|Sihapar|
+SIPT|Siddipet|Shankar Nagar Lane 2
+SIQ|Sarkoni|
+SIR|Sirhind Junction|
+SIRA|Sirhi Itara|
+SIRD|Sird|
+SIRK|Sitaput Kutchery H|
+SIRL|Shirala|
+SIRN|Sirran|
+SISM|Singuli Shyam|
+SISN|Sisauna|
+SIU|Singur|
+SIVN|Sivnar Halt|
+SIW|Shirravde|
+SIY|Sirry|
+SIZ|Shrikhanda|
+SJA|Sijua|
+SJD|Saljada|
+SJDA|Sanjuje Da Arey|
+SJDR|Sri Jhadeshwar|
+SJER|Sanjarpur|
+SJF|Sajanvar Road|
+SJGH|Sarai Jagdish|
+SJGM|Sanjay Gram|
+SJHG|Shaheed Jitendra Halt Gopalpur|Gopalpur
+SJJ|Sanjha|
+SJKL|Surja Kamal|
+SJL|Sangam Jagarlamudi|
+SJM|Sajuma|
+SJMA|Sanjamala|Andhra Pradesh 518134
+SJN|Sanjan|
+SJNP|Sujanpur|
+SJP|Shujalpur|
+SJPA|Sujalpur|
+SJPM|Sujata Puram Halt|
+SJPR|Surjyapur|
+SJQ|Surajpur Road|
+SJRR|Sajherpar|
+SJS|Shamlaji Road|
+SJSM|Salemgarhmasani|
+SJT|Shujaatpur|
+SJTR|Sojitra|
+SJV|Sanjhauli Halt|
+SJVP|Sanjeevaiah Park|
+SJWB|Sumerpur Jawai Bandh|Jawai Bandh
+SK|Sakhun|
+SKA|Sikandra Rao|
+SKAD|Suprakandi Halt|
+SKAP|S K Para|
+SKAR|Sakariya|
+SKB|Shikohabad Junction|
+SKBN|Silakhedi|
+SKBR|Shankarpur Bhadaura|
+SKDG|Shukdasgram Halt|
+SKDM|Sikroda Mina|
+SKEN|Sukhshena|
+SKF|Sakhoti Tanda|
+SKG|Saktigarh|
+SKGH|Saktesgarh|
+SKHK|Sukhasan Kothi|
+SKHR|Sikhera Mb Halt|
+SKHV|Sukhovi|Unnamed Road
+SKI|Sakri Junction|
+SKIP|Ambajora Sikaripara|Ambajora
+SKJ|Sahibpur Kml Junction|
+SKJS|Shri Krishna Janam Asthan|
+SKK|Sikkal|
+SKKE|Sekerkote|
+SKL|Singaperumlkoil|
+SKLI|Sukli|
+SKLP|Shankarpur|
+SKLR|Sakleshpur|
+SKM|Singarayakonda|
+SKN|Srikrishn Nagar|
+SKND|Sukinda Road|
+SKNP|Sarkanpur|Shyampura
+SKNR|Shakar Nagar|
+SKP|Shankarpalli|
+SKPA|Shrikalyanpura|
+SKPI|Sikarpai|
+SKPR|Sikarpur Halt|
+SKPT|Somanayakkanpti|
+SKQ|Sikandarpur|
+SKR|Sakhpur|
+SKRI|Sikaria|
+SKS|Salekasa|
+SKSO|Sikosa|
+SKT|Sakti|
+SKTN|Shakti Nagar|
+SKU|Sikroda|
+SKVL|Sankval|
+SKW|Sheikhupur|
+SKX|Sarkara|
+SKY|Shikara|
+SKZR|Sirpur Kagazngr|
+SL|Surathkal|
+SLB|Salboni|
+SLBN|Salai Banwa|
+SLBS|Salsala Bari|
+SLD|Sakaldiha|
+SLF|Silli|
+SLG|Simlagarh|
+SLGE|Sulerjavalge|
+SLGH|Shelgoan H|
+SLGM|Sankaralingaprm|
+SLGR|Simaluguri Junction|
+SLH|Siliari|
+SLHA|Salhana|
+SLHI|Shilhauri Halt|
+SLHP|Sulah Himachal Pradesh|
+SLI|Sangli|
+SLIA|Salaia|Koritola
+SLJ|Sakrigali Junction|
+SLJR|Salga Jhari|
+SLKN|Sandal Kalan|
+SLKR|Salkaroad|
+SLKX|Salakati|
+SLM|Somalapuram|
+SLME|Salem East|
+SLN|Sultanpur|
+SLNA|Salauna|
+SLNG|Sultanpur Gram|
+SLNK|Sultanpur Karnataka|Taj Sultanpur
+SLO|Samalkot Junction|
+SLON|Salona|
+SLOR|Seloo Road|
+SLP|Salpa|
+SLPM|Shivalingapuram|
+SLPP|Shilpaprabesh|
+SLPR|Silpaprabesh|
+SLQ|Salona Assam|
+SLR|Salogra|
+SLRA|Sarala|
+SLRD|Surla Road|
+SLRP|Salarpur|
+SLRW|Shelarwadi|
+SLS|Salanpur|
+SLT|Silaut|
+SLTH|Sillakkudi|
+SLTP|Sultanpur|
+SLU|Sasalu|
+SLV|Sandalpur|
+SLW|Sohwal|
+SLWR|Silawar|
+SLX|Seleng Hat|
+SLY|Samalpatti|
+SLZ|Solari|
+SM|Samsi|
+SMAE|Samudragarh|
+SMAP|Shamnapur|
+SMBH|Salim Pur Bihar|
+SMBJ|Shri Mahabirji|
+SMBL|Simbhooli|
+SMBR|Sumbar|Sumber
+SMBX|Samba|
+SMC|Samnapur|
+SMCK|Shyam Chak|
+SMCP|Simen Chapari|Simen Chapori
+SMD|Charanmahadevi|
+SMDC|Sawai Madhopur D Cabin|
+SMDM|Samudram|
+SMDP|Shahabad Mohamadpur|
+SMDR|Simodara|
+SMDT|Semmandappatti|
+SME|Shimoga|
+SMET|Shimoga Town|
+SMF|Samar Gopalpur|
+SMG|Shahamatganj|
+SMGR|Samaguri|
+SMH|Simraha|
+SMI|Sitamarhi|
+SMK|Samalkha|
+SMKR|Sham Kauria|
+SMKT|Somankatti|
+SML|Simla|
+SMLA|Samlaya Junction|
+SMLG|Shimiliaguda|
+SMLI|Swamihalli|
+SMLT|Samloti|
+SMM|Saliyamangalam|
+SMND|Sarmatanr|
+SMNE|Somtane|
+SMNH|Somnath|
+SMNN|Shri Makri Nath Nagar|
+SMO|Semapur|
+SMP|Shambhupura|
+SMPA|Shyampuri|
+SMPC|Shambhupura C Cabin|
+SMPR|Shri Madhopur|
+SMQL|Shamli|
+SMR|Samdhari Junction|
+SMRL|Samrala|
+SMRR|Sumreri|
+SMSR|Samaswara|
+SMT|Salamatpur|
+SMTA|Samuktala Road|
+SMTG|Saheed Matangini|
+SMTL|Simariatal|
+SMTN|Somthan|
+SMU|Sambhu|
+SMV|Sumaoli|
+SMVB|Smvt Bengaluru|Baiyappanahalli Rd
+SMVJ|Shrimahaveerji|Karauli
+SMVK|Shri Mata Vaishno Devi Katra|
+SMWA|Someshwara|
+SMX|Simurali|
+SMYD|Smyd|
+SMZ|Sarai Mir|
+SN|Sukna|
+SNA|Sadanapura|
+SNAD|Saniyad|
+SNAP|Sona Arjunpur|
+SNAR|Srinagar|
+SNB|Satnaur Badesron|
+SNBD|Sunderabad|
+SNBR|Sonuabary|
+SNC|S Narayan Chpla|
+SNCA|Sonachara|
+SNCR|Sanpada|
+SND|Sondimra|
+SNDA|Sandhia|
+SNDD|Sindhudurg|
+SNDI|Sendurai|
+SNDP|Sandispur|
+SNDT|Sindri Town|
+SNDY|Sandai|
+SNE|Shenoli|
+SNF|Sanat Nagar|
+SNGN|Sanganer|
+SNGP|Singhpur|
+SNGR|Sanganapur|
+SNH|Saunshi|
+SNHR|Sankhai|
+SNHT|Sanhati H|Sanhati
+SNI|Sindi|
+SNIE|Sath Naraini|
+SNJL|Sanjali|
+SNK|Sindkheda|
+SNKB|Sonkhamb|
+SNKE|Sunehti Kharkhari|
+SNKG|Sankaragummanur Halt|
+SNKL|Sankarankovil|
+SNKP|Sankhalpur|
+SNKR|Sanka|
+SNKX|Sankra|
+SNL|Sanahwal|
+SNLR|Santalpur|
+SNM|Sitanagaram|
+SNMR|Soniyana Mewar|
+SNMY|Sindri Marshalling Yard|
+SNN|Sonegaon|
+SNNR|Sindhanur|
+SNO|Somanur|
+SNP|Sonipat|
+SNPD|Sanpada|
+SNPH|Shankapur Halt|
+SNPR|Singarpur|
+SNPU|Sonepur|
+SNQ|Sankarpur|
+SNR|Shyamnagar|
+SNRA|Sanwara|
+SNRD|Mumbai Sandhurst Road|
+SNRL|Sansartali|
+SNRP|Sonipur Rupal H|Gandhinagar
+SNRR|Sansarpur|
+SNS|Sasni|
+SNSI|Sainagar Shirdi|
+SNSL|Sonshelu|
+SNSN|Sonasan|
+SNSR|Sanosara|
+SNSY|Sanosari|
+SNT|Sainthia|
+SNTD|Santaldih|
+SNTH|Sonthaliya|
+SNTL|Sanathal|
+SNTN|Santinagar Halt|
+SNTR|Shantinagar Halt|
+SNU|Sangrampur|
+SNV|Sondad|
+SNVL|Sonavali|
+SNVR|Sanvatsar|
+SNX|Saneh Road|
+SNYN|Soniyana|
+SNZ|Sherganj|
+SOA|Sanosra|
+SOAE|Somra Bazar|
+SOB|Silanibari|Bantow Bangali
+SOC|Shillong O A|
+SOD|Sojat Road|
+SOE|Sheopur Kalan|
+SOF|Saota|
+SOG|Suratgarh Junction|
+SOGR|Sogra|
+SOH|Sirohi Road|
+SOHL|Sohal|
+SOI|Sonaripur|
+SOJ|Sarojini Nagar|
+SOJN|Sihor Gujarat|
+SOL|Solan|
+SOLA|Sovabazar-Ahiri|
+SOLR|Solur|
+SOM|Somna|
+SONA|Sonamukhi|
+SONH|Seonan Halt|
+SONI|Soni|
+SONR|Saoner Junction|
+SONW|Sonwarsa Halt|
+SOP|Shiupur|
+SOPR|Sonma Pranpur(H|
+SOQ|Sompur Road|
+SOR|Sonagir|
+SORD|Sur Road|
+SORI|Sorai|
+SORO|Soro|
+SOS|Somesar|
+SOT|Shohratgarh|
+SOU|Supaul|
+SOW|Suhsarai|
+SOY|Sukrimangela|
+SOZ|Soladi|
+SP|Saidapet|
+SPAK|Salempura Arniya Khurd|Nizampura
+SPAM|Senji Panambakkam|
+SPB|Sonekpur Halt|
+SPBG|Sipra Bridge|
+SPBK|Spbk|
+SPC|Sitapur City|Sitapur
+SPD|Supedi|
+SPDA|Sapda|
+SPDM|Singhpur Dumra|
+SPDR|Sheoprasadnager|
+SPE|Sullurupeta|
+SPF|Stuartpuram|
+SPGL|Sarai Gopal|
+SPGN|Sripuria Gaon|
+SPGR|Sampige Road|
+SPHL|Shampurhalli|
+SPHT|Shivpuri H|Sri Krishna Puri
+SPJ|Samastipur Junction|Samastipur
+SPJB|Saidpur Jalalabad|Kapurthala
+SPK|Sapekhati|
+SPL|Sundaraperumal Kovil|
+SPLE|Sujnipara|
+SPN|Shahjehanpur|
+SPO|Surpura|
+SPP|Shahpur Patoree|
+SPPA|Sherpur Dhipura|
+SPPR|Shudnipur|
+SPQ|Sorupeta|
+SPR|Sonarpur Junction|
+SPRA|Sillipur|
+SPRD|Singapuram Road|
+SPRM|Sitapuram Halt|
+SPRN|Salempur Halt|
+SPS|Shripat Shrikhand|
+SPSR|Sarpeswar Ph|
+SPT|Sompeta|
+SPTR|Silapathar|
+SPV|Sivapur|
+SPVM|Sarpavaram|
+SPWI|Solapurwadi|
+SPX|Sapatgram|
+SPY|Sarsonpuri|
+SPYA|Sipaya|
+SPZ|Sampla|
+SQB|Singhabad|Srirampur
+SQD|Sattirakkudi|
+SQE|Samarala Halt|
+SQF|Sukritipur|
+SQJ|Saila Khurd|
+SQK|Shankar|
+SQL|Sontalai|
+SQN|Sarai Kansrai|
+SQQ|Salagaon|
+SQR|Sultanpur Lodi|
+SQS|Sigsigi|
+SQW|Sidhwalia|
+SQZ|Vanchangiri|
+SR|Sabli Road|
+SRA|Semra|
+SRAS|Siras|
+SRB|Sarobag|
+SRBA|Saragbundia|
+SRBG|Sarobag|
+SRBH|Shahid Ramphal Balhara Halt|Bahu Akbarpur
+SRBR|Surbari|
+SRBZ|Sehara Bazar|Bardhaman
+SRC|Santragachi Junction|
+SRDA|Saradiya|
+SRDH|Sarsadh|
+SRDR|Sardarshahr|
+SRDW|Shrimad Dwarakapuri|
+SRE|Saharanpur|
+SREE|Sree|
+SRF|Sagar Jambagaru|
+SRGD|Saragaon Deori|
+SRGH|Surajgarh|
+SRGM|Srirangam|
+SRGP|Saragipalli|
+SRGR|Saraygarh|
+SRGT|Surendranagar G|
+SRHA|Sukhpur Roha|
+SRHT|Sorkhi Halt|
+SRI|Salmari|
+SRID|Shridham|
+SRJ|Shankargarh|
+SRJK|Suraj Kunda|
+SRJM|Sirjam|
+SRJN|Sirajnagar H|
+SRJR|Sarsa Jarnalpur|Sarsa Jamalpur
+SRK|Samrau|
+SRKI|Semarkheri|
+SRKN|Sherekan|
+SRKR|Salar Khurd|
+SRKT|Sarkantra|
+SRL|Sarola|
+SRM|Sarna|
+SRMN|Semraon|
+SRMP|Sirsi Mukhdumpr|
+SRMR|Srirampuram|
+SRMT|Sirmuttra|
+SRN|Soron|
+SRNK|Soron|
+SRNM|Sriramanagar H|Mustoor
+SRNR|Sriramnagar|
+SRNT|Sarnath|
+SRO|Sirathu|
+SRP|Serampore|
+SRPB|Srirampur Assam|
+SRPJ|Swarupganj|
+SRPM|Siripuram|
+SRPN|Sripani|Siripani Ahom Pathar
+SRPR|Sarupsar Jn|
+SRPU|Sripur Halt|
+SRR|Shoranur Junction|
+SRRB|Shoranur B Cabin|
+SRRG|Surer|
+SRSI|Sarsi|
+SRSL|Sirsala|
+SRSO|Sarsoo|
+SRT|Satur|
+SRTA|Sorta|
+SRTE|Soorothee|
+SRTL|Shertalai|
+SRTN|Sibsagar Town|
+SRU|Salempur Junction|
+SRUR|Sirpur Town|
+SRVA|Shirva|
+SRVN|Sravanur|
+SRVT|Siruvattur|
+SRVX|Suravali|
+SRW|Shri Karanpur|
+SRWN|Saraswatinagar|
+SRX|Sura Nussi|
+SRY|Sirari|
+SRZ|Sardargarh|
+SS|Shirsoli|
+SSA|Sirsa|
+SSB|Shakurbasti|New Delhi
+SSC|Shahi|
+SSCP|Selected Samla Asstt Sdg|
+SSCR|Sonachara|West Bengal
+SSD|Shamsabad|
+SSDT|Shamshabad|Shamsabad Town
+SSF|Sirsuphal|
+SSG|Shiu Sagar Road|
+SSGJ|Sursaraighat Jh|
+SSGM|Sarsogram|
+SSGR|Sisai Gulabrai|
+SSHT|Saghar Sultanpur Halt|Sagar Sultan Pur Uttar
+SSI|Shirsai|
+SSIA|Suisa|
+SSJB|Sri Bala Bramareshwara Jogulamba|
+SSKA|Sisarka|
+SSKI|Sarsoki|
+SSKL|Suskal|
+SSL|Sirsaul|
+SSM|Sasaram|
+SSN|Sason|
+SSNG|Satsang Nagar|
+SSNH|Sree Saradanagar Halt|
+SSNR|Satsang Nagar Halt|
+SSNS|Shaheed S N Singh Halt|
+SSNT|Sirsa Nunthar Halt|Deoghar - Dumka Rd
+SSP|Santoshpur|
+SSPD|Sadashivapet Road|
+SSPH|Satish Samanta P.H.|
+SSPN|Sai P Nilayam|
+SSPR|Sadashibapur|
+SSR|Sareri|
+SSRD|Shasan Road|
+SSRH|Shasan Halt|
+SSU|Sasa Musa|
+SSV|Sasvad Road|
+SSW|Sarsawa|
+SSZ|Sadda Singhwala|
+ST|Surat|
+STA|Satna|
+STB|Shantipur|
+STBB|Satberia H|Satberia Halt
+STBD|Sultanabad|
+STBJ|Sitabinj|
+STC|Santa Cruz|
+STD|Satrod|
+STDB|Sitafalmandi B|
+STDI|Sitafal Mandi A Cabin|
+STDR|Satadhar|
+STE|Sagarkatte|
+STF|Sikta|
+STH|Sethal|
+STHL|Sinthal|
+STJT|Sathajagat|
+STKT|Sasthankotta|
+STKW|Sultanpur Kalia|
+STL|Simultala|
+STLB|Sitalpur Bengal|
+STLI|Sithouli|
+STLR|Sitalpur|
+STM|St Thomas Mount|
+STMM|St Thomas Mount|
+STN|Sitarampur|
+STNC|Sitarampur Link Cabin|
+STNL|Satnali|
+STNR|Sitalnagar|
+STP|Sitapur|
+STPD|Sitafal Mandi|
+STPM|S Narayanapuram|
+STPT|Sitampet|
+STR|Satara|
+STRB|Santir Bazar|Gardang
+STRC|Satara Oa|
+STRD|Shitala Road|
+STRK|Sitapur Kutchery Halt|
+STRM|Sitaramapuram|
+STSN|Shaitansinghngr|
+STUR|Satulur|
+STVA|Satyavada|
+STW|Sahatwar|
+STZ|Satraon|
+SU|Surapur|
+SUA|Sardiha|
+SUAL|Saundal Halt|Saundal
+SUBL|Hubli South|
+SUBR|Subhagpur|
+SUC|Sunak|
+SUCH|Suchindram|
+SUD|Sudhani|
+SUDR|Sunderpur Halt|Bina
+SUDV|Summadevi|
+SUF|Sesapani|
+SUH|Sulehalli|
+SUI|Sui|
+SUIA|Suraincha|
+SUJ|Sarju|
+SUJH|Sujangarh|
+SUJR|Sujra|
+SUK|Sukhpur|
+SUKP|Sukhpur|
+SUKU|Suku|
+SUL|Suladhal|
+SULH|Sulhani|
+SUM|Summit|
+SUMA|Solu Majra H|
+SUMR|Sumer|
+SUND|Sundarna|
+SUNE|Sune|
+SUNM|Sunamai Halt|
+SUNN|Surendranagar Rri|
+SUNR|Surendranagar|
+SUNW|Surendra Nagar (W) Cabin|
+SUP|Shrungavarpukta|
+SUPP|Suppalapadu|Salevariuppalapadu
+SUPR|Surajpur|
+SUR|Solapur Junction|
+SURC|Sholapur Cb|
+SURI|Siuri|
+SURL|Sureli|
+SURM|Solapur Jn|
+SURP|Suratpura|
+SURR|Surera|
+SUT|Sutlana|
+SUU|Sulur Road|
+SUW|Sukhisewaniyan|
+SUX|Sudiyur|
+SUZ|Subansiri|
+SV|Siwan Junction|
+SVA|Suwasra|
+SVB|Savni|
+SVC|Siwan Kachari|
+SVD|Sarwari|
+SVDC|Sivadevunichkla|
+SVDK|Shmata V D Ktra|
+SVE|Sewri|
+SVF|Sri Venkataperu|
+SVG|Sawalgi|
+SVGA|Sivaganga|
+SVGL|Shrivagilu|
+SVH|Sonadanga|
+SVHE|Sisvinhalli|
+SVI|Sagarpali|
+SVJ|Sajiyavadar|
+SVJR|Sivajinagar|Pune
+SVK|Sivarakottai|
+SVKD|Savarkundla|
+SVKS|Sivakasi|
+SVL|Sevaliya|
+SVLI|Savli|
+SVM|Sanverdam Chuch|
+SVN|Sivungaon|
+SVNI|Sivni|
+SVNR|Savanur|
+SVO|Sanvrad|
+SVPH|Shivpur Halt|Unnamed Road
+SVPI|Shivpuri|
+SVPM|S Venkteswrpalm|
+SVPO|Shivpoor|
+SVPR|Srivilliputtur|
+SVQ|Sivok|
+SVR|Sevvapet Road|
+SVRP|Shivanarayanpur|
+SVS|Srinivaspur|
+SVT|Shivpura|
+SVTN|Shivathan|
+SVU|Shivrajpur|
+SVUR|Sevur|
+SVV|Srivaikuntam|
+SVW|Shivni Shivapur|
+SVX|Savarda|
+SVZ|Sarai Harkhu|
+SW|Sehramau|
+SW02|Kalgurki H|
+SWA|Sahjanwa|
+SWAR|Sewar|
+SWC|Shivrampur|
+SWCR|Simenchepri|
+SWD|Sanawad|
+SWDE|Siwaha|
+SWDK|Seawoods Darave Karave|
+SWDV|Sea Wood Darave|Sea Woods Estate
+SWE|Siwaith|
+SWF|Sathin Road|
+SWG|Sidhwan|
+SWI|Swamimalai|
+SWJ|Siajuli|Bokanala No.2
+SWKE|Sawalkot|Sawalkote
+SWLN|Surwadi|Suravadi
+SWM|Sawai Madhopur|
+SWMD|Sawai Madhopur D|
+SWMM|Sawai Mdhopr Jn|
+SWNI|Siwani|
+SWNR|Sewa Nagar|
+SWO|Sonwara|
+SWPR|Sewapuri|
+SWPS|Swami Paramhans|Rae Bareli
+SWQ|Sangwi|
+SWR|Sonua|
+SWRT|Sahawar Town|
+SWS|Suwansa|
+SWT|Shivwala Tehu|
+SWU|Sanaura|
+SWV|Sawantwadi Road|
+SWW|Shahanagar Timarua|
+SWX|Saidanwala|
+SXA|Sagphata|
+SXB|Sambre|
+SXC|Sondalia|
+SXD|Siduli|
+SXE|Sila Kheri Halt|
+SXF|Sobhapur|
+SXH|Shingatageri|
+SXK|Shajahanpurcort|
+SXN|Sonakhan|
+SXO|Srikona|
+SXP|Sankopara|
+SXQ|Suaheri|
+SXR|Serndanur|
+SXS|Shobhasan|
+SXT|Salem Town|
+SXV|Suku|
+SXW|Sanha|
+SXX|Salbari|
+SXZM|Sopore|Sopore Degree College
+SY|Sirkazhi|
+SYA|Salaia|
+SYAE|Liluah (Sorting Yard)|
+SYC|Sarai Chandi|
+SYE|Sindewahi|
+SYF|Semai|
+SYH|Saiyedpur Bhtri|
+SYI|Singareni Colrs|
+SYJ|Saidraja|
+SYK|Saidkhanpur|
+SYL|Salpura|
+SYM|Savalyapuram|
+SYN|Sayan|
+SYO|Siroliya|
+SYQ|Sinhan|
+SYU|Sarayan|
+SYW|Sindurwa|
+SYWN|Saiyid Sarawan|
+SYZ|Sonai|
+SZ|Salawas|
+SZA|Sarotra Road|
+SZB|Sarona|
+SZE|Sonardih|
+SZF|Satbahini|
+SZH|Saonga Halt|
+SZK|Sur Khand Ka Kh|
+SZM|Subzi Mandi|
+SZN|Shahbaznagar|
+SZNR|Shahbaznagar Road|
+SZP|Shahjahanpur|
+SZR|Sarupathar|
+SZV|Sivadi|
+SZY|Silak Jhori|
+SZZ|Sabira|
+TA|Tanur|
+TAA|Tadla Pusapalli|
+TABU|Talaburu|
+TAC|Taticherla|
+TADA|Tada|
+TAE|Tadali|
+TAK|Tarakeswar|
+TAKL|Takal|
+TAKU|Taku|
+TALA|Talla|
+TALL|Tall Jn|
+TAM|Tilaivilagam|
+TAN|Tarana Road|
+TAO|Tamna|
+TAP|Tapang|
+TAPA|Tapa|
+TAR|Tharsa|
+TAS|Thasra|
+TASA|Thippasandra|Karnataka 562131
+TAT|Tummanamgutta|
+TATA|Tatanagar Junction|
+TATI|Tati|
+TAV|Talala Junction|
+TAX|Tati|
+TAY|Talaiyuthu|
+TAZ|Targaon|
+TB|Tharbitia|
+TBA|Timba Road|
+TBAE|Tribeni|
+TBB|Tilbhita|
+TBD|Telibandha|
+TBDM|Tungabhadra Dam|Hosapete
+TBH|Tatibahar|
+TBL|Tarcherra Brlrm|
+TBM|Tambaram|Chennai
+TBMS|Tambaram Sanatorium|
+TBN|Timarni|
+TBR|Taiabpur|
+TBT|Talbahat|
+TBTN|Thana Bhawan Tn|
+TBU|Tharban|
+TBV|Timbarva|
+TBX|Tilbhum|
+TCA|Tanchha|
+TCH|Tiruchchuli|
+TCL|Tyakal|
+TCM|Ottankadu|
+TCN|Tiruchendur|
+TCNR|Tiruchanur|
+TCR|Thrisur|Thrissur
+TCT|Tiruchitrambalam|
+TD|Tanda|
+TDD|Tadepalligudem|
+TDE|Thudiyalur|TNP Nagar
+TDH|Tindharia|
+TDK|Taduku|
+TDL|Tundla Junction|
+TDLE|Tildanga|
+TDN|Tiruparankndrm|
+TDO|Tanda Urmar|
+TDOK|Tadoki|
+TDP|Todarpur|
+TDPM|Todikkapulam Halt|
+TDPR|Tirupadripulyur|
+TDR|Tiruvidaimaruthur|
+TDRD|Tanda Road|Ghore
+TDRS|Toda Rai Singh|
+TDU|Tandur|
+TDV|Thondebhavi|
+TDW|Tandwal|
+TEA|Taregna|
+TEG|Tirbediganj|
+TEK|Tekkali Halt|
+TEL|Tenali Junction|
+TELI|Teli|
+TELO|Telo|
+TELY|Telia|
+TEN|Tirunelveli|
+TENI|Teni|Theni
+TEO|Teegaon|
+TEP|Tempa|
+TER|Thair|
+TERH|Terha Halt|
+TET|Tetulmari|
+TETA|Telta|
+TFGN|Tufanganj|
+TGA|Teghra|
+TGB|Tangarbasuli|
+TGBP|Thingou|Jiribam - Imphal Rd State: Manipur
+TGCH|Teragachh|Terhagachh
+TGDE|Thangundi|
+TGE|Thekeraguri|
+TGH|Titagarh|
+TGL|Tuggali|
+TGLN|Taradgaon|Maharashtra 415528
+TGM|Tangarmunda|
+TGN|Talegaon|
+TGP|Tuljapur|
+TGQ|Tenganmada|
+TGR2|Block And Catch Siding Cabine No.2|
+TGR3|Block And Catch Siding Cabine No.3|
+TGRL|Tangiriapal|
+TGT|Tinai Ghat|
+TGU|Tarigoppula|
+TH|Tinich|
+THA|Tehta|
+THAL|Thal|
+THAM|Tham|
+THAN|Than Junction|
+THB|Thana Bihpur Junction|
+THBN|Thana Bhawan|
+THDR|Thandla Road|
+THE|Thawe Jn|
+THEA|Thalera|
+THED|Tauheed|
+THJ|Talheri Buzurg|
+THK|Thakruli|
+THKU|Thallak|
+THL|Tiruvalam|
+THM|Thalyat Hamira|
+THMA|Tham|
+THMR|Thathana Mithri|
+THN|Tolahunse|
+THO|Tulin|
+THP|Taherpur|
+THPR|Tippapur|
+THR|Thara|
+THS|Thansit|
+THSA|Thanisandra|
+THTW|Thailik Twisa|Bhuratali
+THUR|Thuria|
+THV|Therubali|
+THVM|Thivim|Goa
+THW|Tharwai|
+THWM|Tapeshwarnath D|Fursatganj
+THX|Tovalai|
+THY|Thadi|
+THZI|Takazhi|
+TI|Tiruninravur|
+TIA|Tilaya|
+TIBI|Tibi|
+TIC|Timmachipuram|
+TID|Tagdi|
+TIG|Titlagarh|
+TIGJ|Triveniganj|
+TIHU|Tihu|
+TII|Tingrai|
+TIK|Tik|
+TIL|Tilrath|
+TILA|Tila|Kotra
+TIM|Timmanacherla|
+TIP|Tattapparai|
+TIR|Tirur|
+TIS|Tatisilwai|
+TISI|Tisi|
+TIT|Talit|
+TIU|Tilaru|
+TIW|Tivari|
+TJ|Thanjavur|
+TJA|Talaja|
+TJD|Tajpur Dehma|
+TJH|Tajgadh|
+TJM|Turinjapuram|
+TJNR|Taj Nagar|
+TJP|Tajpur|
+TJSP|Taj Sultanpur|
+TJW|Tejpurwa Halt|
+TK|Tumkur|
+TKA|Teharka|
+TKB|Tupkadih|
+TKBG|Tekkabigha|
+TKBN|Tsakibanda|
+TKC|Thakurkuchi|
+TKD|Tuglakabad|
+TKDC|Tuglakabad Cabin|
+TKE|Tarikere Junction|
+TKEC|Tuglakabad East Cabin|
+TKF|Taki Road|
+TKG|Thakurganj|
+TKH|Thakurtota|
+TKHA|Takha|
+TKHE|Takarkhede|
+TKI|Takli|
+TKJ|Tilak Bridge|
+TKKD|Tikekarwadi|
+TKLB|Takli Bhansali|
+TKLE|Tikani|
+TKLN|Tarrakalan|
+TKMG|Tikamgarh|
+TKMY|Taklimiya|
+TKN|Tankuppa|
+TKND|Trivikramdeo Nagar|
+TKNG|Tilak Nagar|
+TKNR|Thakurnagar|Thirunagar
+TKO|Takkolam|
+TKOT|Tokkottu|
+TKP|Takipur|
+TKPH|Takipur Halt|Takipur
+TKPL|Tikirapal Halt|
+TKPY|Turkapalli|
+TKQ|Trikarpur|
+TKR|Takari|
+TKRA|Tikra Ph|
+TKRD|Tankariya Road|
+TKRI|Tikiri|
+TKRP|Tikauli Rawatpur|
+TKRU|Takhrau|
+TKS|Tokisud|
+TKT|Tikkotti|
+TKTB|Thakurbari|
+TKU|Tanakallu|
+TKUR|Tappa Khajuria|
+TKV|Tek Newas|Bihar 841305
+TKVR|Tappa Khajuriay|
+TKW|Thakurvadi|
+TKWA|Tilakwada|
+TKWD|Tikekarwadi|
+TKYR|Tikaria|
+TL|Tiloniya|
+TLA|Titvala|
+TLAM|Tulsi Ashram|
+TLB|Talwa Bazar|
+TLC|Talchhapar|
+TLD|Tilda|
+TLE|Talgaria|
+TLG|Tolly Ganj|
+TLGI|Teligi|
+TLGP|Talguppa|
+TLGR|Tulsi Nagar|
+TLH|Tilhar|
+TLHD|Talcher Road|
+TLHR|Talcher|
+TLI|Tulwara Jhil|
+TLJ|Taljhari|
+TLKH|Talakhajuri|
+TLKL|Talakal|Tadkal
+TLL|Talap|
+TLM|Trisulam|
+TLMD|Trilochan Mahdo|
+TLMG|Talmadugu|
+TLMR|Teliamura|
+TLN|Talni|
+TLNH|Tilaunchi|
+TLNR|Talanallur|
+TLO|Talandu|
+TLP|Talpur|
+TLPH|Talpur|
+TLPR|Telapur|Tellapur
+TLR|Tulsipur|
+TLRA|Talara|
+TLS|Bettahalsoor|
+TLSI|Tulsia Halt|Tulsia
+TLT|Tilati|
+TLTM|Talcher Thermal|
+TLU|Tarlupadu|
+TLV|Talvadya|
+TLWA|Thalwara|
+TLX|Taldi|
+TLY|Thalassery|
+TLZ|Talavli|
+TMA|Tamuria|
+TMB|Temburu|
+TMBY|Trombay|
+TMC|Talamanchi|
+TMD|Talmadla|
+TME|Tuti Melur|
+TMGN|Thamla Mogana|
+TMH|Tin Mile Hat|
+TMHA|Thumha|
+TMKA|Tomka|
+TML|Tenmalai|Thenmalai
+TMLP|Tirumalpur|
+TMLU|Tummalacheruvu|
+TMO|Tamlor|
+TMP|Tamaraipadi|
+TMPM|Timmapuram|
+TMPT|Tirumalairayan Pattinam H|Thirumalairayanpattinam
+TMPY|Tumboli|
+TMQ|Tirumangalam|
+TMR|Tumsar Road|
+TMS|Tumsar Town|
+TMT|Timtala|
+TMU|Tirumanthikunam|
+TMUR|Tenua Dumaria Halt|Tenua
+TMV|Tindivanam|
+TMVL|Tirumullaivayil|
+TMX|Timmapur|
+TMZ|Tamluk|
+TMZJ|Tmzj|
+TN|Tuticorin|
+TNA|Thane|
+TNDE|Thanesar City|
+TNDN|Thandoni|
+TNGI|Tungi Halt|
+TNGL|Toranagallu|
+TNGM|Tondalagopavaram|
+TNGN|Tangani|
+TNGR|Thonganur|
+TNH|Tinkheda|
+TNI|Tandarai|
+TNJE|Tentulla|
+TNJR|Taj Nagar|
+TNK|Tirunellikaval|
+TNKA|Tankhala|
+TNKU|Tanuku|
+TNL|Tangla|
+TNLR|Thondaimanallur|
+TNM|Tiruvannamalai|
+TNNH|Tapaswinarayan Nagar Halt|
+TNO|Tundu|
+TNP|Tondiarpettai|
+TNPR|Tejnarayanpur|
+TNR|Tanguturu|
+TNRI|Teneri Halt|
+TNRU|Tenneru|
+TNT|Tinnappatti|
+TNU|Tirunettur|
+TNUE|Tindauli|
+TNW|Thapar Nagar|
+TNWR|Tonkarwar|
+TNX|Tarak Nagar|
+TO|Tiruvalangadu|
+TOD|Talod|
+TOI|Tamkuhi Road|
+TOK|Thokur|
+TOM|Tondamanpatti|
+TOP|Tapasi|Tapasi Apartment
+TOR|Titur|
+TORA|Torniya|
+TORI|Tori|
+TOS|Tolasampatti|
+TOU|Telaprolu|
+TOY|Topputurai|
+TP|Tirchrpali Fort|
+TPB|Trilokpur|
+TPC|Tiruppachetti|
+TPDH|Tupadih|
+TPE|Tiruchrpli Plki|
+TPF|Tarapith Road|
+TPG|Tipling|
+TPH|Tinpahar Junction|
+TPJ|Tiruchchirapali|Tiruchirappalli
+TPK|Tipkai|
+TPKR|Tikiapara|
+TPM|Totiyapalayam|
+TPN|Tapona|
+TPND|Taloja Panchand|
+TPNI|Tuiya Pani|
+TPNR|Transport Nagar|
+TPO|Tantpur|
+TPP|Toppur|
+TPPI|Tipparthi|
+TPQ|Topokal|
+TPSA|Top Sarthua|Bihar 801304
+TPT|Tirupattur Junction|
+TPTN|Tiruchrpali Twn|Tiruchirappalli
+TPTY|Tirupati|
+TPU|Tanakpur|
+TPV|Tinpheria|
+TPW|Tirupati West Halt|
+TPY|Tadakalpudi|
+TPZ|Tapri|
+TQA|Takia|
+TQB|Tarangambadi|
+TQL|Theh Qalandar|
+TQM|Telam|
+TQN|Tikunia|
+TQR|Tektar|
+TR|Taru|
+TRA|Tangra|
+TRAH|Taranga Hill|
+TRAN|Torang|
+TRB|Tiruverumbur|
+TRBE|Tarabari|
+TRBI|Taraboi Ph|
+TRDI|Tirodi|
+TRE|Tikri|
+TRF|Taropa|Gujarat 393140
+TRG|Tarighat|
+TRJ|Tariasujan|
+TRK|Tirukoilur|
+TRKR|Turekala Road|
+TRL|Trivellore|
+TRM|Tirunagesvaram|
+TRMN|Taramani|
+TRN|Taraon|
+TRNA|Torna|
+TRO|Tirora|
+TRP|Tarapur Jn|Nar
+TRPL|Tripal Halt|
+TRR|Taraori|
+TRS|Tarsarai|
+TRSR|Tarsai|
+TRT|Tiruttani|
+TRTR|Triupunittura|
+TRV|Tarva|
+TRVL|Tiruvalla|
+TRVZ|Tiruvizha|
+TRW|Tarsod|
+TRWT|Taravata|
+TRX|Tirumani|
+TRZ|Tolra|
+TSA|Tisua|
+TSAH|Tata Sijua Halt|
+TSD|Tahsil Bhadra|
+TSF|Tahsil Fatehpur|
+TSG|Sitapur City (Thomasganj)|
+TSI|Tenkasi Junction|
+TSK|Tinsukia Junction|
+TSKG|Tinsukia Goods|
+TSL|Taksal|
+TSR|Tsunduru|
+TSS|Talli Saidasahu|
+TT|Titte|
+TTB|Titabar|
+TTH|Tirumlai Hls Oa|
+TTI|Turtipar|
+TTL|Tiruttangal|
+TTLA|Tetelia|
+TTN|Tulsitanr|
+TTO|Tarn Taran|
+TTP|Tiruturaipudi Junction|
+TTPT|Talcher Thermal|
+TTQ|Thathankulam|
+TTR|Tiptur|
+TTRA|Tintoda|
+TTU|Tettu|
+TTW|Titwa|
+TTZ|Tukaithad|
+TU|Tadipatri|
+TUA|Tirunnavaya|
+TUD|Talodhi Road|
+TUG|Thalangai|
+TUH|Turbhe|
+TUJ|Tanijan|Kuhiar Bari
+TUL|Tiraldih|
+TULI|Tuli|
+TUM|Tulsigam|
+TUN|Tohana|
+TUNG|Tung|
+TUNI|Tuni|
+TUP|Tiruppur|
+TUR|Turki|
+TUV|Tuvvur|
+TUVR|Turavur|
+TUWA|Tuwa|
+TUX|Tunia|
+TUY|Thiruthuraiyur|
+TV|Ten Talav|
+TVC|Trivandrum Cntl|Trivandrum
+TVCN|Thiruvananthapuram North|
+TVCS|Trivandrum South|Nemom
+TVD|Adavali|
+TVF|Tiruvangur|
+TVG|Tavargatti|
+TVI|Taradevi|
+TVL|Tadwal|
+TVN|Tiruppuvanam|
+TVNL|Tirvnlnlur Road|
+TVP|Trivandrum Pett|Trivandrum
+TVR|Thiruvarur Junction|
+TVS|Talaivasal|
+TVT|Tiruvottiyur|
+TVTN|Thambawati Nagri|
+TWB|Talwandi|
+TWG|Twining Ganj|
+TWI|Totewahi Halt|
+TWL|Tilwara|
+TWV|Thuwavi|
+TXD|Tyada|
+TXM|Tandavapura|
+TXR|Tirunallaru|Ring Rd
+TY|Tulukapati|
+TYAE|Tenya|
+TYK|Thabalke|
+TYM|Tirumayam|
+TYMR|Tiruvanmiyur|
+TYT|Tirunelveli Town|
+TZD|Tozhuppedu|
+TZH|Takazhi|
+TZR|Turki Road|
+TZTB|Tezpore|
+UA|Upleta|
+UAA|Uppala|
+UAM|Udagamandalam|
+UAMR|Uam Round Trip|
+UAR|Unawa Aithor|
+UB|Uska Bazar|
+UBC|Ambala City|Ambala
+UBCN|Ulhas Bridge Cabin|
+UBL|Hubli Junction|
+UBN|Ubarni|
+UBR|Umbargam Road|
+UCA|Uchana|
+UCB|Unchi Bassi|
+UCH|Unchaulia|
+UCP|Uchippuli|
+UCR|Unchahar Junction|
+UD|Udupi|
+UDGR|Udgir|
+UDK|Udyan Kheri|
+UDKL|Udai Kalan|Udei Kalan
+UDKN|Udaypur Khurd|
+UDL|Andal Junction|
+UDLE|Andal-East/Cabin|
+UDLW|Andal West Cabin|
+UDM|Undasa Madhawpu|
+UDMR|Udi Mor|Udi - Agra Rd
+UDN|Udhna Junction|
+UDPR|Udaipura|
+UDPU|Udaipur Tripura|Murapara part
+UDR|Amdara|
+UDS|Udasar|
+UDT|Udumalaippettai|
+UDX|Urdauli|
+UDZ|Udaipur City|
+UGD|Uppugunduru|
+UGN|Ugaon|
+UGNA|Ugna Halt|
+UGNR|Udyognagar P.H.|
+UGP|Ugarpur|
+UGR|Ugar Khurd|
+UGU|Ugu|
+UGWE|Ugwe|
+UHL|Una Himachal|
+UHP|Udhampur|
+UHR|Unchhera|
+UIH|Umaria Ispa Hlt|
+UJ|Ujalvav|
+UJA|Unjha|
+UJH|Ujhani|
+UJJN|Ujjain Jn|
+UJN|Ujjain Junction|Ujjain
+UJNC|Ujn C Cabin|
+UJP|Ujiarpur|
+UKA|Ukhra|
+UKC|Ukshi|
+UKD|Ulindakonda|
+UKE|Uttarkathani|No.2 Uttar Kathani
+UKH|Ukhali|
+UKL|Uttukuli|
+UKLR|Ukilerhat Halt|
+UKN|Uklana|
+UKR|Udalkachar|
+UKV|Uttamarkovil|
+ULA|Umra Nala|
+ULB|Ulubaria|
+ULD|Achalda|
+ULG|Udalguri|
+ULL|Ullal|
+ULM|Urlam|
+ULN|Ulna Bhari|
+ULNR|Ulhasnagar|
+ULR|Ultadanga Road|
+ULT|Kulti|
+ULTL|Kulti Link Cabin|
+ULU|Ulundurpet|
+UM|Umardashi|
+UMB|Ambala Cant Junction|Ambala
+UMD|Usmanabad|
+UMED|Umed|
+UMG|Uttangal Mangalam|
+UMH|Umreth|
+UML|Umalla|
+UMM|Umram|
+UMN|Ambliyasan|
+UMNF|Ambliyasan Jn|
+UMNR|Umeshnagar|
+UMPD|Umarpada|
+UMR|Umaria|
+UMRA|Umra|
+UMRI|Umri|
+UMS|Udramsar|
+UNA|Una|
+UNCT|Uran City|
+UND|Unchdih|
+UNDI|Undi|
+UNI|Unai Vansada Road|
+UNK|Unkal|
+UNL|Unhel|
+UNLA|Unaula|
+UOI|Umroli|
+UPA|Uttarpara|
+UPD|Ulavapadu|
+UPI|Uplai|
+UPL|Uppalur|
+UPM|Urappakkam|
+UPR|Usmanpur|
+UPRD|Usmanpur Dehat Halt|Usmaanpur
+UPW|Uppalavai|
+UR|Umdanagar|
+URD|Untare Road|
+UREN|Uren|
+URG|Usargaon|
+URGA|Urga|
+URGR|Udayagiri Ratnagiri Road|NH53
+URI|Uruli|
+URK|Urkura|
+URL|Unjalur|
+URMA|Urma|
+URML|Uparmal|
+URN|Utran|
+URP|Udairampur|
+URPR|Ugrasenpur|
+URR|Umred|
+URT|Umrala|
+USD|Ukai Songadh|
+USK|Usia Khas|
+USL|Usalapur|
+USLP|Usilampatti|
+USRA|Usra|
+UTA|Umar Tali|
+UTD|Utarsanda|
+UTL|Utarlai|
+UTN|Uttar Radhanagar Halt|
+UTP|Utripura|
+UTR|Utrahtia|
+UVD|Udvada|
+UVSN|Unawa Vasan|Gandhinagar
+UWAN|Urwan|Ranchi-Patna Rd
+UWNR|Udwant Nagar Halt|
+VAA|Bhaga Junction|
+VAD|Velavadar|
+VADR|Warud|
+VAE|Vadali|
+VAH|Vah|
+VAI|Bani|
+VAJ|Vadapalanji|Tamil Nadu 625514
+VAK|Varkala|
+VAL|Vadal|
+VAN|Vadhvana|
+VAPI|Vapi|
+VAPM|Valapattanam|
+VAR|Vidyanagar|
+VARD|Vaikam Road|
+VAS|Vasai Dabhla|
+VASO|Vaso|
+VAT|Vatlur|
+VAU|Vadarlapadu|
+VAY|Vayalar|
+VB|Villiyambakkam|
+VBH|Vishnupur Bathua Halt|
+VBL|Bobbili|
+VBN|Vallabhnagar|
+VBR|Vambori|
+VBU|Vembur|
+VBW|Vaibhavwadi Road|
+VC|Vyasa Colony|
+VCA|Vinchiya|
+VCN|Virochannagar|
+VCT|Victor|
+VD|Vagdiya|
+VDA|Vasad Junction|
+VDD|Vendodu|
+VDE|Vedayapalem|
+VDG|Vadnagar|
+VDGN|Vadgaon Nila|
+VDGT|Vadala Granthian|
+VDH|Vedchha|
+VDI|Veldurti|
+VDK|Vadakannikapurm|
+VDKS|Vadanam Kurussi Halt|
+VDL|Vithisvarankol|
+VDLR|Vadala Road|Vadala -Kemwadi Rd
+VDM|Vadamadura|
+VDN|Vadgaon|
+VDNP|Baijnath Andoli|
+VDP|Vadippatti|
+VDR|Vandalur|
+VDS|Vidyasagar|
+VDV|Vadiya Devli|
+VDY|Vedaranniyam|Vedaranyam Beach Road
+VED|Verad|
+VEER|Veer|
+VEI|Velliyani|
+VEK|Vellarakkad|
+VEL|Vellanur|
+VELI|Veli|
+VEM|Vempalli|
+VEN|Verna|
+VEP|Velpuru Road|
+VEPX|Vellacheruvu|
+VER|Vellur Halt|
+VEU|Veppampattu|
+VG|Viramgam Junction|
+VGA|Vepagunta|
+VGD|Vilangudi|
+VGDC|Viramgam D Cabin|
+VGE|Valappadi G Hlt|
+VGH|Velangi|
+VGI|Vangani|
+VGL|Vaghli|
+VGLB|Virangana Lakshmibai(Jhanshi)|
+VGLJ|Virangana Lakshmibai(Jhanshi)|
+VGM|Vinnamangalam|
+VGN|Vangaon|
+VGP|Veganpur|
+VGR|Vagra|
+VGRA|Vagra|
+VGT|Unguturu|
+VH|Vakada|East Godavari
+VHCH|Block Cabin Chakki|
+VHGN|Wihirgaon|
+VHK|Jeonathpur|
+VHL|Wahiyal|
+VI|Villianur|
+VID|Vilavade|
+VINA|Vina|
+VINH|Vinhere|
+VJ|Virinchipuram|
+VJA|Vejandla|
+VJBA|Brijbehra|
+VJD|Vijpadi Road|
+VJF|Vijapur|
+VJK|Vejalka|
+VJM|Vyasarpadi Jeeva|
+VJP|Vijay Pur|
+VJPJ|Vijiypur Jammu|
+VJR|Vijayanagar|
+VJRD|Vajirabad|
+VK|Vikhroli|
+VKA|Verka Junction|
+VKB|Vikarabad Junction|
+VKD|Bakhrabad|
+VKDH|Veer Kunwar Halt|
+VKG|Vavadi Khurd|
+VKH|Vikhran Road|
+VKI|Venkatagiri|
+VKL|Vankal|
+VKM|Venkatesapuram|
+VKN|Vinukonda|
+VKNR|Valmikinagar Rd|
+VKP|Varakalpattu|
+VKR|Venkatnagra|
+VKT|Venkatachalam|
+VKZ|Venkata Narasimha Raju Vari Peta|
+VL|Vilad|
+VLA|Bavla|
+VLC|Velachha|
+VLCA|Velalacheruv Ht|
+VLCY|Velachery|
+VLD|Vayalpad|
+VLDE|Valadi|
+VLDI|Vithalwadi|
+VLDR|Valadar|
+VLE|Vellacheruvu|
+VLG|Vanigonda|
+VLI|Vallikunnu|
+VLK|Villivakkam|
+VLKN|Velankanni|
+VLL|Vellayil|
+VLN|Vilegaon|
+VLNK|Vellankanni|
+VLP|Vile Parle|
+VLR|Vellore Cant|
+VLT|Valathoor|
+VLTR|Vadali Luter Road|
+VLU|Vadalur|
+VLV|Vallivedu|
+VLY|Valliyur|
+VLYN|Vallabh Vidhya Nagar|Vallabh Vidya Nagar
+VM|Villuparam Junction|
+VMA|Vikramgarh Alot|
+VMC|Vmc|
+VMD|Vadlamannadu|
+VML|Vemulapadu|
+VMLD|Vemuluripadu|
+VMM|Valaramanikkam|
+VMP|Vallampadugai|
+VMR|Vemar|
+VMU|Vemuru|
+VN|Vaniyambadi|
+VNA|Varangaon|
+VNB|Vaniyambalam|
+VNC|Vijawada North Cabin|
+VND|Vendra|
+VNE|Viswanath Chrli|
+VNEC|Vijayawada North East|
+VNG|Visnagar|
+VNGL|Vangal|
+VNGP|Vangaichungpao|
+VNJ|Tiruppur Vanjipalayam|
+VNK|Binaiki|
+VNKA|Vankiya|
+VNL|Velanandal|
+VNM|Ontimitta|
+VNN|Bhanaur|
+VNP|Venora|
+VNPN|Vain Poin|
+VNR|Devanur|
+VNRD|Vani Road|
+VNT|Vyankatpura|
+VNTD|Vantada|
+VNUP|Vishnupuram|
+VNWI|Vighanwadi|Eganwadi
+VO|Vellodu|
+VOC|V.O.C. Nagar|
+VOL|Virol|
+VON|Vondh|
+VONB|Vondh|
+VP|Virapur|
+VPDA|Vidyapatidham|
+VPG|Ventrapragada|
+VPH|Vachaspati Nagar|
+VPJ|Valyampatti|
+VPL|Venkatampalle|
+VPN|Vidyapatinagar|
+VPO|Bhupia Mau|
+VPR|Visapur|
+VPT|Virudunagar Junction|
+VPU|Velpuru|
+VPUN|Velpuru North|
+VPY|Vyasarpadi|
+VPZ|Vailapuzha|
+VQD|Viramdad|
+VR|Virar|Mumbai
+VRA|Valavanur|
+VRB|Vishrambag|
+VRBD|Vrindaban Road|
+VRD|Virdel Road|
+VRDP|Varadapur|
+VRE|Varediya|
+VRG|Vikramnagar|
+VRH|Virbhadra|
+VRI|Vridhachalam Junction|
+VRJ|Vadaj|
+VRJN|Venkatachalam Road Jn|
+VRK|Virkudi|
+VRKD|Varkhedi|
+VRL|Veraval|
+VRLF|Veraval Mg|
+VRLI|Veravali (H)|Veravli Bk.
+VRLR|Virani Alur|
+VRM|Varnama|
+VRN|Vanganur|
+VRO|Vaidi Road|
+VRPD|Virapandy Road|
+VRQ|Virarakkiyam|
+VRR|Virpur|
+VRS|Virsad|
+VRT|Vriddhachalm Tn|
+VRU|Valiveru|
+VRV|Viravada|
+VRVL|Viravalli|
+VRX|Varahi|
+VS|Vishvamitri|
+VSD|Vasind|
+VSG|Vasco Da Gama|
+VSH|Vashi|
+VSHI|Vaishali|Basarh
+VSI|Vishvamitri|
+VSKP|Vishakapatnam|Vishakhapatnam
+VSP|Wasanapura|
+VSPR|Bishnupriya|
+VSR|Vasundhara|Basundhara
+VST|Bijaysota|
+VSU|Bishnupur|
+VSV|Vasadva|
+VSW|Visavadar|
+VT|Vellore Town|
+VTA|Vatva|
+VTDI|Varetha|
+VTE|Venkatagiri Kote Halt|
+VTG|Bhetaguri|
+VTJ|Vartej|
+VTK|Vallathol Nagar|
+VTL|Vadtal Swaminarayan|
+VTM|Vetapalemu|
+VTN|Vaitarna|
+VTP|Vastrapur|
+VTV|Valantaraval|
+VU|Vaghpura|
+VUL|Virul|
+VV|Valivade|
+VVA|Varvala|
+VVB|Viveka Vihar|
+VVD|Vavdi|
+VVE|Valivade|
+VVF|Vavdi Road|
+VVG|V.V.Giri Halt|Bihar
+VVH|Vidyavihar|
+VVKN|Vivekananda Nagar|
+VVKP|Vivekanand Puri Halt|
+VVL|Vadviyala|
+VVM|Viravasaram|
+VVN|Vikravandi|
+VVR|Viravanallur|Peravallur
+VVV|Vavera|
+VWA|Viduraswattha|
+VWP|Vishwanath Puri|
+VXD|Vadod|
+VXM|Vellipalayam|
+VYA|Vyara|
+VYK|Vilayatkalan Road|
+VYN|Vyasnagar|
+VYS|Vyasankeri|Hosapete
+VZ|Vijayamangalam|
+VZM|Vizianagram Junction|
+VZPH|Vazeerpur Halt|
+VZR|Bhanjpur|
+WAAD|Wayad|
+WAB|Balwa|
+WAD|Wadali|
+WADI|Wadi|
+WADO|Wadoda|
+WAIR|Wair|
+WANI|Wani|
+WARUD|Warud|
+WAT|Waltair|
+WC|Wadhwan City|
+WCB|West Cabin Gaya|
+WCN|Wimco Nagar|
+WDA|Wadrengdisa|
+WDC|Wdc|
+WDG|Wadegaon|
+WDHR|Wadharva|
+WDJ|Wanderjatana|
+WDL|Wandal|
+WDLN|Wadwal Nagnath|
+WDM|Wyndhamganj|
+WDN|Vadgaon Nila|
+WDR|Wadiaram|
+WDS|Wadsinge|
+WEL|Wellington|
+WENA|Wena|
+WFD|Whitefield|
+WG|Wagholi|
+WGA|Waghoda|
+WGH|Wagah|
+WGI|Waghai|
+WGJ|Waris Ganj Halt|
+WGN|Waghaniya|
+WGR|Waghoriya|
+WH|West Hill|
+WHM|Washim|
+WHPC|Whitefield Panel Cabin|
+WIR|Wair|
+WIRR|Wirur|
+WJ|Walajabad|
+WJP|Vejpur|
+WJR|Walajah Road Junction|
+WKA|Vakav|
+WKI|Wadakancheri|
+WKND|Wanwar Koteshwarnath Dham|Makhdumpur-Barabar Rd
+WKR|Wankaner Junction|
+WKRC|Wankaner City|
+WL|Warangal|
+WLA|Valtoha|
+WLGN|Walgaon|
+WLH|Valha|
+WML|Windmill|
+WMP|Vishrampura|
+WND|Wan Road|
+WNG|Wanegaon|
+WOC|Warud Orange Ct|
+WP|Wangapalli|
+WPR|Wanparti Road|
+WR|Wardha Junction|
+WR01|Surendra Nagar E|
+WR02|Surendra Nagar W|
+WRA|Walayar|
+WRC|W R S Colony Ph|
+WRD|Warudkhed|
+WRE|Wardha East|
+WRGN|Warigaon Newada|
+WRI|Waraseoni|Pawar Gali
+WRR|Warora|
+WRS|Waris Aleganj|
+WRSC|Wrs Colony H|
+WSA|Wadsa|
+WSB|Washimbe|
+WSC|Shivarampur|
+WSD|Wasud|
+WSE|Vasan Iyawa|
+WSJ|Wansjaliya|
+WSR|Wa Sojintra|
+WST|Washermanpet|
+WTJ|Jam Wanthali|
+WTP|Water Pipe|
+WTR|Wathar|
+WTS|Sorath Vanthali|
+WTWI|Wetalwadi|Kinhi
+WW|Wanabar|
+WWA|Vavaniya|
+WZJ|Wazerganj|
+X014|Varud|
+X019|Kesla|
+X101|TGR Cabin No 1|
+X102|TGR Cabin No 2|
+X103|TGR Cabin No 3|
+X108|Aman Lodge|
+X133|Dhoki|
+X135|Kadethan|
+X235|Ravli Jn|
+X920|Gimma|
+XBAC|Bachharpur Halt|
+XBKJ|Bikramganj|
+XCBN|Xcbn|
+XGN|Gokulnagar|
+XKA|Kamta|
+XKCH|Kachhiyana Halt|
+XSAD|Sadipur Halt|
+XSAN|Sarvodaya Halt|
+XSK|Sokali|
+XSKR|Sukhra|
+XXX|Xxx|
+XXXX|Bpt Station|
+YA|Yerraguntla|
+YAD|Yeulkhed|
+YADA|Yada|
+YADD|Yadadri|Nalgonda
+YAG|Yaqutganj|
+YAL|Yataluru|
+YDD|Yadudih|
+YDK|Yedekumeri|
+YDLP|Yadalapur|
+YDM|Yedamangala|
+YDP|Yedapalli|
+YDV|Yadvendranagar|
+YEAM|Yogendra Dham Halt|
+YFP|Yusufpur|
+YG|Yadgir|
+YGA|Yerra Goppa Halt|
+YGD|Yerragudipad|
+YGL|Yelgur|
+YGM|Yadugram Bh|
+YJUD|Yamunanagar Jud|
+YKA|Yakutpura Kacheguda|
+YL|Yeola|
+YLBA|Yelburga|Yelburga State: Karnataka
+YLG|Yalvigi|
+YLK|Yellakaru|
+YLM|Ellamanchili|
+YNA|Yenor|
+YNG|Yenugonda|
+YNK|Yelhanka Junction|Bangalore
+YNRK|Yog N Rishikesh|Ganga Nagar
+YP|Errupalem|
+YPD|Yerpedu|
+YPR|Yesvantpur Junction|Bangalore
+YPRA|Yesvantpur A Cabin|
+YS|Yermaras|
+YSI|Yedshi|
+YSPM|Yasantapur|
+YT|Yevat|
+YTG|Yeshwantnagar|
+YTL|Yavatmal|
+YVP|Yawarpura|Makarpura
+YY|Yediyuru|Bengaluru - Mangaluru Highway
+ZAR|Jharola|
+ZARP|Zarap|
+ZB|Zahirabad|
+ZBD|Zafarabad Junction|
+ZKV|Zankhvav|
+ZN|Jangaon|
+ZNA|Zamania|
+ZNP|Zindpura|
+ZP|Zarpur Pali|
+ZPI|Zampini|
+ZPL|Zangalapalle|
+ZPR|Zorawar Pura Halt|
+ZR|Jhajhpor|
+ZRD|Jiradei|
+ZRDE|Jiradei|
+ZW|Zawar|
+ZZZ|Zeebeedee|
+ZZZZ|Bhagalpur|

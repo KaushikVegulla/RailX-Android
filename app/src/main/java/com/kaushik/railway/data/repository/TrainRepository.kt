@@ -28,10 +28,18 @@ class TrainRepository(
     )
     private val availability = ExpiringCache<AvailabilityKey, AvailabilityResult>(30_000, 128, nowMillis)
     private val stations = ExpiringCache<String, List<Station>>(86_400_000, 64, nowMillis)
+    private val trainSearches = ExpiringCache<String, List<Train>>(600_000, 32, nowMillis)
     private val availabilitySlots = Semaphore(3)
 
-    suspend fun searchTrains(from: String, to: String, date: String): Result<List<Train>> =
-        capture { source.searchTrains(from, to, date) }
+    suspend fun searchTrains(from: String, to: String, date: String): Result<List<Train>> {
+        // Repeat searches for the same route and date are served from cache:
+        // the RailRadar free plan allows only 100 requests a month.
+        val key = "${from.uppercase(Locale.ROOT)}|${to.uppercase(Locale.ROOT)}|$date"
+        trainSearches[key]?.let { return Result.success(it) }
+        val result = capture { source.searchTrains(from, to, date) }
+        result.getOrNull()?.takeIf { it.isNotEmpty() }?.let { trainSearches.put(key, it) }
+        return result
+    }
 
     /** Each class can succeed independently; callbacks execute in the caller's context. */
     suspend fun loadClassAvailability(
@@ -76,6 +84,10 @@ class TrainRepository(
     suspend fun searchStations(query: String): List<Station> {
         val normalized = query.trim().lowercase(Locale.ROOT)
         if (normalized.length < 2) return emptyList()
+        // Offline directory first: complete and free. The API is only a
+        // fallback for a station missing from the bundled list.
+        val local = com.kaushik.railway.data.StationDirectory.search(normalized)
+        if (local.isNotEmpty()) return local
         stations[normalized]?.let { return it }
         return capture { source.searchStations(normalized) }
             .getOrDefault(emptyList()).also { if (it.isNotEmpty()) stations.put(normalized, it) }
