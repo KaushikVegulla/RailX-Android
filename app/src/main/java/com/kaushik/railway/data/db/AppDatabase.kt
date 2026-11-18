@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
 
-@Database(entities = [BookingEntity::class], version = 2, exportSchema = false)
+@Database(entities = [BookingEntity::class], version = 3, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun bookingDao(): BookingDao
 
@@ -20,6 +20,18 @@ abstract class AppDatabase : RoomDatabase() {
             }
         }
 
+        val MIGRATION_2_3 = object : Migration(2, 3) {
+            override fun migrate(db: SupportSQLiteDatabase) {
+                // Departure time and availability status at booking time
+                // (needed for IRCTC refund quotes), plus the applied
+                // cancellation charge and refund on cancelled bookings.
+                db.execSQL("ALTER TABLE bookings ADD COLUMN departTime TEXT NOT NULL DEFAULT ''")
+                db.execSQL("ALTER TABLE bookings ADD COLUMN classStatus TEXT NOT NULL DEFAULT ''")
+                db.execSQL("ALTER TABLE bookings ADD COLUMN cancelCharge INTEGER NOT NULL DEFAULT 0")
+                db.execSQL("ALTER TABLE bookings ADD COLUMN refundAmount INTEGER NOT NULL DEFAULT 0")
+            }
+        }
+
         @Volatile
         private var INSTANCE: AppDatabase? = null
 
@@ -29,7 +41,7 @@ abstract class AppDatabase : RoomDatabase() {
                     context.applicationContext,
                     AppDatabase::class.java,
                     "railone.db"
-                ).addMigrations(MIGRATION_1_2).build().also { INSTANCE = it }
+                ).addMigrations(MIGRATION_1_2, MIGRATION_2_3).build().also { INSTANCE = it }
             }
         }
     }

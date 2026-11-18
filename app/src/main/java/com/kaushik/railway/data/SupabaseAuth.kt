@@ -96,7 +96,8 @@ object SupabaseAuth {
         email: String,
         password: String,
         fullName: String = "",
-        mobile: String = ""
+        mobile: String = "",
+        username: String = ""
     ): SupabaseCall = withContext(Dispatchers.IO) {
         if (!SupabaseConfig.isConfigured) {
             return@withContext SupabaseCall.Err("Supabase is not configured in local.properties")
@@ -105,7 +106,11 @@ object SupabaseAuth {
             "email" to email.trim(),
             "password" to password,
             "email_redirect_to" to AUTH_REDIRECT,
-            "data" to mapOf("full_name" to fullName.trim(), "mobile" to mobile.trim())
+            "data" to mapOf(
+                "full_name" to fullName.trim(),
+                "mobile" to mobile.trim(),
+                "username" to username.trim()
+            )
         )
         val (code, response) = post("signup?redirect_to=$AUTH_REDIRECT_ENCODED", body, accessToken = null)
         val session = SupabaseSession.fromAuthResponse(response)
@@ -130,6 +135,30 @@ object SupabaseAuth {
                 )
             else -> SupabaseCall.Err(supabaseErrorMessage(response, code), supabaseErrorCode(response))
         }
+    }
+
+    /**
+     * Resolve a sign-in user ID (username) to the account email via the
+     * email_for_username RPC, or null when no account uses that ID.
+     * Profiles RLS is owner-only, so the pre-login lookup goes through
+     * the security-definer function instead of the table.
+     */
+    suspend fun lookupEmailForUsername(username: String): String? = withContext(Dispatchers.IO) {
+        if (!SupabaseConfig.isConfigured) return@withContext null
+        runCatching {
+            val body = JSONObject().put("p_username", username.trim()).toString().toRequestBody(jsonType)
+            val request = Request.Builder()
+                .url(SupabaseConfig.restUrl("rpc/email_for_username"))
+                .addHeader("apikey", SupabaseConfig.publishableKey)
+                .addHeader("Content-Type", "application/json")
+                .post(body)
+                .build()
+            http.newCall(request).execute().use { resp ->
+                if (!resp.isSuccessful) return@use null
+                val raw = resp.body?.string().orEmpty().trim()
+                raw.removeSurrounding("\"").takeIf { it.contains("@") }
+            }
+        }.getOrNull()
     }
 
     suspend fun signIn(email: String, password: String): SupabaseCall =

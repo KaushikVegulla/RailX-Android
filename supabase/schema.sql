@@ -34,6 +34,29 @@ alter table public.profiles
     add column if not exists pin_code         text not null default '',
     add column if not exists profile_complete boolean not null default false;
 
+-- A sign-in user ID (username) alongside the email, so users can sign in
+-- with either. Written by the signup trigger from auth metadata; looked
+-- up through the email_for_username RPC (profiles RLS is owner-only, so
+-- the pre-login lookup goes through a security-definer function).
+alter table public.profiles
+    add column if not exists username text not null default '';
+
+create unique index if not exists profiles_username_lower_idx
+    on public.profiles (lower(username)) where username <> '';
+
+create or replace function public.email_for_username(p_username text)
+returns text
+language sql
+security definer
+set search_path = public
+as $$
+    select email from public.profiles
+    where username <> '' and lower(username) = lower(p_username)
+    limit 1;
+$$;
+
+grant execute on function public.email_for_username(text) to anon, authenticated;
+
 -- ---------------------------------------------------------------- bookings
 -- Mirrors the Room `bookings` table in the Android app. passengers are kept
 -- as jsonb in the same shape the app already stores locally (passengersJson).
@@ -126,12 +149,13 @@ security definer
 set search_path = public
 as $$
 begin
-    insert into public.profiles (id, full_name, email, mobile)
+    insert into public.profiles (id, full_name, email, mobile, username)
     values (
         new.id,
         coalesce(new.raw_user_meta_data ->> 'full_name', ''),
         coalesce(new.email, ''),
-        coalesce(new.raw_user_meta_data ->> 'mobile', '')
+        coalesce(new.raw_user_meta_data ->> 'mobile', ''),
+        coalesce(new.raw_user_meta_data ->> 'username', '')
     )
     on conflict (id) do nothing;
     return new;

@@ -12,6 +12,8 @@ import com.kaushik.railway.data.AccountStore
 import com.kaushik.railway.data.AvailabilityResult
 import com.kaushik.railway.data.Booking
 import com.kaushik.railway.data.IrctcRules
+import com.kaushik.railway.data.RefundPolicy
+import com.kaushik.railway.data.RefundQuote
 import com.kaushik.railway.data.LastJourney
 import com.kaushik.railway.data.MockData
 import com.kaushik.railway.data.Passenger
@@ -517,7 +519,7 @@ class AppViewModel : ViewModel() {
                 return@launch
             }
             val call = withTimeoutOrNull(15_000) {
-                supabaseAuth.signUp(regEmail.trim(), regPassword, regFullName.trim(), regMobile.trim())
+                supabaseAuth.signUp(regEmail.trim(), regPassword, regFullName.trim(), regMobile.trim(), regUserId.trim())
             }
             cloudBusy = false
             when (call) {
@@ -677,15 +679,20 @@ class AppViewModel : ViewModel() {
             // mirrored on this device. There is no on-device demo or
             // legacy sign-in anymore.
             val savedProfile = accountStore.findProfile(idOrEmail)
-            val supabaseEmail = when {
+            var supabaseEmail = when {
                 idOrEmail.contains("@") -> idOrEmail.trim()
                 else -> savedProfile?.email?.takeIf { it.contains("@") }.orEmpty()
             }
+            if (supabaseEmail.isBlank() && !idOrEmail.contains("@")) {
+                // A bare user ID with no on-device mirror (fresh install):
+                // resolve it against the server account directory, so the
+                // user ID signs in on any device, not just this one.
+                supabaseEmail = withTimeoutOrNull(12_000) {
+                    supabaseAuth.lookupEmailForUsername(idOrEmail)
+                }.orEmpty()
+            }
             if (supabaseEmail.isBlank()) {
-                // A bare user ID resolves through the on-device mirror.
-                // On a fresh install there is none yet, so ask for the
-                // email — it opens the same cloud account.
-                val message = "Sign in with your registered email — it opens your same cloud account."
+                val message = "No account found for that user ID. Check the ID, or sign in with your registered email."
                 authLoading = false
                 authError = message
                 onError(message)
@@ -1174,7 +1181,9 @@ class AppViewModel : ViewModel() {
             fromName = stationName(fromCode),
             toName = stationName(toCode),
             paymentId = paymentId,
-            orderId = orderId
+            orderId = orderId,
+            departTime = train.depart,
+            classStatus = cls.status
         )
         val journey = LastJourney(
             fromCode = fromCode,
@@ -1198,13 +1207,35 @@ class AppViewModel : ViewModel() {
         return booking
     }
 
+    /** IRCTC-rule refund quote for cancelling this booking right now. */
+    fun refundQuoteFor(booking: Booking): RefundQuote {
+        val departure = RefundPolicy.departureOf(booking.date, booking.departTime)
+            ?: RefundPolicy.departureOf(booking.date, "")
+            ?: java.time.LocalDateTime.now()
+        return RefundPolicy.quote(
+            classCode = booking.travelClass.code,
+            farePerPassenger = booking.travelClass.fare,
+            passengers = booking.passengers.size,
+            ticketStatus = booking.classStatus.ifBlank { booking.travelClass.status },
+            quota = booking.quota,
+            departure = departure
+        )
+    }
+
     fun cancel(pnr: String) {
         val owner = bookingOwnerId.takeIf { it.isNotBlank() } ?: return
+        val booking = bookings.firstOrNull { it.pnr == pnr }
+            ?: lastBooking?.takeIf { it.pnr == pnr }
+        val quote = booking?.let { refundQuoteFor(it) }
         viewModelScope.launch {
-            bookingRepo.cancel(owner, pnr)
+            bookingRepo.cancel(owner, pnr, quote?.totalCharge ?: 0, quote?.refundAmount ?: 0)
             supabaseSync.pushBookingStatus(pnr, "CANCELLED")
             if (bookingOwnerId == owner && lastBooking?.pnr == pnr) {
-                lastBooking = lastBooking?.copy(status = "CANCELLED")
+                lastBooking = lastBooking?.copy(
+                    status = "CANCELLED",
+                    cancelCharge = quote?.totalCharge ?: 0,
+                    refundAmount = quote?.refundAmount ?: 0
+                )
             }
         }
     }

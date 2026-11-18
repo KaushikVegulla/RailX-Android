@@ -27,5 +27,9 @@ data class BookingEntity(
     val orderId: String = "",
     val createdAt: Long = System.currentTimeMillis(),
     // Empty identifies pre-migration records whose owner cannot be safely inferred.
-    @ColumnInfo(defaultValue = "''") val ownerId: String = ""
+    @ColumnInfo(defaultValue = "''") val ownerId: String = "",
+    @ColumnInfo(defaultValue = "''") val departTime: String = "",
+    @ColumnInfo(defaultValue = "''") val classStatus: String = "",
+    @ColumnInfo(defaultValue = "0") val cancelCharge: Int = 0,
+    @ColumnInfo(defaultValue = "0") val refundAmount: Int = 0
 )

@@ -21,6 +21,9 @@ interface BookingDao {
     @Query("UPDATE bookings SET status = :status WHERE ownerId = :ownerId AND ownerId != '' AND pnr = :pnr")
     suspend fun updateStatus(ownerId: String, pnr: String, status: String)
 
+    @Query("UPDATE bookings SET status = 'CANCELLED', cancelCharge = :cancelCharge, refundAmount = :refundAmount WHERE ownerId = :ownerId AND ownerId != '' AND pnr = :pnr")
+    suspend fun updateCancellation(ownerId: String, pnr: String, cancelCharge: Int, refundAmount: Int)
+
     @Query("DELETE FROM bookings WHERE ownerId = :ownerId AND ownerId != '' AND pnr = :pnr")
     suspend fun delete(ownerId: String, pnr: String)
 }

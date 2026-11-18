@@ -30,9 +30,9 @@ class BookingRepository(private val db: AppDatabase) {
         dao.insert(booking.toEntity(ownerId))
     }
 
-    suspend fun cancel(ownerId: String, pnr: String) {
+    suspend fun cancel(ownerId: String, pnr: String, cancelCharge: Int = 0, refundAmount: Int = 0) {
         require(ownerId.isNotBlank()) { "Sign in before cancelling a booking" }
-        dao.updateStatus(ownerId, pnr, "CANCELLED")
+        dao.updateCancellation(ownerId, pnr, cancelCharge, refundAmount)
     }
 
     suspend fun getByPnr(ownerId: String, pnr: String): Booking? = withContext(Dispatchers.Default) {
@@ -64,7 +64,7 @@ class BookingRepository(private val db: AppDatabase) {
             to = toName,
             fromCode = fromCode,
             toCode = toCode,
-            depart = "",
+            depart = departTime,
             arrive = "",
             duration = "",
             days = ""
@@ -89,7 +89,11 @@ class BookingRepository(private val db: AppDatabase) {
             fromName = fromName,
             toName = toName,
             paymentId = paymentId,
-            orderId = orderId
+            orderId = orderId,
+            departTime = departTime,
+            classStatus = classStatus,
+            cancelCharge = cancelCharge,
+            refundAmount = refundAmount
         )
     }
 
@@ -124,7 +128,11 @@ class BookingRepository(private val db: AppDatabase) {
             status = status,
             amount = amount,
             paymentId = paymentId,
-            orderId = orderId
+            orderId = orderId,
+            departTime = departTime,
+            classStatus = classStatus,
+            cancelCharge = cancelCharge,
+            refundAmount = refundAmount
         )
     }
 }
