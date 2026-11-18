@@ -28,6 +28,8 @@ import com.kaushik.railway.data.*
 import com.kaushik.railway.ui.components.OrangeButton
 import com.kaushik.railway.ui.components.RailCard
 import com.kaushik.railway.ui.components.RailTopBar
+import com.kaushik.railway.ui.components.GlassSwitch
+import androidx.compose.ui.draw.alpha
 import com.kaushik.railway.ui.components.StatusChip
 import com.kaushik.railway.ui.components.SeatMapGrid
 import com.kaushik.railway.ui.components.demoSeatMap
@@ -119,7 +121,7 @@ fun TrainListScreen(vm: AppViewModel, onBack: () -> Unit, onSelect: (Train) -> U
                         Text("Available seats only", style = MaterialTheme.typography.titleSmall)
                         Text("Uses availability supplied in these results", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
                     }
-                    Switch(checked = availableOnly, onCheckedChange = { availableOnly = it }, enabled = hasAvailability)
+                    GlassSwitch(checked = availableOnly, onCheckedChange = { if (hasAvailability) availableOnly = it }, modifier = Modifier.alpha(if (hasAvailability) 1f else 0.45f))
                 }
                 if (!hasFares || classes.isEmpty()) Text("Some live searches omit class, fare and seat details. Open a train to check those details; missing values are never treated as available or free.", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant, modifier = Modifier.padding(vertical = 12.dp))
                 OrangeButton("Show ${visible.size} ${if (visible.size == 1) "train" else "trains"}") { showFilters = false }

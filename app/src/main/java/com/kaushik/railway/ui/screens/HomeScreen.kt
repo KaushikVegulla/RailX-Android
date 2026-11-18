@@ -48,6 +48,8 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.semantics.Role
@@ -86,7 +88,7 @@ fun HomeScreen(
     LazyColumn(
         modifier = Modifier.fillMaxSize().statusBarsPadding().imePadding(),
         verticalArrangement = Arrangement.spacedBy(20.dp),
-        contentPadding = androidx.compose.foundation.layout.PaddingValues(horizontal = 20.dp, vertical = 20.dp)
+        contentPadding = androidx.compose.foundation.layout.PaddingValues(start = 20.dp, end = 20.dp, top = 20.dp, bottom = 112.dp)
     ) {
         item {
             Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
@@ -100,9 +102,10 @@ fun HomeScreen(
                     )
                 }
                 Box(
-                    Modifier.size(50.dp).background(colors.primaryContainer, CircleShape),
+                    Modifier.size(50.dp).clip(RoundedCornerShape(15.dp))
+                        .background(Brush.linearGradient(listOf(Color(0xFF0A2E63), Color(0xFF0A5BD7), Color(0xFF0E86E8)))),
                     contentAlignment = Alignment.Center
-                ) { Icon(Icons.Default.Train, null, tint = colors.primary) }
+                ) { Icon(Icons.Default.Train, null, tint = Color.White, modifier = Modifier.size(28.dp)) }
             }
         }
         item {

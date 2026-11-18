@@ -25,6 +25,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.luminance
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.googlefonts.Font
+import androidx.compose.ui.text.googlefonts.GoogleFont
+import com.kaushik.railway.R
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.em
@@ -33,10 +36,22 @@ import androidx.compose.ui.unit.sp
 /** 0 = fully tinted glass, 1 = ultra-clear glass. Set from Settings. */
 val LocalGlassIntensity = compositionLocalOf { 0.55f }
 
-// System sans with an SF-style scale: tight tracking on large titles,
-// generous line heights, semibold emphasis. (A bundled Inter family can
-// replace this later without touching any screen.)
-private val AppFontFamily = FontFamily.Default
+// Inter, fetched at runtime from the Google Fonts provider (falls back to
+// the system sans if the provider is unavailable). SF-style scale: tight
+// tracking on large titles, generous line heights, semibold emphasis.
+private val InterProvider = GoogleFont.Provider(
+    providerAuthority = "com.google.android.gms.fonts",
+    providerPackage = "com.google.android.gms",
+    certificates = R.array.com_google_android_gms_fonts_certs
+)
+private val InterFont = GoogleFont("Inter")
+private val AppFontFamily = FontFamily(
+    Font(InterFont, InterProvider, FontWeight.Normal),
+    Font(InterFont, InterProvider, FontWeight.Medium),
+    Font(InterFont, InterProvider, FontWeight.SemiBold),
+    Font(InterFont, InterProvider, FontWeight.Bold),
+    Font(InterFont, InterProvider, FontWeight.ExtraBold)
+)
 
 private fun typeStyle(
     size: Int,
@@ -85,8 +100,8 @@ private val darkScheme = darkColorScheme(
     primaryContainer = Color(0xFF14335F), onPrimaryContainer = Color(0xFFD6E9FF),
     secondary = Color(0xFFFFB340), onSecondary = Color(0xFF452B00),
     secondaryContainer = Color(0xFF59401D), onSecondaryContainer = Color(0xFFFFDFA6),
-    background = Color(0xFF05070C), onBackground = Color(0xFFEDF2FA),
-    surface = Color(0xFF131926), onSurface = Color(0xFFEDF2FA),
+    background = Color(0xFF000000), onBackground = Color(0xFFEDF2FA),
+    surface = Color(0xFF1C1C1E), onSurface = Color(0xFFEDF2FA),
     surfaceVariant = Color(0xFF1C2536), onSurfaceVariant = Color(0xFFA7B4C8),
     outline = Color(0xFF5A6B84), outlineVariant = Color(0xFF2A3446),
     error = Color(0xFFFF6961), onError = Color(0xFF690005)
@@ -173,7 +188,7 @@ fun LiquidGlassBackdrop(modifier: Modifier = Modifier, content: @Composable BoxS
             .background(
                 Brush.verticalGradient(
                     if (dark) {
-                        listOf(Color(0xFF0A101E), Color(0xFF05070C), Color(0xFF030408))
+                        listOf(Color(0xFF0C0D12), Color(0xFF000000), Color(0xFF000000))
                     } else {
                         listOf(Color(0xFFF4F7FC), Color(0xFFEDF0F6), Color(0xFFE3EAF4))
                     }
