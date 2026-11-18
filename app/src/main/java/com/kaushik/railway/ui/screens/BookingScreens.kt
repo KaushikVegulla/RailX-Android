@@ -65,6 +65,7 @@ import com.kaushik.railway.ui.components.LabeledField
 import com.kaushik.railway.ui.components.OrangeButton
 import com.kaushik.railway.ui.components.RailCard
 import com.kaushik.railway.ui.components.RailTopBar
+import com.kaushik.railway.ui.components.SegmentedControl
 import com.kaushik.railway.ui.components.SectionTitle
 import com.kaushik.railway.ui.theme.Navy
 import com.kaushik.railway.ui.theme.Orange
@@ -445,16 +446,18 @@ fun BookingsScreen(vm: AppViewModel, onBack: () -> Unit) {
     Scaffold(topBar = { RailTopBar("My journeys", onBack) }) { pad ->
         LazyColumn(
             Modifier.fillMaxSize().padding(pad),
-            contentPadding = PaddingValues(20.dp),
+            contentPadding = PaddingValues(start = 20.dp, end = 20.dp, top = 20.dp, bottom = 112.dp),
             verticalArrangement = Arrangement.spacedBy(14.dp)
         ) {
             item {
                 Text("Your travel collection", style = MaterialTheme.typography.headlineSmall, fontWeight = FontWeight.Bold)
                 Text("Bookings saved for this account", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
-                Row(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.padding(top = 10.dp)) {
-                    FilterChip(selected = !showCancelled, onClick = { showCancelled = false }, label = { Text("Booked") })
-                    FilterChip(selected = showCancelled, onClick = { showCancelled = true }, label = { Text("Cancelled") })
-                }
+                Spacer(Modifier.height(12.dp))
+                SegmentedControl(
+                    options = listOf("Booked", "Cancelled"),
+                    selectedIndex = if (showCancelled) 1 else 0,
+                    onSelect = { showCancelled = it == 1 }
+                )
             }
             if (bookings.isEmpty()) {
                 item {

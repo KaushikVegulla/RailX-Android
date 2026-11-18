@@ -13,10 +13,17 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.statusBarsPadding
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ConfirmationNumber
+import androidx.compose.material.icons.filled.Fingerprint
+import androidx.compose.material.icons.filled.Luggage
+import androidx.compose.material.icons.filled.Person
+import androidx.compose.material.icons.filled.Pin
+import androidx.compose.material.icons.filled.Train
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.OutlinedTextField
-import androidx.compose.material3.Slider
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.MaterialTheme
@@ -37,6 +44,11 @@ import com.kaushik.railway.ui.components.OrangeButton
 import com.kaushik.railway.ui.components.RailCard
 import com.kaushik.railway.ui.components.SectionTitle
 import com.kaushik.railway.ui.components.RailTopBar
+import com.kaushik.railway.ui.components.GlassSlider
+import com.kaushik.railway.ui.components.GroupedDivider
+import com.kaushik.railway.ui.components.GroupedSection
+import com.kaushik.railway.ui.components.ListRow
+import com.kaushik.railway.ui.components.SegmentedControl
 import com.kaushik.railway.ui.components.StatusChip
 import com.kaushik.railway.ui.theme.Mute
 import com.kaushik.railway.ui.theme.Navy
@@ -73,6 +85,7 @@ fun PnrScreen(vm: AppViewModel, onBack: () -> Unit) {
                     }
                 }
             }
+            Spacer(Modifier.height(96.dp))
         }
     }
 }
@@ -202,62 +215,51 @@ fun MoreScreen(
     onAadhaar: () -> Unit = {},
     onMpin: () -> Unit = {}
 ) {
+    val colors = MaterialTheme.colorScheme
     Column(
-        Modifier.fillMaxSize().background(Color.Transparent).verticalScroll(rememberScrollState()).padding(16.dp)
+        Modifier.fillMaxSize().background(Color.Transparent).statusBarsPadding()
+            .verticalScroll(rememberScrollState()).padding(horizontal = 16.dp)
     ) {
-        Text("More", fontSize = 24.sp, fontWeight = FontWeight.Bold, color = Navy)
-        Text("RailX  •  academic demo", color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 13.sp)
-        Spacer(Modifier.height(12.dp))
-        listOf(
-            "PNR enquiry" to onPnr,
-            "Live train status" to onRunning,
-            "My bookings" to onBookings,
-            "Profile & logout" to onProfile,
-            "Generate PIN" to onMpin,
-            "Tatkal Aadhaar link" to onAadhaar
-        ).forEach { (label, action) ->
-            RailCard(Modifier.padding(bottom = 8.dp)) {
-                androidx.compose.material3.TextButton(onClick = action, modifier = Modifier.fillMaxWidth()) {
-                    Text(label, color = Navy, fontWeight = FontWeight.Medium)
-                }
-            }
+        Spacer(Modifier.height(14.dp))
+        Text("More", fontSize = 34.sp, fontWeight = FontWeight.Bold, color = colors.onBackground)
+        Text(
+            "RailX  \u2022  academic demo",
+            color = colors.onSurfaceVariant,
+            fontSize = 13.sp,
+            modifier = Modifier.padding(top = 2.dp)
+        )
+        Spacer(Modifier.height(20.dp))
+        GroupedSection("Enquiries") {
+            ListRow("PNR enquiry", Icons.Default.ConfirmationNumber, Color(0xFF0A84FF)) { onPnr() }
+            GroupedDivider()
+            ListRow("Live train status", Icons.Default.Train, Color(0xFF30D158)) { onRunning() }
+            GroupedDivider()
+            ListRow("My bookings", Icons.Default.Luggage, Color(0xFFFF9F0A)) { onBookings() }
         }
-        Spacer(Modifier.height(16.dp))
-        SectionTitle("Appearance")
-        RailCard(Modifier.padding(bottom = 8.dp)) {
-            Column {
-                Text("Theme", color = Navy, fontWeight = FontWeight.Medium)
-                Spacer(Modifier.height(8.dp))
-                Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    listOf("system" to "System", "light" to "Light", "dark" to "Dark").forEach { (mode, label) ->
-                        val chipSelected = vm.themeMode == mode
-                        Box(
-                            Modifier
-                                .clip(RoundedCornerShape(50))
-                                .background(
-                                    if (chipSelected) MaterialTheme.colorScheme.primary
-                                    else MaterialTheme.colorScheme.surfaceVariant
-                                )
-                                .clickable { vm.updateThemeMode(mode) }
-                                .padding(horizontal = 16.dp, vertical = 8.dp)
-                        ) {
-                            Text(
-                                label,
-                                color = if (chipSelected) MaterialTheme.colorScheme.onPrimary
-                                    else MaterialTheme.colorScheme.onSurfaceVariant,
-                                fontSize = 13.sp,
-                                fontWeight = FontWeight.Medium
-                            )
-                        }
-                    }
-                }
-                Spacer(Modifier.height(16.dp))
-                Text("Liquid Glass intensity", color = Navy, fontWeight = FontWeight.Medium)
-                Slider(
-                    value = vm.glassIntensity,
-                    onValueChange = { vm.updateGlassIntensity(it) },
-                    valueRange = 0f..1f
+        Spacer(Modifier.height(22.dp))
+        GroupedSection("Account") {
+            ListRow("Profile & logout", Icons.Default.Person, Color(0xFFBF5AF2)) { onProfile() }
+            GroupedDivider()
+            ListRow("Generate PIN", Icons.Default.Pin, Color(0xFF5E5CE6)) { onMpin() }
+            GroupedDivider()
+            ListRow("Tatkal Aadhaar link", Icons.Default.Fingerprint, Color(0xFFFF6482)) { onAadhaar() }
+        }
+        Spacer(Modifier.height(22.dp))
+        GroupedSection("Appearance") {
+            Column(Modifier.padding(horizontal = 16.dp, vertical = 10.dp)) {
+                Text("Theme", fontSize = 16.sp, color = colors.onSurface)
+                Spacer(Modifier.height(10.dp))
+                SegmentedControl(
+                    options = listOf("System", "Light", "Dark"),
+                    selectedIndex = listOf("system", "light", "dark").indexOf(vm.themeMode).coerceAtLeast(0),
+                    onSelect = { vm.updateThemeMode(listOf("system", "light", "dark")[it]) }
                 )
+                Spacer(Modifier.height(18.dp))
+                Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
+                    Text("Liquid Glass", fontSize = 16.sp, color = colors.onSurface)
+                    Text("${(vm.glassIntensity * 100).toInt()}%", fontSize = 16.sp, color = colors.onSurfaceVariant)
+                }
+                GlassSlider(value = vm.glassIntensity, onValueChange = { vm.updateGlassIntensity(it) })
                 Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
                     Text("Fully tinted", color = Mute, fontSize = 12.sp)
                     Text("Ultra-clear", color = Mute, fontSize = 12.sp)
@@ -265,10 +267,11 @@ fun MoreScreen(
             }
         }
         Text(
-            "Inspired by RailOne (CRIS). Academic demo only — not an official Indian Railways app.",
-            color = MaterialTheme.colorScheme.onSurfaceVariant,
+            "Inspired by RailOne (CRIS). Academic demo only \u2014 not an official Indian Railways app.",
+            color = colors.onSurfaceVariant,
             fontSize = 12.sp,
-            modifier = Modifier.padding(top = 16.dp)
+            modifier = Modifier.padding(top = 20.dp, start = 20.dp, end = 20.dp)
         )
+        Spacer(Modifier.height(110.dp))
     }
 }

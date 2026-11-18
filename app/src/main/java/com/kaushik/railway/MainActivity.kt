@@ -13,14 +13,17 @@ import com.razorpay.PaymentData
 import com.razorpay.PaymentResultWithDataListener
 import androidx.compose.foundation.background
 import androidx.compose.foundation.selection.selectable
-import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.animation.AnimatedContentTransitionScope
+import androidx.compose.animation.core.CubicBezierEasing
+import androidx.compose.animation.slideInHorizontally
+import androidx.compose.animation.slideOutHorizontally
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
@@ -38,7 +41,6 @@ import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedTextField
-import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
@@ -49,6 +51,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
@@ -89,6 +92,10 @@ import com.kaushik.railway.ui.screens.TrainListScreen
 import com.kaushik.railway.ui.screens.UnlockScreen
 import com.kaushik.railway.ui.screens.VacancyChartScreen
 import com.kaushik.railway.ui.theme.RailwayTheme
+import dev.chrisbanes.haze.HazeState
+import dev.chrisbanes.haze.HazeTint
+import dev.chrisbanes.haze.hazeEffect
+import dev.chrisbanes.haze.hazeSource
 
 class MainActivity : FragmentActivity(), PaymentResultWithDataListener {
     private val vm: AppViewModel by viewModels()
@@ -124,6 +131,8 @@ class MainActivity : FragmentActivity(), PaymentResultWithDataListener {
     }
 }
 
+private val IosEase = CubicBezierEasing(0.32f, 0.72f, 0.24f, 1f)
+
 @Composable
 fun RailwayApp(vm: AppViewModel = viewModel()) {
     val nav = rememberNavController()
@@ -131,6 +140,9 @@ fun RailwayApp(vm: AppViewModel = viewModel()) {
     val route = back?.destination?.route
     val tabs = setOf(Routes.Home, Routes.Bookings, Routes.Pnr, Routes.More)
     val showBar = route in tabs
+    val hazeState = remember { HazeState() }
+    val barFill = GlassFill
+    val barStroke = GlassStroke
 
     LiquidGlassBackdrop {
     if (vm.showPasswordReset) {
@@ -146,21 +158,39 @@ fun RailwayApp(vm: AppViewModel = viewModel()) {
             }
         )
     }
-    Column(Modifier.fillMaxSize()) {
+    Box(Modifier.fillMaxSize()) {
         NavHost(
             navController = nav,
             startDestination = Routes.Splash,
-            modifier = Modifier.weight(1f),
+            modifier = Modifier.fillMaxSize().hazeSource(hazeState),
             enterTransition = {
-                fadeIn(tween(300)) +
-                    slideIntoContainer(AnimatedContentTransitionScope.SlideDirection.Start, tween(340))
+                if (initialState.destination.route in tabs && targetState.destination.route in tabs) {
+                    fadeIn(tween(260))
+                } else {
+                    fadeIn(tween(320)) + slideInHorizontally(tween(380, IosEase)) { it }
+                }
             },
-            exitTransition = { fadeOut(tween(220)) },
+            exitTransition = {
+                if (initialState.destination.route in tabs && targetState.destination.route in tabs) {
+                    fadeOut(tween(200))
+                } else {
+                    fadeOut(tween(320)) + slideOutHorizontally(tween(380, IosEase)) { -(it * 0.3f).toInt() }
+                }
+            },
             popEnterTransition = {
-                fadeIn(tween(300)) +
-                    slideIntoContainer(AnimatedContentTransitionScope.SlideDirection.End, tween(340))
+                if (initialState.destination.route in tabs && targetState.destination.route in tabs) {
+                    fadeIn(tween(260))
+                } else {
+                    fadeIn(tween(320)) + slideInHorizontally(tween(380, IosEase)) { -(it * 0.3f).toInt() }
+                }
             },
-            popExitTransition = { fadeOut(tween(220)) }
+            popExitTransition = {
+                if (initialState.destination.route in tabs && targetState.destination.route in tabs) {
+                    fadeOut(tween(200))
+                } else {
+                    fadeOut(tween(320)) + slideOutHorizontally(tween(380, IosEase)) { it }
+                }
+            }
         ) {
             composable(Routes.Splash) {
                 SplashScreen(ready = vm.gateReady) {
@@ -304,12 +334,20 @@ fun RailwayApp(vm: AppViewModel = viewModel()) {
             }
         }
         if (showBar) {
-            Surface(
-                color = GlassFill,
-                shape = RoundedCornerShape(36.dp),
-                border = BorderStroke(1.dp, GlassStroke),
-                shadowElevation = 18.dp,
-                modifier = Modifier.navigationBarsPadding().padding(horizontal = 16.dp, vertical = 10.dp)
+            Box(
+                Modifier
+                    .align(Alignment.BottomCenter)
+                    .navigationBarsPadding()
+                    .padding(horizontal = 16.dp, vertical = 10.dp)
+                    .shadow(18.dp, RoundedCornerShape(36.dp))
+                    .clip(RoundedCornerShape(36.dp))
+                    .hazeEffect(hazeState) {
+                        blurRadius = 26.dp
+                        noiseFactor = 0f
+                        tints = listOf(HazeTint(barFill))
+                        fallbackTint = HazeTint(barFill)
+                    }
+                    .border(1.dp, barStroke, RoundedCornerShape(36.dp))
             ) {
                 Row(
                     Modifier.fillMaxWidth().padding(6.dp),
