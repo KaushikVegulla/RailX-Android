@@ -20,6 +20,9 @@ import androidx.compose.animation.core.CubicBezierEasing
 import androidx.compose.animation.slideInHorizontally
 import androidx.compose.animation.slideOutHorizontally
 import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.core.Spring
+import androidx.compose.animation.core.animateDpAsState
+import androidx.compose.animation.core.spring
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
@@ -34,6 +37,10 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
+import androidx.compose.foundation.layout.offset
+import androidx.compose.foundation.layout.width
+import androidx.compose.ui.layout.onSizeChanged
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ConfirmationNumber
 import androidx.compose.material.icons.filled.Home
@@ -362,6 +369,23 @@ fun RailwayApp(vm: AppViewModel = viewModel()) {
                 )
             }
         }
+        // One selection pill that physically slides between tabs with the
+        // same spring as the Booked/Cancelled segmented control, instead of
+        // each tab fading its own background in place.
+        val selectedTab = when (route) {
+            Routes.Bookings -> 1
+            Routes.Pnr -> 2
+            Routes.More -> 3
+            else -> 0
+        }
+        var barWidth by remember { mutableStateOf(0) }
+        val barDensity = LocalDensity.current
+        val tabWidth = with(barDensity) { if (barWidth == 0) 0.dp else (barWidth / 4).toDp() }
+        val pillOffset by animateDpAsState(
+            targetValue = tabWidth * selectedTab,
+            animationSpec = spring(dampingRatio = 0.85f, stiffness = Spring.StiffnessMediumLow),
+            label = "Tab pill"
+        )
         if (showBar) {
             Box(
                 Modifier
@@ -373,21 +397,30 @@ fun RailwayApp(vm: AppViewModel = viewModel()) {
                     .background(barFill)
                     .border(1.dp, barStroke, RoundedCornerShape(36.dp))
             ) {
-                Row(
-                    Modifier.fillMaxWidth().padding(6.dp),
-                    horizontalArrangement = Arrangement.spacedBy(4.dp)
+                Box(
+                    Modifier.fillMaxWidth().padding(6.dp)
+                        .onSizeChanged { barWidth = it.width }
                 ) {
-                    NavItem("Home", route == Routes.Home, Icons.Default.Home, Modifier.weight(1f)) {
-                        nav.navigate(Routes.Home) { popUpTo(Routes.Home) { saveState = true }; launchSingleTop = true; restoreState = true }
+                    if (barWidth > 0) {
+                        Box(
+                            Modifier.offset(x = pillOffset).width(tabWidth).height(56.dp)
+                                .clip(RoundedCornerShape(24.dp))
+                                .background(MaterialTheme.colorScheme.primary)
+                        )
                     }
-                    NavItem("Trips", route == Routes.Bookings, Icons.Default.Train, Modifier.weight(1f)) {
-                        nav.navigate(Routes.Bookings) { popUpTo(Routes.Home) { saveState = true }; launchSingleTop = true; restoreState = true }
-                    }
-                    NavItem("PNR", route == Routes.Pnr, Icons.Default.ConfirmationNumber, Modifier.weight(1f)) {
-                        nav.navigate(Routes.Pnr) { popUpTo(Routes.Home) { saveState = true }; launchSingleTop = true; restoreState = true }
-                    }
-                    NavItem("More", route == Routes.More, Icons.Default.MoreHoriz, Modifier.weight(1f)) {
-                        nav.navigate(Routes.More) { popUpTo(Routes.Home) { saveState = true }; launchSingleTop = true; restoreState = true }
+                    Row(Modifier.fillMaxWidth()) {
+                        NavItem("Home", route == Routes.Home, Icons.Default.Home, Modifier.weight(1f)) {
+                            nav.navigate(Routes.Home) { popUpTo(Routes.Home) { saveState = true }; launchSingleTop = true; restoreState = true }
+                        }
+                        NavItem("Trips", route == Routes.Bookings, Icons.Default.Train, Modifier.weight(1f)) {
+                            nav.navigate(Routes.Bookings) { popUpTo(Routes.Home) { saveState = true }; launchSingleTop = true; restoreState = true }
+                        }
+                        NavItem("PNR", route == Routes.Pnr, Icons.Default.ConfirmationNumber, Modifier.weight(1f)) {
+                            nav.navigate(Routes.Pnr) { popUpTo(Routes.Home) { saveState = true }; launchSingleTop = true; restoreState = true }
+                        }
+                        NavItem("More", route == Routes.More, Icons.Default.MoreHoriz, Modifier.weight(1f)) {
+                            nav.navigate(Routes.More) { popUpTo(Routes.Home) { saveState = true }; launchSingleTop = true; restoreState = true }
+                        }
                     }
                 }
             }
@@ -400,11 +433,10 @@ fun RailwayApp(vm: AppViewModel = viewModel()) {
 private fun NavItem(label: String, selected: Boolean, icon: ImageVector, modifier: Modifier = Modifier, onClick: () -> Unit) {
     val colors = MaterialTheme.colorScheme
     val tint by animateColorAsState(if (selected) colors.onPrimary else colors.onSurfaceVariant, label = "Navigation tint")
-    val background by animateColorAsState(if (selected) colors.primary else Color.Transparent, label = "Navigation selection")
     Column(
-        modifier = modifier.clip(RoundedCornerShape(24.dp)).background(background)
+        modifier = modifier.clip(RoundedCornerShape(24.dp))
             .selectable(selected = selected, role = Role.Tab, onClick = onClick)
-            .heightIn(min = 56.dp).padding(horizontal = 4.dp, vertical = 8.dp),
+            .height(56.dp).padding(horizontal = 4.dp, vertical = 8.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(4.dp)
     ) {
