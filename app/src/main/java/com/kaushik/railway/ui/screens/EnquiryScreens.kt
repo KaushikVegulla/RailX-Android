@@ -59,7 +59,7 @@ fun PnrScreen(vm: AppViewModel, onBack: () -> Unit) {
     var pnr by remember { mutableStateOf("") }
     Scaffold(topBar = { RailTopBar("PNR status", onBack) }) { pad ->
         Column(
-            Modifier.fillMaxSize().padding(pad).background(Color.Transparent).verticalScroll(rememberScrollState()).padding(16.dp)
+            Modifier.fillMaxSize().padding(pad).background(Color.Transparent).verticalScroll(rememberScrollState()).padding(start = 16.dp, end = 16.dp, top = 16.dp, bottom = 120.dp)
         ) {
             LabeledField("10-digit PNR", pnr, onValue = { value ->
                 pnr = value.filter { ch -> ch.isDigit() }.take(10)
