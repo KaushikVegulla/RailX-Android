@@ -115,7 +115,7 @@ object AuthApi {
 
     private fun loginLocal(email: String, password: String): AuthUser {
         val u = localUsers[email.lowercase()]
-            ?: throw IllegalStateException("No account. Register first (local demo mode).")
+            ?: throw IllegalStateException("No account found on this device. If you already registered, sign in with your email.")
         if (u.password != password) throw IllegalStateException("Invalid email or password")
         if (!u.verified) {
             u.otp = "%06d".format((100000..999999).random())

@@ -92,10 +92,12 @@ import com.kaushik.railway.ui.screens.TrainListScreen
 import com.kaushik.railway.ui.screens.UnlockScreen
 import com.kaushik.railway.ui.screens.VacancyChartScreen
 import com.kaushik.railway.ui.theme.RailwayTheme
-import dev.chrisbanes.haze.HazeState
-import dev.chrisbanes.haze.HazeTint
-import dev.chrisbanes.haze.hazeEffect
-import dev.chrisbanes.haze.hazeSource
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.unit.sp
+import com.kaushik.railway.util.CrashLog
 
 class MainActivity : FragmentActivity(), PaymentResultWithDataListener {
     private val vm: AppViewModel by viewModels()
@@ -140,13 +142,31 @@ fun RailwayApp(vm: AppViewModel = viewModel()) {
     val route = back?.destination?.route
     val tabs = setOf(Routes.Home, Routes.Bookings, Routes.Pnr, Routes.More)
     val showBar = route in tabs
-    val hazeState = remember { HazeState() }
     val barFill = GlassFill
     val barStroke = GlassStroke
 
     LiquidGlassBackdrop {
     if (vm.showPasswordReset) {
         PasswordResetDialog(vm)
+    }
+    val crashContext = LocalContext.current
+    var crashText by remember { mutableStateOf(CrashLog.read(crashContext)) }
+    crashText?.let { trace ->
+        AlertDialog(
+            onDismissRequest = { CrashLog.clear(crashContext); crashText = null },
+            title = { Text("Last crash report") },
+            text = {
+                Text(
+                    trace,
+                    fontFamily = FontFamily.Monospace,
+                    fontSize = 10.sp,
+                    modifier = Modifier.heightIn(max = 320.dp).verticalScroll(rememberScrollState())
+                )
+            },
+            confirmButton = {
+                TextButton(onClick = { CrashLog.clear(crashContext); crashText = null }) { Text("Dismiss", color = Orange) }
+            }
+        )
     }
     vm.authLinkNotice?.let { notice ->
         AlertDialog(
@@ -162,7 +182,7 @@ fun RailwayApp(vm: AppViewModel = viewModel()) {
         NavHost(
             navController = nav,
             startDestination = Routes.Splash,
-            modifier = Modifier.fillMaxSize().hazeSource(hazeState),
+            modifier = Modifier.fillMaxSize(),
             enterTransition = {
                 if (initialState.destination.route in tabs && targetState.destination.route in tabs) {
                     fadeIn(tween(260))
@@ -341,12 +361,7 @@ fun RailwayApp(vm: AppViewModel = viewModel()) {
                     .padding(horizontal = 16.dp, vertical = 10.dp)
                     .shadow(18.dp, RoundedCornerShape(36.dp))
                     .clip(RoundedCornerShape(36.dp))
-                    .hazeEffect(hazeState) {
-                        blurRadius = 26.dp
-                        noiseFactor = 0f
-                        tints = listOf(HazeTint(barFill))
-                        fallbackTint = HazeTint(barFill)
-                    }
+                    .background(barFill)
                     .border(1.dp, barStroke, RoundedCornerShape(36.dp))
             ) {
                 Row(
