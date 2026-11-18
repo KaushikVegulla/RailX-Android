@@ -5,8 +5,10 @@ import com.kaushik.railway.data.Passenger
 import com.kaushik.railway.data.RemoteBooking
 import com.kaushik.railway.data.RemoteFavouriteRoute
 import com.kaushik.railway.data.RemotePassenger
+import com.kaushik.railway.data.RailProfile
 import com.kaushik.railway.data.RemoteProfile
 import com.kaushik.railway.data.SupabaseDb
+import com.kaushik.railway.data.toRemote
 
 /**
  * Sync between the app and the Supabase tables.
@@ -74,14 +76,14 @@ class SupabaseSyncRepository(private val authRepository: SupabaseAuthRepository)
         return runCatching { SupabaseDb.fetchProfile(session) }.getOrNull()
     }
 
-    suspend fun pushProfile(fullName: String, mobile: String): RemoteProfile? {
+    suspend fun pushProfile(profile: RemoteProfile): RemoteProfile? {
         val session = authRepository.currentSession() ?: return null
-        val profile = RemoteProfile(
-            id = session.userId,
-            fullName = fullName,
-            email = session.email,
-            mobile = mobile
-        )
         return runCatching { SupabaseDb.upsertProfile(session, profile) }.getOrNull()
+    }
+
+    /** Mirror an on-device profile up to this account's server row. */
+    suspend fun pushLocalProfile(local: RailProfile): RemoteProfile? {
+        val session = authRepository.currentSession() ?: return null
+        return pushProfile(local.toRemote(session.userId))
     }
 }
