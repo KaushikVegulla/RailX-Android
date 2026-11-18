@@ -26,6 +26,8 @@ import androidx.compose.animation.core.spring
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
+import androidx.compose.animation.scaleIn
+import androidx.compose.animation.scaleOut
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -213,18 +215,23 @@ fun RailwayApp(vm: AppViewModel = viewModel()) {
                     fadeOut(tween(320)) + slideOutHorizontally(tween(380, easing = IosEase)) { -(it * 0.3f).toInt() }
                 }
             },
+            // Back navigation uses the predictive-back style: the screen
+            // being left shrinks and fades while the previous screen
+            // settles in behind it. With the manifest's
+            // enableOnBackInvokedCallback, the edge-swipe gesture scrubs
+            // these transitions and springs back if the swipe is cancelled.
             popEnterTransition = {
                 if (initialState.destination.route in tabs && targetState.destination.route in tabs) {
                     EnterTransition.None
                 } else {
-                    fadeIn(tween(320)) + slideInHorizontally(tween(380, easing = IosEase)) { -(it * 0.3f).toInt() }
+                    fadeIn(tween(320)) + scaleIn(initialScale = 1.08f, animationSpec = tween(380, easing = IosEase))
                 }
             },
             popExitTransition = {
                 if (initialState.destination.route in tabs && targetState.destination.route in tabs) {
                     ExitTransition.None
                 } else {
-                    fadeOut(tween(320)) + slideOutHorizontally(tween(380, easing = IosEase)) { it }
+                    fadeOut(tween(320)) + scaleOut(targetScale = 0.88f, animationSpec = tween(380, easing = IosEase))
                 }
             }
         ) {
