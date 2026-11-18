@@ -702,6 +702,16 @@ class AppViewModel : ViewModel() {
                 }
                 return@launch
             }
+            if (savedProfile == null && !idOrEmail.contains("@")) {
+                // A bare user ID can only resolve through the on-device
+                // profile. On a fresh install there is none, so say that
+                // plainly instead of falling through to the legacy errors.
+                val message = "No account with that user ID on this device. Sign in with your registered email — it opens your same cloud account."
+                authLoading = false
+                authError = message
+                onError(message)
+                return@launch
+            }
             // Supabase accounts sign in against the Supabase backend first.
             // A failed or unreachable Supabase attempt falls through to the
             // local / legacy flow so nobody is locked out by the migration.
