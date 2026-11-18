@@ -63,6 +63,7 @@ import com.kaushik.railway.data.Passenger
 import com.kaushik.railway.ui.components.KeyValue
 import com.kaushik.railway.ui.components.LabeledField
 import com.kaushik.railway.ui.components.OrangeButton
+import com.kaushik.railway.ui.components.SelectionExpiredScreen
 import com.kaushik.railway.ui.components.RailCard
 import com.kaushik.railway.ui.components.RailTopBar
 import com.kaushik.railway.ui.components.SegmentedControl
@@ -161,8 +162,12 @@ fun PassengerScreen(vm: AppViewModel, onBack: () -> Unit, onContinue: () -> Unit
 
 @Composable
 fun ReviewScreen(vm: AppViewModel, onBack: () -> Unit, onPay: () -> Unit) {
-    val train = vm.selectedTrain ?: return
-    val cls = vm.selectedTravelClass ?: return
+    val train = vm.selectedTrain
+    val cls = vm.selectedTravelClass
+    if (train == null || cls == null) {
+        SelectionExpiredScreen("Review booking", onBack)
+        return
+    }
     val ins = if (vm.insurance) vm.passengers.size * 15 else 0
     val total = cls.fare * vm.passengers.size + ins
     Scaffold(

@@ -26,6 +26,7 @@ import androidx.compose.ui.unit.sp
 import com.kaushik.railway.AppViewModel
 import com.kaushik.railway.data.*
 import com.kaushik.railway.ui.components.OrangeButton
+import com.kaushik.railway.ui.components.SelectionExpiredScreen
 import com.kaushik.railway.ui.components.RailCard
 import com.kaushik.railway.ui.components.RailTopBar
 import com.kaushik.railway.ui.components.GlassSwitch
@@ -177,7 +178,11 @@ private fun TrainResultCard(train: Train, onClick: () -> Unit) {
 
 @Composable
 fun AvailabilityScreen(vm: AppViewModel, onBack: () -> Unit, onVacancy: (TrainClassAvail) -> Unit) {
-    val train = vm.selectedTrain ?: return
+    val train = vm.selectedTrain
+    if (train == null) {
+        SelectionExpiredScreen("Seat availability", onBack)
+        return
+    }
     LaunchedEffect(train.number, vm.journeyDate, vm.selectedClass, vm.selectedQuota) { vm.loadAvailability(train) }
     Scaffold(topBar = { RailTopBar(train.name, onBack) }) { pad ->
         LazyColumn(Modifier.fillMaxSize().padding(pad), contentPadding = PaddingValues(20.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
@@ -215,8 +220,12 @@ fun AvailabilityScreen(vm: AppViewModel, onBack: () -> Unit, onVacancy: (TrainCl
 
 @Composable
 fun VacancyChartScreen(vm: AppViewModel, onBack: () -> Unit, onBook: () -> Unit) {
-    val train = vm.selectedTrain ?: return
-    val cls = vm.selectedTravelClass ?: return
+    val train = vm.selectedTrain
+    val cls = vm.selectedTravelClass
+    if (train == null || cls == null) {
+        SelectionExpiredScreen("Vacancy chart", onBack)
+        return
+    }
     LaunchedEffect(train.number, cls.code, vm.journeyDate, vm.selectedQuota) { vm.loadVacancyChart(cls) }
     Scaffold(topBar = { RailTopBar("Vacancy chart • ${cls.code}", onBack) }) { pad ->
         Column(
