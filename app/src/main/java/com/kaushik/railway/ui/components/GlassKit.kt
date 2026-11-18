@@ -66,7 +66,7 @@ fun GroupedSection(
                 modifier = Modifier.padding(start = 20.dp, bottom = 7.dp)
             )
         }
-        Column(Modifier.glassModifier().padding(vertical = 5.dp), content = content)
+        Column(glassModifier().padding(vertical = 5.dp), content = content)
     }
 }
 

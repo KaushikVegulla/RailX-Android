@@ -223,7 +223,7 @@ fun MoreScreen(
         Spacer(Modifier.height(14.dp))
         Text("More", fontSize = 34.sp, fontWeight = FontWeight.Bold, color = colors.onBackground)
         Text(
-            "RailX  \u2022  academic demo",
+            "RailX  •  academic demo",
             color = colors.onSurfaceVariant,
             fontSize = 13.sp,
             modifier = Modifier.padding(top = 2.dp)
@@ -267,7 +267,7 @@ fun MoreScreen(
             }
         }
         Text(
-            "Inspired by RailOne (CRIS). Academic demo only \u2014 not an official Indian Railways app.",
+            "Inspired by RailOne (CRIS). Academic demo only — not an official Indian Railways app.",
             color = colors.onSurfaceVariant,
             fontSize = 12.sp,
             modifier = Modifier.padding(top = 20.dp, start = 20.dp, end = 20.dp)

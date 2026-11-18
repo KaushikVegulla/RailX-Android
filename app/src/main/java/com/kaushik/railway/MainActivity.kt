@@ -167,28 +167,28 @@ fun RailwayApp(vm: AppViewModel = viewModel()) {
                 if (initialState.destination.route in tabs && targetState.destination.route in tabs) {
                     fadeIn(tween(260))
                 } else {
-                    fadeIn(tween(320)) + slideInHorizontally(tween(380, IosEase)) { it }
+                    fadeIn(tween(320)) + slideInHorizontally(tween(380, easing = IosEase)) { it }
                 }
             },
             exitTransition = {
                 if (initialState.destination.route in tabs && targetState.destination.route in tabs) {
                     fadeOut(tween(200))
                 } else {
-                    fadeOut(tween(320)) + slideOutHorizontally(tween(380, IosEase)) { -(it * 0.3f).toInt() }
+                    fadeOut(tween(320)) + slideOutHorizontally(tween(380, easing = IosEase)) { -(it * 0.3f).toInt() }
                 }
             },
             popEnterTransition = {
                 if (initialState.destination.route in tabs && targetState.destination.route in tabs) {
                     fadeIn(tween(260))
                 } else {
-                    fadeIn(tween(320)) + slideInHorizontally(tween(380, IosEase)) { -(it * 0.3f).toInt() }
+                    fadeIn(tween(320)) + slideInHorizontally(tween(380, easing = IosEase)) { -(it * 0.3f).toInt() }
                 }
             },
             popExitTransition = {
                 if (initialState.destination.route in tabs && targetState.destination.route in tabs) {
                     fadeOut(tween(200))
                 } else {
-                    fadeOut(tween(320)) + slideOutHorizontally(tween(380, IosEase)) { it }
+                    fadeOut(tween(320)) + slideOutHorizontally(tween(380, easing = IosEase)) { it }
                 }
             }
         ) {
