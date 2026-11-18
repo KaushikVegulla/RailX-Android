@@ -8,6 +8,7 @@ import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.interaction.collectIsPressedAsState
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.size
@@ -155,6 +156,36 @@ fun RailTopBar(title: String, onBack: (() -> Unit)? = null) {
     }
 }
 
+/**
+ * Shown by booking steps that need a train/class selection when that
+ * selection is missing, instead of rendering a blank screen.
+ */
+@Composable
+fun SelectionExpiredScreen(title: String, onBack: () -> Unit) {
+    Column(Modifier.fillMaxSize()) {
+        RailTopBar(title, onBack)
+        Column(
+            Modifier.fillMaxSize().padding(24.dp),
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Text(
+                "Your train selection is no longer available.",
+                style = MaterialTheme.typography.titleMedium,
+                color = MaterialTheme.colorScheme.onSurface
+            )
+            Spacer(Modifier.height(8.dp))
+            Text(
+                "Go back and pick the train and class again.",
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant
+            )
+            Spacer(Modifier.height(20.dp))
+            OrangeButton("Go back", onClick = onBack)
+        }
+    }
+}
+
 @Composable
 fun OrangeButton(text: String, modifier: Modifier = Modifier, enabled: Boolean = true, onClick: () -> Unit) {
     val interaction = remember { MutableInteractionSource() }
@@ -179,7 +210,7 @@ fun OrangeButton(text: String, modifier: Modifier = Modifier, enabled: Boolean =
         onClick = onClick,
         enabled = enabled,
         interactionSource = interaction,
-        modifier = modifier.fillMaxWidth().heightIn(min = 56.dp).scale(scale),
+        modifier = modifier.fillMaxWidth().height(56.dp).scale(scale),
         shape = RoundedCornerShape(50),
         colors = ButtonDefaults.buttonColors(
             containerColor = Color.Transparent,
