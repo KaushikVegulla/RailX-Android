@@ -66,8 +66,11 @@ fun PnrScreen(vm: AppViewModel, onBack: () -> Unit) {
             })
             Spacer(Modifier.height(12.dp))
             OrangeButton("GET LIVE STATUS", enabled = pnr.length == 10 && !vm.pnrLoading) { vm.lookupPnr(pnr) }
-            if (vm.pnrLoading) Text("Fetching from RailRadar…", color = MaterialTheme.colorScheme.onSurfaceVariant, modifier = Modifier.padding(top = 8.dp))
+            if (vm.pnrLoading) Text("Searching your bookings…", color = MaterialTheme.colorScheme.onSurfaceVariant, modifier = Modifier.padding(top = 8.dp))
             vm.pnrError?.let { Text(it, color = MaterialTheme.colorScheme.error, fontSize = 13.sp, modifier = Modifier.padding(top = 8.dp)) }
+            if (vm.pnrNote.isNotBlank()) {
+                Text(vm.pnrNote, fontWeight = FontWeight.SemiBold, color = Navy, modifier = Modifier.padding(top = 12.dp))
+            }
             vm.pnrResult?.let { b ->
                 Spacer(Modifier.height(16.dp))
                 RailCard {
