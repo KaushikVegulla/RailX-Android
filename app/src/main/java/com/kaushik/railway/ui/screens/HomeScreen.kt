@@ -2,6 +2,8 @@ package com.kaushik.railway.ui.screens
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -306,7 +308,8 @@ private fun StationSearch(label: String, field: String, code: String, reset: Int
             shape = RoundedCornerShape(16.dp)
         )
         if (vm.stationSuggestionField == field && query.length >= 2) {
-            vm.stationSuggestions.take(6).forEach { station ->
+            Column(Modifier.heightIn(max = 320.dp).verticalScroll(rememberScrollState())) {
+            vm.stationSuggestions.take(10).forEach { station ->
                 Row(
                     Modifier.fillMaxWidth().clip(RoundedCornerShape(12.dp))
                         .clickable(role = Role.Button) {
@@ -320,6 +323,7 @@ private fun StationSearch(label: String, field: String, code: String, reset: Int
                     Text(station.name, modifier = Modifier.weight(1f), color = colors.onSurface, style = MaterialTheme.typography.bodyMedium)
                     Text(station.code, color = colors.primary, style = MaterialTheme.typography.labelMedium)
                 }
+            }
             }
         }
     }

@@ -988,6 +988,7 @@ class AppViewModel : ViewModel() {
     // ── Search / Trains ───────────────────────────────────
     fun stationName(code: String) =
         MockData.stations.find { it.code == code }?.let { "${it.name} (${it.code})" }
+            ?: com.kaushik.railway.data.StationDirectory.byCode(code)?.let { "${it.name} (${it.code})" }
             ?: stationSuggestions.find { it.code == code }?.let { "${it.name} (${it.code})" }
             ?: code
 
@@ -1009,10 +1010,15 @@ class AppViewModel : ViewModel() {
                 if (request != trainSearchVersion || from != fromCode || to != toCode || date != journeyDate) return@launch
                 result.onSuccess { list ->
                     trains.addAll(list)
-                }.onFailure {
+                }.onFailure { e ->
                     trains.addAll(MockData.trains(from, to))
                     isOfflineHint = true
-                    searchError = "Live search is unavailable. Showing demo trains."
+                    val msg = e.message.orEmpty()
+                    searchError = if (msg.contains("quota", ignoreCase = true) || msg.contains("TOO_MANY", ignoreCase = true)) {
+                        "Live search limit reached — the RailRadar free plan allows 100 requests a month and this month's quota is used up. Showing demo trains."
+                    } else {
+                        "Live search is unavailable. Showing demo trains."
+                    }
                 }
             } finally {
                 if (request == trainSearchVersion) searchLoading = false
@@ -1185,6 +1191,14 @@ class AppViewModel : ViewModel() {
         stationSuggestionField = field
         stationSuggestions.clear()
         if (normalized.length < 2) return
+        // Instant offline suggestions from the bundled station directory —
+        // no waiting, no API quota spent. The network fallback below only
+        // runs for a station the directory somehow doesn't know.
+        val local = com.kaushik.railway.data.StationDirectory.search(normalized)
+        if (local.isNotEmpty()) {
+            stationSuggestions.addAll(local)
+            return
+        }
         stationSearchJob = viewModelScope.launch {
             delay(300)
             val found = trainRepo.searchStations(normalized)
