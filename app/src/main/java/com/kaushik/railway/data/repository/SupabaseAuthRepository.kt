@@ -23,15 +23,23 @@ class SupabaseAuthRepository(context: Context) {
     private val tokenStore = SupabaseTokenStore(context.applicationContext)
     private val sessionStore = SessionStore(context.applicationContext)
 
-    suspend fun signUp(email: String, password: String, fullName: String, mobile: String): SupabaseCall {
+    suspend fun signUp(email: String, password: String, fullName: String, mobile: String, username: String = ""): SupabaseCall {
         val call = try {
-            SupabaseAuth.signUp(email, password, fullName, mobile)
+            SupabaseAuth.signUp(email, password, fullName, mobile, username)
         } catch (e: Exception) {
             return SupabaseCall.Err("Could not reach Supabase (${e.message ?: "network error"})")
         }
         if (call is SupabaseCall.SignedIn) persist(call.session, fullName, mobile)
         return call
     }
+
+    /** Resolve a bare user ID to its account email via the server directory, or null. */
+    suspend fun lookupEmailForUsername(username: String): String? =
+        try {
+            SupabaseAuth.lookupEmailForUsername(username)
+        } catch (e: Exception) {
+            null
+        }
 
     suspend fun signIn(email: String, password: String): SupabaseCall {
         val call = try {
