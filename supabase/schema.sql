@@ -19,6 +19,21 @@ create table if not exists public.profiles (
     updated_at timestamptz not null default now()
 );
 
+-- Profile activation details live on the server so a signed-in user is
+-- recognised as complete on any device; the app mirrors them locally.
+alter table public.profiles
+    add column if not exists gender           text not null default '',
+    add column if not exists dob              text not null default '',
+    add column if not exists occupation       text not null default '',
+    add column if not exists marital_status   text not null default '',
+    add column if not exists nationality      text not null default '',
+    add column if not exists address_line     text not null default '',
+    add column if not exists city             text not null default '',
+    add column if not exists state            text not null default '',
+    add column if not exists country          text not null default '',
+    add column if not exists pin_code         text not null default '',
+    add column if not exists profile_complete boolean not null default false;
+
 -- ---------------------------------------------------------------- bookings
 -- Mirrors the Room `bookings` table in the Android app. passengers are kept
 -- as jsonb in the same shape the app already stores locally (passengersJson).

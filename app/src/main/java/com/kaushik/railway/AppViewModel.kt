@@ -474,10 +474,10 @@ class AppViewModel : ViewModel() {
             if (userId.isNotBlank()) {
                 val updated = accountStore.update(userId) { it.copy(fullName = name, mobile = mobile.filter { ch -> ch.isDigit() }) }
                 applyProfile(updated)
+                // Keep the server profile row in step when signed in
+                // there (no-op without a session; failures are ignored).
+                supabaseSync.pushLocalProfile(updated)
             }
-            // Keep the Supabase profile row in step when signed in there
-            // (no-op without a session; failures are ignored by design).
-            supabaseSync.pushProfile(name.trim(), mobile.filter { ch -> ch.isDigit() })
         }
     }
 
@@ -537,22 +537,12 @@ class AppViewModel : ViewModel() {
                     when {
                         call.message.contains("already", ignoreCase = true) ->
                             onDone("This email already has a Supabase account. Go back and sign in with it.")
-                        call.message.startsWith("Could not reach") -> {
-                            // Supabase unreachable: fall back to an on-device demo account.
-                            useSupabaseConfirm = false
-                            if (regEmailOtp.isBlank() || regMobileOtp.isBlank()) issueOtps()
-                            supabaseDelivery = "Cloud registration is unavailable. This creates a demo account stored only on this device. Use the codes shown here."
-                            onDone(null)
-                        }
+                        call.message.startsWith("Could not reach") ->
+                            onDone("Could not reach the server. Check your connection and try again.")
                         else -> onDone(call.message)
                     }
                 }
-                null -> {
-                    useSupabaseConfirm = false
-                    if (regEmailOtp.isBlank() || regMobileOtp.isBlank()) issueOtps()
-                    supabaseDelivery = "Cloud registration is unavailable. This creates a demo account stored only on this device. Use the codes shown here."
-                    onDone(null)
-                }
+                null -> onDone("Could not reach the server. Check your connection and try again.")
             }
         }
     }
@@ -682,125 +672,54 @@ class AppViewModel : ViewModel() {
         authLoading = true
         authError = null
         viewModelScope.launch {
+            // Cloud accounts only. Sign-in goes to Supabase with the
+            // account email; the server profile is then pulled down and
+            // mirrored on this device. There is no on-device demo or
+            // legacy sign-in anymore.
             val savedProfile = accountStore.findProfile(idOrEmail)
-            if (savedProfile?.authProvider == AccountProvider.LOCAL_DEMO) {
-                try {
-                    val profile = accountStore.authenticate(idOrEmail, password)
-                        ?: error("No demo account on this device. Register again.")
-                    // Demo credentials never authenticate a cloud session or payment request.
-                    PaymentApi.bearerToken = null
-                    sessionStore.saveSession(profile.fullName, profile.email, profile.mobile, profile.userId)
-                    applyProfile(profile)
-                    loggedIn = true
-                    appUnlocked = true
-                    authLoading = false
-                    onSuccess()
-                } catch (e: Exception) {
-                    authLoading = false
-                    authError = e.message ?: "Demo sign-in failed"
-                    onError(authError!!)
-                }
-                return@launch
+            val supabaseEmail = when {
+                idOrEmail.contains("@") -> idOrEmail.trim()
+                else -> savedProfile?.email?.takeIf { it.contains("@") }.orEmpty()
             }
-            if (savedProfile == null && !idOrEmail.contains("@")) {
-                // A bare user ID can only resolve through the on-device
-                // profile. On a fresh install there is none, so say that
-                // plainly instead of falling through to the legacy errors.
-                val message = "No account with that user ID on this device. Sign in with your registered email — it opens your same cloud account."
+            if (supabaseEmail.isBlank()) {
+                // A bare user ID resolves through the on-device mirror.
+                // On a fresh install there is none yet, so ask for the
+                // email — it opens the same cloud account.
+                val message = "Sign in with your registered email — it opens your same cloud account."
                 authLoading = false
                 authError = message
                 onError(message)
                 return@launch
             }
-            // Supabase accounts sign in against the Supabase backend first.
-            // A failed or unreachable Supabase attempt falls through to the
-            // local / legacy flow so nobody is locked out by the migration.
-            val supabaseAccount = savedProfile?.authProvider == AccountProvider.SUPABASE
-            // Supabase signs in by email. When the user types their RailX
-            // user ID, resolve it to the email stored on the local profile:
-            // sending the raw ID ("Admin") as the email is what produced
-            // "Invalid login credentials" for a correct password.
-            val supabaseEmail = when {
-                idOrEmail.contains("@") -> idOrEmail.trim()
-                else -> savedProfile?.email?.takeIf { it.contains("@") }.orEmpty()
-            }
-            val trySupabase = supabaseEmail.isNotBlank() && (supabaseAccount || savedProfile == null)
-            var supabaseError: String? = null
-            if (trySupabase) {
-                when (val sb = withTimeoutOrNull(12_000) {
-                    supabaseAuth.signIn(supabaseEmail, password)
-                }) {
-                    is SupabaseCall.SignedIn -> {
-                        adoptSupabaseUser(sb.session, password)
-                        appUnlocked = true
-                        authLoading = false
-                        onSuccess()
-                        return@launch
+            when (val sb = withTimeoutOrNull(12_000) {
+                supabaseAuth.signIn(supabaseEmail, password)
+            }) {
+                is SupabaseCall.SignedIn -> {
+                    adoptSupabaseUser(sb.session, password)
+                    appUnlocked = true
+                    authLoading = false
+                    onSuccess()
+                    return@launch
+                }
+                is SupabaseCall.Err -> {
+                    val message = if (sb.message.contains("not confirmed", ignoreCase = true)) {
+                        "Confirm your email first: open the confirmation link Supabase sent you, then sign in."
+                    } else {
+                        sb.message
                     }
-                    is SupabaseCall.Err -> {
-                        if (sb.message.contains("not confirmed", ignoreCase = true)) {
-                            val message = "Confirm your email first: open the confirmation link Supabase sent you, then sign in."
-                            authLoading = false
-                            authError = message
-                            onError(message)
-                            return@launch
-                        }
-                        // Remember the cloud error and fall through to the
-                        // local copy: an account registered on this device
-                        // can still sign in locally if its cloud password
-                        // differs (e.g. it was reset elsewhere).
-                        supabaseError = sb.message
-                    }
-                    else -> Unit
+                    authLoading = false
+                    authError = message
+                    onError(message)
+                    return@launch
+                }
+                else -> {
+                    val message = "Could not reach the server. Check your connection and try again."
+                    authLoading = false
+                    authError = message
+                    onError(message)
+                    return@launch
                 }
             }
-            var localProfile: RailProfile? = null
-            var localError: String? = null
-            try {
-                localProfile = accountStore.authenticate(idOrEmail, password)
-            } catch (e: Exception) {
-                localError = e.message ?: "Login failed"
-            }
-            if (localProfile != null) {
-                sessionStore.saveSession(localProfile.fullName, localProfile.email, localProfile.mobile, localProfile.userId)
-                applyProfile(localProfile)
-                loggedIn = true
-                appUnlocked = true
-                authLoading = false
-                onSuccess()
-                return@launch
-            }
-            val result = authRepo.login(idOrEmail, password)
-            if (result.success) {
-                try {
-                    bridgeLegacyAccount(result.name, result.email.ifBlank { idOrEmail }, password)
-                } catch (_: Exception) {
-                    profileComplete = true
-                    userName = result.name
-                    userEmail = result.email.ifBlank { idOrEmail }
-                    email = userEmail
-                    loggedIn = true
-                }
-                appUnlocked = true
-                authLoading = false
-                onSuccess()
-                return@launch
-            }
-            if (result.needsVerification) {
-                pendingVerifyEmail = result.email.ifBlank { idOrEmail }
-                needsVerification = true
-                otpEmailed = result.displayCode == null
-                otpDisplayCode = result.displayCode
-                authError = result.error
-                authLoading = false
-                onNeedVerify(pendingVerifyEmail)
-                return@launch
-            }
-            val message = (if (supabaseAccount) supabaseError else null)
-                ?: localError ?: result.error ?: "No account for that user ID. Register first."
-            authLoading = false
-            authError = message
-            onError(message)
         }
     }
 
@@ -853,6 +772,9 @@ class AppViewModel : ViewModel() {
                 }
                 sessionStore.saveSession(updated.fullName, updated.email, updated.mobile, updated.userId)
                 applyProfile(updated)
+                // The profile lives on the server now: push the completed
+                // activation so it is recognised on every device.
+                supabaseSync.pushLocalProfile(updated)
                 onDone(null)
             } catch (e: Exception) {
                 onDone(e.message ?: "Could not save the profile")
@@ -933,10 +855,33 @@ class AppViewModel : ViewModel() {
         val list = accountStore.profiles.first()
         val match = list.find { it.cloudUsername == session.userId }
             ?: list.find { mail.isNotBlank() && it.email.equals(mail, ignoreCase = true) }
+        // The server profile is the source of truth. Pull it and overlay
+        // it on the on-device mirror, so a user who already finished
+        // activation is recognised on any device instead of being asked
+        // to complete the profile again after a reinstall.
+        val remote = supabaseSync.pullProfile()
+        fun overlay(base: RailProfile): RailProfile {
+            if (remote == null) return base
+            return base.copy(
+                fullName = remote.fullName.ifBlank { base.fullName },
+                email = remote.email.ifBlank { base.email },
+                mobile = remote.mobile.ifBlank { base.mobile },
+                gender = remote.gender.ifBlank { base.gender },
+                dob = remote.dob.ifBlank { base.dob },
+                occupation = remote.occupation.ifBlank { base.occupation },
+                maritalStatus = remote.maritalStatus.ifBlank { base.maritalStatus },
+                nationality = remote.nationality.ifBlank { base.nationality },
+                addressLine = remote.addressLine.ifBlank { base.addressLine },
+                city = remote.city.ifBlank { base.city },
+                state = remote.state.ifBlank { base.state },
+                country = remote.country.ifBlank { base.country },
+                pinCode = remote.pinCode.ifBlank { base.pinCode },
+                profileComplete = base.profileComplete || remote.profileComplete
+            )
+        }
         val profile = if (match != null) {
             accountStore.update(match.userId) {
-                it.copy(
-                    fullName = name.ifBlank { it.fullName },
+                overlay(it).copy(
                     email = mail.ifBlank { it.email },
                     passwordHash = IrctcRules.secretHash(it.userId, password),
                     authProvider = AccountProvider.SUPABASE,
@@ -945,7 +890,7 @@ class AppViewModel : ViewModel() {
             }
         } else {
             val id = accountStore.unusedUserId(IrctcRules.userIdFromEmail(mail.ifBlank { "railxuser" }))
-            accountStore.create(
+            val created = accountStore.create(
                 userId = id,
                 fullName = name.ifBlank { id },
                 email = mail.ifBlank { "$id@users.railx.local" },
@@ -956,6 +901,12 @@ class AppViewModel : ViewModel() {
                 authProvider = AccountProvider.SUPABASE,
                 cloudUsername = session.userId
             )
+            if (remote != null) accountStore.update(id) { overlay(it) } else created
+        }
+        // If this device was ahead of the server (activation finished
+        // here first), push the completed profile up so it stays synced.
+        if (remote != null && profile.profileComplete && !remote.profileComplete) {
+            supabaseSync.pushLocalProfile(profile)
         }
         sessionStore.saveSession(profile.fullName, profile.email, profile.mobile, profile.userId)
         applyProfile(profile)

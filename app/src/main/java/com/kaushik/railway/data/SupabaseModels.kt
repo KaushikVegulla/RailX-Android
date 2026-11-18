@@ -10,13 +10,35 @@ data class RemoteProfile(
     val id: String,
     val fullName: String = "",
     val email: String = "",
-    val mobile: String = ""
+    val mobile: String = "",
+    val gender: String = "",
+    val dob: String = "",
+    val occupation: String = "",
+    val maritalStatus: String = "",
+    val nationality: String = "",
+    val addressLine: String = "",
+    val city: String = "",
+    val state: String = "",
+    val country: String = "",
+    val pinCode: String = "",
+    val profileComplete: Boolean = false
 ) {
     fun toRow(): Map<String, Any?> = mapOf(
         "id" to id,
         "full_name" to fullName,
         "email" to email,
-        "mobile" to mobile
+        "mobile" to mobile,
+        "gender" to gender,
+        "dob" to dob,
+        "occupation" to occupation,
+        "marital_status" to maritalStatus,
+        "nationality" to nationality,
+        "address_line" to addressLine,
+        "city" to city,
+        "state" to state,
+        "country" to country,
+        "pin_code" to pinCode,
+        "profile_complete" to profileComplete
     )
 
     companion object {
@@ -24,10 +46,40 @@ data class RemoteProfile(
             id = row.jsonString("id"),
             fullName = row.jsonString("full_name"),
             email = row.jsonString("email"),
-            mobile = row.jsonString("mobile")
+            mobile = row.jsonString("mobile"),
+            gender = row.jsonString("gender"),
+            dob = row.jsonString("dob"),
+            occupation = row.jsonString("occupation"),
+            maritalStatus = row.jsonString("marital_status"),
+            nationality = row.jsonString("nationality"),
+            addressLine = row.jsonString("address_line"),
+            city = row.jsonString("city"),
+            state = row.jsonString("state"),
+            country = row.jsonString("country"),
+            pinCode = row.jsonString("pin_code"),
+            profileComplete = row.jsonBool("profile_complete")
         )
     }
 }
+
+/** The server row for an on-device profile, under the given auth user id. */
+fun RailProfile.toRemote(id: String): RemoteProfile = RemoteProfile(
+    id = id,
+    fullName = fullName,
+    email = email,
+    mobile = mobile,
+    gender = gender,
+    dob = dob,
+    occupation = occupation,
+    maritalStatus = maritalStatus,
+    nationality = nationality,
+    addressLine = addressLine,
+    city = city,
+    state = state,
+    country = country,
+    pinCode = pinCode,
+    profileComplete = profileComplete
+)
 
 data class RemoteBooking(
     val pnr: String,

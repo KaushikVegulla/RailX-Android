@@ -85,6 +85,14 @@ fun Map<String, Any?>.jsonLong(key: String, fallback: Long = 0L): Long =
         else -> fallback
     }
 
+/** Boolean value from a decoded JSON row; accepts Boolean or "true"/"false". */
+fun Map<String, Any?>.jsonBool(key: String, fallback: Boolean = false): Boolean =
+    when (val v = this[key]) {
+        is Boolean -> v
+        is String -> v.toBooleanStrictOrNull() ?: fallback
+        else -> fallback
+    }
+
 @Suppress("UNCHECKED_CAST")
 fun Map<String, Any?>.jsonMap(key: String): Map<String, Any?> =
     this[key] as? Map<String, Any?> ?: emptyMap()

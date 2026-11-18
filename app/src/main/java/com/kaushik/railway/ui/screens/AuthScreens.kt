@@ -130,9 +130,9 @@ fun LoginScreen(vm: AppViewModel, onLogin: () -> Unit, onRegister: () -> Unit, o
         RailCard {
         Column {
         Text("SIGN IN", color = Orange, fontSize = 13.sp, fontWeight = FontWeight.Bold, letterSpacing = 1.sp)
-        Text("User ID and password", color = Navy, fontSize = 26.sp, fontWeight = FontWeight.Bold)
+        Text("Sign in to your account", color = Navy, fontSize = 26.sp, fontWeight = FontWeight.Bold)
         Spacer(Modifier.height(16.dp))
-        LabeledField("User ID", user, onValue = { user = it })
+        LabeledField("Email or user ID", user, onValue = { user = it })
         Spacer(Modifier.height(12.dp))
         LabeledField("Password", pass, isPassword = true, onValue = { pass = it })
         TextButton(onClick = { forgotOpen = true; forgotInfo = null }, modifier = Modifier.fillMaxWidth()) {

@@ -45,8 +45,10 @@ data class RailProfile(
 }
 
 /**
- * On-device accounts for the demo. Passwords are stored as hashes.
- * Aadhaar / VID values are never written — only the last 4 digits.
+ * On-device mirror of the user's account. The Supabase profile is the
+ * source of truth and is pulled down at sign-in; this store is the local
+ * cache the UI reads. Passwords are stored as hashes. Aadhaar / VID
+ * values are never written — only the last 4 digits.
  */
 class AccountStore(private val context: Context) {
     private val keyProfiles = stringPreferencesKey("profiles_json")

@@ -14,6 +14,8 @@ import com.razorpay.PaymentResultWithDataListener
 import androidx.compose.foundation.background
 import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.animation.EnterTransition
+import androidx.compose.animation.ExitTransition
 import androidx.compose.animation.core.CubicBezierEasing
 import androidx.compose.animation.slideInHorizontally
 import androidx.compose.animation.slideOutHorizontally
@@ -58,8 +60,8 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.sp
-import com.kaushik.railway.ui.theme.GlassFill
 import com.kaushik.railway.ui.theme.GlassStroke
+import com.kaushik.railway.ui.theme.LocalGlassIntensity
 import com.kaushik.railway.ui.theme.LiquidGlassBackdrop
 import com.kaushik.railway.ui.theme.Navy
 import com.kaushik.railway.ui.theme.Orange
@@ -142,7 +144,11 @@ fun RailwayApp(vm: AppViewModel = viewModel()) {
     val route = back?.destination?.route
     val tabs = setOf(Routes.Home, Routes.Bookings, Routes.Pnr, Routes.More)
     val showBar = route in tabs
-    val barFill = GlassFill
+    // The bar floats over scrolling content without a blur layer, so its
+    // fill keeps a higher floor opacity than the cards use: text sliding
+    // underneath stays subdued instead of showing through.
+    val glassIntensity = LocalGlassIntensity.current
+    val barFill = MaterialTheme.colorScheme.surface.copy(alpha = 0.96f - 0.26f * glassIntensity)
     val barStroke = GlassStroke
 
     LiquidGlassBackdrop {
@@ -183,30 +189,33 @@ fun RailwayApp(vm: AppViewModel = viewModel()) {
             navController = nav,
             startDestination = Routes.Splash,
             modifier = Modifier.fillMaxSize(),
+            // Tab-to-tab switches are instant: crossfading two dense
+            // screens left both sets of text visible mid-fade and felt
+            // glitchy. Push/pop navigation keeps the slide + parallax.
             enterTransition = {
                 if (initialState.destination.route in tabs && targetState.destination.route in tabs) {
-                    fadeIn(tween(260))
+                    EnterTransition.None
                 } else {
                     fadeIn(tween(320)) + slideInHorizontally(tween(380, easing = IosEase)) { it }
                 }
             },
             exitTransition = {
                 if (initialState.destination.route in tabs && targetState.destination.route in tabs) {
-                    fadeOut(tween(200))
+                    ExitTransition.None
                 } else {
                     fadeOut(tween(320)) + slideOutHorizontally(tween(380, easing = IosEase)) { -(it * 0.3f).toInt() }
                 }
             },
             popEnterTransition = {
                 if (initialState.destination.route in tabs && targetState.destination.route in tabs) {
-                    fadeIn(tween(260))
+                    EnterTransition.None
                 } else {
                     fadeIn(tween(320)) + slideInHorizontally(tween(380, easing = IosEase)) { -(it * 0.3f).toInt() }
                 }
             },
             popExitTransition = {
                 if (initialState.destination.route in tabs && targetState.destination.route in tabs) {
-                    fadeOut(tween(200))
+                    ExitTransition.None
                 } else {
                     fadeOut(tween(320)) + slideOutHorizontally(tween(380, easing = IosEase)) { it }
                 }

@@ -22,7 +22,7 @@ import java.util.UUID
 
 @RunWith(AndroidJUnit4::class)
 class SessionIsolationTest {
-    @Test fun demoRegistrationSurvivesReloadAndSignsInWithoutCloudCredentials() = runBlocking {
+    @Test fun localOnlyRegistrationSurvivesReloadButCannotSignInWithoutCloudAccount() = runBlocking {
         val context = ApplicationProvider.getApplicationContext<Context>()
         val store = AccountStore(context)
         val id = "demo-${UUID.randomUUID()}"
@@ -59,11 +59,13 @@ class SessionIsolationTest {
                 }
                 return withTimeout(20_000) { result.await() }
             }
-            assertEquals("Invalid user ID or password", login("wrong-password"))
+            // Sign-in is cloud-only now: an account that exists only on
+            // this device is rejected by the server for any password,
+            // and no local session is created for it.
+            assertEquals("Invalid login credentials", login("wrong-password"))
             assertFalse(sessions.sessionFlow.first().loggedIn)
-            assertEquals("success", login(password))
-            assertEquals(id, sessions.sessionFlow.first().userId)
-            assertTrue(sessions.sessionFlow.first().loggedIn)
+            assertEquals("Invalid login credentials", login(password))
+            assertFalse(sessions.sessionFlow.first().loggedIn)
         } finally {
             instrumentation.runOnMainSync { holder.clear() }
             sessions.clearSession()
