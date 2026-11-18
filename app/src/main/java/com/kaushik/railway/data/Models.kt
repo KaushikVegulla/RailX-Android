@@ -74,7 +74,15 @@ data class Booking(
     val fromName: String,
     val toName: String,
     val paymentId: String = "",
-    val orderId: String = ""
+    val orderId: String = "",
+    /** Train departure time ("16:55") on the journey date; "" when unknown. */
+    val departTime: String = "",
+    /** Availability status at booking time (e.g. "AVAILABLE 28", "RAC 4", "WL 14"). */
+    val classStatus: String = "",
+    /** IRCTC-rule cancellation charge applied when this booking was cancelled. */
+    val cancelCharge: Int = 0,
+    /** IRCTC-rule refund due when this booking was cancelled. */
+    val refundAmount: Int = 0
 )
 
 data class RunningStop(

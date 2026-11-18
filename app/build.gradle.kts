@@ -15,8 +15,8 @@ android {
         applicationId = "com.kaushik.railway"
         minSdk = 24
         targetSdk = 35
-        versionCode = 19
-        versionName = "1.9.9"
+        versionCode = 20
+        versionName = "1.10.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
         // Local demo configuration. BuildConfig values are recoverable from the APK.
@@ -30,7 +30,7 @@ android {
 
         buildConfigField("String", "SUPABASE_URL", "\"${prop("supabase.url", "https://etaaufimazvjdmpladom.supabase.co")}\"")
         buildConfigField("String", "SUPABASE_PUBLISHABLE_KEY", "\"${prop("supabase.publishable.key", "sb_publishable_XmViLB5DeAomuqBFzv4R8A_UFQNOZYY")}\"")
-        buildConfigField("String", "RAILRADAR_API_KEY", "\"${prop("railradar.api.key", "YOUR_RAILRADAR_API_KEY")}\"")
+        buildConfigField("String", "RAILRADAR_API_KEY", "\"${prop("railradar.api.key", System.getenv("RAILRADAR_API_KEY")?.trim()?.takeIf { it.isNotEmpty() } ?: "YOUR_RAILRADAR_API_KEY")}\"")
         buildConfigField("String", "BACKEND_BASE_URL", "\"${prop("backend.base.url", "http://10.0.2.2:8088")}\"")
         val useLocalKeys = prop("use.local.keys", "true").lowercase() in listOf("true", "1", "yes")
         buildConfigField("boolean", "USE_LOCAL_KEYS", if (useLocalKeys) "true" else "false")

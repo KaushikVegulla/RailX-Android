@@ -361,7 +361,11 @@ private fun payError(msg: String?): String {
             "Could not reach Razorpay. Turn on mobile data/Wi‑Fi and retry."
         m.contains("cancelled", true) || m.contains("canceled", true) || m.contains("USER_CLOSED", true) ->
             "Payment cancelled. Tap PAY to try again."
+        m.contains("no_payment_methods", true) || m.contains("No appropriate payment method", true) ->
+            "That payment method is not enabled on this Razorpay account. Choose 'All methods' or pay by card / net banking."
         m.isBlank() -> "Payment could not start. Retry."
+        // Never show the user a raw JSON error body from the SDK.
+        m.trimStart().startsWith("{") -> "Payment could not be completed. Please try again."
         else -> m
     }
 }
@@ -488,6 +492,14 @@ fun BookingsScreen(vm: AppViewModel, onBack: () -> Unit) {
                             Text("PNR ${b.pnr}", style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
                             Text("₹${b.amount}", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
                         }
+                        if (b.status == "CANCELLED" && b.refundAmount > 0) {
+                            Text(
+                                "Refund ₹${b.refundAmount} · cancellation charge ₹${b.cancelCharge}",
+                                modifier = Modifier.padding(top = 8.dp),
+                                style = MaterialTheme.typography.bodySmall,
+                                color = MaterialTheme.colorScheme.primary
+                            )
+                        }
                         if (b.status != "CANCELLED") {
                             TextButton(onClick = { confirmPnr = b.pnr }) { Text("Cancel booking") }
                         }
@@ -498,10 +510,39 @@ fun BookingsScreen(vm: AppViewModel, onBack: () -> Unit) {
     }
     val cancellation = vm.bookings.firstOrNull { it.pnr == confirmPnr && it.status != "CANCELLED" }
     if (cancellation != null) {
+        val quote = vm.refundQuoteFor(cancellation)
+        val fareTotal = cancellation.travelClass.fare * cancellation.passengers.size
+        val extras = cancellation.amount - fareTotal
         AlertDialog(
             onDismissRequest = { confirmPnr = null },
             title = { Text("Cancel this journey?") },
-            text = { Text("${cancellation.train.name} · ${cancellation.date}\nThis cancels the local demo booking. No real refund is issued.") },
+            text = {
+                Column {
+                    Text("${cancellation.train.name} · ${cancellation.date}")
+                    Spacer(Modifier.height(10.dp))
+                    Text("Ticket fare  ₹$fareTotal")
+                    Text("Cancellation charge  −₹${quote.totalCharge}")
+                    Text("Refund  ₹${quote.refundAmount}", fontWeight = FontWeight.SemiBold)
+                    Spacer(Modifier.height(10.dp))
+                    Text(
+                        "IRCTC rule: ${quote.rule}.",
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                    if (extras > 0) {
+                        Text(
+                            "Add-ons (₹$extras, e.g. travel insurance) are not refundable.",
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                    }
+                    Text(
+                        "Demo booking — the refund follows the official IRCTC rules; no real money moves.",
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
+            },
             confirmButton = { TextButton(onClick = { vm.cancel(cancellation.pnr); confirmPnr = null }) { Text("Cancel booking", color = MaterialTheme.colorScheme.error) } },
             dismissButton = { TextButton(onClick = { confirmPnr = null }) { Text("Keep journey") } }
         )
