@@ -266,6 +266,7 @@ class AppViewModel : ViewModel() {
     var pnrLoading by mutableStateOf(false)
     var pnrError by mutableStateOf<String?>(null)
     var pnrResult by mutableStateOf<PnrResult?>(null)
+    var pnrNote by mutableStateOf("")
 
     var runningLoading by mutableStateOf(false)
     var runningError by mutableStateOf<String?>(null)
@@ -1096,15 +1097,69 @@ class AppViewModel : ViewModel() {
     }
 
     fun lookupPnr(pnr: String) {
+        val digits = pnr.filter { it.isDigit() }
         pnrLoading = true
         pnrError = null
         pnrResult = null
+        pnrNote = ""
         viewModelScope.launch {
-            val result = trainRepo.checkPnr(pnr)
+            // RailX's own bookings first: every PNR issued after payment is
+            // saved on this device and in the account's cloud database, so a
+            // RailX PNR always resolves — no external lookup needed.
+            val local = bookings.firstOrNull { it.pnr == digits }
+                ?: lastBooking?.takeIf { it.pnr == digits }
+            val remote = if (local == null) {
+                supabaseSync.pullBookings().firstOrNull { it.pnr == digits }
+            } else null
+            val own = local ?: remote
+            if (own != null) {
+                pnrResult = own.toPnrResult()
+                pnrNote = "From your RailX bookings"
+                pnrLoading = false
+                return@launch
+            }
+            // Not one of his bookings: fall back to the live RailRadar PNR
+            // endpoint (a paid-plan endpoint; the free plan declines it).
+            val result = trainRepo.checkPnr(digits)
             pnrLoading = false
             result.onSuccess { pnrResult = it }
-                .onFailure { pnrError = it.message ?: "PNR lookup failed" }
+                .onFailure {
+                    val msg = it.message.orEmpty()
+                    pnrError = if (msg.contains("subscription", ignoreCase = true) ||
+                        msg.contains("PLAN_UPGRADE", ignoreCase = true)
+                    ) {
+                        "This PNR is not one of your RailX bookings, and live IRCTC PNR lookup needs a paid RailRadar plan — so only your own booking PNRs can be shown right now."
+                    } else {
+                        msg.ifBlank { "PNR lookup failed" }
+                    }
+                }
         }
+    }
+
+    /** Present one of the user's own bookings as a PNR-status result. */
+    private fun Booking.toPnrResult(): PnrResult {
+        val cancelled = status.equals("CANCELLED", ignoreCase = true)
+        val statusText = when {
+            cancelled -> "Cancelled" + if (refundAmount > 0) " · Refund ₹$refundAmount" else ""
+            classStatus.contains("RAC", ignoreCase = true) -> "RAC"
+            classStatus.contains("WL", ignoreCase = true) -> "Waitlisted"
+            else -> "Confirmed"
+        }
+        return PnrResult(
+            pnr = pnr,
+            trainNo = train.number,
+            trainName = train.name,
+            fromName = fromName.ifBlank { train.from },
+            toName = toName.ifBlank { train.to },
+            date = date,
+            travelClass = travelClass.code,
+            quota = quota,
+            chart = statusText,
+            fare = amount,
+            passengers = passengers.map { p ->
+                "${p.name} · ${p.age}/${p.gender} · $statusText"
+            }
+        )
     }
 
     fun loadRunning(trainNo: String) {
