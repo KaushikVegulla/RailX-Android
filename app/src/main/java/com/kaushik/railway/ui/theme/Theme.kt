@@ -5,9 +5,6 @@ import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxScope
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.offset
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Shapes
@@ -19,7 +16,6 @@ import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.ReadOnlyComposable
 import androidx.compose.runtime.compositionLocalOf
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.blur
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.luminance
@@ -174,9 +170,11 @@ fun RailwayTheme(
 }
 
 /**
- * Layered backdrop the glass sits on: a soft vertical gradient with two
- * blurred colour glows (azure and saffron) so translucent surfaces have
- * something to refract.
+ * Backdrop the glass sits on: one smooth vertical gradient and nothing
+ * else. The earlier azure + saffron glow orbs left a visible seam and an
+ * orange/blue split behind the screens (flagged 19 Nov 2026), so the
+ * colour glows are gone; the glass tint comes from the surfaces
+ * themselves.
  */
 @Composable
 fun LiquidGlassBackdrop(modifier: Modifier = Modifier, content: @Composable BoxScope.() -> Unit) {
@@ -195,36 +193,6 @@ fun LiquidGlassBackdrop(modifier: Modifier = Modifier, content: @Composable BoxS
                 )
             )
     ) {
-        Box(
-            Modifier
-                .size(430.dp)
-                .offset(x = (-130).dp, y = (-150).dp)
-                .blur(90.dp)
-                .background(
-                    Brush.radialGradient(
-                        listOf(
-                            scheme.primary.copy(alpha = if (dark) 0.38f else 0.30f),
-                            Color.Transparent
-                        )
-                    ),
-                    CircleShape
-                )
-        )
-        Box(
-            Modifier
-                .size(380.dp)
-                .offset(x = 230.dp, y = 520.dp)
-                .blur(100.dp)
-                .background(
-                    Brush.radialGradient(
-                        listOf(
-                            TricolorSaffron.copy(alpha = if (dark) 0.20f else 0.26f),
-                            Color.Transparent
-                        )
-                    ),
-                    CircleShape
-                )
-        )
         content()
     }
 }
