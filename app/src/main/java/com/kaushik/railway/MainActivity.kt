@@ -101,6 +101,7 @@ import com.kaushik.railway.ui.screens.VerifyEmailScreen
 import com.kaushik.railway.ui.screens.TicketScreen
 import com.kaushik.railway.ui.screens.TrainListScreen
 import com.kaushik.railway.ui.screens.TripDayScreen
+import com.kaushik.railway.ui.screens.WatchScreen
 import com.kaushik.railway.ui.screens.UnlockScreen
 import com.kaushik.railway.ui.screens.VacancyChartScreen
 import com.kaushik.railway.ui.theme.RailwayTheme
@@ -358,6 +359,7 @@ fun RailwayApp(vm: AppViewModel = viewModel()) {
                 )
             }
             composable(Routes.TripDay) { TripDayScreen(vm, onBack = { nav.popBackStack() }) }
+            composable(Routes.Watch) { WatchScreen(vm, onBack = { nav.popBackStack() }) }
             composable(Routes.Profile) {
                 ProfileScreen(
                     vm = vm,
@@ -377,6 +379,7 @@ fun RailwayApp(vm: AppViewModel = viewModel()) {
                     vm = vm,
                     onPnr = { nav.navigate(Routes.Pnr) },
                     onRunning = { nav.navigate(Routes.Running) },
+                    onWatch = { nav.navigate(Routes.Watch) },
                     onProfile = { nav.navigate(Routes.Profile) },
                     onBookings = { nav.navigate(Routes.Bookings) },
                     onAadhaar = { nav.navigate(Routes.Aadhaar) },

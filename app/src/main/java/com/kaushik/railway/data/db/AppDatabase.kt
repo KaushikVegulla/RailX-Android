@@ -7,9 +7,10 @@ import androidx.room.RoomDatabase
 import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
 
-@Database(entities = [BookingEntity::class], version = 3, exportSchema = false)
+@Database(entities = [BookingEntity::class, WatchEntity::class], version = 4, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun bookingDao(): BookingDao
+    abstract fun watchDao(): WatchDao
 
     companion object {
         val MIGRATION_1_2 = object : Migration(1, 2) {
@@ -32,6 +33,21 @@ abstract class AppDatabase : RoomDatabase() {
             }
         }
 
+        val MIGRATION_3_4 = object : Migration(3, 4) {
+            override fun migrate(db: SupportSQLiteDatabase) {
+                // Train Watch: one row per watched train/date/class.
+                db.execSQL(
+                    "CREATE TABLE IF NOT EXISTS train_watches (" +
+                        "id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, " +
+                        "ownerId TEXT NOT NULL, trainNumber TEXT NOT NULL, trainName TEXT NOT NULL, " +
+                        "fromCode TEXT NOT NULL, toCode TEXT NOT NULL, date TEXT NOT NULL, " +
+                        "classCode TEXT NOT NULL, lastStatus TEXT NOT NULL, " +
+                        "lastCheckedAt INTEGER NOT NULL, createdAt INTEGER NOT NULL)"
+                )
+                db.execSQL("CREATE INDEX IF NOT EXISTS index_train_watches_ownerId_createdAt ON train_watches (ownerId, createdAt)")
+            }
+        }
+
         @Volatile
         private var INSTANCE: AppDatabase? = null
 
@@ -41,7 +57,7 @@ abstract class AppDatabase : RoomDatabase() {
                     context.applicationContext,
                     AppDatabase::class.java,
                     "railone.db"
-                ).addMigrations(MIGRATION_1_2, MIGRATION_2_3).build().also { INSTANCE = it }
+                ).addMigrations(MIGRATION_1_2, MIGRATION_2_3, MIGRATION_3_4).build().also { INSTANCE = it }
             }
         }
     }

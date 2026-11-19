@@ -18,6 +18,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ConfirmationNumber
 import androidx.compose.material.icons.filled.Fingerprint
 import androidx.compose.material.icons.filled.Luggage
+import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Pin
 import androidx.compose.material.icons.filled.Train
@@ -86,6 +87,10 @@ fun PnrScreen(vm: AppViewModel, onBack: () -> Unit) {
                         Spacer(Modifier.height(8.dp))
                         b.passengers.forEach { Text(it, fontSize = 13.sp, color = MaterialTheme.colorScheme.onSurfaceVariant) }
                     }
+                }
+                vm.wlEstimateForPnr(b)?.let { estimate ->
+                    Spacer(Modifier.height(14.dp))
+                    WlEstimateCard(estimate)
                 }
             }
             Spacer(Modifier.height(96.dp))
@@ -216,7 +221,8 @@ fun MoreScreen(
     onProfile: () -> Unit,
     onBookings: () -> Unit,
     onAadhaar: () -> Unit = {},
-    onMpin: () -> Unit = {}
+    onMpin: () -> Unit = {},
+    onWatch: () -> Unit = {}
 ) {
     val colors = MaterialTheme.colorScheme
     Column(
@@ -236,6 +242,8 @@ fun MoreScreen(
             ListRow("PNR enquiry", Icons.Default.ConfirmationNumber, Color(0xFF0A84FF)) { onPnr() }
             GroupedDivider()
             ListRow("Live train status", Icons.Default.Train, Color(0xFF30D158)) { onRunning() }
+            GroupedDivider()
+            ListRow("Train Watch", Icons.Default.Notifications, Color(0xFFFF6482)) { onWatch() }
             GroupedDivider()
             ListRow("My bookings", Icons.Default.Luggage, Color(0xFFFF9F0A)) { onBookings() }
         }

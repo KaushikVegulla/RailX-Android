@@ -37,6 +37,10 @@ import com.kaushik.railway.data.repository.BookingRepository
 import com.kaushik.railway.data.repository.SupabaseAuthRepository
 import com.kaushik.railway.data.repository.SupabaseSyncRepository
 import com.kaushik.railway.data.repository.TrainRepository
+import com.kaushik.railway.data.repository.WatchRepository
+import com.kaushik.railway.data.WlEstimate
+import com.kaushik.railway.data.WlPredictor
+import com.kaushik.railway.data.db.WatchEntity
 import com.kaushik.railway.nav.AccountGate
 import com.kaushik.railway.util.UiState
 import kotlinx.coroutines.Job
@@ -55,6 +59,7 @@ class AppViewModel : ViewModel() {
     private val sessionStore = SessionStore(RailApp.instance)
     private val accountStore = AccountStore(RailApp.instance)
     private val bookingRepo = BookingRepository(AppDatabase.getInstance(RailApp.instance))
+    private val watchRepo = WatchRepository(AppDatabase.getInstance(RailApp.instance))
     private val trainRepo = TrainRepository()
     private val authRepo = AuthRepository(sessionStore)
     private val supabaseAuth = SupabaseAuthRepository(RailApp.instance)
@@ -258,6 +263,11 @@ class AppViewModel : ViewModel() {
 
     /** PNR whose Trip Day companion is open, set from My journeys. */
     var selectedTripPnr by mutableStateOf<String?>(null)
+
+    // ── Train Watch ──────────────────────────────────────────────
+    val watches = mutableStateListOf<WatchEntity>()
+    var watchChecking by mutableStateOf(false)
+    var watchNote by mutableStateOf("")
     val bookings = mutableStateListOf<Booking>()
 
     val trains = mutableStateListOf<Train>()
@@ -338,6 +348,7 @@ class AppViewModel : ViewModel() {
         bookingHistoryJob?.cancel()
         bookingOwnerId = owner
         bookings.clear()
+        watches.clear()
         lastBooking = null
         lastJourney = null
         savedPassengers.clear()
@@ -360,6 +371,14 @@ class AppViewModel : ViewModel() {
             launch {
                 sessionStore.observeLastJourney(owner).collectLatest { journey ->
                     if (bookingOwnerId == owner) lastJourney = journey
+                }
+            }
+            launch {
+                watchRepo.observeWatches(owner).collectLatest { list ->
+                    if (bookingOwnerId == owner) {
+                        watches.clear()
+                        watches.addAll(list)
+                    }
                 }
             }
             launch {
@@ -1312,6 +1331,77 @@ class AppViewModel : ViewModel() {
             quota = booking.quota,
             departure = departure,
             now = now
+        )
+    }
+
+    // ── Train Watch actions ──────────────────────────────────────
+    fun addWatch(
+        trainNumber: String,
+        trainName: String,
+        fromCode: String,
+        toCode: String,
+        date: String,
+        classCode: String
+    ) {
+        val owner = bookingOwnerId
+        if (owner.isBlank()) return
+        viewModelScope.launch {
+            runCatching { watchRepo.add(owner, trainNumber, trainName, fromCode, toCode, date, classCode) }
+        }
+    }
+
+    fun deleteWatch(watch: WatchEntity) {
+        val owner = bookingOwnerId
+        if (owner.isBlank()) return
+        viewModelScope.launch { runCatching { watchRepo.delete(owner, watch.id) } }
+    }
+
+    fun checkWatchesNow() {
+        if (watchChecking) return
+        watchChecking = true
+        watchNote = ""
+        viewModelScope.launch {
+            val notes = runCatching { watchRepo.checkAll(force = true) }.getOrDefault(emptyList())
+            watchChecking = false
+            watchNote = if (notes.isEmpty()) {
+                "Checked just now — no watched status has improved yet."
+            } else {
+                notes.joinToString("\n")
+            }
+        }
+    }
+
+    // ── Waitlist confirmation estimates ──────────────────────────
+    private fun daysToDeparture(date: String, departTime: String): Int {
+        val departure = RefundPolicy.departureOf(date, departTime)
+            ?: RefundPolicy.departureOf(date, "")
+            ?: return 0
+        return java.time.temporal.ChronoUnit.DAYS
+            .between(java.time.LocalDate.now(), departure.toLocalDate())
+            .toInt()
+    }
+
+    /** RailX estimate for a booking's WL/RAC status, or null when confirmed. */
+    fun wlEstimateForBooking(booking: Booking): WlEstimate? = WlPredictor.estimate(
+        status = booking.classStatus.ifBlank { booking.travelClass.status },
+        classCode = booking.travelClass.code,
+        quota = booking.quota,
+        daysToDeparture = daysToDeparture(booking.date, booking.departTime),
+        trainName = booking.train.name
+    )
+
+    /** RailX estimate for a PNR result, using the booking when it is one of ours. */
+    fun wlEstimateForPnr(result: PnrResult): WlEstimate? {
+        bookings.firstOrNull { it.pnr == result.pnr }?.let { return wlEstimateForBooking(it) }
+        val token = result.passengers.firstNotNullOfOrNull { line ->
+            Regex("(RAC|GNWL|RLWL|PQWL|TQWL|WL)\\s*\\d*", RegexOption.IGNORE_CASE).find(line)?.value
+        } ?: return null
+        return WlPredictor.estimate(
+            status = token,
+            classCode = result.travelClass,
+            quota = result.quota,
+            daysToDeparture = daysToDeparture(result.date, ""),
+            trainName = result.trainName
         )
     }
 
