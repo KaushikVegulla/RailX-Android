@@ -15,8 +15,8 @@ android {
         applicationId = "com.kaushik.railway"
         minSdk = 24
         targetSdk = 35
-        versionCode = 31
-        versionName = "1.13.0"
+        versionCode = 32
+        versionName = "1.14.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
         // Local demo configuration. BuildConfig values are recoverable from the APK.
@@ -38,6 +38,11 @@ android {
 
     buildTypes {
         release {
+            // Signed with the debug key so release builds install as an
+            // update over the debug builds used in testing. Release is
+            // the performance build: no debuggable overhead, optimized
+            // and shrunk code.
+            signingConfig = signingConfigs.getByName("debug")
             isMinifyEnabled = true
             isShrinkResources = true
             proguardFiles(
