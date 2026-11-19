@@ -163,6 +163,9 @@ fun ProfileScreen(
                         if (vm.aadhaarLinked) "${vm.aadhaarKind} ••••${vm.aadhaarLast4}" else "Not linked"
                     )
                     KeyValue("Status", if (vm.loggedIn) "Signed in" else "Guest")
+                    if (vm.lastSignInReport.isNotBlank()) {
+                        KeyValue("Last sign-in", vm.lastSignInReport)
+                    }
                 }
             }
             Spacer(Modifier.height(16.dp))

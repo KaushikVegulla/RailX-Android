@@ -176,22 +176,31 @@ fun RailwayTheme(
  * colour glows are gone; the glass tint comes from the surfaces
  * themselves.
  */
+/**
+ * The app backdrop gradient, shared by the outer frame and by every
+ * navigation destination. Each destination paints its own copy, so a
+ * screen sliding over another during a transition stays opaque and
+ * the screen underneath never shows through its translucent cards.
+ */
 @Composable
-fun LiquidGlassBackdrop(modifier: Modifier = Modifier, content: @Composable BoxScope.() -> Unit) {
+fun BackdropBrush(): Brush {
     val scheme = MaterialTheme.colorScheme
     val dark = scheme.background.luminance() < 0.3f
+    return Brush.verticalGradient(
+        if (dark) {
+            listOf(Color(0xFF0C0D12), Color(0xFF000000), Color(0xFF000000))
+        } else {
+            listOf(Color(0xFFF4F7FC), Color(0xFFEDF0F6), Color(0xFFE3EAF4))
+        }
+    )
+}
+
+@Composable
+fun LiquidGlassBackdrop(modifier: Modifier = Modifier, content: @Composable BoxScope.() -> Unit) {
     Box(
         modifier
             .fillMaxSize()
-            .background(
-                Brush.verticalGradient(
-                    if (dark) {
-                        listOf(Color(0xFF0C0D12), Color(0xFF000000), Color(0xFF000000))
-                    } else {
-                        listOf(Color(0xFFF4F7FC), Color(0xFFEDF0F6), Color(0xFFE3EAF4))
-                    }
-                )
-            )
+            .background(BackdropBrush())
     ) {
         content()
     }
