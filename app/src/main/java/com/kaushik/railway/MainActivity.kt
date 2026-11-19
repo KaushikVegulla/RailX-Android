@@ -100,6 +100,7 @@ import com.kaushik.railway.ui.screens.SplashScreen
 import com.kaushik.railway.ui.screens.VerifyEmailScreen
 import com.kaushik.railway.ui.screens.TicketScreen
 import com.kaushik.railway.ui.screens.TrainListScreen
+import com.kaushik.railway.ui.screens.TripDayScreen
 import com.kaushik.railway.ui.screens.UnlockScreen
 import com.kaushik.railway.ui.screens.VacancyChartScreen
 import com.kaushik.railway.ui.theme.RailwayTheme
@@ -349,7 +350,14 @@ fun RailwayApp(vm: AppViewModel = viewModel()) {
             composable(Routes.Ticket) { TicketScreen(vm) { nav.navigate(Routes.Home) { popUpTo(Routes.Home) { inclusive = true } } } }
             composable(Routes.Pnr) { PnrScreen(vm, onBack = { if (!nav.popBackStack()) nav.navigate(Routes.Home) }) }
             composable(Routes.Running) { RunningStatusScreen(vm, onBack = { nav.popBackStack() }) }
-            composable(Routes.Bookings) { BookingsScreen(vm, onBack = { if (!nav.popBackStack()) nav.navigate(Routes.Home) }) }
+            composable(Routes.Bookings) {
+                BookingsScreen(
+                    vm,
+                    onBack = { if (!nav.popBackStack()) nav.navigate(Routes.Home) },
+                    onTripDay = { pnr -> vm.selectedTripPnr = pnr; nav.navigate(Routes.TripDay) }
+                )
+            }
+            composable(Routes.TripDay) { TripDayScreen(vm, onBack = { nav.popBackStack() }) }
             composable(Routes.Profile) {
                 ProfileScreen(
                     vm = vm,

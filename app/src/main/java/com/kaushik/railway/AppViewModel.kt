@@ -255,6 +255,9 @@ class AppViewModel : ViewModel() {
     val selectedSeatIds = mutableStateListOf<String>()
     var selectedSeatLabels by mutableStateOf("")
     var lastBooking by mutableStateOf<Booking?>(null)
+
+    /** PNR whose Trip Day companion is open, set from My journeys. */
+    var selectedTripPnr by mutableStateOf<String?>(null)
     val bookings = mutableStateListOf<Booking>()
 
     val trains = mutableStateListOf<Train>()
