@@ -11,6 +11,8 @@ import com.kaushik.railway.data.AccountProvider
 import com.kaushik.railway.data.AccountStore
 import com.kaushik.railway.data.AvailabilityResult
 import com.kaushik.railway.data.Booking
+import com.kaushik.railway.data.CancellationAdvice
+import com.kaushik.railway.data.CancellationAdvisor
 import com.kaushik.railway.data.IrctcRules
 import com.kaushik.railway.data.RefundPolicy
 import com.kaushik.railway.data.RefundQuote
@@ -1288,6 +1290,25 @@ class AppViewModel : ViewModel() {
             ticketStatus = booking.classStatus.ifBlank { booking.travelClass.status },
             quota = booking.quota,
             departure = departure
+        )
+    }
+
+    /** Cancellation Advisor: the refund for cancelling at [now], and when it next drops. */
+    fun cancellationAdviceFor(
+        booking: Booking,
+        now: java.time.LocalDateTime = java.time.LocalDateTime.now()
+    ): CancellationAdvice {
+        val departure = RefundPolicy.departureOf(booking.date, booking.departTime)
+            ?: RefundPolicy.departureOf(booking.date, "")
+            ?: java.time.LocalDateTime.now()
+        return CancellationAdvisor.advise(
+            classCode = booking.travelClass.code,
+            farePerPassenger = booking.travelClass.fare,
+            passengers = booking.passengers.size,
+            ticketStatus = booking.classStatus.ifBlank { booking.travelClass.status },
+            quota = booking.quota,
+            departure = departure,
+            now = now
         )
     }
 
