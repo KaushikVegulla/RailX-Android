@@ -51,13 +51,19 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.kaushik.railway.AppViewModel
+import com.kaushik.railway.data.CancellationAdvice
 import com.kaushik.railway.data.PaymentApi
 import com.kaushik.railway.data.PaymentBridge
 import com.razorpay.Checkout
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import org.json.JSONObject
+import java.time.Duration
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
+import java.util.Locale
 import com.kaushik.railway.data.MockData
 import com.kaushik.railway.data.Passenger
 import com.kaushik.railway.ui.components.KeyValue
@@ -448,9 +454,43 @@ fun TicketScreen(vm: AppViewModel, onHome: () -> Unit) {
 
 
 @Composable
+private fun CancellationAdviceLine(advice: CancellationAdvice, now: LocalDateTime) {
+    val dropsAt = advice.dropsAt
+    val after = advice.refundAfterDrop
+    val text = when {
+        advice.refundNow <= 0 ->
+            "Cancellation Advisor: this ticket pays no refund if cancelled."
+        dropsAt != null && after != null -> {
+            val mins = Duration.between(now, dropsAt).toMinutes().coerceAtLeast(0)
+            val left = when {
+                mins >= 24 * 60 -> "${mins / (24 * 60)}d ${(mins % (24 * 60)) / 60}h left"
+                mins >= 60 -> "${mins / 60}h ${mins % 60}m left"
+                else -> "${mins}m left"
+            }
+            "Cancellation Advisor: cancel in the next $left to keep ₹${advice.refundNow}. It drops to ₹$after after that."
+        }
+        else ->
+            "Cancellation Advisor: cancelling returns ₹${advice.refundNow}, right up to departure."
+    }
+    Text(
+        text,
+        modifier = Modifier.padding(top = 8.dp),
+        style = MaterialTheme.typography.bodySmall,
+        color = MaterialTheme.colorScheme.primary
+    )
+}
+
+@Composable
 fun BookingsScreen(vm: AppViewModel, onBack: () -> Unit) {
     var confirmPnr by rememberSaveable(vm.bookingOwnerId) { mutableStateOf<String?>(null) }
     var showCancelled by rememberSaveable(vm.bookingOwnerId) { mutableStateOf(false) }
+    var advisorNow by remember { mutableStateOf(LocalDateTime.now()) }
+    LaunchedEffect(Unit) {
+        while (true) {
+            delay(30_000)
+            advisorNow = LocalDateTime.now()
+        }
+    }
     val bookings = vm.bookings.filter { (it.status == "CANCELLED") == showCancelled }
     Scaffold(topBar = { RailTopBar("My journeys", onBack) }) { pad ->
         LazyColumn(
@@ -501,6 +541,7 @@ fun BookingsScreen(vm: AppViewModel, onBack: () -> Unit) {
                             )
                         }
                         if (b.status != "CANCELLED") {
+                            CancellationAdviceLine(vm.cancellationAdviceFor(b, advisorNow), advisorNow)
                             TextButton(onClick = { confirmPnr = b.pnr }) { Text("Cancel booking") }
                         }
                     }
@@ -511,6 +552,7 @@ fun BookingsScreen(vm: AppViewModel, onBack: () -> Unit) {
     val cancellation = vm.bookings.firstOrNull { it.pnr == confirmPnr && it.status != "CANCELLED" }
     if (cancellation != null) {
         val quote = vm.refundQuoteFor(cancellation)
+        val advice = vm.cancellationAdviceFor(cancellation)
         val fareTotal = cancellation.travelClass.fare * cancellation.passengers.size
         val extras = cancellation.amount - fareTotal
         AlertDialog(
@@ -529,6 +571,14 @@ fun BookingsScreen(vm: AppViewModel, onBack: () -> Unit) {
                         style = MaterialTheme.typography.bodySmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
+                    if (advice.dropsAt != null && advice.refundAfterDrop != null) {
+                        Spacer(Modifier.height(10.dp))
+                        Text(
+                            "Advisor: cancel before ${advice.dropsAt.format(DateTimeFormatter.ofPattern("d MMM, h:mm a", Locale.ENGLISH))} to keep ₹${advice.refundNow}. After that, the refund drops to ₹${advice.refundAfterDrop}.",
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.primary
+                        )
+                    }
                     if (extras > 0) {
                         Text(
                             "Add-ons (₹$extras, e.g. travel insurance) are not refundable.",

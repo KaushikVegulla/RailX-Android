@@ -15,8 +15,8 @@ android {
         applicationId = "com.kaushik.railway"
         minSdk = 24
         targetSdk = 35
-        versionCode = 26
-        versionName = "1.10.6"
+        versionCode = 27
+        versionName = "1.10.7"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
         // Local demo configuration. BuildConfig values are recoverable from the APK.
