@@ -26,8 +26,6 @@ import androidx.compose.animation.core.spring
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
-import androidx.compose.animation.scaleIn
-import androidx.compose.animation.scaleOut
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -146,7 +144,7 @@ class MainActivity : FragmentActivity(), PaymentResultWithDataListener {
     }
 }
 
-private val IosEase = CubicBezierEasing(0.32f, 0.72f, 0.24f, 1f)
+private val SlideEase = CubicBezierEasing(0.32f, 0.72f, 0.24f, 1f)
 
 @Composable
 fun RailwayApp(vm: AppViewModel = viewModel()) {
@@ -202,39 +200,35 @@ fun RailwayApp(vm: AppViewModel = viewModel()) {
             modifier = Modifier.fillMaxSize(),
             // Tab-to-tab switches are instant: crossfading two dense
             // screens left both sets of text visible mid-fade and felt
-            // glitchy. Push/pop navigation keeps the slide + parallax.
+            // glitchy. Push navigation keeps the slide + parallax.
             enterTransition = {
                 if (initialState.destination.route in tabs && targetState.destination.route in tabs) {
                     EnterTransition.None
                 } else {
-                    fadeIn(tween(320)) + slideInHorizontally(tween(380, easing = IosEase)) { it }
+                    fadeIn(tween(320)) + slideInHorizontally(tween(380, easing = SlideEase)) { it }
                 }
             },
             exitTransition = {
                 if (initialState.destination.route in tabs && targetState.destination.route in tabs) {
                     ExitTransition.None
                 } else {
-                    fadeOut(tween(320)) + slideOutHorizontally(tween(380, easing = IosEase)) { -(it * 0.3f).toInt() }
+                    fadeOut(tween(320)) + slideOutHorizontally(tween(380, easing = SlideEase)) { -(it * 0.3f).toInt() }
                 }
             },
-            // Back navigation uses the predictive-back style: the screen
-            // being left shrinks and fades while the previous screen
-            // settles in behind it. With the manifest's
+            // Back navigation is a slide with parallax, for every pop,
+            // tab-to-tab included: the screen being left slides off to
+            // the right at full opacity, so its text never ghosts over
+            // the previous screen, while the previous screen parallaxes
+            // in from a third of a screen to the left, brightening as it
+            // settles. With the manifest's
             // enableOnBackInvokedCallback, the edge-swipe gesture scrubs
             // these transitions and springs back if the swipe is cancelled.
             popEnterTransition = {
-                if (initialState.destination.route in tabs && targetState.destination.route in tabs) {
-                    EnterTransition.None
-                } else {
-                    fadeIn(tween(320)) + scaleIn(initialScale = 1.08f, animationSpec = tween(380, easing = IosEase))
-                }
+                fadeIn(tween(380, easing = SlideEase), initialAlpha = 0.35f) +
+                    slideInHorizontally(tween(380, easing = SlideEase)) { -(it * 0.3f).toInt() }
             },
             popExitTransition = {
-                if (initialState.destination.route in tabs && targetState.destination.route in tabs) {
-                    ExitTransition.None
-                } else {
-                    fadeOut(tween(320)) + scaleOut(targetScale = 0.88f, animationSpec = tween(380, easing = IosEase))
-                }
+                slideOutHorizontally(tween(380, easing = SlideEase)) { it }
             }
         ) {
             composable(Routes.Splash) {
