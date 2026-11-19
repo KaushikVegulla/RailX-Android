@@ -1,5 +1,6 @@
 package com.kaushik.railway
 
+import android.util.Log
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
@@ -268,6 +269,9 @@ class AppViewModel : ViewModel() {
     val watches = mutableStateListOf<WatchEntity>()
     var watchChecking by mutableStateOf(false)
     var watchNote by mutableStateOf("")
+
+    /** Timing breakdown of the most recent sign-in, shown on the profile screen. */
+    var lastSignInReport by mutableStateOf("")
     val bookings = mutableStateListOf<Booking>()
 
     val trains = mutableStateListOf<Train>()
@@ -723,11 +727,16 @@ class AppViewModel : ViewModel() {
                 onError(message)
                 return@launch
             }
+            val signInStart = System.currentTimeMillis()
             when (val sb = withTimeoutOrNull(12_000) {
                 supabaseAuth.signIn(supabaseEmail, password)
             }) {
                 is SupabaseCall.SignedIn -> {
-                    adoptSupabaseUser(sb.session, password)
+                    val authMs = System.currentTimeMillis() - signInStart
+                    val profileMs = adoptSupabaseUser(sb.session, password)
+                    val totalMs = System.currentTimeMillis() - signInStart
+                    lastSignInReport = "Sign-in ${secondsText(authMs)} · profile ${secondsText(profileMs)} · total ${secondsText(totalMs)}"
+                    Log.d("RailXTiming", lastSignInReport)
                     appUnlocked = true
                     authLoading = false
                     onSuccess()
@@ -881,7 +890,11 @@ class AppViewModel : ViewModel() {
      * cloudUsername and the Supabase tokens stay in SupabaseTokenStore for
      * backend sync.
      */
-    private suspend fun adoptSupabaseUser(session: SupabaseSession, password: String) {
+    private fun secondsText(ms: Long): String =
+        String.format(java.util.Locale.ENGLISH, "%.1fs", ms / 1000.0)
+
+    /** Adopts a fresh cloud session on this device; returns how long the server profile fetch took, in ms. */
+    private suspend fun adoptSupabaseUser(session: SupabaseSession, password: String): Long {
         val mail = session.email.trim()
         val name = session.fullName
         val list = accountStore.profiles.first()
@@ -891,7 +904,9 @@ class AppViewModel : ViewModel() {
         // it on the on-device mirror, so a user who already finished
         // activation is recognised on any device instead of being asked
         // to complete the profile again after a reinstall.
+        val profileStart = System.currentTimeMillis()
         val remote = supabaseSync.pullProfile()
+        val profileMs = System.currentTimeMillis() - profileStart
         fun overlay(base: RailProfile): RailProfile {
             if (remote == null) return base
             return base.copy(
@@ -944,7 +959,11 @@ class AppViewModel : ViewModel() {
         applyProfile(profile)
         loggedIn = true
         supabaseLinked = true
-        favouriteRoutes = supabaseSync.pullFavouriteRoutes()
+        // Favourite routes load off the sign-in path: sign-in should
+        // not wait on them. They land a moment later (the session
+        // observer loads them too).
+        viewModelScope.launch { favouriteRoutes = supabaseSync.pullFavouriteRoutes() }
+        return profileMs
     }
 
     private suspend fun bridgeLegacyAccount(name: String, email: String, password: String) {

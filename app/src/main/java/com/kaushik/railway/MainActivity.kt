@@ -57,6 +57,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -69,11 +70,14 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.sp
 import com.kaushik.railway.ui.theme.GlassStroke
 import com.kaushik.railway.ui.theme.LocalGlassIntensity
+import com.kaushik.railway.ui.theme.BackdropBrush
 import com.kaushik.railway.ui.theme.LiquidGlassBackdrop
 import com.kaushik.railway.ui.theme.Navy
 import com.kaushik.railway.ui.theme.Orange
 import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavGraph.Companion.findStartDestination
+import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
@@ -146,11 +150,39 @@ class MainActivity : FragmentActivity(), PaymentResultWithDataListener {
 
 private val SlideEase = CubicBezierEasing(0.32f, 0.72f, 0.24f, 1f)
 
+/**
+ * A navigation destination that paints its own copy of the app
+ * backdrop. While one screen slides over another, the moving screen
+ * stays opaque, so the screen underneath never shows through its
+ * translucent cards.
+ */
+private fun NavGraphBuilder.destination(
+    route: String,
+    content: @Composable (NavBackStackEntry) -> Unit
+) {
+    composable(route) { entry ->
+        Box(Modifier.fillMaxSize().background(BackdropBrush())) {
+            content(entry)
+        }
+    }
+}
+
 @Composable
 fun RailwayApp(vm: AppViewModel = viewModel()) {
     val nav = rememberNavController()
     val back by nav.currentBackStackEntryAsState()
     val route = back?.destination?.route
+    // The tab pill follows the settled destination, not the entry at
+    // the moment a transition starts: while a back gesture is
+    // mid-slide, or gets cancelled, the pill stays with the screen
+    // actually shown and moves only when the new screen lands.
+    var settledRoute by remember { mutableStateOf<String?>(null) }
+    LaunchedEffect(nav) {
+        nav.visibleEntries.collect { entries ->
+            if (entries.size == 1) settledRoute = entries.single().destination.route
+        }
+    }
+    val tabRoute = settledRoute ?: route
     val tabs = setOf(Routes.Home, Routes.Bookings, Routes.Pnr, Routes.More)
     val showBar = route in tabs
     // The bar floats over scrolling content without a blur layer, so its
@@ -224,28 +256,34 @@ fun RailwayApp(vm: AppViewModel = viewModel()) {
             // enableOnBackInvokedCallback, the edge-swipe gesture scrubs
             // these transitions and springs back if the swipe is cancelled.
             popEnterTransition = {
-                fadeIn(tween(380, easing = SlideEase), initialAlpha = 0.35f) +
-                    slideInHorizontally(tween(380, easing = SlideEase)) { -(it * 0.3f).toInt() }
+                fadeIn(
+                    spring(dampingRatio = 0.92f, stiffness = Spring.StiffnessMediumLow),
+                    initialAlpha = 0.35f
+                ) + slideInHorizontally(
+                    spring(dampingRatio = 0.92f, stiffness = Spring.StiffnessMediumLow)
+                ) { -(it * 0.3f).toInt() }
             },
             popExitTransition = {
-                slideOutHorizontally(tween(380, easing = SlideEase)) { it }
+                slideOutHorizontally(
+                    spring(dampingRatio = 0.92f, stiffness = Spring.StiffnessMediumLow)
+                ) { it }
             }
         ) {
-            composable(Routes.Splash) {
+            destination(Routes.Splash) {
                 SplashScreen(ready = vm.gateReady) {
                     nav.navigate(vm.gateDestination()) {
                         popUpTo(Routes.Splash) { inclusive = true }
                     }
                 }
             }
-            composable(Routes.Unlock) {
+            destination(Routes.Unlock) {
                 UnlockScreen(vm) {
                     nav.navigate(vm.gateDestination()) {
                         popUpTo(Routes.Unlock) { inclusive = true }
                     }
                 }
             }
-            composable(Routes.Login) {
+            destination(Routes.Login) {
                 LoginScreen(
                     vm,
                     onLogin = {
@@ -255,14 +293,14 @@ fun RailwayApp(vm: AppViewModel = viewModel()) {
                     onNeedVerify = { nav.navigate(Routes.Verify) }
                 )
             }
-            composable(Routes.Register) {
+            destination(Routes.Register) {
                 AccountRegisterScreen(
                     vm,
                     onDone = { nav.popBackStack() },
                     onBack = { nav.popBackStack() }
                 )
             }
-            composable(Routes.Activate) {
+            destination(Routes.Activate) {
                 ProfileActivationScreen(
                     vm,
                     onDone = {
@@ -275,21 +313,21 @@ fun RailwayApp(vm: AppViewModel = viewModel()) {
                     }
                 )
             }
-            composable(Routes.Mpin) {
+            destination(Routes.Mpin) {
                 MpinScreen(vm) {
                     if (!nav.popBackStack(Routes.Home, inclusive = false)) {
                         nav.navigate(Routes.Home) { popUpTo(0) { inclusive = true } }
                     }
                 }
             }
-            composable(Routes.Aadhaar) {
+            destination(Routes.Aadhaar) {
                 AadhaarEnableScreen(
                     vm,
                     onDone = { nav.popBackStack() },
                     onBack = { nav.popBackStack() }
                 )
             }
-            composable(Routes.Verify) {
+            destination(Routes.Verify) {
                 VerifyEmailScreen(
                     vm,
                     email = vm.email,
@@ -299,7 +337,7 @@ fun RailwayApp(vm: AppViewModel = viewModel()) {
                     onBack = { nav.popBackStack() }
                 )
             }
-            composable(Routes.Home) {
+            destination(Routes.Home) {
                 HomeScreen(
                     vm,
                     onSearch = { nav.navigate(Routes.Trains) },
@@ -310,19 +348,19 @@ fun RailwayApp(vm: AppViewModel = viewModel()) {
                     onNeedAadhaar = { nav.navigate(Routes.Aadhaar) }
                 )
             }
-            composable(Routes.Trains) {
+            destination(Routes.Trains) {
                 TrainListScreen(vm, onBack = { nav.popBackStack() }, onSelect = {
                     vm.selectedTrain = it
                     nav.navigate(Routes.Availability)
                 })
             }
-            composable(Routes.Availability) {
+            destination(Routes.Availability) {
                 AvailabilityScreen(vm, onBack = { nav.popBackStack() }, onVacancy = {
                     vm.selectedTravelClass = it
                     nav.navigate(Routes.Vacancy)
                 })
             }
-            composable(Routes.Vacancy) {
+            destination(Routes.Vacancy) {
                 VacancyChartScreen(vm, onBack = { nav.popBackStack() }, onBook = {
                     when {
                         !vm.profileComplete -> nav.navigate(Routes.Activate)
@@ -331,30 +369,30 @@ fun RailwayApp(vm: AppViewModel = viewModel()) {
                     }
                 })
             }
-            composable(Routes.Passengers) {
+            destination(Routes.Passengers) {
                 PassengerScreen(vm, onBack = { nav.popBackStack() }, onContinue = { nav.navigate(Routes.Review) })
             }
-            composable(Routes.Review) {
+            destination(Routes.Review) {
                 ReviewScreen(vm, onBack = { nav.popBackStack() }, onPay = { nav.navigate(Routes.Payment) })
             }
-            composable(Routes.Payment) {
+            destination(Routes.Payment) {
                 PaymentScreen(vm, onBack = { nav.popBackStack() }, onSuccess = {
                     nav.navigate(Routes.Ticket) { popUpTo(Routes.Home) }
                 })
             }
-            composable(Routes.Ticket) { TicketScreen(vm) { nav.navigate(Routes.Home) { popUpTo(Routes.Home) { inclusive = true } } } }
-            composable(Routes.Pnr) { PnrScreen(vm, onBack = { if (!nav.popBackStack()) nav.navigate(Routes.Home) }) }
-            composable(Routes.Running) { RunningStatusScreen(vm, onBack = { nav.popBackStack() }) }
-            composable(Routes.Bookings) {
+            destination(Routes.Ticket) { TicketScreen(vm) { nav.navigate(Routes.Home) { popUpTo(Routes.Home) { inclusive = true } } } }
+            destination(Routes.Pnr) { PnrScreen(vm, onBack = { if (!nav.popBackStack()) nav.navigate(Routes.Home) }) }
+            destination(Routes.Running) { RunningStatusScreen(vm, onBack = { nav.popBackStack() }) }
+            destination(Routes.Bookings) {
                 BookingsScreen(
                     vm,
                     onBack = { if (!nav.popBackStack()) nav.navigate(Routes.Home) },
                     onTripDay = { pnr -> vm.selectedTripPnr = pnr; nav.navigate(Routes.TripDay) }
                 )
             }
-            composable(Routes.TripDay) { TripDayScreen(vm, onBack = { nav.popBackStack() }) }
-            composable(Routes.Watch) { WatchScreen(vm, onBack = { nav.popBackStack() }) }
-            composable(Routes.Profile) {
+            destination(Routes.TripDay) { TripDayScreen(vm, onBack = { nav.popBackStack() }) }
+            destination(Routes.Watch) { WatchScreen(vm, onBack = { nav.popBackStack() }) }
+            destination(Routes.Profile) {
                 ProfileScreen(
                     vm = vm,
                     onBack = { nav.popBackStack() },
@@ -368,7 +406,7 @@ fun RailwayApp(vm: AppViewModel = viewModel()) {
                     onAadhaar = { nav.navigate(Routes.Aadhaar) }
                 )
             }
-            composable(Routes.More) {
+            destination(Routes.More) {
                 MoreScreen(
                     vm = vm,
                     onPnr = { nav.navigate(Routes.Pnr) },
@@ -384,7 +422,7 @@ fun RailwayApp(vm: AppViewModel = viewModel()) {
         // One selection pill that physically slides between tabs with the
         // same spring as the Booked/Cancelled segmented control, instead of
         // each tab fading its own background in place.
-        val selectedTab = when (route) {
+        val selectedTab = when (tabRoute) {
             Routes.Bookings -> 1
             Routes.Pnr -> 2
             Routes.More -> 3
