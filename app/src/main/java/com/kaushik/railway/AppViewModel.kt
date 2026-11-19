@@ -348,6 +348,22 @@ class AppViewModel : ViewModel() {
         }
     }
 
+    /**
+     * Bookings are pushed to the account's cloud storage when they are
+     * made; this pulls them back down so a reinstall or a new phone
+     * shows the full journey history again. Local rows win: a booking
+     * already on the device is never overwritten by the server copy.
+     */
+    private fun restoreCloudBookings(owner: String) {
+        viewModelScope.launch {
+            supabaseSync.pullBookings().forEach { remote ->
+                if (bookingRepo.getByPnr(owner, remote.pnr) == null) {
+                    runCatching { bookingRepo.save(owner, remote) }
+                }
+            }
+        }
+    }
+
     private fun switchBookingOwner(owner: String) {
         bookingHistoryJob?.cancel()
         bookingOwnerId = owner
@@ -363,6 +379,7 @@ class AppViewModel : ViewModel() {
         email = ""
         PaymentApi.bearerToken = null
         if (owner.isBlank()) return
+        restoreCloudBookings(owner)
         bookingHistoryJob = viewModelScope.launch {
             launch {
                 bookingRepo.observeBookings(owner).collectLatest { list ->
