@@ -176,7 +176,6 @@ fun RailwayTheme(
  * colour glows are gone; the glass tint comes from the surfaces
  * themselves.
  */
-@Composable
 /**
  * The app backdrop gradient, shared by the outer frame and by every
  * navigation destination. Each destination paints its own copy, so a
