@@ -52,6 +52,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.kaushik.railway.AppViewModel
 import com.kaushik.railway.data.CancellationAdvice
+import com.kaushik.railway.data.FareSplit
 import com.kaushik.railway.data.PaymentApi
 import com.kaushik.railway.data.PaymentBridge
 import com.razorpay.Checkout
@@ -481,8 +482,9 @@ private fun CancellationAdviceLine(advice: CancellationAdvice, now: LocalDateTim
 }
 
 @Composable
-fun BookingsScreen(vm: AppViewModel, onBack: () -> Unit) {
+fun BookingsScreen(vm: AppViewModel, onBack: () -> Unit, onTripDay: (String) -> Unit = {}) {
     var confirmPnr by rememberSaveable(vm.bookingOwnerId) { mutableStateOf<String?>(null) }
+    var splitPnr by rememberSaveable(vm.bookingOwnerId) { mutableStateOf<String?>(null) }
     var showCancelled by rememberSaveable(vm.bookingOwnerId) { mutableStateOf(false) }
     var advisorNow by remember { mutableStateOf(LocalDateTime.now()) }
     LaunchedEffect(Unit) {
@@ -542,7 +544,13 @@ fun BookingsScreen(vm: AppViewModel, onBack: () -> Unit) {
                         }
                         if (b.status != "CANCELLED") {
                             CancellationAdviceLine(vm.cancellationAdviceFor(b, advisorNow), advisorNow)
-                            TextButton(onClick = { confirmPnr = b.pnr }) { Text("Cancel booking") }
+                            Row {
+                                TextButton(onClick = { onTripDay(b.pnr) }) { Text("Trip Day") }
+                                if (b.passengers.size >= 2) {
+                                    TextButton(onClick = { splitPnr = b.pnr }) { Text("Split fare") }
+                                }
+                                TextButton(onClick = { confirmPnr = b.pnr }) { Text("Cancel booking") }
+                            }
                         }
                     }
                 }
@@ -595,6 +603,55 @@ fun BookingsScreen(vm: AppViewModel, onBack: () -> Unit) {
             },
             confirmButton = { TextButton(onClick = { vm.cancel(cancellation.pnr); confirmPnr = null }) { Text("Cancel booking", color = MaterialTheme.colorScheme.error) } },
             dismissButton = { TextButton(onClick = { confirmPnr = null }) { Text("Keep journey") } }
+        )
+    }
+    val splitBooking = vm.bookings.firstOrNull { it.pnr == splitPnr && it.status != "CANCELLED" }
+    if (splitBooking != null) {
+        val shares = FareSplit.split(splitBooking.amount, splitBooking.passengers.map { it.name })
+        val context = LocalContext.current
+        AlertDialog(
+            onDismissRequest = { splitPnr = null },
+            title = { Text("Split the fare") },
+            text = {
+                Column {
+                    Text("${splitBooking.train.name} · ${splitBooking.date}")
+                    Spacer(Modifier.height(10.dp))
+                    shares.forEach { share ->
+                        Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
+                            Text(share.name)
+                            Text("₹${share.amount}", fontWeight = FontWeight.SemiBold)
+                        }
+                    }
+                    Spacer(Modifier.height(10.dp))
+                    Text(
+                        "Total ₹${splitBooking.amount}, split equally across ${shares.size} passengers.",
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
+            },
+            confirmButton = {
+                TextButton(onClick = {
+                    val text = FareSplit.summaryText(
+                        trainNumber = splitBooking.train.number,
+                        trainName = splitBooking.train.name,
+                        fromName = splitBooking.fromName,
+                        toName = splitBooking.toName,
+                        date = splitBooking.date,
+                        pnr = splitBooking.pnr,
+                        totalAmount = splitBooking.amount,
+                        shares = shares
+                    )
+                    val send = Intent(Intent.ACTION_SEND).apply {
+                        type = "text/plain"
+                        putExtra(Intent.EXTRA_SUBJECT, "RailX fare split ${splitBooking.pnr}")
+                        putExtra(Intent.EXTRA_TEXT, text)
+                    }
+                    context.startActivity(Intent.createChooser(send, "Share fare split"))
+                    splitPnr = null
+                }) { Text("Share split") }
+            },
+            dismissButton = { TextButton(onClick = { splitPnr = null }) { Text("Close") } }
         )
     }
 }
