@@ -21,6 +21,7 @@ object Routes {
     const val Running = "running"
     const val Bookings = "bookings"
     const val TripDay = "tripday"
+    const val Watch = "watch"
     const val Profile = "profile"
     const val More = "more"
 }

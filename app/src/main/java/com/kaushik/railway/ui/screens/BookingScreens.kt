@@ -544,6 +544,14 @@ fun BookingsScreen(vm: AppViewModel, onBack: () -> Unit, onTripDay: (String) -> 
                         }
                         if (b.status != "CANCELLED") {
                             CancellationAdviceLine(vm.cancellationAdviceFor(b, advisorNow), advisorNow)
+                            vm.wlEstimateForBooking(b)?.let { estimate ->
+                                Text(
+                                    "Confirmation chances: ${estimate.band.lowercase(Locale.ENGLISH)} · about ${estimate.percent}% (RailX estimate)",
+                                    modifier = Modifier.padding(top = 4.dp),
+                                    style = MaterialTheme.typography.bodySmall,
+                                    color = MaterialTheme.colorScheme.primary
+                                )
+                            }
                             Row {
                                 TextButton(onClick = { onTripDay(b.pnr) }) { Text("Trip Day") }
                                 if (b.passengers.size >= 2) {

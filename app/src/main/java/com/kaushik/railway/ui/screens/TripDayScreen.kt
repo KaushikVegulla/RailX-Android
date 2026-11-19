@@ -141,6 +141,11 @@ fun TripDayScreen(vm: AppViewModel, onBack: () -> Unit) {
                 }
             }
 
+            vm.wlEstimateForBooking(booking)?.let { estimate ->
+                Spacer(Modifier.height(14.dp))
+                WlEstimateCard(estimate)
+            }
+
             Spacer(Modifier.height(14.dp))
             RailCard {
                 Column {
