@@ -257,15 +257,15 @@ fun RailwayApp(vm: AppViewModel = viewModel()) {
             // these transitions and springs back if the swipe is cancelled.
             popEnterTransition = {
                 fadeIn(
-                    spring(dampingRatio = 0.92f, stiffness = Spring.StiffnessMediumLow),
+                    spring(dampingRatio = 0.9f, stiffness = Spring.StiffnessMedium),
                     initialAlpha = 0.35f
                 ) + slideInHorizontally(
-                    spring(dampingRatio = 0.92f, stiffness = Spring.StiffnessMediumLow)
+                    spring(dampingRatio = 0.9f, stiffness = Spring.StiffnessMedium)
                 ) { -(it * 0.3f).toInt() }
             },
             popExitTransition = {
                 slideOutHorizontally(
-                    spring(dampingRatio = 0.92f, stiffness = Spring.StiffnessMediumLow)
+                    spring(dampingRatio = 0.9f, stiffness = Spring.StiffnessMedium)
                 ) { it }
             }
         ) {
@@ -433,7 +433,7 @@ fun RailwayApp(vm: AppViewModel = viewModel()) {
         val tabWidth = with(barDensity) { if (barWidth == 0) 0.dp else (barWidth / 4).toDp() }
         val pillOffset by animateDpAsState(
             targetValue = tabWidth * selectedTab,
-            animationSpec = spring(dampingRatio = 0.85f, stiffness = Spring.StiffnessMediumLow),
+            animationSpec = spring(dampingRatio = 0.9f, stiffness = Spring.StiffnessMedium),
             label = "Tab pill"
         )
         if (showBar) {

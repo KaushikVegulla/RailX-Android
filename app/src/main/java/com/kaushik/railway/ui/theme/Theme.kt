@@ -197,10 +197,13 @@ fun BackdropBrush(): Brush {
 
 @Composable
 fun LiquidGlassBackdrop(modifier: Modifier = Modifier, content: @Composable BoxScope.() -> Unit) {
+    // Every navigation destination paints its own backdrop gradient,
+    // so this outer frame only needs a flat fill underneath: one less
+    // full-screen gradient layer for the GPU to composite each frame.
     Box(
         modifier
             .fillMaxSize()
-            .background(BackdropBrush())
+            .background(MaterialTheme.colorScheme.background)
     ) {
         content()
     }
